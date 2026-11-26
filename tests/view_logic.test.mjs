@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { currentTurn, frameState } from '../static/view_logic.mjs';
+import { currentTurn, frameState, turnInfo, compactAppiumLine } from '../static/view_logic.mjs';
 test('a matching repeated prompt never reuses the earlier attempt answer', () => {
  const job={events:[{event:'TURN_START',attempt_id:'a',turn:'t',prompt:'same'}, {event:'TURN_DONE',attempt_id:'a',turn:'t',response:'old'}, {event:'TURN_START',attempt_id:'b',turn:'t',prompt:'same'}]};
  assert.equal(currentTurn(job).answer,null);
@@ -15,4 +15,15 @@ test('a frame becomes delayed independently of job and log polling',()=>{
  assert.equal(frameState({state:'LIVE'},1000,1200),'LIVE');
  assert.equal(frameState({state:'PRIVACY'},1000,1200),'PRIVACY');
  assert.equal(frameState({state:'ENDED'},1000,9000),'ENDED');
+});
+test('turn position is computed across conversations of a case',()=>{
+ const definition={conversations:[['a','b'],['c','d','e']]};
+ assert.deepEqual(turnInfo('conversation2_turn1',definition),{conversation:2,conversations:2,turn:1,conversationTurns:3,overall:3,totalTurns:5});
+ assert.equal(turnInfo('conversation1_turn1',{conversations:[['only']]}).totalTurns,1);
+ assert.equal(turnInfo('unexpected',definition),null);
+});
+test('Appium log lines keep [HTTP] and status but shorten session ids and dates',()=>{
+ const line='2026-11-26 03:46:10:813 [HTTP] <-- GET /session/414b9248-0627-4b97-bd1a-44ab59496e6b/source 200 35 ms - 101098';
+ assert.equal(compactAppiumLine(line),'03:46:10:813 [HTTP] <-- GET /session/414b9248…/source 200 35 ms - 101098');
+ assert.equal(compactAppiumLine('plain line'),'plain line');
 });
