@@ -7,6 +7,19 @@ ROOT=Path(__file__).resolve().parent
 CASES=('MB-GEN-001','MB-GEN-008','MB-GEN-009','MB-GEN-013')
 TERMINAL={'COMPLETED','INTERRUPTED','PROCESS_ERROR'}
 def utc():return datetime.now(timezone.utc).isoformat()
+ENGINE=str(ROOT/'engine')
+def use_engine():
+ # Add the engine to the import path once, not on every call.
+ if ENGINE not in sys.path:sys.path.insert(0,ENGINE)
+_DEFINITIONS=None
+def case_definitions():
+ """The four executable case definitions. They are fixed for the life of the process,
+ so they are built once; callers get their own copy."""
+ global _DEFINITIONS
+ if _DEFINITIONS is None:
+  use_engine();from group7_auto.model_based import concretize
+  _DEFINITIONS=concretize()
+ return json.loads(json.dumps(_DEFINITIONS))
 def atomic(path,data):
  path=Path(path);tmp=path.with_suffix(path.suffix+'.tmp');tmp.write_text(json.dumps(data,ensure_ascii=False,indent=2));tmp.replace(path)
 def readjson(path,default=None):
@@ -140,7 +153,7 @@ def events(path):
 
 class RunManager:
  def __init__(self,directory=None,launcher=None,preflight=preflight):
-  self.root=Path(directory or ROOT/'runtime');self.root.mkdir(exist_ok=True,parents=True);self.lock=threading.RLock();self.processes={};self.launcher=launcher;self.preflight=preflight
+  self.root=Path(directory or ROOT/'runtime');self.root.mkdir(exist_ok=True,parents=True);self.lock=threading.RLock();self.processes={};self.cache={};self.launcher=launcher;self.preflight=preflight
   for path in self.root.glob('runs/*/job.json'):
    self._reconcile(path.parent)
    job=readjson(path,{})
@@ -162,10 +175,16 @@ class RunManager:
    job.update(state='INTERRUPTED' if meta.get('interrupted') else ('COMPLETED' if meta.get('exit_code')==0 and (directory/'summary.json').exists() else 'PROCESS_ERROR'),ended_utc=meta['ended_utc'],exit_code=meta.get('exit_code'));atomic(directory/'job.json',job)
  def start(self,value):
   plan=validate_plan(value)
+  busy='An Android run is already active. Stop or wait for it before starting another.'
   with self.lock:
-   if any(j['state'] not in TERMINAL for j in self.jobs()):raise RuntimeError('An Android run is already active. Stop or wait for it before starting another.')
-   health=self.preflight()
-   if not health.get('ready'):raise RuntimeError('Environment is not ready. Check the readiness panel before starting.')
+   if any(j['state'] not in TERMINAL for j in self.jobs()):raise RuntimeError(busy)
+  # The readiness check runs adb and Appium probes (tens of seconds at worst), so it runs
+  # without the lock; other requests keep working meanwhile. The active-run check repeats
+  # under the lock, so two concurrent starts still create only one run.
+  health=self.preflight()
+  if not health.get('ready'):raise RuntimeError('Environment is not ready. Check the readiness panel before starting.')
+  with self.lock:
+   if any(j['state'] not in TERMINAL for j in self.jobs()):raise RuntimeError(busy)
    id=datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')+'_'+uuid.uuid4().hex[:8];directory=self.root/'runs'/id;directory.mkdir(parents=True,exist_ok=False)
    job={'id':id,'state':'RUNNING','plan':plan,'started_utc':utc(),'scope':'NEW_DEMO_RUN_NOT_FORMAL114','planned':len(plan['cases'])*(2 if plan['app']=='both' else 1)*plan['repeats'],'pid':None,'capture_label':'Continuous current-device mirror; saved screenshots are separate evidence'};atomic(directory/'job.json',job)
    authored=[p for name in ('console_core.py','server.py','live_services.py','live_worker.py') if (p:=ROOT/name).exists()]+[p for p in (ROOT/'static').rglob('*') if p.is_file()]
@@ -206,15 +225,25 @@ class RunManager:
     pass
    else:self.mark_ended(id,interrupted=True)
    return readjson(directory/'job.json')
+ def _parsed(self,path,loader):
+  # The page polls twice a second; re-parse a file only when its size or time changed.
+  try:st=path.stat();key=(st.st_size,st.st_mtime_ns)
+  except FileNotFoundError:return []
+  with self.lock:
+   hit=self.cache.get(path)
+   if hit and hit[0]==key:return list(hit[1])
+  value=loader(path)
+  with self.lock:self.cache[path]=(key,value)
+  return list(value)
  def snapshot(self,id):
-  d=self.directory(id);self._reconcile(d);job=readjson(d/'job.json');all_events=events(d/'execution.log');rows=loadcsv(d/'attempts.csv');turns=events(d/'turn_checkpoints.jsonl');details=events(d/'response_details.jsonl')
+  d=self.directory(id);self._reconcile(d);job=readjson(d/'job.json');all_events=self._parsed(d/'execution.log',events);rows=self._parsed(d/'attempts.csv',loadcsv);turns=self._parsed(d/'turn_checkpoints.jsonl',events);details=self._parsed(d/'response_details.jsonl',events)
   active=next((e for e in reversed(all_events) if e.get('event')=='CONVERSATION_PREPARE'),None)
   return {**job,'events':all_events[-120:],'attempts':rows,'turns':turns,'details':details,'summary':readjson(d/'summary.json'),'active_attempt':active,'elapsed_seconds':round((datetime.now(timezone.utc)-datetime.fromisoformat(job['started_utc'])).total_seconds()) if job['state'] not in TERMINAL else None,'counts':{s:sum(r['status']==s for r in rows) for s in ('PASS','FAIL','REVIEW','ERROR')}}
  def generate(self):
   with self.lock:
    id=uuid.uuid4().hex[:12];folder=self.root/'generation'/id;folder.mkdir(parents=True,exist_ok=False)
    # Existing generator is independent of Appium and writes only this new folder.
-   sys.path.insert(0,str(ROOT/'engine'))
+   use_engine()
    from group7_auto.augmentation import export_generated_cases
    from group7_auto.model_based import export_executable
    begin=time.monotonic();a=export_generated_cases(folder/'generated_candidates.csv');b=export_executable(folder/'model_based_extension.csv');result={'id':id,'candidates':len(a),'executable':len(b),'elapsed_seconds':round(time.monotonic()-begin,6),'created_utc':utc(),'definitions':b,'coordinates':a,'remote_llm_call':False};atomic(folder/'generation.json',result);return result
@@ -235,6 +264,4 @@ class RunManager:
   recorded=next((t.get('captured_at_utc') for t in snap['turns'] if t.get('attempt_id')==active['attempt_id'] and t.get('conversation')==conversation and t.get('turn')==turn),None)
   captured=recorded if recorded and stage==FINAL_STAGE else datetime.fromtimestamp(p.stat().st_mtime,timezone.utc).isoformat()
   return {'path':str(p.relative_to(d)),'captured_utc':captured,'capture_time_source':'turn_checkpoint' if recorded and stage==FINAL_STAGE else 'file_modified_time','attempt_id':active['attempt_id'],'label':'Saved evidence frame — capture time shown','bytes':p.read_bytes()}
- def definitions(self):
-  sys.path.insert(0,str(ROOT/'engine'));from group7_auto.model_based import concretize
-  return concretize()
+ def definitions(self):return case_definitions()

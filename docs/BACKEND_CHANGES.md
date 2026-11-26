@@ -9,3 +9,11 @@ Changes to the local console server (`server.py`, `console_core.py`, `live_worke
 - **Configured Appium address.** The readiness check and each run's environment record use `server_url` from `engine/data/android_appium_config.local.json` (default `http://127.0.0.1:4723`), the same address the engine connects to.
 
 Checks: 50 console tests (5 new; the Host and saved-frame tests fail on the previous code), 197 engine tests and 9 view-logic tests pass. A real GEN-009 run (ChatGPT, 1 repeat) completed PASS through the updated server; its environment record names the configured server and its saved frame is the final capture with the checkpoint time. Frontend check runs are not added to any published count.
+
+## Fewer repeated work and no long lock
+
+- **Case definitions built once.** The four executable definitions are built on first use and reused; each caller gets its own copy. The engine folder is added to the import path once instead of on every call (it previously grew by one entry per call).
+- **Readiness check outside the run lock.** Starting a run checks for an active run, runs the readiness probes (adb and Appium, tens of seconds at worst) without holding the lock, then checks again under the lock before creating the run. Other requests such as the saved-run list no longer wait, and two concurrent starts still create only one run.
+- **Parsed run files reused between polls.** The execution log, outcome table, checkpoints and response details are re-read only when a file's size or modification time changes.
+
+Checks: 54 console tests (4 new, all failing on the previous code), 197 engine tests and 9 view-logic tests pass. A real GEN-009 run (ChatGPT, 1 repeat) passed through the updated server, and its result row moved WAITING → RUNNING → PASS live. Check run only; not added to any published count.
