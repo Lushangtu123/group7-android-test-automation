@@ -55,6 +55,7 @@
     <a href="/library/index.html#repeat" target="_blank" rel="noopener">Original three-round comparison ↗</a>
   </div>
   <ul id="checks" class="checks" aria-label="Readiness checks" hidden></ul>
+  <div id="connection" class="connection" role="alert" hidden><span id="connection-text"></span><button type="button" id="reload" class="primary">Reload page</button></div>
   <div id="alert" role="alert" hidden></div>
 
   <section class="workbench">
@@ -93,7 +94,7 @@
           <button id="python-tab" type="button" class="selected" role="tab" aria-selected="true" aria-controls="logs" tabindex="0">Python events</button>
           <button id="appium-tab" type="button" role="tab" aria-selected="false" aria-controls="logs" tabindex="-1">Appium HTTP log</button>
         </div>
-        <span id="log-status">ACTUAL OUTPUT · IDS SHORTENED</span>
+        <span id="log-status">ACTUAL OUTPUT · LOCAL TIME · IDS SHORTENED</span>
       </div>
       <pre id="logs" role="tabpanel" aria-labelledby="python-tab" tabindex="0">Waiting for the real execution process…</pre>
     </div>

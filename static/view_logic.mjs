@@ -90,3 +90,21 @@ export function plannedRows(job, running) {
   });
   return rows;
 }
+
+// All times on the page are shown in the viewer's local time, 24-hour, so logs, frames and
+// saved runs line up. withMs adds milliseconds for log lines.
+export function clock(date, withMs = false) {
+  const d = date instanceof Date ? date : new Date(date);
+  if (Number.isNaN(d.getTime())) return '';
+  const pad = (n, w = 2) => String(n).padStart(w, '0');
+  const base = `${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())}`;
+  return withMs ? `${base}.${pad(d.getMilliseconds(), 3)}` : base;
+}
+
+// Appium writes "YYYY-MM-DD HH:MM:SS:mmm" in UTC. Convert that prefix to local time and
+// shorten session ids; lines without the prefix are only shortened.
+export function localAppiumLine(line) {
+  const m = /^(\d{4}-\d{2}-\d{2}) (\d{2}:\d{2}:\d{2}):(\d{3})/.exec(String(line));
+  const rest = compactAppiumLine(String(line).slice(m ? m[0].length : 0));
+  return m ? clock(new Date(`${m[1]}T${m[2]}.${m[3]}Z`), true) + rest : rest;
+}

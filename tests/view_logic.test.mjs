@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { currentTurn, frameState, turnInfo, compactAppiumLine, earlierTurns, holdFrame, plannedRows } from '../static/view_logic.mjs';
+import { currentTurn, frameState, turnInfo, compactAppiumLine, earlierTurns, holdFrame, plannedRows, clock, localAppiumLine } from '../static/view_logic.mjs';
 test('a matching repeated prompt never reuses the earlier attempt answer', () => {
  const job={events:[{event:'TURN_START',attempt_id:'a',turn:'t',prompt:'same'}, {event:'TURN_DONE',attempt_id:'a',turn:'t',response:'old'}, {event:'TURN_START',attempt_id:'b',turn:'t',prompt:'same'}]};
  assert.equal(currentTurn(job).answer,null);
@@ -52,4 +52,12 @@ test('planned rows follow the worker order and mark running, waiting and done',(
  assert.equal(rows[1].attemptId,'a2');
  assert.deepEqual(plannedRows(job,false).map(r=>r.state),['DONE','STOPPED','NOT_RUN','NOT_RUN']);
  assert.equal(plannedRows({attempts:[{application:'gemini',case_id:'X',repeat:'1'}]},false)[0].state,'DONE');
+});
+test('Appium UTC timestamps are shown in local 24-hour time',()=>{
+ const line='2026-11-26 03:46:10:813 [HTTP] <-- GET /session/414b9248-0627-4b97-bd1a-44ab59496e6b/source 200 35 ms - 101098';
+ const local=clock(new Date(Date.UTC(2026,10,26,3,46,10,813)),true);
+ assert.match(local,/^\d{2}:\d{2}:\d{2}\.813$/);
+ assert.equal(localAppiumLine(line),local+' [HTTP] <-- GET /session/414b9248…/source 200 35 ms - 101098');
+ assert.equal(localAppiumLine('no timestamp here'),'no timestamp here');
+ assert.equal(clock('not a date'),'');
 });

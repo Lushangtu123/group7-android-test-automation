@@ -52,3 +52,13 @@ Browser files only.
 - When the current prompt or answer is cut off by its box, a "Full answer" button opens the whole turn.
 
 Checks: 45 console and 8 JavaScript tests pass. One real GEN-009 run (ChatGPT + Gemini, 1 repeat) completed 2/2 PASS; the table moved through WAITING, RUNNING and PASS for each row. Frontend check only; not added to any published count.
+
+## One place to run, clear connection state, local times
+
+Browser files only (workbench and evidence library).
+
+- The evidence library no longer starts or stops real runs. Its "Run automation" view keeps saved runs and recorded evidence and links to the live workbench, which is now the only place that starts or stops Appium runs. Both pages link to each other from the header.
+- When the local server stops answering, or was restarted so the page's session token is stale, the workbench shows a banner with a Reload button instead of failing silently. The restarted-server notice stays until the page is reloaded.
+- All times are shown in the viewer's local time, 24-hour: Python events, Appium HTTP lines (Appium writes UTC; converted), frame and saved-frame times, saved-run labels and the library's event list. The log bar names the time zone.
+
+Checks: 45 console and 9 JavaScript tests pass (the time test also passes with TZ=UTC). Browser: Appium and Python events for the same moment now read the same local time; the banner appeared when the server was stopped, changed to the restart notice after it came back, stayed steady, and cleared on reload; the library's five views load with no failed requests or overflow. No Android tests were run for this change.

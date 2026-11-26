@@ -3,3 +3,5 @@
 [hidden]{display:none!important}.mode{color:var(--ink)}.mode.live{color:white}.device-frame img{object-fit:cover;object-position:center 30%;cursor:zoom-in}.frame-meta button{color:#a6c7a8;background:none;border:0;text-decoration:underline;font:inherit;cursor:pointer}
 
 .current-answer{font-size:23px;line-height:1.5;color:#cdeac4;white-space:pre-wrap;overflow-wrap:anywhere;max-height:160px;overflow:auto}.projector .current-answer{font-size:30px}.projector .masthead{height:78px}.projector .steps{height:54px}.projector main{padding-top:26px}.projector .section-head{margin-bottom:18px}.projector .section-head h1{font-size:46px}.projector .section-head p{font-size:23px;max-width:850px;margin-top:10px}.projector .eyebrow{margin-bottom:12px}.projector .setup-line{padding:10px 18px;margin-bottom:16px}.projector .setup-line strong,.projector .profiles button{font-size:18px}.projector .log-feed{max-height:130px}.projector .log-pane{gap:16px}.projector .log-label{font-size:18px}.projector .device-frame{max-width:330px;height:440px}.projector .frame-meta{font-size:16px}
+
+.workbench-link{margin-right:16px;text-decoration:none;color:var(--ink)}

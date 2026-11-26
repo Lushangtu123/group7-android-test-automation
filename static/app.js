@@ -1,4 +1,4 @@
-import { currentTurn, frameState, turnInfo, compactAppiumLine, earlierTurns, holdFrame, plannedRows } from './view_logic.mjs';
+import { currentTurn, frameState, turnInfo, compactAppiumLine, earlierTurns, holdFrame, plannedRows, clock, localAppiumLine } from './view_logic.mjs';
 
 const $ = s => document.querySelector(s);
 const names = { chatgpt: 'ChatGPT', gemini: 'Gemini' };
@@ -17,14 +17,34 @@ const state = {
 
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const appName = a => names[a] || a || '';
+// Short name of the viewer's time zone (e.g. PST), shown next to the logs.
+const ZONE = (new Date().toLocaleTimeString('en-US', { timeZoneName: 'short' }).split(' ').pop() || 'LOCAL').toUpperCase();
 const isActive = () => !!state.job && !terminal.has(state.job.state);
 
+// One visible notice when the local server stops answering or was restarted (its session
+// token changed), instead of silent failed requests in the background.
+function connection(problem) {
+  if ((state.connectionProblem || '') === (problem || '')) return;
+  state.connectionProblem = problem || '';
+  $('#connection').hidden = !problem;
+  $('#connection-text').textContent = problem || '';
+}
+
 async function api(path, body) {
-  const response = await fetch(path, {
-    method: body === undefined ? 'GET' : 'POST',
-    headers: { 'X-Demo-Token': state.token, 'Content-Type': 'application/json' },
-    body: body === undefined ? undefined : JSON.stringify(body),
-  });
+  let response;
+  try {
+    response = await fetch(path, {
+      method: body === undefined ? 'GET' : 'POST',
+      headers: { 'X-Demo-Token': state.token, 'Content-Type': 'application/json' },
+      body: body === undefined ? undefined : JSON.stringify(body),
+    });
+  } catch {
+    connection('The local workbench server is not responding. Restart it with Start Live Demo.command, then reload this page.');
+    throw Error('Local server not responding');
+  }
+  // A changed session token only goes away with a reload, so that notice stays once shown.
+  if (response.status === 403 && state.token) state.staleToken = true;
+  connection(state.staleToken ? 'The local workbench server was restarted. Reload this page to reconnect.' : '');
   let data;
   try { data = await response.json(); }
   catch { throw Error(`Local server returned ${response.status} without a readable reply`); }
@@ -76,7 +96,8 @@ function controls() {
 }
 
 function runLabel(j) {
-  const when = new Date(j.started_utc).toLocaleString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+  const started = new Date(j.started_utc);
+  const when = started.toLocaleDateString([], { month: 'short', day: 'numeric' }) + ' ' + clock(started).slice(0, 5);
   const plan = j.plan || {};
   const cases = (plan.cases || []).map(c => caseLabel(c).split(' · ')[0]).join(', ') || 'Unknown case';
   const outcome = j.state === 'COMPLETED' ? '' : ' · ' + j.state;
@@ -204,7 +225,7 @@ function pythonLine(line) {
   try { e = JSON.parse(line); } catch { return esc(line); }
   const tone = e.error ? 'bad' : (EVENT_TONE[e.event] || 'ev');
   const parts = [e.app && appName(e.app), e.attempt_id, e.turn].filter(Boolean).map(esc).join(' / ');
-  let out = `<span class="t">${esc(e.utc?.slice(11, 23) || '')}</span> <span class="${tone}">${esc(e.event)}</span>${parts ? ' <span class="dim">/</span> ' + parts : ''}`;
+  let out = `<span class="t">${esc(e.utc ? clock(e.utc, true) : '')}</span> <span class="${tone}">${esc(e.event)}</span>${parts ? ' <span class="dim">/</span> ' + parts : ''}`;
   if (e.event === 'STAGE_START') out += ' <span class="dim">/ ' + esc(JSON.stringify(e.plan)) + '</span>';
   if (e.error) out += '\n  <span class="bad">' + esc(e.error) + '</span>';
   if (e.event === 'TURN_DONE') out += '\n  ' + esc(e.response);
@@ -212,8 +233,8 @@ function pythonLine(line) {
 }
 
 function appiumLine(line) {
-  return esc(compactAppiumLine(line))
-    .replace(/^(\d{2}:\d{2}:\d{2}:\d{3})/, '<span class="t">$1</span>')
+  return esc(localAppiumLine(line))
+    .replace(/^(\d{2}:\d{2}:\d{2}\.\d{3})/, '<span class="t">$1</span>')
     .replace(/ (\d{3}) (\d+ ms)/, (_, code, ms) => ` <span class="${code < 300 ? 'ok' : code < 400 ? 'warn' : 'bad'}">${code}</span> <span class="dim">${ms}</span>`);
 }
 
@@ -247,7 +268,7 @@ async function tail() {
     if (id === state.id) {
       // Logs arrive in pages; keep reading quickly until a request brings nothing new.
       state.lastTail = changed ? 0 : Date.now();
-      $('#log-status').textContent = 'ACTUAL OUTPUT · IDS SHORTENED';
+      $('#log-status').textContent = 'ACTUAL OUTPUT · ' + ZONE + ' · IDS SHORTENED';
       if (changed || !$('#logs').childElementCount) renderLogs();
     }
   } catch { $('#log-status').textContent = 'LOG CONNECTION DELAYED'; }
@@ -304,7 +325,7 @@ function camera() {
   $('#frame-rate').textContent = state.mirror.fps ? state.mirror.fps.toFixed(1) + ' fps' : '— fps';
   if (mode === 'saved') {
     if ($('#device').src !== state.saved.url) { $('#device').src = state.saved.url; $('#large-device').src = state.saved.url; }
-    $('#frame-time').textContent = 'Saved ' + new Date(state.saved.captured).toLocaleTimeString() + ' · not live';
+    $('#frame-time').textContent = 'Saved ' + clock(state.saved.captured) + ' · not live';
   }
   $('#device').hidden = mode === 'curtain';
   $('#device').classList.toggle('frozen', mode === 'ended' || mode === 'saved' || mode === 'held');
@@ -363,7 +384,7 @@ async function frame() {
         if (old) URL.revokeObjectURL(old);
         const captured = response.headers.get('X-Frame-Captured-Utc');
         const delay = Date.now() - Date.parse(captured);
-        $('#frame-time').textContent = `${new Date(captured).toLocaleTimeString()} · ${(delay / 1000).toFixed(2)}s capture→view`;
+        $('#frame-time').textContent = `${clock(captured)} · ${(delay / 1000).toFixed(2)}s capture→view`;
         // Bounded numeric diagnostics only. The preview bytes are never recorded here.
         window.liveFrameMetrics = window.liveFrameMetrics || [];
         window.liveFrameMetrics.push({ received: Date.now(), captured, delay_ms: delay, sequence: state.sequence, attempt_id: attempt });
@@ -494,6 +515,7 @@ $('#generate').onclick = async () => {
 };
 $('#zoom').onclick = () => { $('#frame-dialog').showModal(); };
 $('#answer-more').onclick = showCurrentAnswer;
+$('#reload').onclick = () => location.reload();
 window.addEventListener('resize', () => updateAnswerMore());
 function setFocus(on) {
   document.body.classList.toggle('focus', on);
