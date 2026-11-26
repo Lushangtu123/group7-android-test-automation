@@ -44,7 +44,7 @@ The live view hides navigation and unverified/account pages. A stale view is lab
 - [Updated English execution report](reference/documents/REPORT_EN_UPDATED.md), [cost records](evidence/formal/statistics/execution_costs.json), and [complexity statistics](reference/complexity.json).
 - [Live-workbench acceptance report](verification/DELIVERY_REPORT.json) and [visual revision checks](verification/VISUAL_QA.json).
 
-The code and light visual skin are current. Earlier execution snapshots retain the source and screenshots actually used for those runs, including the earlier dark skin. The later visual revision changed only the header and CSS and did not execute additional Android tests. See [visual provenance](VISUAL_REFINEMENT.md).
+The code and light visual skin are current. Earlier execution snapshots retain the source and screenshots actually used for those runs, including the earlier dark skin. The later visual revision changed only the header and CSS and did not execute additional Android tests. A subsequent frontend usability revision changed the browser HTML, CSS and JavaScript only; it was checked with one separate two-attempt demo run that is not part of the published evidence. See [visual provenance](VISUAL_REFINEMENT.md).
 
 ## Download the submission packages and Demo
 
@@ -64,7 +64,7 @@ node --test tests/view_logic.test.mjs
 PYTHONPATH=engine python3 -m unittest discover -s engine/tests
 ```
 
-Recorded local validation: **45 console tests, 3 JavaScript checks and 197 engine tests**. These are local checks, not Android test attempts. Node is needed only for the JavaScript checks, not for serving the workbench.
+Recorded local validation: **45 console tests, 5 JavaScript checks and 197 engine tests**. These are local checks, not Android test attempts. Node is needed only for the JavaScript checks, not for serving the workbench.
 
 To start a new independent execution of the original 19-case catalog, use a fresh output directory:
 
