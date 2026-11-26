@@ -66,7 +66,7 @@ node --test tests/view_logic.test.mjs
 PYTHONPATH=engine python3 -m unittest discover -s engine/tests
 ```
 
-Recorded local validation: **50 console tests, 9 JavaScript checks and 197 engine tests**. These are local checks, not Android test attempts. GitHub Actions runs the same checks and the checksum manifest on every pull request (`.github/workflows/tests.yml`). Node is needed only for the JavaScript checks, not for serving the workbench.
+Recorded local validation: **54 console tests, 9 JavaScript checks and 197 engine tests**. These are local checks, not Android test attempts. GitHub Actions runs the same checks and the checksum manifest on every pull request (`.github/workflows/tests.yml`). Node is needed only for the JavaScript checks, not for serving the workbench.
 
 To start a new independent execution of the original 19-case catalog, use a fresh output directory:
 
