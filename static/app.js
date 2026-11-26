@@ -42,7 +42,7 @@ function caseLabel(id) {
 
 function updatePlan() {
   const count = Number($('#repeats').value) * ($('#application').value === 'both' ? 2 : 1);
-  $('#plan').textContent = count + ' planned executions';
+  $('#plan').textContent = count + (count === 1 ? ' planned execution' : ' planned executions');
   renderDefinition();
 }
 
@@ -98,13 +98,13 @@ function renderJob(job) {
   $('#answer').className = 'answer ' + (answer === null ? 'waiting' : (attempt?.status || ''));
   $('#verdict').innerHTML = attempt ? pill(attempt.status) : '';
   $('#attempt').textContent = start ? `ATTEMPT ${start.attempt_id} / ${start.turn}` : 'No attempt ID assigned.';
-  $('#progress').textContent = `${job.state} · ${job.attempts.length} / ${job.planned} executions${job.elapsed_seconds !== null ? ' · ' + job.elapsed_seconds + 's' : ''}`;
+  $('#progress').textContent = `${job.state} · ${job.attempts.length} / ${job.planned} execution${job.planned === 1 ? '' : 's'}${job.elapsed_seconds !== null ? ' · ' + job.elapsed_seconds + 's' : ''}`;
   $('#counts').innerHTML = Object.entries(job.counts).map(([s, n]) =>
     `<span class="${n > 0 ? esc(s) : ''}">${esc(s)} <b>${Number(n)}</b></span>`
   ).join('');
   $('#outcomes').innerHTML = job.attempts.length
     ? job.attempts.map(r => `<tr><td>${esc(appName(r.application))} / repeat ${esc(r.repeat)}</td><td><button type="button" data-attempt="${esc(r.attempt_id)}">${esc(r.attempt_id)} ↗</button></td><td>${esc(r.completed_turns)} / ${esc(r.planned_turns)} turns</td><td>${pill(r.status)}</td><td>${Number(r.duration_seconds).toFixed(1)}s</td></tr>`).join('')
-    : '<tr><td colspan="5">Appium is running. No case outcome has been recorded yet.</td></tr>';
+    : `<tr><td colspan="5">${terminal.has(job.state) ? 'No case outcome was recorded before the run ended.' : 'Appium is running. No case outcome has been recorded yet.'}</td></tr>`;
   $('#export').hidden = !terminal.has(job.state);
   $('#export').href = '/api/jobs/' + encodeURIComponent(job.id) + '/export';
   controls();
@@ -220,7 +220,7 @@ function camera() {
   const finished = !!state.job && state.job.id === state.id && terminal.has(state.job.state);
   let mode = 'curtain';
   if (status === 'LIVE' && liveBlob) mode = 'live';
-  else if (['OFF', 'ENDED'].includes(status) && liveBlob) mode = 'ended';
+  else if (['OFF', 'ENDED'].includes(status) && liveBlob) { mode = 'ended'; status = 'ENDED'; }
   else if (finished && state.saved?.id === state.id) { mode = 'saved'; status = 'SAVED_FRAME'; }
   else if (finished) status = 'SAVED';
 
