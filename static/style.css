@@ -157,6 +157,9 @@ select {
   inset: auto 0 0; background: #e8eee3f5; padding: 11px; font-size: 18px; color: #3d5c3b; border-top: 1px solid #cedbc7;
 }
 .device-stage #curtain.banner strong { font-weight: 600; }
+/* The top banner takes the zoom button's corner, so the button moves to the bottom. */
+.device-stage #curtain.banner.top:not([hidden]) ~ #zoom { top: auto; bottom: 14px; }
+.device-stage #curtain.banner.top { inset: 0 0 auto; border-top: 0; border-bottom: 1px solid #cedbc7; background: #fbf3e2f2; color: #6b5114; }
 #zoom { position: absolute; right: 14px; top: 14px; background: #fbfcf6ef; color: #335a3a; font-size: 17px; padding: 8px 12px; z-index: 3; box-shadow: 0 2px 8px #2d40320b; }
 
 .frame-line {
@@ -191,6 +194,23 @@ select {
 .answer.REVIEW { border-left-color: #d9bf72; }
 .answer.FAIL, .answer.ERROR { border-left-color: #d79a7f; }
 .answer.waiting { font-size: 24px; color: var(--faint); font-weight: 400; }
+/* Idle scenario preview */
+.preview .conv { margin-top: 12px; }
+.preview-prompts { margin: 8px 0 16px; padding-left: 1.6em; font-size: 24px; line-height: 1.4; }
+.preview-prompts li { margin-bottom: 6px; }
+.preview-prompts li::marker { font: 15px var(--mono); color: var(--muted); }
+.preview-rule { margin: 6px 0 12px; font-size: 19px; line-height: 1.45; color: var(--ink); }
+.preview-note { margin: 0; font-size: 16px; color: var(--muted); }
+
+/* Earlier turns of the running attempt */
+.history { margin: 0 0 12px; border: 1px solid var(--line); border-radius: 6px; background: #f6f8f1; }
+.history summary { cursor: pointer; padding: 6px 12px; font: 14px var(--mono); letter-spacing: .03em; color: var(--muted); }
+.history ol { list-style: none; margin: 0; padding: 0 12px 8px; max-height: 132px; overflow: auto; }
+.history li { display: grid; grid-template-columns: 34px minmax(0, 1fr) minmax(0, 1fr); gap: 12px; align-items: baseline; padding: 4px 0; border-top: 1px solid #e3e8dc; font-size: 17px; }
+.history .h-turn { font: 13px var(--mono); color: var(--muted); }
+.history .h-q, .history .h-a { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.history .h-a { color: var(--green); }
+
 #attempt { margin-top: 14px; font: 15px var(--mono); color: var(--muted); overflow-wrap: anywhere; }
 
 .log-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 12px; border-top: 1px solid var(--line); padding: 8px 16px; background: #f0f3ea; }
@@ -298,6 +318,11 @@ dialog p { font-size: 24px; }
   .answer { font-size: 25px; max-height: 90px; }
   .answer.waiting { font-size: 24px; }
   #attempt { margin-top: 8px; }
+  .turn-content { max-height: 68%; }
+  .history { margin-bottom: 8px; }
+  .history summary { padding: 3px 10px; font-size: 13px; }
+  .history ol { max-height: 56px; }
+  .history li { font-size: 15px; padding: 2px 0; }
   #logs { min-height: 110px; padding-top: 10px; padding-bottom: 10px; }
   #curtain h1 { font-size: 32px; margin: 12px 0 8px; }
   #curtain p { font-size: 19px; margin-bottom: 18px; }

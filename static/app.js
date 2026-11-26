@@ -1,4 +1,4 @@
-import { currentTurn, frameState, turnInfo, compactAppiumLine } from './view_logic.mjs';
+import { currentTurn, frameState, turnInfo, compactAppiumLine, earlierTurns, holdFrame } from './view_logic.mjs';
 
 const $ = s => document.querySelector(s);
 const names = { chatgpt: 'ChatGPT', gemini: 'Gemini' };
@@ -11,7 +11,7 @@ const state = {
   token: '', data: null, id: null, job: null, busy: false, source: 'python',
   logs: { python: [], appium: [] }, cursors: { python: 0, appium: 0 },
   mirror: { state: 'OFF' }, received: 0, sequence: 0, blob: null, frameJob: null,
-  saved: null, savedFor: null, cameraKey: '',
+  saved: null, savedFor: null, cameraKey: '', frameAttempt: null, historyKey: '',
   polling: false, logging: false, framing: false, lastPoll: 0, lastTail: 0,
 };
 
@@ -44,6 +44,27 @@ function updatePlan() {
   const count = Number($('#repeats').value) * ($('#application').value === 'both' ? 2 : 1);
   $('#plan').textContent = count + (count === 1 ? ' planned execution' : ' planned executions');
   renderDefinition();
+  renderPreview();
+}
+
+// Before any run is selected, show what the chosen scenario will send and how it is judged.
+function renderPreview() {
+  const idle = !state.id;
+  $('#preview').hidden = !idle;
+  $('#live-turn').hidden = idle;
+  if (!idle) return;
+  const d = state.data?.definitions.find(d => d.case_id === $('#case').value);
+  $('#current-app').textContent = 'PREVIEW · ' + caseLabel($('#case').value);
+  if (!d) { $('#preview').textContent = 'Scenario details are loading…'; return; }
+  const groups = d.conversations;
+  const total = groups.reduce((n, g) => n + g.length, 0);
+  let n = 0;
+  $('#preview').innerHTML = `
+    <div class="prompt-head"><span class="field-label">SCENARIO PREVIEW · ${esc(d.feature || '')}</span><span class="turn-position">${total} prompt${total === 1 ? '' : 's'} · ${esc(appLabels[$('#application').value])}</span></div>
+    ${groups.map((g, i) => `${groups.length > 1 ? `<div class="field-label conv">CONVERSATION ${i + 1}</div>` : ''}<ol class="preview-prompts" start="${n + 1}">${g.map(p => { n += 1; return `<li>${esc(p)}</li>`; }).join('')}</ol>`).join('')}
+    <div class="field-label">PASS RULE</div>
+    <p class="preview-rule">${esc(d.expected || d.oracle)}</p>
+    <p class="preview-note">Nothing is sent until you press Start real demo.</p>`;
 }
 
 function controls() {
@@ -84,7 +105,24 @@ function renderTurn(start) {
   ).join('<i class="gap"></i>');
 }
 
+function renderHistory(job, start) {
+  const rows = earlierTurns(job, start);
+  const key = (start?.attempt_id || '') + ':' + rows.length;
+  if (key === state.historyKey) return;
+  state.historyKey = key;
+  $('#history').hidden = !rows.length;
+  $('#history-count').textContent = rows.length;
+  $('#history-list').innerHTML = rows.map(r => {
+    const info = turnInfo(r.turn, state.data?.definitions.find(d => d.case_id === start.case));
+    return `<li><span class="h-turn">${info ? 'T' + info.overall : esc(r.turn)}</span><span class="h-q" title="${esc(r.prompt)}">${esc(r.prompt)}</span><span class="h-a" title="${esc(r.response)}">${esc(r.response)}</span></li>`;
+  }).join('');
+  // Keep the newest finished turn in view when the list is taller than its box.
+  $('#history-list').scrollTop = $('#history-list').scrollHeight;
+}
+
 function renderJob(job) {
+  $('#preview').hidden = true;
+  $('#live-turn').hidden = false;
   const wasActive = state.lastState && !terminal.has(state.lastState);
   state.lastState = job.state;
   const { start, answer } = currentTurn(job);
@@ -93,6 +131,7 @@ function renderJob(job) {
   $('#run-state').textContent = job.state;
   $('#prompt').textContent = start?.prompt || 'Appium is preparing the app and checking the current conversation.';
   renderTurn(start);
+  renderHistory(job, start);
   const attempt = job.details.find(d => d.attempt_id === start?.attempt_id);
   $('#answer').textContent = answer ?? 'Waiting for a validated response for this turn.';
   $('#answer').className = 'answer ' + (answer === null ? 'waiting' : (attempt?.status || ''));
@@ -212,6 +251,12 @@ const CURTAIN = {
   ENDED: ['Run finished.', 'No live frame was published for this selection.'],
   SAVED: ['Saved run.', 'No verified device frame was kept for this run. Its results and logs are shown alongside.'],
 };
+// Shown over the dimmed last frame while Appium works on a screen that is not published.
+const HELD_TEXT = {
+  PRIVACY: 'Appium is working · showing the last verified frame',
+  STARTING: 'Connecting · showing the last verified frame',
+  DELAYED: 'Stream delayed · showing the last frame',
+};
 const STATUS_TEXT = { OFF: 'VIEW OFF', ENDED: 'RUN FINISHED', LIVE: 'DEVICE LIVE', PRIVACY: 'VIEW GUARDED', STARTING: 'CONNECTING', DELAYED: 'STREAM DELAYED', DISCONNECTED: 'DEVICE DISCONNECTED', SAVED: 'SAVED RUN', SAVED_FRAME: 'SAVED FRAME' };
 
 function camera() {
@@ -220,6 +265,7 @@ function camera() {
   const finished = !!state.job && state.job.id === state.id && terminal.has(state.job.state);
   let mode = 'curtain';
   if (status === 'LIVE' && liveBlob) mode = 'live';
+  else if (liveBlob && holdFrame(status, state.frameAttempt, state.job?.active_attempt?.attempt_id)) mode = 'held';
   else if (['OFF', 'ENDED'].includes(status) && liveBlob) { mode = 'ended'; status = 'ENDED'; }
   else if (finished && state.saved?.id === state.id) { mode = 'saved'; status = 'SAVED_FRAME'; }
   else if (finished) status = 'SAVED';
@@ -233,7 +279,7 @@ function camera() {
     $('#frame-time').textContent = 'Saved ' + new Date(state.saved.captured).toLocaleTimeString() + ' · not live';
   }
   $('#device').hidden = mode === 'curtain';
-  $('#device').classList.toggle('frozen', mode === 'ended' || mode === 'saved');
+  $('#device').classList.toggle('frozen', mode === 'ended' || mode === 'saved' || mode === 'held');
   $('#zoom').hidden = mode === 'curtain';
   $('#curtain').hidden = mode === 'live';
 
@@ -242,8 +288,12 @@ function camera() {
   if (key !== state.cameraKey) {
     state.cameraKey = key;
     const curtain = $('#curtain');
-    curtain.classList.toggle('banner', mode === 'ended' || mode === 'saved');
-    if (mode === 'ended') {
+    curtain.classList.toggle('banner', ['ended', 'saved', 'held'].includes(mode));
+    curtain.classList.toggle('top', mode === 'held');
+    if (mode === 'held') {
+      curtain.innerHTML = `<strong>${esc(HELD_TEXT[status] || HELD_TEXT.PRIVACY)}</strong>`;
+      $('#zoom-label').textContent = 'LAST VERIFIED FRAME · ' + status;
+    } else if (mode === 'ended') {
       curtain.innerHTML = '<strong>Run finished · last live frame</strong>';
       $('#zoom-label').textContent = 'LAST FRAME · NOT LIVE';
     } else if (mode === 'saved') {
@@ -279,7 +329,7 @@ async function frame() {
         if (id !== state.id) return;
         if (state.job?.active_attempt?.attempt_id && attempt !== state.job.active_attempt.attempt_id) return;
         const url = URL.createObjectURL(blob), old = state.blob;
-        state.blob = url; state.frameJob = id; state.received = Date.now();
+        state.blob = url; state.frameJob = id; state.frameAttempt = attempt; state.received = Date.now();
         state.sequence = Number(response.headers.get('X-Frame-Sequence'));
         $('#device').src = url; $('#large-device').src = url;
         if (old) URL.revokeObjectURL(old);
@@ -300,10 +350,23 @@ async function frame() {
 function select(id) {
   Object.assign(state, {
     id, job: null, lastState: null, logs: { python: [], appium: [] }, cursors: { python: 0, appium: 0 },
-    sequence: 0, received: 0, mirror: { state: 'OFF' }, frameJob: null, savedFor: null, lastPoll: 0, lastTail: 0,
+    sequence: 0, received: 0, mirror: { state: 'OFF' }, frameJob: null, frameAttempt: null, savedFor: null, lastPoll: 0, lastTail: 0, historyKey: '',
   });
   $('#frame-time').textContent = 'No device frame received.';
-  renderLogs(); camera(); poll(); tail();
+  renderPreview(); renderLogs(); camera(); poll(); tail();
+}
+
+// Back to the idle state: no run selected, scenario preview shown.
+function clearSelection() {
+  Object.assign(state, { id: null, job: null, lastState: null, mirror: { state: 'OFF' }, frameJob: null, frameAttempt: null, savedFor: null, historyKey: '' });
+  state.logs = { python: [], appium: [] };
+  $('#run-state').className = 'pill'; $('#run-state').textContent = 'IDLE';
+  $('#progress').textContent = 'No run started';
+  $('#counts').innerHTML = ['PASS', 'FAIL', 'REVIEW', 'ERROR'].map(s => `<span>${s} <b>0</b></span>`).join('');
+  $('#outcomes').innerHTML = '<tr><td colspan="5">Independent results appear here as each test finishes.</td></tr>';
+  $('#export').hidden = true;
+  $('#frame-time').textContent = 'No device frame received.';
+  renderLogs(); camera(); renderPreview(); controls();
 }
 
 async function check() {
@@ -384,7 +447,7 @@ function selectTab(source, focus) {
 $('#start').onclick = start;
 $('#stop').onclick = stop;
 $('#readiness').onclick = () => check().catch(e => error(e.message));
-$('#saved').onchange = e => { if (e.target.value) select(e.target.value); };
+$('#saved').onchange = e => { if (e.target.value) select(e.target.value); else clearSelection(); };
 for (const id of ['case', 'application', 'repeats']) $('#' + id).onchange = updatePlan;
 for (const source of ['python', 'appium']) $('#' + source + '-tab').onclick = () => selectTab(source);
 $('[role="tablist"]').addEventListener('keydown', e => {

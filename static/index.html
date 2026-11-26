@@ -70,6 +70,12 @@
     <div class="execution-column">
       <div class="current-head"><span id="current-app">AWAITING EXECUTION</span><span id="run-state" class="pill" aria-live="polite">IDLE</span></div>
       <div class="turn-content">
+        <div id="preview" class="preview">Loading scenario…</div>
+        <div id="live-turn" hidden>
+        <details id="history" class="history" open hidden>
+          <summary>Earlier turns in this attempt (<span id="history-count">0</span>)</summary>
+          <ol id="history-list"></ol>
+        </details>
         <div class="prompt-head">
           <span class="field-label">CURRENT PROMPT</span>
           <span id="turn-position" class="turn-position" hidden></span>
@@ -79,6 +85,7 @@
         <div class="answer-head"><span class="field-label">VALIDATED CAPTURE · CURRENT TURN</span><span id="verdict"></span></div>
         <div id="answer" class="answer waiting">Waiting for a real app response.</div>
         <div id="attempt">No attempt ID assigned.</div>
+        </div>
       </div>
       <div class="log-toolbar">
         <div role="tablist" aria-label="Actual log source">
