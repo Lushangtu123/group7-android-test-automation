@@ -48,7 +48,7 @@ The code and light visual skin are current. Earlier execution snapshots retain t
 
 ## Download the submission packages and Demo
 
-The current portable presentation project, with the revised workbench, is in the [v1.1.0 Release](https://github.com/Lushangtu123/group7-android-test-automation/releases/tag/v1.1.0). It differs from v1.0.0 only in the browser files and visual notes listed in its `PACKAGE_SOURCE_MAPPING.json`.
+The current portable presentation project, with the revised workbench, is in the [latest Release](https://github.com/Lushangtu123/group7-android-test-automation/releases/latest) (v1.2.0 at the time of writing). It differs from v1.0.0 only in the browser files and visual notes listed in its `PACKAGE_SOURCE_MAPPING.json`.
 
 Use the [v1.0.0 Release](https://github.com/Lushangtu123/group7-android-test-automation/releases/tag/v1.0.0) for the original portable presentation project, Core Evidence, Representative Evidence, Optimization Evidence, the additional live-run export, the preserved legacy console, and the existing optimized MP4. Large ZIPs and videos are release assets rather than Git history. The video is the existing reviewed recording; this upload does not create a new movie.
 
