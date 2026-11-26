@@ -25,3 +25,10 @@ A later revision changed only `static/index.html`, `static/style.css`, `static/a
 Checks: 45 console tests and 5 JavaScript checks pass. One real two-attempt run of GEN-009 (ChatGPT + Gemini, 1 repeat each) completed 2/2 PASS on the existing emulator and accounts. That run was a frontend check only; its evidence is kept outside this repository and is not added to the live-demo ledger or any published count.
 
 Earlier distributions (`Group7_Live_Demo.zip`, `Group7_Live_Demo_Presentation.zip`) and their checksum files are unchanged and still describe their own bytes.
+
+## Laptop screens and evidence library
+
+- Workbench: on screens up to 860px tall (for example 1366×768 and 1280×720) the header, controls and panels are tighter so the whole workbench fits in one screen; the controls stay on one row down to 1280px wide. Prompt and answer text stay at 24px or larger and logs at 20px. 1920×1080 is unchanged.
+- Evidence library (`static/library/style.css` only): the accent orange is darker (#bf4320) so white button text and orange labels reach 4.5:1 contrast, the REVIEW label colour is darker, and no text is smaller than 12px. Checked on all five library views at 1920×1080 and 375px wide with no horizontal overflow.
+
+No Android tests were run for this change.

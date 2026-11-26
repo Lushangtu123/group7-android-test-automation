@@ -261,15 +261,46 @@ dialog p { font-size: 24px; }
   main { padding: 20px 30px; }
   .control-bar { gap: 13px; }
   .control-bar button { font-size: 20px; }
-  #case { min-width: 300px; }
-  select { font-size: 21px; padding-right: 24px; }
-  .saved-runs { margin-left: 0; }
+  #case { min-width: 0; width: 270px; }
+  #saved { min-width: 0; width: 240px; }
+  select { font-size: 19px; padding-right: 24px; }
+  .control-bar button { padding: 11px 14px; }
   .system-line { flex-wrap: wrap; }
-  .workbench { height: clamp(600px, calc(100vh - 270px), 880px); }
+  .workbench { height: clamp(520px, calc(100vh - 250px), 880px); }
   .prompt { font-size: 27px; }
   .current-head, .panel-bar { font-size: 16px; }
   #counts { gap: 14px; }
   .result-heading { flex-wrap: wrap; }
+}
+@media (max-width: 1300px) {
+  #case { width: 230px; }
+  #saved { width: 200px; }
+  .control-bar button { font-size: 18px; padding: 11px 12px; }
+  .system-line { font-size: 15px; gap: 14px; }
+  .system-line a, .system-line button.link { font-size: 16px; }
+}
+/* Laptop screens (e.g. 1366×768, 1280×720): tighter chrome so the workbench fits in one screen.
+   Prompt/answer stay at 24px or larger and logs at 20px for projection. */
+@media (max-height: 860px) and (min-width: 761px) {
+  header { padding: 10px 0; }
+  .mark { width: 42px; height: 42px; font-size: 22px; }
+  .identity { font-size: 18px; }
+  .edition span { font-size: 16px; }
+  main { padding-top: 14px; padding-bottom: 20px; }
+  label { gap: 5px; font-size: 13px; }
+  select, .control-bar button { height: 44px; }
+  .system-line { margin: 8px 0 10px; font-size: 16px; }
+  .workbench { height: clamp(440px, calc(100vh - 210px), 760px); }
+  .panel-bar, .current-head { min-height: 44px; padding-top: 9px; padding-bottom: 9px; }
+  .frame-line { min-height: 36px; padding-top: 7px; padding-bottom: 7px; }
+  .turn-content { padding-top: 12px; padding-bottom: 12px; }
+  .prompt { font-size: 24px; margin: 6px 0 10px; max-height: 96px; }
+  .answer { font-size: 25px; max-height: 90px; }
+  .answer.waiting { font-size: 24px; }
+  #attempt { margin-top: 8px; }
+  #logs { min-height: 110px; padding-top: 10px; padding-bottom: 10px; }
+  #curtain h1 { font-size: 32px; margin: 12px 0 8px; }
+  #curtain p { font-size: 19px; margin-bottom: 18px; }
 }
 @media (max-width: 1000px) {
   .edition { display: none; }
