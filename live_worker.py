@@ -4,7 +4,7 @@ from datetime import datetime,timezone
 from pathlib import Path
 ROOT=Path(__file__).resolve().parent
 sys.path.insert(0,str(ROOT))
-from console_core import sdk_paths,atomic,utc,readjson,command
+from console_core import sdk_paths,atomic,utc,readjson,command,appium_server_url
 from live_services import screen_visibility,appium_log_source
 p=argparse.ArgumentParser();p.add_argument('--directory',type=Path,required=True);a=p.parse_args();out=a.directory.resolve();job=readjson(out/'job.json');plan=job['plan'];snap=out/'source_snapshot'
 shutil.copytree(ROOT/'engine',snap,ignore=shutil.ignore_patterns('__pycache__','reports'))
@@ -59,7 +59,7 @@ class Observed(LiveAdapter):
   raw=self.driver._driver if isinstance(self.driver,StoppableDriver) else self.driver
   raw.quit()
 def environment(label):
- d={'captured_utc':utc(),'python':sys.version,'appium_server':'http://127.0.0.1:4723','device':device,'android_release':command([adb,'-s',device,'shell','getprop','ro.build.version.release'])[1],'android_api':command([adb,'-s',device,'shell','getprop','ro.build.version.sdk'])[1],'packages':{}}
+ d={'captured_utc':utc(),'python':sys.version,'appium_server':appium_server_url(config),'device':device,'android_release':command([adb,'-s',device,'shell','getprop','ro.build.version.release'])[1],'android_api':command([adb,'-s',device,'shell','getprop','ro.build.version.sdk'])[1],'packages':{}}
  for pkg in ('com.openai.chatgpt','com.google.android.apps.bard','com.google.android.googlequicksearchbox','io.appium.settings'):
   code,text,error=command([adb,'-s',device,'shell','dumpsys','package',pkg]);d['packages'][pkg]={'exit_code':code,'version_lines':[s.strip() for s in text.splitlines() if 'versionCode=' in s or 'versionName=' in s],'error':error}
  try:

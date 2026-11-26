@@ -18,6 +18,14 @@ class HttpTests(unittest.TestCase):
  def test_bootstrap_separates_historical_scopes(self):
   status,body,_=self.call('/api/bootstrap');d=json.loads(body);self.assertEqual(status,200);self.assertEqual(d['overview']['formal']['recorded'],114);self.assertEqual(len(d['reviews']),58)
  def test_forged_action_token_rejected(self):self.assertEqual(self.call('/api/generate',{},token='wrong')[0],403)
+ def test_unexpected_host_rejected_before_any_route(self):
+  for host in ['attacker.example:'+str(self.server.server_port),'127.0.0.1:1','']:
+   for path,body in [('/api/bootstrap',None),('/',None),('/api/generate',{})]:
+    req=urllib.request.Request(self.base+path,data=json.dumps(body).encode() if body is not None else None,headers={'Host':host,'X-Demo-Token':'test-session-token','Content-Type':'application/json'})
+    with self.assertRaises(urllib.error.HTTPError) as e:urllib.request.urlopen(req)
+    self.assertEqual(e.exception.code,421);self.assertNotIn(b'test-session-token',e.exception.read())
+  req=urllib.request.Request(self.base+'/api/bootstrap',headers={'Host':'localhost:'+str(self.server.server_port)})
+  self.assertEqual(urllib.request.urlopen(req).status,200)
  def test_cross_origin_mutation_rejected(self):self.assertEqual(self.call('/api/generate',{},origin='https://other.example')[0],403)
  def test_traversal_and_private_source_are_not_served(self):
   for url in ['/api/file?origin=reference&path=../../console_core.py','/api/file?origin=unknown&path=a','/source/console_core.py','/../console_core.py']:
