@@ -1,0 +1,26 @@
+{
+  "scope": "New continuation stages only; excludes historical manual and prior Android screening",
+  "recorded_outcome_rows": 393,
+  "cases_with_submitted_prompt_evidence": 341,
+  "unstarted_or_submission_unproven_records": 52,
+  "recorded_case_seconds": 26734.7506,
+  "known_stage_wall_seconds": 26768.515,
+  "stages_missing_wall_measurement": [
+    "atomic_screening_r1",
+    "full_round3",
+    "transition_diag_01",
+    "transition_diag_02"
+  ],
+  "person_hours": null,
+  "person_hours_note": "Not measured; machine duration cannot substitute for labor",
+  "financial_charge": null,
+  "financial_charge_note": "No billing/account-cost evidence collected",
+  "automatic_prompt_retries": 0,
+  "clipboard_read_recovery_retries_in_app_runs": 2,
+  "controlled_fault_probe_retries_not_app_results": 1,
+  "diagnostic_reruns_are_separate_preserved_attempts": true,
+  "review_is_not_pass": true,
+  "copied_lineage_rows_excluded_from_cost": 1,
+  "wall_time_is_complete": false,
+  "interruption_note": "Known active intervals only; the interrupted original Round 3 has no complete wall measurement. Idle gaps are excluded. Copied lineage rows are excluded from recorded case cost."
+}

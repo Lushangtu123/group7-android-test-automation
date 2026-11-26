@@ -1,0 +1,266 @@
+[
+  {
+    "stage": "atomic_screening_r8",
+    "planned": 38,
+    "recorded": 38,
+    "completed_without_error": 34,
+    "counts": {
+      "PASS": 15,
+      "FAIL": 0,
+      "REVIEW": 19,
+      "ERROR": 4
+    },
+    "captured_prompt_turns": 71,
+    "planned_prompt_turns": 84,
+    "planned_turns_for_recorded_cases": 84,
+    "attempted_pct": 100.0,
+    "outcome_records_pct": 100.0,
+    "completion_pct": 89.47,
+    "pass_pct_planned": 39.47,
+    "automatic_pass_pct_completed": 44.12,
+    "wall_seconds": 2425.557,
+    "known_active_seconds": 2425.557,
+    "wall_measurement_complete": true,
+    "recorded_case_seconds": 2419.1569,
+    "started_utc": "2026-11-17T21:42:50.946972+00:00",
+    "ended_utc": "2026-11-17T22:23:16.520757+00:00",
+    "run_has_final_summary": true,
+    "case_catalog_sha256": "064c9a666ecb21eeb22bef480aba50e29633706565c449411220aadd7c1cb744",
+    "automatic_oracle_sha256": "2da973b3b38329e0e948ef480fdf8059f1d8e888bd9170b6b18f95f8f2d743d0",
+    "capture_adapter_sha256": "8ad453bd65599feef2cdd228d2130e6c79efce042d1ac28684d9899879000eb0",
+    "per_app": {
+      "chatgpt": {
+        "PASS": 8,
+        "FAIL": 0,
+        "REVIEW": 11,
+        "ERROR": 0
+      },
+      "gemini": {
+        "PASS": 7,
+        "FAIL": 0,
+        "REVIEW": 8,
+        "ERROR": 4
+      }
+    },
+    "cases_with_submitted_prompt_evidence": 38,
+    "cases_with_at_least_one_captured_answer": 37,
+    "unstarted_or_submission_unproven_records": 0,
+    "unstarted_or_unproven_attempt_ids": [],
+    "definition": "Captured checkpoint or actual submitted user-message XML; a session-start ERROR row alone is not an executed dialogue"
+  },
+  {
+    "stage": "full_round1",
+    "planned": 38,
+    "recorded": 38,
+    "completed_without_error": 29,
+    "counts": {
+      "PASS": 11,
+      "FAIL": 0,
+      "REVIEW": 18,
+      "ERROR": 9
+    },
+    "captured_prompt_turns": 68,
+    "planned_prompt_turns": 84,
+    "planned_turns_for_recorded_cases": 84,
+    "attempted_pct": 97.37,
+    "outcome_records_pct": 100.0,
+    "completion_pct": 76.32,
+    "pass_pct_planned": 28.95,
+    "automatic_pass_pct_completed": 37.93,
+    "wall_seconds": 2970.965,
+    "known_active_seconds": 2970.965,
+    "wall_measurement_complete": true,
+    "recorded_case_seconds": 2964.2639,
+    "started_utc": "2026-11-17T22:23:18.184213+00:00",
+    "ended_utc": "2026-11-17T23:17:47.837540+00:00",
+    "run_has_final_summary": true,
+    "case_catalog_sha256": "064c9a666ecb21eeb22bef480aba50e29633706565c449411220aadd7c1cb744",
+    "automatic_oracle_sha256": "2da973b3b38329e0e948ef480fdf8059f1d8e888bd9170b6b18f95f8f2d743d0",
+    "capture_adapter_sha256": "8ad453bd65599feef2cdd228d2130e6c79efce042d1ac28684d9899879000eb0",
+    "per_app": {
+      "chatgpt": {
+        "PASS": 5,
+        "FAIL": 0,
+        "REVIEW": 10,
+        "ERROR": 4
+      },
+      "gemini": {
+        "PASS": 6,
+        "FAIL": 0,
+        "REVIEW": 8,
+        "ERROR": 5
+      }
+    },
+    "cases_with_submitted_prompt_evidence": 37,
+    "cases_with_at_least_one_captured_answer": 34,
+    "unstarted_or_submission_unproven_records": 1,
+    "unstarted_or_unproven_attempt_ids": [
+      "16a48c67d7b9"
+    ],
+    "definition": "Captured checkpoint or actual submitted user-message XML; a session-start ERROR row alone is not an executed dialogue"
+  },
+  {
+    "stage": "full_round2",
+    "planned": 38,
+    "recorded": 38,
+    "completed_without_error": 33,
+    "counts": {
+      "PASS": 13,
+      "FAIL": 0,
+      "REVIEW": 20,
+      "ERROR": 5
+    },
+    "captured_prompt_turns": 68,
+    "planned_prompt_turns": 84,
+    "planned_turns_for_recorded_cases": 84,
+    "attempted_pct": 100.0,
+    "outcome_records_pct": 100.0,
+    "completion_pct": 86.84,
+    "pass_pct_planned": 34.21,
+    "automatic_pass_pct_completed": 39.39,
+    "wall_seconds": 2581.999,
+    "known_active_seconds": 2581.999,
+    "wall_measurement_complete": true,
+    "recorded_case_seconds": 2575.5611,
+    "started_utc": "2026-11-17T23:25:21.011005+00:00",
+    "ended_utc": "2026-11-18T00:08:23.029741+00:00",
+    "run_has_final_summary": true,
+    "case_catalog_sha256": "064c9a666ecb21eeb22bef480aba50e29633706565c449411220aadd7c1cb744",
+    "automatic_oracle_sha256": "2da973b3b38329e0e948ef480fdf8059f1d8e888bd9170b6b18f95f8f2d743d0",
+    "capture_adapter_sha256": "664d98885ad91f13e09d83827edb5eb6f6c5abc5081ce3d80ab9da9f40931194",
+    "per_app": {
+      "chatgpt": {
+        "PASS": 8,
+        "FAIL": 0,
+        "REVIEW": 11,
+        "ERROR": 0
+      },
+      "gemini": {
+        "PASS": 5,
+        "FAIL": 0,
+        "REVIEW": 9,
+        "ERROR": 5
+      }
+    },
+    "cases_with_submitted_prompt_evidence": 38,
+    "cases_with_at_least_one_captured_answer": 37,
+    "unstarted_or_submission_unproven_records": 0,
+    "unstarted_or_unproven_attempt_ids": [],
+    "definition": "Captured checkpoint or actual submitted user-message XML; a session-start ERROR row alone is not an executed dialogue"
+  },
+  {
+    "stage": "full_round3_completed",
+    "planned": 38,
+    "recorded": 38,
+    "completed_without_error": 33,
+    "counts": {
+      "PASS": 13,
+      "FAIL": 0,
+      "REVIEW": 20,
+      "ERROR": 5
+    },
+    "captured_prompt_turns": 73,
+    "planned_prompt_turns": 84,
+    "planned_turns_for_recorded_cases": 84,
+    "attempted_pct": 94.74,
+    "outcome_records_pct": 100.0,
+    "completion_pct": 86.84,
+    "pass_pct_planned": 34.21,
+    "automatic_pass_pct_completed": 39.39,
+    "wall_seconds": null,
+    "known_active_seconds": 2624.623,
+    "wall_measurement_complete": false,
+    "first_started_utc": "2026-11-18T00:08:24.134651+00:00",
+    "last_segment_started_utc": "2026-11-18T03:28:49.253318+00:00",
+    "final_ended_utc": "2026-11-18T04:06:40.936496+00:00",
+    "measured_segments": [
+      {
+        "stage": "full_round3_completed",
+        "recording_enabled": false,
+        "process_id": 19185,
+        "kind": "REAL_ANDROID_APPIUM",
+        "arguments": {
+          "stage": "full_round3_completed",
+          "app": "both",
+          "cases": null,
+          "repeats": 1,
+          "record": false
+        },
+        "started_utc": "2026-11-18T03:20:06.631681+00:00",
+        "retry_policy": "No implicit prompt or case retries; specific clipboard-helper read timeout permits one audited helper restart/read retry per turn",
+        "clock_start_monotonic": 352922.066385041,
+        "ended_utc": "2026-11-18T03:23:07.068357+00:00",
+        "wall_seconds": 180.437
+      },
+      {
+        "stage": "full_round3_completed",
+        "recording_enabled": false,
+        "process_id": 19685,
+        "kind": "REAL_ANDROID_APPIUM",
+        "arguments": {
+          "stage": "full_round3_completed",
+          "app": "both",
+          "cases": null,
+          "repeats": 1,
+          "record": false
+        },
+        "started_utc": "2026-11-18T03:23:58.991112+00:00",
+        "retry_policy": "No implicit prompt or case retries; specific clipboard-helper read timeout permits one audited helper restart/read retry per turn",
+        "clock_start_monotonic": 353154.425694208,
+        "ended_utc": "2026-11-18T03:26:51.497019+00:00",
+        "wall_seconds": 172.506
+      },
+      {
+        "stage": "full_round3_completed",
+        "recording_enabled": false,
+        "process_id": 20027,
+        "kind": "REAL_ANDROID_APPIUM",
+        "arguments": {
+          "stage": "full_round3_completed",
+          "app": "both",
+          "cases": null,
+          "repeats": 1,
+          "record": false
+        },
+        "started_utc": "2026-11-18T03:28:49.253318+00:00",
+        "retry_policy": "No implicit prompt or case retries; specific clipboard-helper read timeout permits one audited helper restart/read retry per turn",
+        "clock_start_monotonic": 353444.687745083,
+        "ended_utc": "2026-11-18T04:06:40.936496+00:00",
+        "wall_seconds": 2271.68
+      }
+    ],
+    "unmeasured_segments": [
+      "2026-11-18T00:08:24.134651+00:00"
+    ],
+    "note": "Original interrupted segment has no end measurement. Idle gaps excluded. Recorded attempt durations remain separately available.",
+    "recorded_case_seconds": 2550.6439,
+    "started_utc": "2026-11-18T00:08:24.134651+00:00",
+    "ended_utc": "2026-11-18T04:06:40.936496+00:00",
+    "run_has_final_summary": true,
+    "case_catalog_sha256": "064c9a666ecb21eeb22bef480aba50e29633706565c449411220aadd7c1cb744",
+    "automatic_oracle_sha256": "2da973b3b38329e0e948ef480fdf8059f1d8e888bd9170b6b18f95f8f2d743d0",
+    "capture_adapter_sha256": "664d98885ad91f13e09d83827edb5eb6f6c5abc5081ce3d80ab9da9f40931194",
+    "per_app": {
+      "chatgpt": {
+        "PASS": 8,
+        "FAIL": 0,
+        "REVIEW": 9,
+        "ERROR": 2
+      },
+      "gemini": {
+        "PASS": 5,
+        "FAIL": 0,
+        "REVIEW": 11,
+        "ERROR": 3
+      }
+    },
+    "cases_with_submitted_prompt_evidence": 36,
+    "cases_with_at_least_one_captured_answer": 35,
+    "unstarted_or_submission_unproven_records": 2,
+    "unstarted_or_unproven_attempt_ids": [
+      "b982a4a6ff37",
+      "f46edd4a692b"
+    ],
+    "definition": "Captured checkpoint or actual submitted user-message XML; a session-start ERROR row alone is not an executed dialogue"
+  }
+]

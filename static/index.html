@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Group 7 / Live Android Lab</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<header><a class="identity" href="/"><span class="mark">G<span>7</span></span><span>Automation<br><b>Studio</b></span></a><div class="edition">GROUP 07 / ANDROID TEST LAB<span>Live execution workspace</span></div><div class="header-tools"><span class="scope">Original 114 unchanged</span><a href="/library/index.html#evidence" target="_blank" rel="noopener">Evidence library ↗</a><button id="fullscreen">⛶ Full screen</button></div></header>
+<main>
+ <section class="control-bar" aria-label="Real execution controls">
+  <label>GENERATED SCENARIO<select id="case"><option value="MB-GEN-009">GEN-009 · French translation</option><option value="MB-GEN-001">GEN-001 · Factual answer</option><option value="MB-GEN-008">GEN-008 · Multi-turn memory</option><option value="MB-GEN-013">GEN-013 · Five-turn workflow</option></select></label>
+  <label>APPLICATION<select id="application"><option value="both">ChatGPT + Gemini</option><option value="chatgpt">ChatGPT only</option><option value="gemini">Gemini only</option></select></label>
+  <label>RUNS PER APP<select id="repeats"><option>1</option><option selected>2</option><option>3</option></select></label>
+  <button id="readiness">Check readiness</button><button id="start" class="primary">▶ Start real demo</button><button id="stop" class="danger" hidden>■ Stop run</button>
+ </section>
+ <div class="system-line"><span id="health">Existing emulator and logged-in apps · check readiness before starting.</span><span id="plan">4 planned executions</span><button id="model-button">3D model & generator ↗</button></div>
+ <div id="alert" role="alert" hidden></div>
+ <section class="workbench">
+  <div class="device-column">
+   <div class="panel-bar"><span><i id="camera-dot"></i> ANDROID / PIXEL 7</span><span id="camera-status">VIEW OFF</span></div>
+   <div class="device-stage" id="device-stage">
+    <img id="device" alt="Current Android device screen, continuously captured over ADB" hidden>
+    <div id="curtain"><div class="crosshair">⌗</div><h1>Ready for real automation.</h1><p>Start a run to watch Appium operate the Android apps.</p><span>Current screen · target 5 frames/sec</span></div>
+    <button id="zoom" hidden title="Enlarge the continuously updating device view">↗ Enlarge live view</button>
+   </div>
+   <div class="frame-line"><span id="frame-time">No device frame received.</span><span id="frame-rate">— fps</span></div>
+  </div>
+  <div class="execution-column">
+   <div class="current-head"><span id="current-app">AWAITING EXECUTION</span><span id="run-state" class="pill">IDLE</span></div>
+   <div class="turn-content">
+    <div class="field-label">CURRENT PROMPT</div><div id="prompt" class="prompt">The actual prompt will appear here when Appium starts the turn.</div>
+    <div class="answer-head"><span class="field-label">VALIDATED CAPTURE · CURRENT TURN</span><span id="verdict"></span></div>
+    <div id="answer" class="answer waiting">Waiting for a real app response.</div>
+    <div id="attempt">No attempt ID assigned.</div>
+   </div>
+   <div class="log-toolbar"><div role="tablist" aria-label="Actual log source"><button id="python-tab" class="selected" role="tab" aria-selected="true">Python events</button><button id="appium-tab" role="tab" aria-selected="false">Appium HTTP log</button></div><span id="log-status">ACTUAL OUTPUT</span></div>
+   <pre id="logs" tabindex="0" aria-label="Live execution log">Waiting for the real execution process…</pre>
+  </div>
+ </section>
+ <section class="results-panel">
+  <div class="result-heading"><h2 id="progress">No run started</h2><div id="counts"><span>PASS <b>0</b></span><span>FAIL <b>0</b></span><span>REVIEW <b>0</b></span><span>ERROR <b>0</b></span></div><a id="export" class="button" hidden>Export evidence ↗</a></div>
+  <div class="table-wrap"><table><thead><tr><th>APPLICATION / REPEAT</th><th>ATTEMPT ID</th><th>CAPTURE</th><th>RESULT</th><th>TIME</th></tr></thead><tbody id="outcomes"><tr><td colspan="5">Independent results appear here as each test finishes.</td></tr></tbody></table></div>
+ </section>
+ <section class="history"><label>SAVED NEW DEMO RUNS <select id="saved"><option value="">Choose a completed run</option></select></label><span>Saved results are labelled separately from the live device view.</span><a href="/library/index.html#repeat" target="_blank" rel="noopener">Original three-round comparison ↗</a></section>
+</main>
+<dialog id="model-dialog"><button class="close" aria-label="Close model">×</button><div class="field-label">INPUT × CONTEXT × OUTPUT</div><h2>Model → executable test → Android result.</h2><p>16 generated coordinates. Four executable scenarios. The historical model coverage remains partial.</p><button id="generate" class="primary">Run actual Python generator</button><div id="generation-result"></div><div id="definition"></div></dialog>
+<dialog id="frame-dialog"><button class="close" aria-label="Close enlarged screen">×</button><div class="field-label" id="zoom-label">CURRENT DEVICE VIEW</div><img id="large-device" alt="Enlarged continuously updated Android screen"></dialog>
+<dialog id="answer-dialog"><button class="close" aria-label="Close answer">×</button><div id="answer-detail"></div></dialog>
+<script type="module" src="/app.js"></script>
+</body></html>

@@ -1,0 +1,11 @@
+{
+  "5983f318cddf": {
+    "classification": "APPLICATION_EMPTY_REPLY_UI",
+    "reviewer_type": "CODEX_ASSISTANT_XML_AND_SCREENSHOT_OBSERVATION_NOT_HUMAN_SIGNOFF",
+    "stage": "atomic_screening_r4",
+    "observed": "Current prompt visible, current Copy/actions visible, no Stop marker, no response text in XML or actual ERROR.png. The UI displays an empty completed-response area. No response correctness is inferred.",
+    "original_status_unchanged": "ERROR",
+    "evidence_relative": "runs/atomic_screening_r4/screenshots/chatgpt/TC-NLU-04/repeat_1/5983f318cddf/ERROR.png",
+    "does_not_prove_model_internal_output_empty": true
+  }
+}

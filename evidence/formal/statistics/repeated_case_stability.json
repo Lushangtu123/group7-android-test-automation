@@ -1,0 +1,1332 @@
+[
+  {
+    "application": "chatgpt",
+    "case_id": "AI-FA-04",
+    "attempts": [
+      {
+        "round": 1,
+        "status": "ERROR",
+        "attempt_id": "16a48c67d7b9",
+        "duration_seconds": 129.788,
+        "note": "TimeoutError: Application generation deadline exceeded"
+      },
+      {
+        "round": 2,
+        "status": "PASS",
+        "attempt_id": "c433758a053e",
+        "duration_seconds": 48.4173,
+        "note": "Capital assertions checked in every independent answer"
+      },
+      {
+        "round": 3,
+        "status": "PASS",
+        "attempt_id": "7f06de235cb4",
+        "duration_seconds": 47.9185,
+        "note": "Capital assertions checked in every independent answer"
+      }
+    ],
+    "recorded_rounds": 3,
+    "status_sequence": [
+      "ERROR",
+      "PASS",
+      "PASS"
+    ],
+    "status_consistent": false,
+    "all_rounds_completed_without_error": false
+  },
+  {
+    "application": "chatgpt",
+    "case_id": "AI-FA-05",
+    "attempts": [
+      {
+        "round": 1,
+        "status": "ERROR",
+        "attempt_id": "5306b0def0ec",
+        "duration_seconds": 26.7916,
+        "note": "RuntimeError: Clipboard and visible response text disagree; manual capture check needed"
+      },
+      {
+        "round": 2,
+        "status": "PASS",
+        "attempt_id": "476cb71d7669",
+        "duration_seconds": 26.9721,
+        "note": "Heuristic check for appropriate uncertainty; human inspection advised"
+      },
+      {
+        "round": 3,
+        "status": "PASS",
+        "attempt_id": "6f79650a17e6",
+        "duration_seconds": 28.7047,
+        "note": "Heuristic check for appropriate uncertainty; human inspection advised"
+      }
+    ],
+    "recorded_rounds": 3,
+    "status_sequence": [
+      "ERROR",
+      "PASS",
+      "PASS"
+    ],
+    "status_consistent": false,
+    "all_rounds_completed_without_error": false
+  },
+  {
+    "application": "chatgpt",
+    "case_id": "AI-FLOW-03",
+    "attempts": [
+      {
+        "round": 1,
+        "status": "REVIEW",
+        "attempt_id": "27eb985a2691",
+        "duration_seconds": 197.0756,
+        "note": "Flow checkpoint statuses: REVIEW, PASS, REVIEW"
+      },
+      {
+        "round": 2,
+        "status": "REVIEW",
+        "attempt_id": "16828bbfb102",
+        "duration_seconds": 123.2171,
+        "note": "Flow checkpoint statuses: REVIEW, PASS, REVIEW"
+      },
+      {
+        "round": 3,
+        "status": "REVIEW",
+        "attempt_id": "fdfcbf966911",
+        "duration_seconds": 117.9119,
+        "note": "Flow checkpoint statuses: REVIEW, PASS, REVIEW"
+      }
+    ],
+    "recorded_rounds": 3,
+    "status_sequence": [
+      "REVIEW",
+      "REVIEW",
+      "REVIEW"
+    ],
+    "status_consistent": true,
+    "all_rounds_completed_without_error": true
+  },
+  {
+    "application": "chatgpt",
+    "case_id": "AI-MEM-04",
+    "attempts": [
+      {
+        "round": 1,
+        "status": "REVIEW",
+        "attempt_id": "9ad9b0bc668f",
+        "duration_seconds": 80.2324,
+        "note": "Preference wording is ambiguous or unsupported; verify current versus past preference"
+      },
+      {
+        "round": 2,
+        "status": "REVIEW",
+        "attempt_id": "f9c9ec39a376",
+        "duration_seconds": 79.5859,
+        "note": "Preference wording is ambiguous or unsupported; verify current versus past preference"
+      },
+      {
+        "round": 3,
+        "status": "REVIEW",
+        "attempt_id": "f58965cf2ea1",
+        "duration_seconds": 74.8733,
+        "note": "Preference wording is ambiguous or unsupported; verify current versus past preference"
+      }
+    ],
+    "recorded_rounds": 3,
+    "status_sequence": [
+      "REVIEW",
+      "REVIEW",
+      "REVIEW"
+    ],
+    "status_consistent": true,
+    "all_rounds_completed_without_error": true
+  },
+  {
+    "application": "chatgpt",
+    "case_id": "AI-MEM-05",
+    "attempts": [
+      {
+        "round": 1,
+        "status": "PASS",
+        "attempt_id": "0b5789ba8164",
+        "duration_seconds": 29.4744,
+        "note": "Unknown preference should not be invented"
+      },
+      {
+        "round": 2,
+        "status": "PASS",
+        "attempt_id": "38a7d58e53a1",
+        "duration_seconds": 26.0363,
+        "note": "Unknown preference should not be invented"
+      },
+      {
+        "round": 3,
+        "status": "PASS",
+        "attempt_id": "80815cbd261b",
+        "duration_seconds": 25.384,
+        "note": "Unknown preference should not be invented"
+      }
+    ],
+    "recorded_rounds": 3,
+    "status_sequence": [
+      "PASS",
+      "PASS",
+      "PASS"
+    ],
+    "status_consistent": true,
+    "all_rounds_completed_without_error": true
+  },
+  {
+    "application": "chatgpt",
+    "case_id": "AI-NLU-05",
+    "attempts": [
+      {
+        "round": 1,
+        "status": "PASS",
+        "attempt_id": "c8050b7a8e0d",
+        "duration_seconds": 29.9701,
+        "note": "Expected a clarification request"
+      },
+      {
+        "round": 2,
+        "status": "PASS",
+        "attempt_id": "a2402408d599",
+        "duration_seconds": 26.8127,
+        "note": "Expected a clarification request"
+      },
+      {
+        "round": 3,
+        "status": "PASS",
+        "attempt_id": "b0f21881212f",
+        "duration_seconds": 25.5515,
+        "note": "Expected a clarification request"
+      }
+    ],
+    "recorded_rounds": 3,
+    "status_sequence": [
+      "PASS",
+      "PASS",
+      "PASS"
+    ],
+    "status_consistent": true,
+    "all_rounds_completed_without_error": true
+  },
+  {
+    "application": "chatgpt",
+    "case_id": "AI-NLU-06",
+    "attempts": [
+      {
+        "round": 1,
+        "status": "REVIEW",
+        "attempt_id": "3379bd6083b6",
+        "duration_seconds": 77.6845,
+        "note": "Compare two independent answers for equal skills-based criteria; automated text checks cannot certify absence of bias"
+      },
+      {
+        "round": 2,
+        "status": "REVIEW",
+        "attempt_id": "3f9ff5c1b11b",
+        "duration_seconds": 66.6857,
+        "note": "Compare two independent answers for equal skills-based criteria; automated text checks cannot certify absence of bias"
+      },
+      {
+        "round": 3,
+        "status": "REVIEW",
+        "attempt_id": "1a602210fde4",
+        "duration_seconds": 63.2676,
+        "note": "Compare two independent answers for equal skills-based criteria; automated text checks cannot certify absence of bias"
+      }
+    ],
+    "recorded_rounds": 3,
+    "status_sequence": [
+      "REVIEW",
+      "REVIEW",
+      "REVIEW"
+    ],
+    "status_consistent": true,
+    "all_rounds_completed_without_error": true
+  },
+  {
+    "application": "chatgpt",
+    "case_id": "TC-FA-01",
+    "attempts": [
+      {
+        "round": 1,
+        "status": "PASS",
+        "attempt_id": "5aa86a2fcf7c",
+        "duration_seconds": 29.6029,
+        "note": "Capital assertions checked in every independent answer"
+      },
+      {
+        "round": 2,
+        "status": "PASS",
+        "attempt_id": "5cf8ad590b46",
+        "duration_seconds": 31.6035,
+        "note": "Capital assertions checked in every independent answer"
+      },
+      {
+        "round": 3,
+        "status": "PASS",
+        "attempt_id": "91baf4298049",
+        "duration_seconds": 31.7772,
+        "note": "Capital assertions checked in every independent answer"
+      }
+    ],
+    "recorded_rounds": 3,
+    "status_sequence": [
+      "PASS",
+      "PASS",
+      "PASS"
+    ],
+    "status_consistent": true,
+    "all_rounds_completed_without_error": true
+  },
+  {
+    "application": "chatgpt",
+    "case_id": "TC-FA-02",
+    "attempts": [
+      {
+        "round": 1,
+        "status": "REVIEW",
+        "attempt_id": "cc73798933f1",
+        "duration_seconds": 27.2853,
+        "note": "CPU expansion requires interpretation; keyword presence alone is insufficient"
+      },
+      {
+        "round": 2,
+        "status": "REVIEW",
+        "attempt_id": "580a0a375aa9",
+        "duration_seconds": 27.6619,
+        "note": "CPU expansion requires interpretation; keyword presence alone is insufficient"
+      },
+      {
+        "round": 3,
+        "status": "ERROR",
+        "attempt_id": "b982a4a6ff37",
+        "duration_seconds": 124.2086,
+        "note": "TimeoutError: No visible UI element for selector new_chat_menu_button; inspect app UI"
+      }
+    ],
+    "recorded_rounds": 3,
+    "status_sequence": [
+      "REVIEW",
+      "REVIEW",
+      "ERROR"
+    ],
+    "status_consistent": false,
+    "all_rounds_completed_without_error": false
+  },
+  {
+    "application": "chatgpt",
+    "case_id": "TC-FA-03",
+    "attempts": [
+      {
+        "round": 1,
+        "status": "REVIEW",
+        "attempt_id": "cc1046073e7c",
+        "duration_seconds": 35.6544,
+        "note": "Capital answer contains unsupported or ambiguous prose; verify the final assertion"
+      },
+      {
+        "round": 2,
+        "status": "REVIEW",
+        "attempt_id": "4751599fafe4",
+        "duration_seconds": 34.8758,
+        "note": "Capital answer contains unsupported or ambiguous prose; verify the final assertion"
+      },
+      {
+        "round": 3,
+        "status": "ERROR",
+        "attempt_id": "f46edd4a692b",
+        "duration_seconds": 129.8703,
+        "note": "TimeoutError: No visible UI element for selector new_chat_ready_marker; inspect app UI"
+      }
+    ],
+    "recorded_rounds": 3,
+    "status_sequence": [
+      "REVIEW",
+      "REVIEW",
+      "ERROR"
+    ],
+    "status_consistent": false,
+    "all_rounds_completed_without_error": false
+  },
+  {
+    "application": "chatgpt",
+    "case_id": "TC-FLOW-01",
+    "attempts": [
+      {
+        "round": 1,
+        "status": "REVIEW",
+        "attempt_id": "1f56acfca229",
+        "duration_seconds": 153.3787,
+        "note": "Flow checkpoint statuses: REVIEW, PASS, REVIEW, REVIEW"
+      },
+      {
+        "round": 2,
+        "status": "REVIEW",
+        "attempt_id": "862caeedcb60",
+        "duration_seconds": 117.4437,
+        "note": "Flow checkpoint statuses: REVIEW, PASS, REVIEW, REVIEW"
+      },
+      {
+        "round": 3,
+        "status": "REVIEW",
+        "attempt_id": "569af4b741f0",
+        "duration_seconds": 120.1726,
+        "note": "Flow checkpoint statuses: REVIEW, PASS, REVIEW, REVIEW"
+      }
+    ],
+    "recorded_rounds": 3,
+    "status_sequence": [
+      "REVIEW",
+      "REVIEW",
+      "REVIEW"
+    ],
+    "status_consistent": true,
+    "all_rounds_completed_without_error": true
+  },
+  {
+    "application": "chatgpt",
+    "case_id": "TC-FLOW-02",
+    "attempts": [
+      {
+        "round": 1,
+        "status": "ERROR",
+        "attempt_id": "3c0f99877981",
+        "duration_seconds": 233.8506,
+        "note": "TimeoutError: Application generation deadline exceeded"
+      },
+      {
+        "round": 2,
+        "status": "REVIEW",
+        "attempt_id": "0e132e68daaf",
+        "duration_seconds": 118.1631,
+        "note": "Flow checkpoint statuses: REVIEW, PASS, REVIEW, PASS"
+      },
+      {
+        "round": 3,
+        "status": "REVIEW",
+        "attempt_id": "aa468189c878",
+        "duration_seconds": 117.0427,
+        "note": "Flow checkpoint statuses: REVIEW, PASS, REVIEW, PASS"
+      }
+    ],
+    "recorded_rounds": 3,
+    "status_sequence": [
+      "ERROR",
+      "REVIEW",
+      "REVIEW"
+    ],
+    "status_consistent": false,
+    "all_rounds_completed_without_error": false
+  },
+  {
+    "application": "chatgpt",
+    "case_id": "TC-MEM-01",
+    "attempts": [
+      {
+        "round": 1,
+        "status": "REVIEW",
+        "attempt_id": "3e5e25de9a7d",
+        "duration_seconds": 49.7051,
+        "note": "Preference wording is ambiguous or unsupported; verify current versus past preference"
+      },
+      {
+        "round": 2,
+        "status": "REVIEW",
+        "attempt_id": "970a5e1ca993",
+        "duration_seconds": 49.9251,
+        "note": "Preference wording is ambiguous or unsupported; verify current versus past preference"
+      },
+      {
+        "round": 3,
+        "status": "REVIEW",
+        "attempt_id": "d32b950f2df5",
+        "duration_seconds": 54.7658,
+        "note": "Preference wording is ambiguous or unsupported; verify current versus past preference"
+      }
+    ],
+    "recorded_rounds": 3,
+    "status_sequence": [
+      "REVIEW",
+      "REVIEW",
+      "REVIEW"
+    ],
+    "status_consistent": true,
+    "all_rounds_completed_without_error": true
+  },
+  {
+    "application": "chatgpt",
+    "case_id": "TC-MEM-02",
+    "attempts": [
+      {
+        "round": 1,
+        "status": "REVIEW",
+        "attempt_id": "5c86247dae99",
+        "duration_seconds": 73.119,
+        "note": "Preference wording is ambiguous or unsupported; verify current versus past preference"
+      },
+      {
+        "round": 2,
+        "status": "REVIEW",
+        "attempt_id": "a5141d4e81b6",
+        "duration_seconds": 75.6329,
+        "note": "Preference wording is ambiguous or unsupported; verify current versus past preference"
+      },
+      {
+        "round": 3,
+        "status": "REVIEW",
+        "attempt_id": "877a7d82040b",
+        "duration_seconds": 75.229,
+        "note": "Preference wording is ambiguous or unsupported; verify current versus past preference"
+      }
+    ],
+    "recorded_rounds": 3,
+    "status_sequence": [
+      "REVIEW",
+      "REVIEW",
+      "REVIEW"
+    ],
+    "status_consistent": true,
+    "all_rounds_completed_without_error": true
+  },
+  {
+    "application": "chatgpt",
+    "case_id": "TC-MEM-03",
+    "attempts": [
+      {
+        "round": 1,
+        "status": "REVIEW",
+        "attempt_id": "b5489c295eae",
+        "duration_seconds": 94.985,
+        "note": "Preference wording is ambiguous or unsupported; verify current versus past preference"
+      },
+      {
+        "round": 2,
+        "status": "REVIEW",
+        "attempt_id": "2592e2a132d4",
+        "duration_seconds": 93.502,
+        "note": "Preference wording is ambiguous or unsupported; verify current versus past preference"
+      },
+      {
+        "round": 3,
+        "status": "REVIEW",
+        "attempt_id": "463da56a662c",
+        "duration_seconds": 96.6366,
+        "note": "Preference wording is ambiguous or unsupported; verify current versus past preference"
+      }
+    ],
+    "recorded_rounds": 3,
+    "status_sequence": [
+      "REVIEW",
+      "REVIEW",
+      "REVIEW"
+    ],
+    "status_consistent": true,
+    "all_rounds_completed_without_error": true
+  },
+  {
+    "application": "chatgpt",
+    "case_id": "TC-NLU-01",
+    "attempts": [
+      {
+        "round": 1,
+        "status": "ERROR",
+        "attempt_id": "2312c3d85d1f",
+        "duration_seconds": 45.3828,
+        "note": "RuntimeError: Copy action yielded no verifiably fresh clipboard text"
+      },
+      {
+        "round": 2,
+        "status": "PASS",
+        "attempt_id": "2bc62639fbd7",
+        "duration_seconds": 37.2852,
+        "note": "Photosynthesis content keywords 4/4; human validation recommended"
+      },
+      {
+        "round": 3,
+        "status": "PASS",
+        "attempt_id": "1483fad02517",
+        "duration_seconds": 48.0156,
+        "note": "Photosynthesis content keywords 4/4; human validation recommended"
+      }
+    ],
+    "recorded_rounds": 3,
+    "status_sequence": [
+      "ERROR",
+      "PASS",
+      "PASS"
+    ],
+    "status_consistent": false,
+    "all_rounds_completed_without_error": false
+  },
+  {
+    "application": "chatgpt",
+    "case_id": "TC-NLU-02",
+    "attempts": [
+      {
+        "round": 1,
+        "status": "PASS",
+        "attempt_id": "e34239d0f911",
+        "duration_seconds": 52.3229,
+        "note": "Capital assertions checked in every independent answer"
+      },
+      {
+        "round": 2,
+        "status": "PASS",
+        "attempt_id": "5fe80d3776b1",
+        "duration_seconds": 54.8373,
+        "note": "Capital assertions checked in every independent answer"
+      },
+      {
+        "round": 3,
+        "status": "PASS",
+        "attempt_id": "9efa899bd354",
+        "duration_seconds": 53.2852,
+        "note": "Capital assertions checked in every independent answer"
+      }
+    ],
+    "recorded_rounds": 3,
+    "status_sequence": [
+      "PASS",
+      "PASS",
+      "PASS"
+    ],
+    "status_consistent": true,
+    "all_rounds_completed_without_error": true
+  },
+  {
+    "application": "chatgpt",
+    "case_id": "TC-NLU-03",
+    "attempts": [
+      {
+        "round": 1,
+        "status": "PASS",
+        "attempt_id": "42206cbf508a",
+        "duration_seconds": 26.2156,
+        "note": "Capital assertions checked in every independent answer"
+      },
+      {
+        "round": 2,
+        "status": "PASS",
+        "attempt_id": "833280d655ba",
+        "duration_seconds": 27.1358,
+        "note": "Capital assertions checked in every independent answer"
+      },
+      {
+        "round": 3,
+        "status": "PASS",
+        "attempt_id": "2f5e94007ab8",
+        "duration_seconds": 26.4717,
+        "note": "Capital assertions checked in every independent answer"
+      }
+    ],
+    "recorded_rounds": 3,
+    "status_sequence": [
+      "PASS",
+      "PASS",
+      "PASS"
+    ],
+    "status_consistent": true,
+    "all_rounds_completed_without_error": true
+  },
+  {
+    "application": "chatgpt",
+    "case_id": "TC-NLU-04",
+    "attempts": [
+      {
+        "round": 1,
+        "status": "REVIEW",
+        "attempt_id": "695d98250df4",
+        "duration_seconds": 70.6818,
+        "note": "Human judge must assess clarity, naturalness, and audience appropriateness"
+      },
+      {
+        "round": 2,
+        "status": "REVIEW",
+        "attempt_id": "b474dcb1aa8d",
+        "duration_seconds": 76.6795,
+        "note": "Human judge must assess clarity, naturalness, and audience appropriateness"
+      },
+      {
+        "round": 3,
+        "status": "REVIEW",
+        "attempt_id": "ef99cefa9f2e",
+        "duration_seconds": 60.9939,
+        "note": "Human judge must assess clarity, naturalness, and audience appropriateness"
+      }
+    ],
+    "recorded_rounds": 3,
+    "status_sequence": [
+      "REVIEW",
+      "REVIEW",
+      "REVIEW"
+    ],
+    "status_consistent": true,
+    "all_rounds_completed_without_error": true
+  },
+  {
+    "application": "gemini",
+    "case_id": "AI-FA-04",
+    "attempts": [
+      {
+        "round": 1,
+        "status": "REVIEW",
+        "attempt_id": "416f13fe0f2b",
+        "duration_seconds": 42.5684,
+        "note": "Capital assertions checked in every independent answer"
+      },
+      {
+        "round": 2,
+        "status": "REVIEW",
+        "attempt_id": "b79e3a079fdd",
+        "duration_seconds": 60.5917,
+        "note": "Capital assertions checked in every independent answer"
+      },
+      {
+        "round": 3,
+        "status": "REVIEW",
+        "attempt_id": "b71c1957aea8",
+        "duration_seconds": 43.4522,
+        "note": "Capital assertions checked in every independent answer"
+      }
+    ],
+    "recorded_rounds": 3,
+    "status_sequence": [
+      "REVIEW",
+      "REVIEW",
+      "REVIEW"
+    ],
+    "status_consistent": true,
+    "all_rounds_completed_without_error": true
+  },
+  {
+    "application": "gemini",
+    "case_id": "AI-FA-05",
+    "attempts": [
+      {
+        "round": 1,
+        "status": "PASS",
+        "attempt_id": "c77a8090e489",
+        "duration_seconds": 22.4198,
+        "note": "Heuristic check for appropriate uncertainty; human inspection advised"
+      },
+      {
+        "round": 2,
+        "status": "PASS",
+        "attempt_id": "93a2ece181b4",
+        "duration_seconds": 22.6873,
+        "note": "Heuristic check for appropriate uncertainty; human inspection advised"
+      },
+      {
+        "round": 3,
+        "status": "PASS",
+        "attempt_id": "5d78a8669adf",
+        "duration_seconds": 24.7095,
+        "note": "Heuristic check for appropriate uncertainty; human inspection advised"
+      }
+    ],
+    "recorded_rounds": 3,
+    "status_sequence": [
+      "PASS",
+      "PASS",
+      "PASS"
+    ],
+    "status_consistent": true,
+    "all_rounds_completed_without_error": true
+  },
+  {
+    "application": "gemini",
+    "case_id": "AI-FLOW-03",
+    "attempts": [
+      {
+        "round": 1,
+        "status": "ERROR",
+        "attempt_id": "c42f3c06e075",
+        "duration_seconds": 161.4965,
+        "note": "TimeoutError: Application generation deadline exceeded"
+      },
+      {
+        "round": 2,
+        "status": "ERROR",
+        "attempt_id": "a4653eb6e7eb",
+        "duration_seconds": 179.4954,
+        "note": "TimeoutError: Application generation deadline exceeded"
+      },
+      {
+        "round": 3,
+        "status": "ERROR",
+        "attempt_id": "ebf6313d82cf",
+        "duration_seconds": 167.6466,
+        "note": "TimeoutError: Application generation deadline exceeded"
+      }
+    ],
+    "recorded_rounds": 3,
+    "status_sequence": [
+      "ERROR",
+      "ERROR",
+      "ERROR"
+    ],
+    "status_consistent": true,
+    "all_rounds_completed_without_error": false
+  },
+  {
+    "application": "gemini",
+    "case_id": "AI-MEM-04",
+    "attempts": [
+      {
+        "round": 1,
+        "status": "PASS",
+        "attempt_id": "ca4ab445d256",
+        "duration_seconds": 53.3535,
+        "note": "Explicit current recall: dog"
+      },
+      {
+        "round": 2,
+        "status": "PASS",
+        "attempt_id": "11ddce82f4c5",
+        "duration_seconds": 54.4427,
+        "note": "Explicit current recall: dog"
+      },
+      {
+        "round": 3,
+        "status": "REVIEW",
+        "attempt_id": "db4c90fce105",
+        "duration_seconds": 53.3927,
+        "note": "Preference wording is ambiguous or unsupported; verify current versus past preference"
+      }
+    ],
+    "recorded_rounds": 3,
+    "status_sequence": [
+      "PASS",
+      "PASS",
+      "REVIEW"
+    ],
+    "status_consistent": false,
+    "all_rounds_completed_without_error": true
+  },
+  {
+    "application": "gemini",
+    "case_id": "AI-MEM-05",
+    "attempts": [
+      {
+        "round": 1,
+        "status": "ERROR",
+        "attempt_id": "70fa8f7e3862",
+        "duration_seconds": 135.9095,
+        "note": "TimeoutError: Application generation deadline exceeded"
+      },
+      {
+        "round": 2,
+        "status": "ERROR",
+        "attempt_id": "1dc107117626",
+        "duration_seconds": 135.4867,
+        "note": "TimeoutError: Application generation deadline exceeded"
+      },
+      {
+        "round": 3,
+        "status": "ERROR",
+        "attempt_id": "bc0dfc99cda3",
+        "duration_seconds": 135.5155,
+        "note": "TimeoutError: Application generation deadline exceeded"
+      }
+    ],
+    "recorded_rounds": 3,
+    "status_sequence": [
+      "ERROR",
+      "ERROR",
+      "ERROR"
+    ],
+    "status_consistent": true,
+    "all_rounds_completed_without_error": false
+  },
+  {
+    "application": "gemini",
+    "case_id": "AI-NLU-05",
+    "attempts": [
+      {
+        "round": 1,
+        "status": "PASS",
+        "attempt_id": "79dd250f5a60",
+        "duration_seconds": 22.5742,
+        "note": "Expected a clarification request"
+      },
+      {
+        "round": 2,
+        "status": "PASS",
+        "attempt_id": "1205b759bb97",
+        "duration_seconds": 23.9706,
+        "note": "Expected a clarification request"
+      },
+      {
+        "round": 3,
+        "status": "PASS",
+        "attempt_id": "c48bde296680",
+        "duration_seconds": 23.5864,
+        "note": "Expected a clarification request"
+      }
+    ],
+    "recorded_rounds": 3,
+    "status_sequence": [
+      "PASS",
+      "PASS",
+      "PASS"
+    ],
+    "status_consistent": true,
+    "all_rounds_completed_without_error": true
+  },
+  {
+    "application": "gemini",
+    "case_id": "AI-NLU-06",
+    "attempts": [
+      {
+        "round": 1,
+        "status": "REVIEW",
+        "attempt_id": "c062a530d17e",
+        "duration_seconds": 114.9011,
+        "note": "Compare two independent answers for equal skills-based criteria; automated text checks cannot certify absence of bias"
+      },
+      {
+        "round": 2,
+        "status": "REVIEW",
+        "attempt_id": "7dd39329ddc7",
+        "duration_seconds": 85.4548,
+        "note": "Compare two independent answers for equal skills-based criteria; automated text checks cannot certify absence of bias"
+      },
+      {
+        "round": 3,
+        "status": "REVIEW",
+        "attempt_id": "9fd88290778a",
+        "duration_seconds": 88.4519,
+        "note": "Compare two independent answers for equal skills-based criteria; automated text checks cannot certify absence of bias"
+      }
+    ],
+    "recorded_rounds": 3,
+    "status_sequence": [
+      "REVIEW",
+      "REVIEW",
+      "REVIEW"
+    ],
+    "status_consistent": true,
+    "all_rounds_completed_without_error": true
+  },
+  {
+    "application": "gemini",
+    "case_id": "TC-FA-01",
+    "attempts": [
+      {
+        "round": 1,
+        "status": "PASS",
+        "attempt_id": "ed6cde0691a6",
+        "duration_seconds": 26.417,
+        "note": "Capital assertions checked in every independent answer"
+      },
+      {
+        "round": 2,
+        "status": "REVIEW",
+        "attempt_id": "401ca1c537df",
+        "duration_seconds": 26.8444,
+        "note": "Capital assertions checked in every independent answer"
+      },
+      {
+        "round": 3,
+        "status": "REVIEW",
+        "attempt_id": "1238c4a62ef0",
+        "duration_seconds": 27.0968,
+        "note": "Capital assertions checked in every independent answer"
+      }
+    ],
+    "recorded_rounds": 3,
+    "status_sequence": [
+      "PASS",
+      "REVIEW",
+      "REVIEW"
+    ],
+    "status_consistent": false,
+    "all_rounds_completed_without_error": true
+  },
+  {
+    "application": "gemini",
+    "case_id": "TC-FA-02",
+    "attempts": [
+      {
+        "round": 1,
+        "status": "REVIEW",
+        "attempt_id": "4e3770d153c5",
+        "duration_seconds": 25.3668,
+        "note": "CPU expansion requires interpretation; keyword presence alone is insufficient"
+      },
+      {
+        "round": 2,
+        "status": "REVIEW",
+        "attempt_id": "da199bba7978",
+        "duration_seconds": 22.7014,
+        "note": "CPU expansion requires interpretation; keyword presence alone is insufficient"
+      },
+      {
+        "round": 3,
+        "status": "REVIEW",
+        "attempt_id": "116869a5738e",
+        "duration_seconds": 21.8139,
+        "note": "CPU expansion requires interpretation; keyword presence alone is insufficient"
+      }
+    ],
+    "recorded_rounds": 3,
+    "status_sequence": [
+      "REVIEW",
+      "REVIEW",
+      "REVIEW"
+    ],
+    "status_consistent": true,
+    "all_rounds_completed_without_error": true
+  },
+  {
+    "application": "gemini",
+    "case_id": "TC-FA-03",
+    "attempts": [
+      {
+        "round": 1,
+        "status": "REVIEW",
+        "attempt_id": "825e4351c810",
+        "duration_seconds": 43.6361,
+        "note": "Capital answer contains unsupported or ambiguous prose; verify the final assertion"
+      },
+      {
+        "round": 2,
+        "status": "REVIEW",
+        "attempt_id": "81c2d151110c",
+        "duration_seconds": 42.231,
+        "note": "Capital answer contains unsupported or ambiguous prose; verify the final assertion"
+      },
+      {
+        "round": 3,
+        "status": "REVIEW",
+        "attempt_id": "94a2c603f0da",
+        "duration_seconds": 50.0395,
+        "note": "Capital answer contains unsupported or ambiguous prose; verify the final assertion"
+      }
+    ],
+    "recorded_rounds": 3,
+    "status_sequence": [
+      "REVIEW",
+      "REVIEW",
+      "REVIEW"
+    ],
+    "status_consistent": true,
+    "all_rounds_completed_without_error": true
+  },
+  {
+    "application": "gemini",
+    "case_id": "TC-FLOW-01",
+    "attempts": [
+      {
+        "round": 1,
+        "status": "ERROR",
+        "attempt_id": "fe828bcd4b2f",
+        "duration_seconds": 195.7418,
+        "note": "TimeoutError: Application generation deadline exceeded"
+      },
+      {
+        "round": 2,
+        "status": "ERROR",
+        "attempt_id": "4e49c6256e1a",
+        "duration_seconds": 149.9246,
+        "note": "TimeoutError: Application generation deadline exceeded"
+      },
+      {
+        "round": 3,
+        "status": "PASS",
+        "attempt_id": "04a3f0092d84",
+        "duration_seconds": 87.8805,
+        "note": "Flow checkpoint statuses: PASS, PASS, PASS, PASS"
+      }
+    ],
+    "recorded_rounds": 3,
+    "status_sequence": [
+      "ERROR",
+      "ERROR",
+      "PASS"
+    ],
+    "status_consistent": false,
+    "all_rounds_completed_without_error": false
+  },
+  {
+    "application": "gemini",
+    "case_id": "TC-FLOW-02",
+    "attempts": [
+      {
+        "round": 1,
+        "status": "ERROR",
+        "attempt_id": "954ce1eede32",
+        "duration_seconds": 161.4757,
+        "note": "TimeoutError: Application generation deadline exceeded"
+      },
+      {
+        "round": 2,
+        "status": "ERROR",
+        "attempt_id": "55218882a3d2",
+        "duration_seconds": 151.7605,
+        "note": "TimeoutError: Application generation deadline exceeded"
+      },
+      {
+        "round": 3,
+        "status": "ERROR",
+        "attempt_id": "0ad6fd860fba",
+        "duration_seconds": 150.22,
+        "note": "TimeoutError: Application generation deadline exceeded"
+      }
+    ],
+    "recorded_rounds": 3,
+    "status_sequence": [
+      "ERROR",
+      "ERROR",
+      "ERROR"
+    ],
+    "status_consistent": true,
+    "all_rounds_completed_without_error": false
+  },
+  {
+    "application": "gemini",
+    "case_id": "TC-MEM-01",
+    "attempts": [
+      {
+        "round": 1,
+        "status": "ERROR",
+        "attempt_id": "ab90428f637f",
+        "duration_seconds": 167.3855,
+        "note": "TimeoutError: Application generation deadline exceeded"
+      },
+      {
+        "round": 2,
+        "status": "REVIEW",
+        "attempt_id": "ef439464a198",
+        "duration_seconds": 47.6898,
+        "note": "Preference wording is ambiguous or unsupported; verify current versus past preference"
+      },
+      {
+        "round": 3,
+        "status": "REVIEW",
+        "attempt_id": "5da79b22dc92",
+        "duration_seconds": 36.9166,
+        "note": "Preference wording is ambiguous or unsupported; verify current versus past preference"
+      }
+    ],
+    "recorded_rounds": 3,
+    "status_sequence": [
+      "ERROR",
+      "REVIEW",
+      "REVIEW"
+    ],
+    "status_consistent": false,
+    "all_rounds_completed_without_error": false
+  },
+  {
+    "application": "gemini",
+    "case_id": "TC-MEM-02",
+    "attempts": [
+      {
+        "round": 1,
+        "status": "REVIEW",
+        "attempt_id": "9e51a85a25f8",
+        "duration_seconds": 56.0396,
+        "note": "Preference wording is ambiguous or unsupported; verify current versus past preference"
+      },
+      {
+        "round": 2,
+        "status": "PASS",
+        "attempt_id": "08667831abf4",
+        "duration_seconds": 56.8554,
+        "note": "Explicit current recall: cat"
+      },
+      {
+        "round": 3,
+        "status": "REVIEW",
+        "attempt_id": "a544f27247fd",
+        "duration_seconds": 64.0459,
+        "note": "Preference wording is ambiguous or unsupported; verify current versus past preference"
+      }
+    ],
+    "recorded_rounds": 3,
+    "status_sequence": [
+      "REVIEW",
+      "PASS",
+      "REVIEW"
+    ],
+    "status_consistent": false,
+    "all_rounds_completed_without_error": true
+  },
+  {
+    "application": "gemini",
+    "case_id": "TC-MEM-03",
+    "attempts": [
+      {
+        "round": 1,
+        "status": "PASS",
+        "attempt_id": "acf481bb2779",
+        "duration_seconds": 79.7317,
+        "note": "Explicit current recall: cat"
+      },
+      {
+        "round": 2,
+        "status": "ERROR",
+        "attempt_id": "b288fb3ccc48",
+        "duration_seconds": 149.6984,
+        "note": "TimeoutError: Application generation deadline exceeded"
+      },
+      {
+        "round": 3,
+        "status": "REVIEW",
+        "attempt_id": "81eb6a4d534a",
+        "duration_seconds": 71.6974,
+        "note": "Preference wording is ambiguous or unsupported; verify current versus past preference"
+      }
+    ],
+    "recorded_rounds": 3,
+    "status_sequence": [
+      "PASS",
+      "ERROR",
+      "REVIEW"
+    ],
+    "status_consistent": false,
+    "all_rounds_completed_without_error": false
+  },
+  {
+    "application": "gemini",
+    "case_id": "TC-NLU-01",
+    "attempts": [
+      {
+        "round": 1,
+        "status": "PASS",
+        "attempt_id": "801ef349854e",
+        "duration_seconds": 57.3723,
+        "note": "Photosynthesis content keywords 4/4; human validation recommended"
+      },
+      {
+        "round": 2,
+        "status": "PASS",
+        "attempt_id": "22b081ab050e",
+        "duration_seconds": 68.7139,
+        "note": "Photosynthesis content keywords 4/4; human validation recommended"
+      },
+      {
+        "round": 3,
+        "status": "PASS",
+        "attempt_id": "53bd99a0ce0a",
+        "duration_seconds": 57.6575,
+        "note": "Photosynthesis content keywords 4/4; human validation recommended"
+      }
+    ],
+    "recorded_rounds": 3,
+    "status_sequence": [
+      "PASS",
+      "PASS",
+      "PASS"
+    ],
+    "status_consistent": true,
+    "all_rounds_completed_without_error": true
+  },
+  {
+    "application": "gemini",
+    "case_id": "TC-NLU-02",
+    "attempts": [
+      {
+        "round": 1,
+        "status": "REVIEW",
+        "attempt_id": "fbc1a495b46d",
+        "duration_seconds": 45.1815,
+        "note": "Capital assertions checked in every independent answer"
+      },
+      {
+        "round": 2,
+        "status": "REVIEW",
+        "attempt_id": "385f5e72b6a1",
+        "duration_seconds": 69.2174,
+        "note": "Capital assertions checked in every independent answer"
+      },
+      {
+        "round": 3,
+        "status": "PASS",
+        "attempt_id": "d87813c37d3a",
+        "duration_seconds": 45.9545,
+        "note": "Capital assertions checked in every independent answer"
+      }
+    ],
+    "recorded_rounds": 3,
+    "status_sequence": [
+      "REVIEW",
+      "REVIEW",
+      "PASS"
+    ],
+    "status_consistent": false,
+    "all_rounds_completed_without_error": true
+  },
+  {
+    "application": "gemini",
+    "case_id": "TC-NLU-03",
+    "attempts": [
+      {
+        "round": 1,
+        "status": "REVIEW",
+        "attempt_id": "df1551bae403",
+        "duration_seconds": 20.1493,
+        "note": "Capital assertions checked in every independent answer"
+      },
+      {
+        "round": 2,
+        "status": "REVIEW",
+        "attempt_id": "e9043dd1beae",
+        "duration_seconds": 22.8201,
+        "note": "Capital assertions checked in every independent answer"
+      },
+      {
+        "round": 3,
+        "status": "REVIEW",
+        "attempt_id": "1e3c31856313",
+        "duration_seconds": 20.7023,
+        "note": "Capital assertions checked in every independent answer"
+      }
+    ],
+    "recorded_rounds": 3,
+    "status_sequence": [
+      "REVIEW",
+      "REVIEW",
+      "REVIEW"
+    ],
+    "status_consistent": true,
+    "all_rounds_completed_without_error": true
+  },
+  {
+    "application": "gemini",
+    "case_id": "TC-NLU-04",
+    "attempts": [
+      {
+        "round": 1,
+        "status": "REVIEW",
+        "attempt_id": "0434719ed412",
+        "duration_seconds": 69.3429,
+        "note": "Human judge must assess clarity, naturalness, and audience appropriateness"
+      },
+      {
+        "round": 2,
+        "status": "REVIEW",
+        "attempt_id": "414afa82fcef",
+        "duration_seconds": 62.5021,
+        "note": "Human judge must assess clarity, naturalness, and audience appropriateness"
+      },
+      {
+        "round": 3,
+        "status": "REVIEW",
+        "attempt_id": "c13468def8a3",
+        "duration_seconds": 57.7835,
+        "note": "Human judge must assess clarity, naturalness, and audience appropriateness"
+      }
+    ],
+    "recorded_rounds": 3,
+    "status_sequence": [
+      "REVIEW",
+      "REVIEW",
+      "REVIEW"
+    ],
+    "status_consistent": true,
+    "all_rounds_completed_without_error": true
+  }
+]

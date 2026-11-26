@@ -1,0 +1,35 @@
+[
+  {
+    "stage": "atomic_screening_r4",
+    "planned": 38,
+    "recorded": 38,
+    "completed_without_error": 24,
+    "counts": {
+      "PASS": 10,
+      "FAIL": 0,
+      "REVIEW": 14,
+      "ERROR": 14
+    },
+    "captured_prompt_turns": 48,
+    "planned_prompt_turns": 84,
+    "attempted_pct": 100.0,
+    "completion_pct": 63.16,
+    "pass_pct_planned": 26.32,
+    "wall_seconds": 2769.895,
+    "recorded_case_seconds": 2762.3238,
+    "started_utc": "2026-11-17T07:35:08.133144+00:00",
+    "ended_utc": "2026-11-17T08:21:18.045329+00:00",
+    "per_app": {
+      "chatgpt": {
+        "PASS": 6,
+        "REVIEW": 8,
+        "ERROR": 5
+      },
+      "gemini": {
+        "REVIEW": 6,
+        "PASS": 4,
+        "ERROR": 9
+      }
+    }
+  }
+]

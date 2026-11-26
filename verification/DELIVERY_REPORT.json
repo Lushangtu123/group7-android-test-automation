@@ -1,0 +1,213 @@
+{
+  "validated_utc": "2026-11-26T03:12:55.381248+00:00",
+  "client_date": "2026-11-25",
+  "formal114": {
+    "PASS": 37,
+    "FAIL": 0,
+    "REVIEW": 58,
+    "ERROR": 19
+  },
+  "unsigned_human_reviews": 58,
+  "historical_model_extension": {
+    "PASS": 12,
+    "FAIL": 0,
+    "REVIEW": 1,
+    "ERROR": 3
+  },
+  "live_acceptance_runs": [
+    {
+      "stage": "initial",
+      "run_id": "20261126T030225Z_13fd3e84",
+      "scope": "NEW_DEMO_RUN_NOT_FORMAL114",
+      "planned": 4,
+      "completed": 4,
+      "counts": {
+        "PASS": 4
+      },
+      "worker_wall_seconds": 108.787,
+      "browser_frame_count": 245,
+      "capture_to_browser_mean_ms": 303.6,
+      "capture_to_browser_p95_ms": 453,
+      "frames_by_attempt": {
+        "722bfc8cb4e4": 71,
+        "d4ae44afd13b": 83,
+        "5ab006073cec": 46,
+        "94c3d033b9aa": 45
+      },
+      "mirror_statistics": [
+        {
+          "stream_id": "20d61f3ad2",
+          "run_id": "20261126T030225Z_13fd3e84",
+          "frames_captured": 251,
+          "target_fps": 5,
+          "capture_latency_mean_seconds": 0.1974,
+          "capture_latency_p95_seconds": 0.3151,
+          "finished_state": "ENDED",
+          "wall_seconds": 108.909,
+          "frames_saved_to_disk": 0,
+          "test_retries_triggered": 0
+        }
+      ],
+      "attempts": [
+        {
+          "attempt_id": "722bfc8cb4e4",
+          "application": "chatgpt",
+          "repeat": 1,
+          "status": "PASS",
+          "complete_turns": 1,
+          "planned_turns": 1
+        },
+        {
+          "attempt_id": "d4ae44afd13b",
+          "application": "chatgpt",
+          "repeat": 2,
+          "status": "PASS",
+          "complete_turns": 1,
+          "planned_turns": 1
+        },
+        {
+          "attempt_id": "5ab006073cec",
+          "application": "gemini",
+          "repeat": 1,
+          "status": "PASS",
+          "complete_turns": 1,
+          "planned_turns": 1
+        },
+        {
+          "attempt_id": "94c3d033b9aa",
+          "application": "gemini",
+          "repeat": 2,
+          "status": "PASS",
+          "complete_turns": 1,
+          "planned_turns": 1
+        }
+      ]
+    },
+    {
+      "stage": "final",
+      "run_id": "20261126T030705Z_6cce1e00",
+      "scope": "NEW_DEMO_RUN_NOT_FORMAL114",
+      "planned": 4,
+      "completed": 4,
+      "counts": {
+        "PASS": 4
+      },
+      "worker_wall_seconds": 107.605,
+      "browser_frame_count": 244,
+      "capture_to_browser_mean_ms": 301.6,
+      "capture_to_browser_p95_ms": 440,
+      "frames_by_attempt": {
+        "3107e95dea49": 73,
+        "502ff3eee802": 83,
+        "cee0db5004a1": 42,
+        "43bf808cdd41": 46
+      },
+      "mirror_statistics": [
+        {
+          "stream_id": "f8994349f8",
+          "run_id": "20261126T030705Z_6cce1e00",
+          "frames_captured": 253,
+          "target_fps": 5,
+          "capture_latency_mean_seconds": 0.1956,
+          "capture_latency_p95_seconds": 0.292,
+          "finished_state": "ENDED",
+          "wall_seconds": 107.753,
+          "frames_saved_to_disk": 0,
+          "test_retries_triggered": 0
+        }
+      ],
+      "attempts": [
+        {
+          "attempt_id": "3107e95dea49",
+          "application": "chatgpt",
+          "repeat": 1,
+          "status": "PASS",
+          "complete_turns": 1,
+          "planned_turns": 1
+        },
+        {
+          "attempt_id": "502ff3eee802",
+          "application": "chatgpt",
+          "repeat": 2,
+          "status": "PASS",
+          "complete_turns": 1,
+          "planned_turns": 1
+        },
+        {
+          "attempt_id": "cee0db5004a1",
+          "application": "gemini",
+          "repeat": 1,
+          "status": "PASS",
+          "complete_turns": 1,
+          "planned_turns": 1
+        },
+        {
+          "attempt_id": "43bf808cdd41",
+          "application": "gemini",
+          "repeat": 2,
+          "status": "PASS",
+          "complete_turns": 1,
+          "planned_turns": 1
+        }
+      ]
+    }
+  ],
+  "new_demo_total_only": {
+    "planned": 8,
+    "completed": 8,
+    "PASS": 8,
+    "FAIL": 0,
+    "REVIEW": 0,
+    "ERROR": 0
+  },
+  "local_checks_not_android_tests": {
+    "python_console": 45,
+    "javascript": 3,
+    "unchanged_engine": 197,
+    "browser_checks": 15,
+    "browser_errors": 0
+  },
+  "unchanged_historical_file_count": 400,
+  "historical_archives_verified": 10,
+  "unchanged_engine_files": 70,
+  "original_videos": [
+    {
+      "path": "outputs/Group7_D3_Completion_Evidence/demo/Group7_Deliverable3_Demo.mp4",
+      "sha256": "d753e00a96df2484fa6a09e3977639b41f86475db18ce4ced025b64974fd39d5",
+      "unchanged": true
+    },
+    {
+      "path": "outputs/Group7_D3_Optimization_Evidence/demo/Group7_Deliverable3_Optimized_Demo.mp4",
+      "sha256": "2e8315b1b79a61e372a4527e7664205b7046d8b02d79671f80e60cce679b409c",
+      "unchanged": true
+    }
+  ],
+  "exports": [
+    {
+      "stage": "initial",
+      "file": "Group7_Live_Run_20261126T030225Z_13fd3e84.zip",
+      "sha256": "eb0a63ee167c60aa04a8ee5b045db85dcc5de8ef15780e219660b6eb5d1bee2e",
+      "bytes": 2150017,
+      "entries": 143,
+      "withheld_images": 4,
+      "raw_derivative_mappings_verified": true
+    },
+    {
+      "stage": "final",
+      "file": "Group7_Live_Run_20261126T030705Z_6cce1e00.zip",
+      "sha256": "e4dc0093e50f935ad698fbf296bccd279a529a8999e33ea21065df9c84cfd494",
+      "bytes": 2127342,
+      "entries": 155,
+      "withheld_images": 4,
+      "raw_derivative_mappings_verified": true
+    }
+  ],
+  "limitations": [
+    "This acceptance exercised generated GEN-009, not all four selectable scenarios or a new formal114 batch.",
+    "The mirror targets5fps, not30/60fps, and hides navigation/unverified pages. Preview frames remain in memory.",
+    "The XML-based privacy guard is conservative; use the dedicated device and avoid manual private navigation.",
+    "Original 4/16 model coverage and unsigned formal human review remain unchanged.",
+    "No new Demo movie was recorded or edited.",
+    "Original runtime files are local; portable exports are documented privacy derivatives."
+  ]
+}

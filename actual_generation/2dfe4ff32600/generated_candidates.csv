@@ -1,0 +1,17 @@
+generated_id,feature,input_class,context_class,expected_output_class,review_status,execution_status
+GEN-001,Factual/Domain,verified geography fact,new independent chat,verified answer,CANDIDATE_NEEDS_LOGIC_REVIEW,NOT_EXECUTED
+GEN-002,Factual/Domain,verified geography fact,new independent chat,premise correction,CANDIDATE_NEEDS_LOGIC_REVIEW,NOT_EXECUTED
+GEN-003,Factual/Domain,verified geography fact,new independent chat,uncertainty acknowledgement,CANDIDATE_NEEDS_LOGIC_REVIEW,NOT_EXECUTED
+GEN-004,Factual/Domain,verified geography fact,misleading preceding turn,verified answer,CANDIDATE_NEEDS_LOGIC_REVIEW,NOT_EXECUTED
+GEN-005,Memory,preference statement,immediate,recall original,CANDIDATE_NEEDS_LOGIC_REVIEW,NOT_EXECUTED
+GEN-006,Memory,preference statement,immediate,recall updated,CANDIDATE_NEEDS_LOGIC_REVIEW,NOT_EXECUTED
+GEN-007,Memory,preference statement,immediate,admit unknown,CANDIDATE_NEEDS_LOGIC_REVIEW,NOT_EXECUTED
+GEN-008,Memory,preference statement,one interruption,recall original,CANDIDATE_NEEDS_LOGIC_REVIEW,NOT_EXECUTED
+GEN-009,NLU,clear question,standalone,clear semantic answer,CANDIDATE_NEEDS_LOGIC_REVIEW,NOT_EXECUTED
+GEN-010,NLU,clear question,standalone,clarification request,CANDIDATE_NEEDS_LOGIC_REVIEW,NOT_EXECUTED
+GEN-011,NLU,clear question,standalone,consistent skill-based assessment,CANDIDATE_NEEDS_LOGIC_REVIEW,NOT_EXECUTED
+GEN-012,NLU,clear question,paired independent chats,clear semantic answer,CANDIDATE_NEEDS_LOGIC_REVIEW,NOT_EXECUTED
+GEN-013,Fixed Flow,preference,five-turn original,correct intermediate steps,CANDIDATE_NEEDS_LOGIC_REVIEW,NOT_EXECUTED
+GEN-014,Fixed Flow,preference,five-turn original,correct final recall,CANDIDATE_NEEDS_LOGIC_REVIEW,NOT_EXECUTED
+GEN-015,Fixed Flow,preference,five-turn paraphrase,correct intermediate steps,CANDIDATE_NEEDS_LOGIC_REVIEW,NOT_EXECUTED
+GEN-016,Fixed Flow,preference,five-turn paraphrase,correct final recall,CANDIDATE_NEEDS_LOGIC_REVIEW,NOT_EXECUTED

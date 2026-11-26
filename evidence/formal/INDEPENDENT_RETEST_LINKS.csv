@@ -1,0 +1,7 @@
+﻿application,case_id,original_attempt_id,original_status,cause,retest_stage,retest_attempt_id,retest_status,fills_unsubmitted_case_coverage,certificate
+chatgpt,TC-NLU-01,2312c3d85d1f,ERROR,The response Copy gesture left the unique clipboard marker unchanged.,round1_capture_repair_targets_v19,a4b61e8d56eb,PASS,False,ROUND1_CAPTURE_REPAIR_ACCEPTANCE.json
+chatgpt,TC-FLOW-02,3c0f99877981,ERROR,The exact fifth prompt stayed in the editor while its real send control remained disabled.,round1_capture_repair_targets_v19,a86967657d6a,REVIEW,False,ROUND1_CAPTURE_REPAIR_ACCEPTANCE.json
+chatgpt,AI-FA-04,16a48c67d7b9,ERROR,The exact first prompt stayed in the editor while its real send control remained disabled.,round1_capture_repair_targets_v19,e139b99df4c7,PASS,True,ROUND1_CAPTURE_REPAIR_ACCEPTANCE.json
+chatgpt,AI-FA-05,5306b0def0ec,ERROR,The Android inline link label and Markdown clipboard representation did not compare equal.,round1_capture_repair_targets_v19,21e60a8d8376,PASS,False,ROUND1_CAPTURE_REPAIR_ACCEPTANCE.json
+chatgpt,TC-FA-02,b982a4a6ff37,,,round3_startup_repair_targets_v20,923be0b2fb1c,REVIEW,True,ROUND3_STARTUP_REPAIR_ACCEPTANCE.json
+chatgpt,TC-FA-03,f46edd4a692b,,,round3_startup_repair_targets_v20,816db2e92c72,REVIEW,True,ROUND3_STARTUP_REPAIR_ACCEPTANCE.json

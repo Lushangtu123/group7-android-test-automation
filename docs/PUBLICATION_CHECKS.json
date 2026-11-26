@@ -1,0 +1,15 @@
+{
+  "scope": "Prepared public repository and additional exported run; four source distributions separately scanned",
+  "text_files_scanned": 549,
+  "findings": [],
+  "actual_secret_values_printed": false,
+  "formal_status_counts": {
+    "PASS": 37,
+    "REVIEW": 58,
+    "ERROR": 19
+  },
+  "formal_records": 114,
+  "raw_runtime_included": false,
+  "account_credentials_included": false,
+  "source_distribution_checksums": "docs/RELEASE_ASSETS.json"
+}

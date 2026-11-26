@@ -1,0 +1,22 @@
+{
+  "account_identifier_file_hits": [],
+  "source_archive_credential_scan": {
+    "source_archive_members_scanned": 9648,
+    "high_confidence_secret_candidates": [],
+    "actual_credentials_printed": false,
+    "policy": "Appium session IDs and element IDs remain as execution evidence, not login credentials."
+  },
+  "all_copied_bytes_unchanged_from_full_archive": false,
+  "documented_historical_derivative_corrections": [
+    {
+      "compact_path": "baseline_evidence/reviews/error_observations.json",
+      "full_archive_member": "Group7_D3_Final_Evidence/baseline_evidence/reviews/error_observations.json",
+      "source_sha256": "c12cb2e9935ec36a7d82b1dcb83f0d608180a0734e21d2fcaf3c51a054801855",
+      "compact_sha256": "f8e80af88442b65a4da30ed6f7e13791464dfe3e38fa2b0299db4e09eb9aef96",
+      "reason": "Historical shared JSON contained an invalid backslash escape and an escaped-newline account-name residue. Preserve the literal backslash with valid JSON syntax and redact the account name only.",
+      "formal_status_records_modified": false,
+      "original_full_archive_modified": false
+    }
+  ],
+  "screenshot_scope": "Selected PNGs are the existing privacy derivatives from the unchanged final full ZIP; no unredacted private source images or videos are added."
+}

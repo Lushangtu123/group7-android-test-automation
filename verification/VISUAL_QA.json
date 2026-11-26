@@ -1,0 +1,33 @@
+{
+  "changes": [
+    "static/index.html: header branding only",
+    "static/style.css: light visual skin and responsive layout"
+  ],
+  "checks": [
+    "unchanged static/app.js",
+    "unchanged static/view_logic.mjs",
+    "unchanged server.py",
+    "unchanged live_services.py",
+    "unchanged live_worker.py",
+    "unchanged console_core.py",
+    "previous delivery ZIP unchanged",
+    "light paper background",
+    "main prompt and answer at least24px",
+    "actual log text at least20px",
+    "live execution controls remain available",
+    "idle view does not impersonate a live stream",
+    "preserved4case results still displayed",
+    "actual Appium log switch still works",
+    "full answer inspection still works",
+    "model panel still opens",
+    "mobile page has no horizontal overflow",
+    "no browser JavaScript errors",
+    "all existing run evidence bytes unchanged"
+  ],
+  "browser_errors": [],
+  "new_android_tests": 0,
+  "existing_run_files_unchanged": 495,
+  "backend_and_browser_javascript_unchanged": true,
+  "previous_delivery_zip_unchanged": true,
+  "evidence_note": "Earlier live acceptance results retain their original executed source snapshots. This visual refinement does not claim a new Android execution."
+}

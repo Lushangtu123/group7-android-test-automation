@@ -1,0 +1,11 @@
+✔ a matching repeated prompt never reuses the earlier attempt answer (0.351542ms)
+✔ changing turn inside one attempt clears the previous answer (0.053125ms)
+✔ a frame becomes delayed independently of job and log polling (0.05675ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 46.374958

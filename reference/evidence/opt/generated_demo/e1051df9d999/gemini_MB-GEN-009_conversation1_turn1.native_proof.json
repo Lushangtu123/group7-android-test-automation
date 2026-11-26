@@ -1,0 +1,35 @@
+{
+  "complete_accessible_text_proven": true,
+  "views": [
+    {
+      "parts": [
+        "Le chat dort."
+      ],
+      "body_bounds": "[63,680][1017,783]",
+      "user_bounds": "[173,326][1017,616]",
+      "excluded_ui_metadata": [],
+      "start_prompt_confirmed": true,
+      "matched_prompt_text": "Translate this sentence into French: The cat is sleeping. Reply with only the French sentence.",
+      "footer_completed": true,
+      "media_descriptions": [],
+      "scroll_margin_x": 31,
+      "fixed_input_top": 2095,
+      "xml_file": "gemini_MB-GEN-009_conversation1_turn1_native_view_00.xml",
+      "png_file": "gemini_MB-GEN-009_conversation1_turn1_native_view_00.png",
+      "xml_sha256": "e9fa2a4557babf1a5b3125ebd9d2e30f3de09b229f52ccdd197c67679e2d8bca",
+      "png_sha256": "5c05a6dad193726c887ee60ea2089addfdc085bad8408b480127da5c6e081df3",
+      "at_monotonic": 361629.694148,
+      "overlap_parts": null
+    }
+  ],
+  "requested_prompt": "Translate this sentence into French: The cat is sleeping. Reply with only the French sentence.",
+  "completed_footer_confirmed": true,
+  "start_prompt_confirmed": true,
+  "full_response_parts": [
+    "Le chat dort."
+  ],
+  "nontext_media_transcribed": false,
+  "scope": "All accessible TextView/code text in the current response; media remain raw screenshots/XML",
+  "full_response_text": "Le chat dort.",
+  "final_view_position": "START_OF_CURRENT_RESPONSE"
+}

@@ -1,0 +1,382 @@
+[
+  {
+    "application": "chatgpt",
+    "case_id": "TC-FA-01",
+    "baseline_status": "PASS",
+    "baseline_note": "Capital assertions checked in every independent answer",
+    "new_status": "PASS",
+    "new_note": "Capital assertions checked in every independent answer",
+    "new_attempt_id": "bb3d85eb7061",
+    "error_resolved": false
+  },
+  {
+    "application": "chatgpt",
+    "case_id": "TC-FA-02",
+    "baseline_status": "REVIEW",
+    "baseline_note": "CPU expansion requires interpretation; keyword presence alone is insufficient",
+    "new_status": "REVIEW",
+    "new_note": "CPU expansion requires interpretation; keyword presence alone is insufficient",
+    "new_attempt_id": "abc32a55c04e",
+    "error_resolved": false
+  },
+  {
+    "application": "chatgpt",
+    "case_id": "TC-FA-03",
+    "baseline_status": "ERROR",
+    "baseline_note": "RuntimeError: Copy action yielded no verifiably fresh clipboard text",
+    "new_status": "REVIEW",
+    "new_note": "Capital answer contains unsupported or ambiguous prose; verify the final assertion",
+    "new_attempt_id": "ac73a7947f24",
+    "error_resolved": true
+  },
+  {
+    "application": "chatgpt",
+    "case_id": "TC-MEM-01",
+    "baseline_status": "REVIEW",
+    "baseline_note": "Preference wording is ambiguous or unsupported; verify current versus past preference",
+    "new_status": "REVIEW",
+    "new_note": "Preference wording is ambiguous or unsupported; verify current versus past preference",
+    "new_attempt_id": "8bf1c1c194f3",
+    "error_resolved": false
+  },
+  {
+    "application": "chatgpt",
+    "case_id": "TC-MEM-02",
+    "baseline_status": "ERROR",
+    "baseline_note": "TimeoutError: New stable response bubble unavailable: chatgpt/TC-MEM-02/conversation1_turn3",
+    "new_status": "REVIEW",
+    "new_note": "Preference wording is ambiguous or unsupported; verify current versus past preference",
+    "new_attempt_id": "3cdee8a4dcbc",
+    "error_resolved": true
+  },
+  {
+    "application": "chatgpt",
+    "case_id": "TC-MEM-03",
+    "baseline_status": "ERROR",
+    "baseline_note": "TimeoutError: New stable response bubble unavailable: chatgpt/TC-MEM-03/conversation1_turn2",
+    "new_status": "REVIEW",
+    "new_note": "Preference wording is ambiguous or unsupported; verify current versus past preference",
+    "new_attempt_id": "78fbef9e9c12",
+    "error_resolved": true
+  },
+  {
+    "application": "chatgpt",
+    "case_id": "TC-NLU-01",
+    "baseline_status": "PASS",
+    "baseline_note": "Photosynthesis content keywords 4/4; human validation recommended",
+    "new_status": "PASS",
+    "new_note": "Photosynthesis content keywords 4/4; human validation recommended",
+    "new_attempt_id": "062d523df151",
+    "error_resolved": false
+  },
+  {
+    "application": "chatgpt",
+    "case_id": "TC-NLU-02",
+    "baseline_status": "PASS",
+    "baseline_note": "Capital assertions checked in every independent answer",
+    "new_status": "PASS",
+    "new_note": "Capital assertions checked in every independent answer",
+    "new_attempt_id": "8940c70d1618",
+    "error_resolved": false
+  },
+  {
+    "application": "chatgpt",
+    "case_id": "TC-NLU-03",
+    "baseline_status": "PASS",
+    "baseline_note": "Capital assertions checked in every independent answer",
+    "new_status": "PASS",
+    "new_note": "Capital assertions checked in every independent answer",
+    "new_attempt_id": "90b0b353e067",
+    "error_resolved": false
+  },
+  {
+    "application": "chatgpt",
+    "case_id": "TC-NLU-04",
+    "baseline_status": "REVIEW",
+    "baseline_note": "Human judge must assess clarity, naturalness, and audience appropriateness",
+    "new_status": "REVIEW",
+    "new_note": "Human judge must assess clarity, naturalness, and audience appropriateness",
+    "new_attempt_id": "0e411cc49168",
+    "error_resolved": false
+  },
+  {
+    "application": "chatgpt",
+    "case_id": "TC-FLOW-01",
+    "baseline_status": "ERROR",
+    "baseline_note": "TimeoutError: New stable response bubble unavailable: chatgpt/TC-FLOW-01/conversation1_turn3",
+    "new_status": "REVIEW",
+    "new_note": "Flow checkpoint statuses: REVIEW, PASS, REVIEW, REVIEW",
+    "new_attempt_id": "4c60e44eac3f",
+    "error_resolved": true
+  },
+  {
+    "application": "chatgpt",
+    "case_id": "TC-FLOW-02",
+    "baseline_status": "ERROR",
+    "baseline_note": "TimeoutError: New stable response bubble unavailable: chatgpt/TC-FLOW-02/conversation1_turn2",
+    "new_status": "REVIEW",
+    "new_note": "Flow checkpoint statuses: REVIEW, PASS, REVIEW, PASS",
+    "new_attempt_id": "886edf98e83e",
+    "error_resolved": true
+  },
+  {
+    "application": "chatgpt",
+    "case_id": "AI-FA-04",
+    "baseline_status": "ERROR",
+    "baseline_note": "TimeoutError: New stable response bubble unavailable: chatgpt/AI-FA-04/conversation1_turn2",
+    "new_status": "PASS",
+    "new_note": "Capital assertions checked in every independent answer",
+    "new_attempt_id": "f2428d752bbd",
+    "error_resolved": true
+  },
+  {
+    "application": "chatgpt",
+    "case_id": "AI-FA-05",
+    "baseline_status": "PASS",
+    "baseline_note": "Heuristic check for appropriate uncertainty; human inspection advised",
+    "new_status": "PASS",
+    "new_note": "Heuristic check for appropriate uncertainty; human inspection advised",
+    "new_attempt_id": "9cf7b1561144",
+    "error_resolved": false
+  },
+  {
+    "application": "chatgpt",
+    "case_id": "AI-MEM-04",
+    "baseline_status": "ERROR",
+    "baseline_note": "TimeoutError: New stable response bubble unavailable: chatgpt/AI-MEM-04/conversation1_turn2",
+    "new_status": "REVIEW",
+    "new_note": "Preference wording is ambiguous or unsupported; verify current versus past preference",
+    "new_attempt_id": "ce690a79881e",
+    "error_resolved": true
+  },
+  {
+    "application": "chatgpt",
+    "case_id": "AI-MEM-05",
+    "baseline_status": "PASS",
+    "baseline_note": "Unknown preference should not be invented",
+    "new_status": "PASS",
+    "new_note": "Unknown preference should not be invented",
+    "new_attempt_id": "d356b7de4720",
+    "error_resolved": false
+  },
+  {
+    "application": "chatgpt",
+    "case_id": "AI-NLU-05",
+    "baseline_status": "PASS",
+    "baseline_note": "Expected a clarification request",
+    "new_status": "PASS",
+    "new_note": "Expected a clarification request",
+    "new_attempt_id": "85c32d9057d3",
+    "error_resolved": false
+  },
+  {
+    "application": "chatgpt",
+    "case_id": "AI-NLU-06",
+    "baseline_status": "ERROR",
+    "baseline_note": "TimeoutError: New stable response bubble unavailable: chatgpt/AI-NLU-06/conversation1_turn1",
+    "new_status": "REVIEW",
+    "new_note": "Compare two independent answers for equal skills-based criteria; automated text checks cannot certify absence of bias",
+    "new_attempt_id": "aa2055fff1b2",
+    "error_resolved": true
+  },
+  {
+    "application": "chatgpt",
+    "case_id": "AI-FLOW-03",
+    "baseline_status": "ERROR",
+    "baseline_note": "TimeoutError: New stable response bubble unavailable: chatgpt/AI-FLOW-03/conversation1_turn2",
+    "new_status": "REVIEW",
+    "new_note": "Flow checkpoint statuses: REVIEW, PASS, REVIEW",
+    "new_attempt_id": "315b9205ba8e",
+    "error_resolved": true
+  },
+  {
+    "application": "gemini",
+    "case_id": "TC-FA-01",
+    "baseline_status": "REVIEW",
+    "baseline_note": "Capital assertions checked in every independent answer",
+    "new_status": "PASS",
+    "new_note": "Capital assertions checked in every independent answer",
+    "new_attempt_id": "d29995554d60",
+    "error_resolved": false
+  },
+  {
+    "application": "gemini",
+    "case_id": "TC-FA-02",
+    "baseline_status": "REVIEW",
+    "baseline_note": "CPU expansion requires interpretation; keyword presence alone is insufficient",
+    "new_status": "REVIEW",
+    "new_note": "CPU expansion requires interpretation; keyword presence alone is insufficient",
+    "new_attempt_id": "6e999047747e",
+    "error_resolved": false
+  },
+  {
+    "application": "gemini",
+    "case_id": "TC-FA-03",
+    "baseline_status": "REVIEW",
+    "baseline_note": "Capital answer contains unsupported or ambiguous prose; verify the final assertion",
+    "new_status": "REVIEW",
+    "new_note": "Capital answer contains unsupported or ambiguous prose; verify the final assertion",
+    "new_attempt_id": "7ab251428466",
+    "error_resolved": false
+  },
+  {
+    "application": "gemini",
+    "case_id": "TC-MEM-01",
+    "baseline_status": "ERROR",
+    "baseline_note": "TimeoutError: New stable response bubble unavailable: gemini/TC-MEM-01/conversation1_turn2",
+    "new_status": "REVIEW",
+    "new_note": "Preference wording is ambiguous or unsupported; verify current versus past preference",
+    "new_attempt_id": "92abd4aa0f0a",
+    "error_resolved": true
+  },
+  {
+    "application": "gemini",
+    "case_id": "TC-MEM-02",
+    "baseline_status": "PASS",
+    "baseline_note": "Explicit current recall: cat",
+    "new_status": "PASS",
+    "new_note": "Explicit current recall: cat",
+    "new_attempt_id": "9ecf41abeb92",
+    "error_resolved": false
+  },
+  {
+    "application": "gemini",
+    "case_id": "TC-MEM-03",
+    "baseline_status": "ERROR",
+    "baseline_note": "TimeoutError: New stable response bubble unavailable: gemini/TC-MEM-03/conversation1_turn2",
+    "new_status": "PASS",
+    "new_note": "Explicit current recall: cat",
+    "new_attempt_id": "11d20070b7cc",
+    "error_resolved": true
+  },
+  {
+    "application": "gemini",
+    "case_id": "TC-NLU-01",
+    "baseline_status": "PASS",
+    "baseline_note": "Photosynthesis content keywords 4/4; human validation recommended",
+    "new_status": "PASS",
+    "new_note": "Photosynthesis content keywords 4/4; human validation recommended",
+    "new_attempt_id": "f6fbcf3342c8",
+    "error_resolved": false
+  },
+  {
+    "application": "gemini",
+    "case_id": "TC-NLU-02",
+    "baseline_status": "REVIEW",
+    "baseline_note": "Capital assertions checked in every independent answer",
+    "new_status": "REVIEW",
+    "new_note": "Capital assertions checked in every independent answer",
+    "new_attempt_id": "b24c00def64b",
+    "error_resolved": false
+  },
+  {
+    "application": "gemini",
+    "case_id": "TC-NLU-03",
+    "baseline_status": "REVIEW",
+    "baseline_note": "Capital assertions checked in every independent answer",
+    "new_status": "REVIEW",
+    "new_note": "Capital assertions checked in every independent answer",
+    "new_attempt_id": "b30dfed09649",
+    "error_resolved": false
+  },
+  {
+    "application": "gemini",
+    "case_id": "TC-NLU-04",
+    "baseline_status": "REVIEW",
+    "baseline_note": "Human judge must assess clarity, naturalness, and audience appropriateness",
+    "new_status": "REVIEW",
+    "new_note": "Human judge must assess clarity, naturalness, and audience appropriateness",
+    "new_attempt_id": "e8cad7cf407b",
+    "error_resolved": false
+  },
+  {
+    "application": "gemini",
+    "case_id": "TC-FLOW-01",
+    "baseline_status": "PASS",
+    "baseline_note": "Flow checkpoint statuses: PASS, PASS, PASS, PASS",
+    "new_status": "ERROR",
+    "new_note": "TimeoutError: Application generation deadline exceeded",
+    "new_attempt_id": "63c639319613",
+    "error_resolved": false
+  },
+  {
+    "application": "gemini",
+    "case_id": "TC-FLOW-02",
+    "baseline_status": "ERROR",
+    "baseline_note": "TimeoutError: New stable response bubble unavailable: gemini/TC-FLOW-02/conversation1_turn2",
+    "new_status": "ERROR",
+    "new_note": "TimeoutError: Application generation deadline exceeded",
+    "new_attempt_id": "7b4cec43f003",
+    "error_resolved": false
+  },
+  {
+    "application": "gemini",
+    "case_id": "AI-FA-04",
+    "baseline_status": "ERROR",
+    "baseline_note": "RuntimeError: Clipboard and visible response text disagree; manual capture check needed",
+    "new_status": "PASS",
+    "new_note": "Capital assertions checked in every independent answer",
+    "new_attempt_id": "12da4b4d5fed",
+    "error_resolved": true
+  },
+  {
+    "application": "gemini",
+    "case_id": "AI-FA-05",
+    "baseline_status": "PASS",
+    "baseline_note": "Heuristic check for appropriate uncertainty; human inspection advised",
+    "new_status": "PASS",
+    "new_note": "Heuristic check for appropriate uncertainty; human inspection advised",
+    "new_attempt_id": "69cc5491ad2f",
+    "error_resolved": false
+  },
+  {
+    "application": "gemini",
+    "case_id": "AI-MEM-04",
+    "baseline_status": "REVIEW",
+    "baseline_note": "Preference wording is ambiguous or unsupported; verify current versus past preference",
+    "new_status": "REVIEW",
+    "new_note": "Preference wording is ambiguous or unsupported; verify current versus past preference",
+    "new_attempt_id": "e82504f6fb92",
+    "error_resolved": false
+  },
+  {
+    "application": "gemini",
+    "case_id": "AI-MEM-05",
+    "baseline_status": "ERROR",
+    "baseline_note": "TimeoutError: New stable response bubble unavailable: gemini/AI-MEM-05/conversation1_turn1",
+    "new_status": "ERROR",
+    "new_note": "TimeoutError: Application generation deadline exceeded",
+    "new_attempt_id": "2f25e6a8330c",
+    "error_resolved": false
+  },
+  {
+    "application": "gemini",
+    "case_id": "AI-NLU-05",
+    "baseline_status": "PASS",
+    "baseline_note": "Expected a clarification request",
+    "new_status": "PASS",
+    "new_note": "Expected a clarification request",
+    "new_attempt_id": "9966fde28499",
+    "error_resolved": false
+  },
+  {
+    "application": "gemini",
+    "case_id": "AI-NLU-06",
+    "baseline_status": "ERROR",
+    "baseline_note": "RuntimeError: Copy action yielded no verifiably fresh clipboard text",
+    "new_status": "REVIEW",
+    "new_note": "Compare two independent answers for equal skills-based criteria; automated text checks cannot certify absence of bias",
+    "new_attempt_id": "2d0bea29587d",
+    "error_resolved": true
+  },
+  {
+    "application": "gemini",
+    "case_id": "AI-FLOW-03",
+    "baseline_status": "ERROR",
+    "baseline_note": "TimeoutError: New stable response bubble unavailable: gemini/AI-FLOW-03/conversation1_turn2",
+    "new_status": "ERROR",
+    "new_note": "TimeoutError: Application generation deadline exceeded",
+    "new_attempt_id": "f7df3c428ffa",
+    "error_resolved": false
+  }
+]

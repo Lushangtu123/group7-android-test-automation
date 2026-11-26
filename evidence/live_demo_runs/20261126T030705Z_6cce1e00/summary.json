@@ -1,0 +1,24 @@
+{
+  "run_type": "LIVE_APPIUM_UI",
+  "evidence_source": "THIS_RUN_ONLY",
+  "config_path": "/Users/DEMO_USER/Documents/Codex/2026-11-16/macbook-m2-max-android-studio-emulator/demo/Group7_Live_Demo/runtime/runs/20261126T030705Z_6cce1e00/source_snapshot/data/android_appium_config.local.json",
+  "output_dir": "/Users/DEMO_USER/Documents/Codex/2026-11-16/macbook-m2-max-android-studio-emulator/demo/Group7_Live_Demo/runtime/runs/20261126T030705Z_6cce1e00",
+  "planned_app_case_repetitions": 4,
+  "selected_records": 4,
+  "all_checkpointed_attempts": 4,
+  "status_counts": {
+    "PASS": 4
+  },
+  "automatic_pass_rate_pct": 100.0,
+  "completion_rate_pct": 100.0,
+  "selected_recorded_case_seconds": 101.6432,
+  "checkpointed_attempt_seconds": 101.6432,
+  "notes": [
+    "Captured live UI output must be checked on the actual device.",
+    "REVIEW is not PASS; requires a separate human judgment.",
+    "ERROR denotes capture/infrastructure failure, not necessarily model failure.",
+    "Recorded duration does not include uncheckpointed setup or human effort.",
+    "These outputs do not authenticate earlier team reports."
+  ],
+  "timestamp_utc": "2026-11-26T03:08:53+00:00"
+}

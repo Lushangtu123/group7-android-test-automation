@@ -1,0 +1,217 @@
+{
+  "server_url": "http://127.0.0.1:4723",
+  "timeout_seconds": 120,
+  "stable_seconds": 3,
+  "poll_seconds": 0.75,
+  "chat_reset_wait_seconds": 1.5,
+  "apps": {
+    "chatgpt": {
+      "platform": "Android",
+      "capture_mode": "copy",
+      "capabilities": {
+        "platformName": "Android",
+        "appium:automationName": "UiAutomator2",
+        "appium:deviceName": "Group7_Pixel7_API35",
+        "appium:udid": "emulator-5554",
+        "appium:appPackage": "com.openai.chatgpt",
+        "appium:noReset": true,
+        "appium:forceAppLaunch": true,
+        "appium:newCommandTimeout": 180,
+        "appium:appWaitForLaunch": false
+      },
+      "selectors": {
+        "new_chat_menu_button": {
+          "by": "accessibility id",
+          "value": "Navigation menu"
+        },
+        "new_chat_button": {
+          "by": "xpath",
+          "value": "//android.widget.Button[@content-desc='New chat']"
+        },
+        "prompt_input": {
+          "by": "class name",
+          "value": "android.widget.EditText"
+        },
+        "send_button": {
+          "by": "accessibility id",
+          "value": "Send Message"
+        },
+        "assistant_response_bubbles": {
+          "by": "xpath",
+          "value": "//*[@content-desc='Copy']/ancestor::android.view.View[6]"
+        },
+        "response_text_nodes": {
+          "by": "xpath",
+          "value": ".//android.widget.TextView[@text!='' and @text!='Memory updated']"
+        },
+        "response_finished_marker": {
+          "by": "xpath",
+          "value": "//*[@content-desc='Copy' and not(//*[@content-desc='Stop'])]"
+        },
+        "copy_response_button": {
+          "by": "accessibility id",
+          "value": "Copy"
+        },
+        "response_scroll_container": {
+          "by": "xpath",
+          "value": "//android.view.View[@scrollable='true']"
+        },
+        "new_chat_final_button": {
+          "by": "xpath",
+          "value": "//*[@content-desc='Temporary chat' and not(self::android.widget.EditText)][1]"
+        },
+        "new_chat_ready_marker": {
+          "by": "xpath",
+          "value": "//android.widget.TextView[@text='Unpersonalized']"
+        },
+        "response_generating_marker": {
+          "by": "accessibility id",
+          "value": "Stop"
+        },
+        "response_copy_relative": {
+          "by": "xpath",
+          "value": ".//*[@content-desc='Copy']"
+        },
+        "assistant_response_after_prompt_xpath": "(//*[@content-desc='Copy']/ancestor::android.view.View[6])[preceding::android.widget.TextView[@text={prompt} and not(@content-desc)]]",
+        "response_copy_parent_relative": {
+          "by": "xpath",
+          "value": ".//*[@clickable='true' and @enabled='true' and child::*[@content-desc='Copy']]"
+        },
+        "enabled_send_control": {
+          "by": "xpath",
+          "value": "//*[@content-desc='Send Message']/ancestor::*[@clickable='true'][1][@enabled='true']"
+        },
+        "disabled_send_control": {
+          "by": "xpath",
+          "value": "//*[@content-desc='Send Message']/ancestor::*[@clickable='true'][1][@enabled='false']"
+        }
+      },
+      "response_scroll_gesture": {
+        "startX": 540,
+        "startY": 1750,
+        "endX": 540,
+        "endY": 650,
+        "speed": 1200
+      },
+      "response_footer_max_y": 2100,
+      "response_scroll_action": "mobile: dragGesture",
+      "uiautomator_settings": {
+        "enableMultiWindows": true,
+        "waitForIdleTimeout": 1000
+      },
+      "copy_response_action": "mobile: clickGesture"
+    },
+    "gemini": {
+      "platform": "Android",
+      "capture_mode": "native_full_response",
+      "capabilities": {
+        "platformName": "Android",
+        "appium:automationName": "UiAutomator2",
+        "appium:deviceName": "Group7_Pixel7_API35",
+        "appium:udid": "emulator-5554",
+        "appium:appPackage": "com.google.android.apps.bard",
+        "appium:noReset": true,
+        "appium:forceAppLaunch": true,
+        "appium:newCommandTimeout": 180,
+        "appium:appActivity": ".shellapp.BardEntryPointActivity",
+        "appium:appWaitPackage": "com.google.android.googlequicksearchbox",
+        "appium:appWaitActivity": "com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity",
+        "appium:appWaitForLaunch": false
+      },
+      "selectors": {
+        "new_chat_menu_button": {
+          "by": "accessibility id",
+          "value": "Open sidebar"
+        },
+        "new_chat_button": {
+          "by": "xpath",
+          "value": "//android.widget.TextView[@text='New chat']"
+        },
+        "prompt_input": {
+          "by": "id",
+          "value": "com.google.android.googlequicksearchbox:id/assistant_robin_input_collapsed_text_half_sheet"
+        },
+        "send_button": {
+          "by": "xpath",
+          "value": "//*[@content-desc='Send']/parent::*[@clickable='true']"
+        },
+        "assistant_response_bubbles": {
+          "by": "xpath",
+          "value": "//*[@resource-id='com.google.android.googlequicksearchbox:id/assistant_robin_content_message_container' and .//android.widget.TextView[@text!=''] and following-sibling::*[1]//*[@resource-id='com.google.android.googlequicksearchbox:id/assistant_robin_message_content_actions_options_button']]"
+        },
+        "response_text_nodes": {
+          "by": "xpath",
+          "value": ".//android.widget.TextView[@text!='' and @resource-id!='com.google.android.googlequicksearchbox:id/assistant_robin_code_info']"
+        },
+        "response_finished_marker": {
+          "by": "id",
+          "value": "com.google.android.googlequicksearchbox:id/assistant_robin_message_content_actions_options_button"
+        },
+        "copy_response_button": {
+          "by": "id",
+          "value": "com.google.android.googlequicksearchbox:id/assistant_robin_message_content_actions_options_copy_content"
+        },
+        "response_scroll_container": {
+          "by": "id",
+          "value": "com.google.android.googlequicksearchbox:id/assistant_robin_chat_history_list"
+        },
+        "new_chat_final_button": {
+          "by": "accessibility id",
+          "value": "New temporary chat"
+        },
+        "new_chat_ready_marker": {
+          "by": "accessibility id",
+          "value": "Close temporary chat"
+        },
+        "response_generating_marker": {
+          "by": "accessibility id",
+          "value": "Stop generating response"
+        },
+        "response_copy_relative": {
+          "by": "xpath",
+          "value": "./following-sibling::*[1]//*[@resource-id='com.google.android.googlequicksearchbox:id/assistant_robin_message_content_actions_options_copy_content']"
+        },
+        "assistant_response_after_prompt_xpath": "(//*[@resource-id='com.google.android.googlequicksearchbox:id/assistant_robin_content_message_container' and .//android.widget.TextView[@text!=''] and following-sibling::*[1]//*[@resource-id='com.google.android.googlequicksearchbox:id/assistant_robin_message_content_actions_options_button']])[preceding::*[@resource-id='com.google.android.googlequicksearchbox:id/assistant_robin_user_message_text' and @text={prompt}]]"
+      },
+      "response_scroll_gesture": {
+        "left": 50,
+        "top": 400,
+        "width": 960,
+        "height": 1300,
+        "direction": "down",
+        "percent": 0.8
+      },
+      "response_footer_max_y": 2100,
+      "uiautomator_settings": {
+        "limitXPathContextScope": false,
+        "enableMultiWindows": true,
+        "waitForIdleTimeout": 1000
+      },
+      "prelaunch_stop_host": true,
+      "startup_notice_cancel": {
+        "title_resource_id": "com.google.android.googlequicksearchbox:id/assistant_robin_extensions_consent_title_text",
+        "title_text": "Creating content from images and files",
+        "cancel_resource_id": "android:id/button2",
+        "cancel_text": "Cancel"
+      },
+      "copy_response_action": "mobile: clickGesture",
+      "allow_initial_capitalization": true,
+      "require_full_response_copy": true,
+      "native_full_response_capture": true
+    }
+  },
+  "clipboard_wait_seconds": 10,
+  "clipboard_settle_seconds": 0,
+  "verify_prompt_text": true,
+  "prompt_verify_seconds": 15,
+  "input_settle_seconds": 1,
+  "capture_submission_evidence": true,
+  "atomic_response_snapshot": true,
+  "manage_clipboard_overlay": true,
+  "overlay_timeout_seconds": 3,
+  "capture_navigation_seconds": 120,
+  "capture_stall_seconds": 15,
+  "recover_clipboard_helper_once": true,
+  "adb_path": "/Users/DEMO_USER/Library/Android/sdk/platform-tools/adb",
+  "recover_appium_settings_anr_at_case_boundary": true
+}

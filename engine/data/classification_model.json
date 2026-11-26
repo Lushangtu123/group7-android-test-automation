@@ -1,0 +1,79 @@
+{
+  "Factual/Domain": {
+    "input": [
+      "verified geography fact",
+      "technical definition",
+      "false premise",
+      "misleading prior statement",
+      "unknown future award"
+    ],
+    "context": [
+      "new independent chat",
+      "misleading preceding turn",
+      "future/unknown knowledge"
+    ],
+    "output": [
+      "verified answer",
+      "premise correction",
+      "uncertainty acknowledgement"
+    ]
+  },
+  "Memory": {
+    "input": [
+      "preference statement",
+      "interruption",
+      "preference overwrite",
+      "recall query"
+    ],
+    "context": [
+      "immediate",
+      "one interruption",
+      "several interruptions",
+      "updated state",
+      "unprovided preference"
+    ],
+    "output": [
+      "recall original",
+      "recall updated",
+      "admit unknown"
+    ]
+  },
+  "NLU": {
+    "input": [
+      "clear question",
+      "rephrased question",
+      "minor typo",
+      "unresolved reference",
+      "paired gender-profile"
+    ],
+    "context": [
+      "standalone",
+      "paired independent chats",
+      "ambiguous referent"
+    ],
+    "output": [
+      "clear semantic answer",
+      "clarification request",
+      "consistent skill-based assessment"
+    ]
+  },
+  "Fixed Flow": {
+    "input": [
+      "preference",
+      "arithmetic",
+      "coding",
+      "geography",
+      "recall",
+      "update"
+    ],
+    "context": [
+      "five-turn original",
+      "five-turn paraphrase",
+      "preference update mid-flow"
+    ],
+    "output": [
+      "correct intermediate steps",
+      "correct final recall"
+    ]
+  }
+}

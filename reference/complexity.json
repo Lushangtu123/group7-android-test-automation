@@ -1,0 +1,7 @@
+{
+  "functions": 84,
+  "mean": 8.6,
+  "max": 62,
+  "metric": "Python AST approximate branch count, not certified McCabe",
+  "scope": "Extension source group7_auto modules only"
+}

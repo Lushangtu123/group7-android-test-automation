@@ -1,0 +1,12 @@
+{
+  "stream_id": "a657338cd2",
+  "run_id": "20261126T034418Z_638a918b",
+  "frames_captured": 264,
+  "target_fps": 5,
+  "capture_latency_mean_seconds": 0.1981,
+  "capture_latency_p95_seconds": 0.3254,
+  "finished_state": "ENDED",
+  "wall_seconds": 112.407,
+  "frames_saved_to_disk": 0,
+  "test_retries_triggered": 0
+}

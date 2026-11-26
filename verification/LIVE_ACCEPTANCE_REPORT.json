@@ -1,0 +1,3707 @@
+{
+  "run_id": "20261126T030225Z_13fd3e84",
+  "job": {
+    "id": "20261126T030225Z_13fd3e84",
+    "state": "COMPLETED",
+    "plan": {
+      "profile": "full",
+      "app": "both",
+      "cases": [
+        "MB-GEN-009"
+      ],
+      "repeats": 2
+    },
+    "started_utc": "2026-11-26T03:02:25.970683+00:00",
+    "scope": "NEW_DEMO_RUN_NOT_FORMAL114",
+    "planned": 4,
+    "pid": 49118,
+    "capture_label": "Latest saved evidence frame; not a live video stream",
+    "ended_utc": "2026-11-26T03:04:14.871616+00:00",
+    "exit_code": 0,
+    "events": [
+      {
+        "utc": "2026-11-26T03:02:26.066003+00:00",
+        "event": "STAGE_START",
+        "run_id": "20261126T030225Z_13fd3e84",
+        "plan": {
+          "profile": "full",
+          "app": "both",
+          "cases": [
+            "MB-GEN-009"
+          ],
+          "repeats": 2
+        }
+      },
+      {
+        "utc": "2026-11-26T03:02:26.823990+00:00",
+        "event": "NETWORK_PREFLIGHT",
+        "hostname_http_204": true
+      },
+      {
+        "utc": "2026-11-26T03:02:26.825027+00:00",
+        "event": "SESSION_START",
+        "app": "chatgpt"
+      },
+      {
+        "utc": "2026-11-26T03:02:29.353552+00:00",
+        "event": "SESSION_READY",
+        "app": "chatgpt",
+        "observation": {
+          "host_stopped": false
+        }
+      },
+      {
+        "utc": "2026-11-26T03:02:29.354184+00:00",
+        "event": "CONVERSATION_PREPARE",
+        "app": "chatgpt",
+        "case": "MB-GEN-009",
+        "repeat": 1,
+        "attempt_id": "722bfc8cb4e4",
+        "conversation": 1,
+        "evidence_directory": "screenshots/chatgpt/MB-GEN-009/repeat_1/722bfc8cb4e4"
+      },
+      {
+        "utc": "2026-11-26T03:02:29.354210+00:00",
+        "event": "NEW_CHAT",
+        "app": "chatgpt",
+        "case": "MB-GEN-009",
+        "repeat": 1,
+        "attempt_id": "722bfc8cb4e4",
+        "conversation": 1,
+        "evidence_directory": "screenshots/chatgpt/MB-GEN-009/repeat_1/722bfc8cb4e4"
+      },
+      {
+        "utc": "2026-11-26T03:02:38.052525+00:00",
+        "event": "NEW_CHAT_READY",
+        "app": "chatgpt",
+        "case": "MB-GEN-009",
+        "repeat": 1,
+        "attempt_id": "722bfc8cb4e4",
+        "conversation": 1,
+        "evidence_directory": "screenshots/chatgpt/MB-GEN-009/repeat_1/722bfc8cb4e4"
+      },
+      {
+        "utc": "2026-11-26T03:02:38.052797+00:00",
+        "event": "TURN_START",
+        "app": "chatgpt",
+        "case": "MB-GEN-009",
+        "repeat": 1,
+        "attempt_id": "722bfc8cb4e4",
+        "conversation": 1,
+        "evidence_directory": "screenshots/chatgpt/MB-GEN-009/repeat_1/722bfc8cb4e4",
+        "turn": "conversation1_turn1",
+        "prompt": "Translate this sentence into French: The cat is sleeping. Reply with only the French sentence."
+      },
+      {
+        "utc": "2026-11-26T03:02:58.366791+00:00",
+        "event": "TURN_DONE",
+        "app": "chatgpt",
+        "case": "MB-GEN-009",
+        "repeat": 1,
+        "attempt_id": "722bfc8cb4e4",
+        "conversation": 1,
+        "evidence_directory": "screenshots/chatgpt/MB-GEN-009/repeat_1/722bfc8cb4e4",
+        "turn": "conversation1_turn1",
+        "prompt": "Translate this sentence into French: The cat is sleeping. Reply with only the French sentence.",
+        "response": "Le chat dort.",
+        "characters": 13
+      },
+      {
+        "utc": "2026-11-26T03:02:58.368257+00:00",
+        "event": "CONVERSATION_PREPARE",
+        "app": "chatgpt",
+        "case": "MB-GEN-009",
+        "repeat": 2,
+        "attempt_id": "d4ae44afd13b",
+        "conversation": 1,
+        "evidence_directory": "screenshots/chatgpt/MB-GEN-009/repeat_2/d4ae44afd13b"
+      },
+      {
+        "utc": "2026-11-26T03:02:58.368293+00:00",
+        "event": "NEW_CHAT",
+        "app": "chatgpt",
+        "case": "MB-GEN-009",
+        "repeat": 2,
+        "attempt_id": "d4ae44afd13b",
+        "conversation": 1,
+        "evidence_directory": "screenshots/chatgpt/MB-GEN-009/repeat_2/d4ae44afd13b"
+      },
+      {
+        "utc": "2026-11-26T03:03:04.481123+00:00",
+        "event": "NEW_CHAT_READY",
+        "app": "chatgpt",
+        "case": "MB-GEN-009",
+        "repeat": 2,
+        "attempt_id": "d4ae44afd13b",
+        "conversation": 1,
+        "evidence_directory": "screenshots/chatgpt/MB-GEN-009/repeat_2/d4ae44afd13b"
+      },
+      {
+        "utc": "2026-11-26T03:03:04.481391+00:00",
+        "event": "TURN_START",
+        "app": "chatgpt",
+        "case": "MB-GEN-009",
+        "repeat": 2,
+        "attempt_id": "d4ae44afd13b",
+        "conversation": 1,
+        "evidence_directory": "screenshots/chatgpt/MB-GEN-009/repeat_2/d4ae44afd13b",
+        "turn": "conversation1_turn1",
+        "prompt": "Translate this sentence into French: The cat is sleeping. Reply with only the French sentence."
+      },
+      {
+        "utc": "2026-11-26T03:03:23.714048+00:00",
+        "event": "TURN_DONE",
+        "app": "chatgpt",
+        "case": "MB-GEN-009",
+        "repeat": 2,
+        "attempt_id": "d4ae44afd13b",
+        "conversation": 1,
+        "evidence_directory": "screenshots/chatgpt/MB-GEN-009/repeat_2/d4ae44afd13b",
+        "turn": "conversation1_turn1",
+        "prompt": "Translate this sentence into French: The cat is sleeping. Reply with only the French sentence.",
+        "response": "Le chat dort.",
+        "characters": 13
+      },
+      {
+        "utc": "2026-11-26T03:03:23.904553+00:00",
+        "event": "SESSION_START",
+        "app": "gemini"
+      },
+      {
+        "utc": "2026-11-26T03:03:26.574260+00:00",
+        "event": "SESSION_READY",
+        "app": "gemini",
+        "observation": {
+          "host_stopped": true,
+          "package": "com.google.android.googlequicksearchbox",
+          "command": [
+            "/Users/DEMO_USER/Library/Android/sdk/platform-tools/adb",
+            "-s",
+            "emulator-5554",
+            "shell",
+            "am",
+            "force-stop",
+            "com.google.android.googlequicksearchbox"
+          ],
+          "exit_code": 0,
+          "at_unix_seconds": 1795662203.982383,
+          "account_data_cleared": false
+        }
+      },
+      {
+        "utc": "2026-11-26T03:03:26.575128+00:00",
+        "event": "CONVERSATION_PREPARE",
+        "app": "gemini",
+        "case": "MB-GEN-009",
+        "repeat": 1,
+        "attempt_id": "5ab006073cec",
+        "conversation": 1,
+        "evidence_directory": "screenshots/gemini/MB-GEN-009/repeat_1/5ab006073cec"
+      },
+      {
+        "utc": "2026-11-26T03:03:26.575154+00:00",
+        "event": "NEW_CHAT",
+        "app": "gemini",
+        "case": "MB-GEN-009",
+        "repeat": 1,
+        "attempt_id": "5ab006073cec",
+        "conversation": 1,
+        "evidence_directory": "screenshots/gemini/MB-GEN-009/repeat_1/5ab006073cec"
+      },
+      {
+        "utc": "2026-11-26T03:03:37.753637+00:00",
+        "event": "NEW_CHAT_READY",
+        "app": "gemini",
+        "case": "MB-GEN-009",
+        "repeat": 1,
+        "attempt_id": "5ab006073cec",
+        "conversation": 1,
+        "evidence_directory": "screenshots/gemini/MB-GEN-009/repeat_1/5ab006073cec"
+      },
+      {
+        "utc": "2026-11-26T03:03:37.754054+00:00",
+        "event": "TURN_START",
+        "app": "gemini",
+        "case": "MB-GEN-009",
+        "repeat": 1,
+        "attempt_id": "5ab006073cec",
+        "conversation": 1,
+        "evidence_directory": "screenshots/gemini/MB-GEN-009/repeat_1/5ab006073cec",
+        "turn": "conversation1_turn1",
+        "prompt": "Translate this sentence into French: The cat is sleeping. Reply with only the French sentence."
+      },
+      {
+        "utc": "2026-11-26T03:03:53.005712+00:00",
+        "event": "TURN_DONE",
+        "app": "gemini",
+        "case": "MB-GEN-009",
+        "repeat": 1,
+        "attempt_id": "5ab006073cec",
+        "conversation": 1,
+        "evidence_directory": "screenshots/gemini/MB-GEN-009/repeat_1/5ab006073cec",
+        "turn": "conversation1_turn1",
+        "prompt": "Translate this sentence into French: The cat is sleeping. Reply with only the French sentence.",
+        "response": "Le chat dort.\n",
+        "characters": 14
+      },
+      {
+        "utc": "2026-11-26T03:03:53.006917+00:00",
+        "event": "CONVERSATION_PREPARE",
+        "app": "gemini",
+        "case": "MB-GEN-009",
+        "repeat": 2,
+        "attempt_id": "94c3d033b9aa",
+        "conversation": 1,
+        "evidence_directory": "screenshots/gemini/MB-GEN-009/repeat_2/94c3d033b9aa"
+      },
+      {
+        "utc": "2026-11-26T03:03:53.006940+00:00",
+        "event": "NEW_CHAT",
+        "app": "gemini",
+        "case": "MB-GEN-009",
+        "repeat": 2,
+        "attempt_id": "94c3d033b9aa",
+        "conversation": 1,
+        "evidence_directory": "screenshots/gemini/MB-GEN-009/repeat_2/94c3d033b9aa"
+      },
+      {
+        "utc": "2026-11-26T03:03:58.897595+00:00",
+        "event": "NEW_CHAT_READY",
+        "app": "gemini",
+        "case": "MB-GEN-009",
+        "repeat": 2,
+        "attempt_id": "94c3d033b9aa",
+        "conversation": 1,
+        "evidence_directory": "screenshots/gemini/MB-GEN-009/repeat_2/94c3d033b9aa"
+      },
+      {
+        "utc": "2026-11-26T03:03:58.898128+00:00",
+        "event": "TURN_START",
+        "app": "gemini",
+        "case": "MB-GEN-009",
+        "repeat": 2,
+        "attempt_id": "94c3d033b9aa",
+        "conversation": 1,
+        "evidence_directory": "screenshots/gemini/MB-GEN-009/repeat_2/94c3d033b9aa",
+        "turn": "conversation1_turn1",
+        "prompt": "Translate this sentence into French: The cat is sleeping. Reply with only the French sentence."
+      },
+      {
+        "utc": "2026-11-26T03:04:14.449596+00:00",
+        "event": "TURN_DONE",
+        "app": "gemini",
+        "case": "MB-GEN-009",
+        "repeat": 2,
+        "attempt_id": "94c3d033b9aa",
+        "conversation": 1,
+        "evidence_directory": "screenshots/gemini/MB-GEN-009/repeat_2/94c3d033b9aa",
+        "turn": "conversation1_turn1",
+        "prompt": "Translate this sentence into French: The cat is sleeping. Reply with only the French sentence.",
+        "response": "Le chat dort.",
+        "characters": 13
+      },
+      {
+        "utc": "2026-11-26T03:04:14.635256+00:00",
+        "event": "RESULT",
+        "summary": {
+          "run_type": "LIVE_APPIUM_UI",
+          "evidence_source": "THIS_RUN_ONLY",
+          "config_path": "/Users/DEMO_USER/Documents/Codex/2026-11-16/macbook-m2-max-android-studio-emulator/demo/Group7_Live_Demo/runtime/runs/20261126T030225Z_13fd3e84/source_snapshot/data/android_appium_config.local.json",
+          "output_dir": "/Users/DEMO_USER/Documents/Codex/2026-11-16/macbook-m2-max-android-studio-emulator/demo/Group7_Live_Demo/runtime/runs/20261126T030225Z_13fd3e84",
+          "planned_app_case_repetitions": 4,
+          "selected_records": 4,
+          "all_checkpointed_attempts": 4,
+          "status_counts": {
+            "PASS": 4
+          },
+          "automatic_pass_rate_pct": 100.0,
+          "completion_rate_pct": 100.0,
+          "selected_recorded_case_seconds": 102.2344,
+          "checkpointed_attempt_seconds": 102.2344,
+          "notes": [
+            "Captured live UI output must be checked on the actual device.",
+            "REVIEW is not PASS; requires a separate human judgment.",
+            "ERROR denotes capture/infrastructure failure, not necessarily model failure.",
+            "Recorded duration does not include uncheckpointed setup or human effort.",
+            "These outputs do not authenticate earlier team reports."
+          ],
+          "timestamp_utc": "2026-11-26T03:04:14+00:00"
+        }
+      },
+      {
+        "utc": "2026-11-26T03:04:14.852727+00:00",
+        "event": "STAGE_END",
+        "wall_seconds": 108.787
+      }
+    ],
+    "attempts": [
+      {
+        "attempt_id": "722bfc8cb4e4",
+        "case_id": "MB-GEN-009",
+        "feature": "NLU",
+        "application": "chatgpt",
+        "repeat": "1",
+        "status": "PASS",
+        "oracle": "opt_translate_fr_cat",
+        "duration_seconds": "29.0134",
+        "started_utc": "2026-11-26T03:02:29+00:00",
+        "ended_utc": "2026-11-26T03:02:58+00:00",
+        "completed_turns": "1",
+        "planned_turns": "1",
+        "human_review_required": "NO",
+        "note": "Whole affirmative French translation matches a declared valid form",
+        "evidence_directory": "screenshots/chatgpt/MB-GEN-009/repeat_1/722bfc8cb4e4"
+      },
+      {
+        "attempt_id": "d4ae44afd13b",
+        "case_id": "MB-GEN-009",
+        "feature": "NLU",
+        "application": "chatgpt",
+        "repeat": "2",
+        "status": "PASS",
+        "oracle": "opt_translate_fr_cat",
+        "duration_seconds": "25.3463",
+        "started_utc": "2026-11-26T03:02:58+00:00",
+        "ended_utc": "2026-11-26T03:03:23+00:00",
+        "completed_turns": "1",
+        "planned_turns": "1",
+        "human_review_required": "NO",
+        "note": "Whole affirmative French translation matches a declared valid form",
+        "evidence_directory": "screenshots/chatgpt/MB-GEN-009/repeat_2/d4ae44afd13b"
+      },
+      {
+        "attempt_id": "5ab006073cec",
+        "case_id": "MB-GEN-009",
+        "feature": "NLU",
+        "application": "gemini",
+        "repeat": "1",
+        "status": "PASS",
+        "oracle": "opt_translate_fr_cat",
+        "duration_seconds": "26.4316",
+        "started_utc": "2026-11-26T03:03:26+00:00",
+        "ended_utc": "2026-11-26T03:03:53+00:00",
+        "completed_turns": "1",
+        "planned_turns": "1",
+        "human_review_required": "NO",
+        "note": "Whole affirmative French translation matches a declared valid form",
+        "evidence_directory": "screenshots/gemini/MB-GEN-009/repeat_1/5ab006073cec"
+      },
+      {
+        "attempt_id": "94c3d033b9aa",
+        "case_id": "MB-GEN-009",
+        "feature": "NLU",
+        "application": "gemini",
+        "repeat": "2",
+        "status": "PASS",
+        "oracle": "opt_translate_fr_cat",
+        "duration_seconds": "21.4431",
+        "started_utc": "2026-11-26T03:03:53+00:00",
+        "ended_utc": "2026-11-26T03:04:14+00:00",
+        "completed_turns": "1",
+        "planned_turns": "1",
+        "human_review_required": "NO",
+        "note": "Whole affirmative French translation matches a declared valid form",
+        "evidence_directory": "screenshots/gemini/MB-GEN-009/repeat_2/94c3d033b9aa"
+      }
+    ],
+    "turns": [
+      {
+        "attempt_id": "722bfc8cb4e4",
+        "application": "chatgpt",
+        "case_id": "MB-GEN-009",
+        "repeat": 1,
+        "conversation": 1,
+        "turn": 1,
+        "prompt": "Translate this sentence into French: The cat is sleeping. Reply with only the French sentence.",
+        "response": "Le chat dort.",
+        "captured_at_utc": "2026-11-26T03:02:58+00:00",
+        "capture_type": "LIVE_APPIUM_UI_TEXT"
+      },
+      {
+        "attempt_id": "d4ae44afd13b",
+        "application": "chatgpt",
+        "case_id": "MB-GEN-009",
+        "repeat": 2,
+        "conversation": 1,
+        "turn": 1,
+        "prompt": "Translate this sentence into French: The cat is sleeping. Reply with only the French sentence.",
+        "response": "Le chat dort.",
+        "captured_at_utc": "2026-11-26T03:03:23+00:00",
+        "capture_type": "LIVE_APPIUM_UI_TEXT"
+      },
+      {
+        "attempt_id": "5ab006073cec",
+        "application": "gemini",
+        "case_id": "MB-GEN-009",
+        "repeat": 1,
+        "conversation": 1,
+        "turn": 1,
+        "prompt": "Translate this sentence into French: The cat is sleeping. Reply with only the French sentence.",
+        "response": "Le chat dort.\n",
+        "captured_at_utc": "2026-11-26T03:03:53+00:00",
+        "capture_type": "LIVE_APPIUM_UI_TEXT"
+      },
+      {
+        "attempt_id": "94c3d033b9aa",
+        "application": "gemini",
+        "case_id": "MB-GEN-009",
+        "repeat": 2,
+        "conversation": 1,
+        "turn": 1,
+        "prompt": "Translate this sentence into French: The cat is sleeping. Reply with only the French sentence.",
+        "response": "Le chat dort.",
+        "captured_at_utc": "2026-11-26T03:04:14+00:00",
+        "capture_type": "LIVE_APPIUM_UI_TEXT"
+      }
+    ],
+    "details": [
+      {
+        "attempt_id": "722bfc8cb4e4",
+        "case_id": "MB-GEN-009",
+        "feature": "NLU",
+        "application": "chatgpt",
+        "repeat": 1,
+        "status": "PASS",
+        "oracle": "opt_translate_fr_cat",
+        "duration_seconds": 29.0134,
+        "started_utc": "2026-11-26T03:02:29+00:00",
+        "ended_utc": "2026-11-26T03:02:58+00:00",
+        "completed_turns": 1,
+        "planned_turns": 1,
+        "human_review_required": "NO",
+        "note": "Whole affirmative French translation matches a declared valid form",
+        "evidence_directory": "screenshots/chatgpt/MB-GEN-009/repeat_1/722bfc8cb4e4",
+        "input_groups": [
+          [
+            "Translate this sentence into French: The cat is sleeping. Reply with only the French sentence."
+          ]
+        ],
+        "captured_response_groups": [
+          [
+            "Le chat dort."
+          ]
+        ],
+        "warning": "A recorded live UI capture is not a semantic truth guarantee"
+      },
+      {
+        "attempt_id": "d4ae44afd13b",
+        "case_id": "MB-GEN-009",
+        "feature": "NLU",
+        "application": "chatgpt",
+        "repeat": 2,
+        "status": "PASS",
+        "oracle": "opt_translate_fr_cat",
+        "duration_seconds": 25.3463,
+        "started_utc": "2026-11-26T03:02:58+00:00",
+        "ended_utc": "2026-11-26T03:03:23+00:00",
+        "completed_turns": 1,
+        "planned_turns": 1,
+        "human_review_required": "NO",
+        "note": "Whole affirmative French translation matches a declared valid form",
+        "evidence_directory": "screenshots/chatgpt/MB-GEN-009/repeat_2/d4ae44afd13b",
+        "input_groups": [
+          [
+            "Translate this sentence into French: The cat is sleeping. Reply with only the French sentence."
+          ]
+        ],
+        "captured_response_groups": [
+          [
+            "Le chat dort."
+          ]
+        ],
+        "warning": "A recorded live UI capture is not a semantic truth guarantee"
+      },
+      {
+        "attempt_id": "5ab006073cec",
+        "case_id": "MB-GEN-009",
+        "feature": "NLU",
+        "application": "gemini",
+        "repeat": 1,
+        "status": "PASS",
+        "oracle": "opt_translate_fr_cat",
+        "duration_seconds": 26.4316,
+        "started_utc": "2026-11-26T03:03:26+00:00",
+        "ended_utc": "2026-11-26T03:03:53+00:00",
+        "completed_turns": 1,
+        "planned_turns": 1,
+        "human_review_required": "NO",
+        "note": "Whole affirmative French translation matches a declared valid form",
+        "evidence_directory": "screenshots/gemini/MB-GEN-009/repeat_1/5ab006073cec",
+        "input_groups": [
+          [
+            "Translate this sentence into French: The cat is sleeping. Reply with only the French sentence."
+          ]
+        ],
+        "captured_response_groups": [
+          [
+            "Le chat dort.\n"
+          ]
+        ],
+        "warning": "A recorded live UI capture is not a semantic truth guarantee"
+      },
+      {
+        "attempt_id": "94c3d033b9aa",
+        "case_id": "MB-GEN-009",
+        "feature": "NLU",
+        "application": "gemini",
+        "repeat": 2,
+        "status": "PASS",
+        "oracle": "opt_translate_fr_cat",
+        "duration_seconds": 21.4431,
+        "started_utc": "2026-11-26T03:03:53+00:00",
+        "ended_utc": "2026-11-26T03:04:14+00:00",
+        "completed_turns": 1,
+        "planned_turns": 1,
+        "human_review_required": "NO",
+        "note": "Whole affirmative French translation matches a declared valid form",
+        "evidence_directory": "screenshots/gemini/MB-GEN-009/repeat_2/94c3d033b9aa",
+        "input_groups": [
+          [
+            "Translate this sentence into French: The cat is sleeping. Reply with only the French sentence."
+          ]
+        ],
+        "captured_response_groups": [
+          [
+            "Le chat dort."
+          ]
+        ],
+        "warning": "A recorded live UI capture is not a semantic truth guarantee"
+      }
+    ],
+    "summary": {
+      "run_type": "LIVE_APPIUM_UI",
+      "evidence_source": "THIS_RUN_ONLY",
+      "config_path": "/Users/DEMO_USER/Documents/Codex/2026-11-16/macbook-m2-max-android-studio-emulator/demo/Group7_Live_Demo/runtime/runs/20261126T030225Z_13fd3e84/source_snapshot/data/android_appium_config.local.json",
+      "output_dir": "/Users/DEMO_USER/Documents/Codex/2026-11-16/macbook-m2-max-android-studio-emulator/demo/Group7_Live_Demo/runtime/runs/20261126T030225Z_13fd3e84",
+      "planned_app_case_repetitions": 4,
+      "selected_records": 4,
+      "all_checkpointed_attempts": 4,
+      "status_counts": {
+        "PASS": 4
+      },
+      "automatic_pass_rate_pct": 100.0,
+      "completion_rate_pct": 100.0,
+      "selected_recorded_case_seconds": 102.2344,
+      "checkpointed_attempt_seconds": 102.2344,
+      "notes": [
+        "Captured live UI output must be checked on the actual device.",
+        "REVIEW is not PASS; requires a separate human judgment.",
+        "ERROR denotes capture/infrastructure failure, not necessarily model failure.",
+        "Recorded duration does not include uncheckpointed setup or human effort.",
+        "These outputs do not authenticate earlier team reports."
+      ],
+      "timestamp_utc": "2026-11-26T03:04:14+00:00"
+    },
+    "active_attempt": {
+      "utc": "2026-11-26T03:03:53.006917+00:00",
+      "event": "CONVERSATION_PREPARE",
+      "app": "gemini",
+      "case": "MB-GEN-009",
+      "repeat": 2,
+      "attempt_id": "94c3d033b9aa",
+      "conversation": 1,
+      "evidence_directory": "screenshots/gemini/MB-GEN-009/repeat_2/94c3d033b9aa"
+    },
+    "elapsed_seconds": null,
+    "counts": {
+      "PASS": 4,
+      "FAIL": 0,
+      "REVIEW": 0,
+      "ERROR": 0
+    }
+  },
+  "browser_errors": [],
+  "frame_count_observed": 245,
+  "unique_frame_sequences": 245,
+  "capture_to_browser_mean_ms": 303.6,
+  "capture_to_browser_p95_ms": 453,
+  "appium_http_visible_during_run": true,
+  "browser_reloaded_without_duplicate_worker": true,
+  "frame_metrics": [
+    {
+      "received": 1795662161092,
+      "captured": "2026-11-26T03:02:40.641212+00:00",
+      "delay_ms": 444,
+      "sequence": 1,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662161494,
+      "captured": "2026-11-26T03:02:41.010543+00:00",
+      "delay_ms": 484,
+      "sequence": 2,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662161888,
+      "captured": "2026-11-26T03:02:41.422395+00:00",
+      "delay_ms": 466,
+      "sequence": 3,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662162092,
+      "captured": "2026-11-26T03:02:41.688051+00:00",
+      "delay_ms": 404,
+      "sequence": 4,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662162491,
+      "captured": "2026-11-26T03:02:42.014365+00:00",
+      "delay_ms": 477,
+      "sequence": 5,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662162693,
+      "captured": "2026-11-26T03:02:42.291801+00:00",
+      "delay_ms": 402,
+      "sequence": 6,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662162885,
+      "captured": "2026-11-26T03:02:42.528741+00:00",
+      "delay_ms": 357,
+      "sequence": 7,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662163088,
+      "captured": "2026-11-26T03:02:42.809065+00:00",
+      "delay_ms": 279,
+      "sequence": 8,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662163285,
+      "captured": "2026-11-26T03:02:43.081753+00:00",
+      "delay_ms": 204,
+      "sequence": 9,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662163486,
+      "captured": "2026-11-26T03:02:43.291096+00:00",
+      "delay_ms": 195,
+      "sequence": 10,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662163685,
+      "captured": "2026-11-26T03:02:43.499151+00:00",
+      "delay_ms": 186,
+      "sequence": 11,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662163883,
+      "captured": "2026-11-26T03:02:43.707859+00:00",
+      "delay_ms": 176,
+      "sequence": 12,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662164293,
+      "captured": "2026-11-26T03:02:44.123239+00:00",
+      "delay_ms": 170,
+      "sequence": 14,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662164684,
+      "captured": "2026-11-26T03:02:44.333122+00:00",
+      "delay_ms": 350,
+      "sequence": 15,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662164884,
+      "captured": "2026-11-26T03:02:44.537362+00:00",
+      "delay_ms": 347,
+      "sequence": 16,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662165085,
+      "captured": "2026-11-26T03:02:44.743601+00:00",
+      "delay_ms": 342,
+      "sequence": 17,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662165285,
+      "captured": "2026-11-26T03:02:44.949373+00:00",
+      "delay_ms": 336,
+      "sequence": 18,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662165487,
+      "captured": "2026-11-26T03:02:45.159435+00:00",
+      "delay_ms": 328,
+      "sequence": 19,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662165685,
+      "captured": "2026-11-26T03:02:45.368062+00:00",
+      "delay_ms": 317,
+      "sequence": 20,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662165884,
+      "captured": "2026-11-26T03:02:45.574381+00:00",
+      "delay_ms": 310,
+      "sequence": 21,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662166085,
+      "captured": "2026-11-26T03:02:45.782828+00:00",
+      "delay_ms": 303,
+      "sequence": 22,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662166285,
+      "captured": "2026-11-26T03:02:45.991186+00:00",
+      "delay_ms": 294,
+      "sequence": 23,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662166484,
+      "captured": "2026-11-26T03:02:46.197649+00:00",
+      "delay_ms": 287,
+      "sequence": 24,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662166687,
+      "captured": "2026-11-26T03:02:46.406039+00:00",
+      "delay_ms": 281,
+      "sequence": 25,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662166886,
+      "captured": "2026-11-26T03:02:46.610900+00:00",
+      "delay_ms": 276,
+      "sequence": 26,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662167085,
+      "captured": "2026-11-26T03:02:46.811754+00:00",
+      "delay_ms": 274,
+      "sequence": 27,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662167286,
+      "captured": "2026-11-26T03:02:47.018205+00:00",
+      "delay_ms": 268,
+      "sequence": 28,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662167485,
+      "captured": "2026-11-26T03:02:47.224623+00:00",
+      "delay_ms": 261,
+      "sequence": 29,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662167883,
+      "captured": "2026-11-26T03:02:47.475739+00:00",
+      "delay_ms": 408,
+      "sequence": 30,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662168087,
+      "captured": "2026-11-26T03:02:47.749935+00:00",
+      "delay_ms": 338,
+      "sequence": 31,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662168289,
+      "captured": "2026-11-26T03:02:48.001220+00:00",
+      "delay_ms": 287,
+      "sequence": 32,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662168685,
+      "captured": "2026-11-26T03:02:48.280981+00:00",
+      "delay_ms": 405,
+      "sequence": 33,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662168884,
+      "captured": "2026-11-26T03:02:48.539072+00:00",
+      "delay_ms": 345,
+      "sequence": 34,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662169084,
+      "captured": "2026-11-26T03:02:48.809122+00:00",
+      "delay_ms": 275,
+      "sequence": 35,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662169488,
+      "captured": "2026-11-26T03:02:49.056361+00:00",
+      "delay_ms": 432,
+      "sequence": 36,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662169688,
+      "captured": "2026-11-26T03:02:49.342825+00:00",
+      "delay_ms": 346,
+      "sequence": 37,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662170084,
+      "captured": "2026-11-26T03:02:49.619131+00:00",
+      "delay_ms": 465,
+      "sequence": 38,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662170283,
+      "captured": "2026-11-26T03:02:50.115968+00:00",
+      "delay_ms": 168,
+      "sequence": 40,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662170684,
+      "captured": "2026-11-26T03:02:50.324441+00:00",
+      "delay_ms": 360,
+      "sequence": 41,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662170884,
+      "captured": "2026-11-26T03:02:50.534395+00:00",
+      "delay_ms": 350,
+      "sequence": 42,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662171086,
+      "captured": "2026-11-26T03:02:50.739563+00:00",
+      "delay_ms": 347,
+      "sequence": 43,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662171285,
+      "captured": "2026-11-26T03:02:50.946052+00:00",
+      "delay_ms": 339,
+      "sequence": 44,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662171485,
+      "captured": "2026-11-26T03:02:51.150833+00:00",
+      "delay_ms": 335,
+      "sequence": 45,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662171685,
+      "captured": "2026-11-26T03:02:51.358287+00:00",
+      "delay_ms": 327,
+      "sequence": 46,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662171884,
+      "captured": "2026-11-26T03:02:51.565762+00:00",
+      "delay_ms": 319,
+      "sequence": 47,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662172085,
+      "captured": "2026-11-26T03:02:51.765981+00:00",
+      "delay_ms": 320,
+      "sequence": 48,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662172285,
+      "captured": "2026-11-26T03:02:51.972670+00:00",
+      "delay_ms": 313,
+      "sequence": 49,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662172487,
+      "captured": "2026-11-26T03:02:52.182570+00:00",
+      "delay_ms": 305,
+      "sequence": 50,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662172685,
+      "captured": "2026-11-26T03:02:52.391081+00:00",
+      "delay_ms": 294,
+      "sequence": 51,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662172885,
+      "captured": "2026-11-26T03:02:52.598056+00:00",
+      "delay_ms": 287,
+      "sequence": 52,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662173085,
+      "captured": "2026-11-26T03:02:52.807812+00:00",
+      "delay_ms": 278,
+      "sequence": 53,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662173287,
+      "captured": "2026-11-26T03:02:53.016153+00:00",
+      "delay_ms": 271,
+      "sequence": 54,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662173485,
+      "captured": "2026-11-26T03:02:53.224368+00:00",
+      "delay_ms": 261,
+      "sequence": 55,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662173687,
+      "captured": "2026-11-26T03:02:53.433823+00:00",
+      "delay_ms": 254,
+      "sequence": 56,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662173887,
+      "captured": "2026-11-26T03:02:53.635076+00:00",
+      "delay_ms": 252,
+      "sequence": 57,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662174487,
+      "captured": "2026-11-26T03:02:53.843593+00:00",
+      "delay_ms": 644,
+      "sequence": 58,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662174689,
+      "captured": "2026-11-26T03:02:54.297624+00:00",
+      "delay_ms": 391,
+      "sequence": 59,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662175085,
+      "captured": "2026-11-26T03:02:54.590826+00:00",
+      "delay_ms": 495,
+      "sequence": 60,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662175488,
+      "captured": "2026-11-26T03:02:54.930450+00:00",
+      "delay_ms": 558,
+      "sequence": 61,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662175685,
+      "captured": "2026-11-26T03:02:55.287380+00:00",
+      "delay_ms": 398,
+      "sequence": 62,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662175884,
+      "captured": "2026-11-26T03:02:55.602369+00:00",
+      "delay_ms": 282,
+      "sequence": 63,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662176286,
+      "captured": "2026-11-26T03:02:55.863146+00:00",
+      "delay_ms": 423,
+      "sequence": 64,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662176488,
+      "captured": "2026-11-26T03:02:56.122150+00:00",
+      "delay_ms": 366,
+      "sequence": 65,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662176885,
+      "captured": "2026-11-26T03:02:56.391240+00:00",
+      "delay_ms": 494,
+      "sequence": 66,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662177084,
+      "captured": "2026-11-26T03:02:56.735280+00:00",
+      "delay_ms": 349,
+      "sequence": 67,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662177284,
+      "captured": "2026-11-26T03:02:56.963330+00:00",
+      "delay_ms": 321,
+      "sequence": 68,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662177486,
+      "captured": "2026-11-26T03:02:57.172905+00:00",
+      "delay_ms": 314,
+      "sequence": 69,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662177685,
+      "captured": "2026-11-26T03:02:57.381196+00:00",
+      "delay_ms": 304,
+      "sequence": 70,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662177884,
+      "captured": "2026-11-26T03:02:57.588596+00:00",
+      "delay_ms": 296,
+      "sequence": 71,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662178085,
+      "captured": "2026-11-26T03:02:57.793736+00:00",
+      "delay_ms": 292,
+      "sequence": 72,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662178285,
+      "captured": "2026-11-26T03:02:58.002818+00:00",
+      "delay_ms": 283,
+      "sequence": 73,
+      "attempt_id": "722bfc8cb4e4"
+    },
+    {
+      "received": 1795662187496,
+      "captured": "2026-11-26T03:03:07.067432+00:00",
+      "delay_ms": 429,
+      "sequence": 74,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662187696,
+      "captured": "2026-11-26T03:03:07.393285+00:00",
+      "delay_ms": 303,
+      "sequence": 75,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662187895,
+      "captured": "2026-11-26T03:03:07.607672+00:00",
+      "delay_ms": 288,
+      "sequence": 76,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662188094,
+      "captured": "2026-11-26T03:03:07.830571+00:00",
+      "delay_ms": 264,
+      "sequence": 77,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662188498,
+      "captured": "2026-11-26T03:03:08.062665+00:00",
+      "delay_ms": 436,
+      "sequence": 78,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662188698,
+      "captured": "2026-11-26T03:03:08.295882+00:00",
+      "delay_ms": 403,
+      "sequence": 79,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662188895,
+      "captured": "2026-11-26T03:03:08.596246+00:00",
+      "delay_ms": 299,
+      "sequence": 80,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662189295,
+      "captured": "2026-11-26T03:03:08.867820+00:00",
+      "delay_ms": 428,
+      "sequence": 81,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662189494,
+      "captured": "2026-11-26T03:03:09.121583+00:00",
+      "delay_ms": 373,
+      "sequence": 82,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662189695,
+      "captured": "2026-11-26T03:03:09.379784+00:00",
+      "delay_ms": 316,
+      "sequence": 83,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662189896,
+      "captured": "2026-11-26T03:03:09.586505+00:00",
+      "delay_ms": 310,
+      "sequence": 84,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662190093,
+      "captured": "2026-11-26T03:03:09.795491+00:00",
+      "delay_ms": 298,
+      "sequence": 85,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662190295,
+      "captured": "2026-11-26T03:03:10.004777+00:00",
+      "delay_ms": 291,
+      "sequence": 86,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662190496,
+      "captured": "2026-11-26T03:03:10.214802+00:00",
+      "delay_ms": 282,
+      "sequence": 87,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662190695,
+      "captured": "2026-11-26T03:03:10.424522+00:00",
+      "delay_ms": 271,
+      "sequence": 88,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662190894,
+      "captured": "2026-11-26T03:03:10.630980+00:00",
+      "delay_ms": 264,
+      "sequence": 89,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662191095,
+      "captured": "2026-11-26T03:03:10.838185+00:00",
+      "delay_ms": 257,
+      "sequence": 90,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662191296,
+      "captured": "2026-11-26T03:03:11.041336+00:00",
+      "delay_ms": 255,
+      "sequence": 91,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662191495,
+      "captured": "2026-11-26T03:03:11.242146+00:00",
+      "delay_ms": 253,
+      "sequence": 92,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662191695,
+      "captured": "2026-11-26T03:03:11.451938+00:00",
+      "delay_ms": 244,
+      "sequence": 93,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662191894,
+      "captured": "2026-11-26T03:03:11.656124+00:00",
+      "delay_ms": 238,
+      "sequence": 94,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662192096,
+      "captured": "2026-11-26T03:03:11.863314+00:00",
+      "delay_ms": 233,
+      "sequence": 95,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662192295,
+      "captured": "2026-11-26T03:03:12.071667+00:00",
+      "delay_ms": 224,
+      "sequence": 96,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662192496,
+      "captured": "2026-11-26T03:03:12.280975+00:00",
+      "delay_ms": 216,
+      "sequence": 97,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662192698,
+      "captured": "2026-11-26T03:03:12.491041+00:00",
+      "delay_ms": 207,
+      "sequence": 98,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662192894,
+      "captured": "2026-11-26T03:03:12.696190+00:00",
+      "delay_ms": 198,
+      "sequence": 99,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662193294,
+      "captured": "2026-11-26T03:03:13.110100+00:00",
+      "delay_ms": 183,
+      "sequence": 101,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662193495,
+      "captured": "2026-11-26T03:03:13.315246+00:00",
+      "delay_ms": 180,
+      "sequence": 102,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662193895,
+      "captured": "2026-11-26T03:03:13.522434+00:00",
+      "delay_ms": 372,
+      "sequence": 103,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662194095,
+      "captured": "2026-11-26T03:03:13.806378+00:00",
+      "delay_ms": 289,
+      "sequence": 104,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662194496,
+      "captured": "2026-11-26T03:03:14.073292+00:00",
+      "delay_ms": 423,
+      "sequence": 105,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662194701,
+      "captured": "2026-11-26T03:03:14.350804+00:00",
+      "delay_ms": 351,
+      "sequence": 106,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662194896,
+      "captured": "2026-11-26T03:03:14.618799+00:00",
+      "delay_ms": 278,
+      "sequence": 107,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662195300,
+      "captured": "2026-11-26T03:03:14.871609+00:00",
+      "delay_ms": 429,
+      "sequence": 108,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662195500,
+      "captured": "2026-11-26T03:03:15.140528+00:00",
+      "delay_ms": 360,
+      "sequence": 109,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662195699,
+      "captured": "2026-11-26T03:03:15.404463+00:00",
+      "delay_ms": 295,
+      "sequence": 110,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662196097,
+      "captured": "2026-11-26T03:03:15.649715+00:00",
+      "delay_ms": 448,
+      "sequence": 111,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662196295,
+      "captured": "2026-11-26T03:03:15.914300+00:00",
+      "delay_ms": 380,
+      "sequence": 112,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662196496,
+      "captured": "2026-11-26T03:03:16.169381+00:00",
+      "delay_ms": 327,
+      "sequence": 113,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662196695,
+      "captured": "2026-11-26T03:03:16.374151+00:00",
+      "delay_ms": 321,
+      "sequence": 114,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662196895,
+      "captured": "2026-11-26T03:03:16.583025+00:00",
+      "delay_ms": 312,
+      "sequence": 115,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662197096,
+      "captured": "2026-11-26T03:03:16.792740+00:00",
+      "delay_ms": 304,
+      "sequence": 116,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662197295,
+      "captured": "2026-11-26T03:03:17.001575+00:00",
+      "delay_ms": 294,
+      "sequence": 117,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662197495,
+      "captured": "2026-11-26T03:03:17.207196+00:00",
+      "delay_ms": 288,
+      "sequence": 118,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662197694,
+      "captured": "2026-11-26T03:03:17.410316+00:00",
+      "delay_ms": 284,
+      "sequence": 119,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662197895,
+      "captured": "2026-11-26T03:03:17.620311+00:00",
+      "delay_ms": 275,
+      "sequence": 120,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662198096,
+      "captured": "2026-11-26T03:03:17.827322+00:00",
+      "delay_ms": 269,
+      "sequence": 121,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662198297,
+      "captured": "2026-11-26T03:03:18.032470+00:00",
+      "delay_ms": 265,
+      "sequence": 122,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662198496,
+      "captured": "2026-11-26T03:03:18.236031+00:00",
+      "delay_ms": 260,
+      "sequence": 123,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662198694,
+      "captured": "2026-11-26T03:03:18.445956+00:00",
+      "delay_ms": 249,
+      "sequence": 124,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662198894,
+      "captured": "2026-11-26T03:03:18.655896+00:00",
+      "delay_ms": 239,
+      "sequence": 125,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662199096,
+      "captured": "2026-11-26T03:03:18.866112+00:00",
+      "delay_ms": 230,
+      "sequence": 126,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662199294,
+      "captured": "2026-11-26T03:03:19.076127+00:00",
+      "delay_ms": 218,
+      "sequence": 127,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662199494,
+      "captured": "2026-11-26T03:03:19.285728+00:00",
+      "delay_ms": 209,
+      "sequence": 128,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662199698,
+      "captured": "2026-11-26T03:03:19.486707+00:00",
+      "delay_ms": 212,
+      "sequence": 129,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662199896,
+      "captured": "2026-11-26T03:03:19.691274+00:00",
+      "delay_ms": 205,
+      "sequence": 130,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662200093,
+      "captured": "2026-11-26T03:03:19.899245+00:00",
+      "delay_ms": 194,
+      "sequence": 131,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662200494,
+      "captured": "2026-11-26T03:03:20.108374+00:00",
+      "delay_ms": 386,
+      "sequence": 132,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662200895,
+      "captured": "2026-11-26T03:03:20.435936+00:00",
+      "delay_ms": 460,
+      "sequence": 133,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662201294,
+      "captured": "2026-11-26T03:03:20.751485+00:00",
+      "delay_ms": 543,
+      "sequence": 134,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662201496,
+      "captured": "2026-11-26T03:03:21.114637+00:00",
+      "delay_ms": 382,
+      "sequence": 135,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662201698,
+      "captured": "2026-11-26T03:03:21.372751+00:00",
+      "delay_ms": 326,
+      "sequence": 136,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662201895,
+      "captured": "2026-11-26T03:03:21.620400+00:00",
+      "delay_ms": 275,
+      "sequence": 137,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662202294,
+      "captured": "2026-11-26T03:03:21.887220+00:00",
+      "delay_ms": 407,
+      "sequence": 138,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662202497,
+      "captured": "2026-11-26T03:03:22.196808+00:00",
+      "delay_ms": 301,
+      "sequence": 139,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662202896,
+      "captured": "2026-11-26T03:03:22.453358+00:00",
+      "delay_ms": 443,
+      "sequence": 140,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662203095,
+      "captured": "2026-11-26T03:03:22.713747+00:00",
+      "delay_ms": 382,
+      "sequence": 141,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662203293,
+      "captured": "2026-11-26T03:03:22.949156+00:00",
+      "delay_ms": 344,
+      "sequence": 142,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662203494,
+      "captured": "2026-11-26T03:03:23.154442+00:00",
+      "delay_ms": 340,
+      "sequence": 143,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662203695,
+      "captured": "2026-11-26T03:03:23.362832+00:00",
+      "delay_ms": 333,
+      "sequence": 144,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662203897,
+      "captured": "2026-11-26T03:03:23.566007+00:00",
+      "delay_ms": 331,
+      "sequence": 145,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662204096,
+      "captured": "2026-11-26T03:03:23.777049+00:00",
+      "delay_ms": 319,
+      "sequence": 146,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662204295,
+      "captured": "2026-11-26T03:03:23.984628+00:00",
+      "delay_ms": 311,
+      "sequence": 147,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662204495,
+      "captured": "2026-11-26T03:03:24.184992+00:00",
+      "delay_ms": 311,
+      "sequence": 148,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662204697,
+      "captured": "2026-11-26T03:03:24.389777+00:00",
+      "delay_ms": 308,
+      "sequence": 149,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662204894,
+      "captured": "2026-11-26T03:03:24.631825+00:00",
+      "delay_ms": 263,
+      "sequence": 150,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662205094,
+      "captured": "2026-11-26T03:03:24.877578+00:00",
+      "delay_ms": 217,
+      "sequence": 151,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662205296,
+      "captured": "2026-11-26T03:03:25.085239+00:00",
+      "delay_ms": 211,
+      "sequence": 152,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662205496,
+      "captured": "2026-11-26T03:03:25.286234+00:00",
+      "delay_ms": 210,
+      "sequence": 153,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662205695,
+      "captured": "2026-11-26T03:03:25.491201+00:00",
+      "delay_ms": 204,
+      "sequence": 154,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662205894,
+      "captured": "2026-11-26T03:03:25.699146+00:00",
+      "delay_ms": 195,
+      "sequence": 155,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662206295,
+      "captured": "2026-11-26T03:03:25.907810+00:00",
+      "delay_ms": 388,
+      "sequence": 156,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662206494,
+      "captured": "2026-11-26T03:03:26.111997+00:00",
+      "delay_ms": 383,
+      "sequence": 157,
+      "attempt_id": "d4ae44afd13b"
+    },
+    {
+      "received": 1795662222696,
+      "captured": "2026-11-26T03:03:42.305715+00:00",
+      "delay_ms": 391,
+      "sequence": 158,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662223096,
+      "captured": "2026-11-26T03:03:42.601262+00:00",
+      "delay_ms": 495,
+      "sequence": 159,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662223294,
+      "captured": "2026-11-26T03:03:42.925558+00:00",
+      "delay_ms": 369,
+      "sequence": 160,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662223496,
+      "captured": "2026-11-26T03:03:43.201625+00:00",
+      "delay_ms": 295,
+      "sequence": 161,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662223700,
+      "captured": "2026-11-26T03:03:43.414871+00:00",
+      "delay_ms": 286,
+      "sequence": 162,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662224095,
+      "captured": "2026-11-26T03:03:43.695330+00:00",
+      "delay_ms": 400,
+      "sequence": 163,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662224295,
+      "captured": "2026-11-26T03:03:43.918475+00:00",
+      "delay_ms": 377,
+      "sequence": 164,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662224497,
+      "captured": "2026-11-26T03:03:44.163719+00:00",
+      "delay_ms": 334,
+      "sequence": 165,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662224897,
+      "captured": "2026-11-26T03:03:44.444791+00:00",
+      "delay_ms": 453,
+      "sequence": 166,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662225096,
+      "captured": "2026-11-26T03:03:44.695701+00:00",
+      "delay_ms": 401,
+      "sequence": 167,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662225695,
+      "captured": "2026-11-26T03:03:45.372381+00:00",
+      "delay_ms": 323,
+      "sequence": 169,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662225894,
+      "captured": "2026-11-26T03:03:45.593519+00:00",
+      "delay_ms": 301,
+      "sequence": 170,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662226095,
+      "captured": "2026-11-26T03:03:45.794349+00:00",
+      "delay_ms": 301,
+      "sequence": 171,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662226297,
+      "captured": "2026-11-26T03:03:46.004452+00:00",
+      "delay_ms": 293,
+      "sequence": 172,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662226495,
+      "captured": "2026-11-26T03:03:46.214374+00:00",
+      "delay_ms": 281,
+      "sequence": 173,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662226698,
+      "captured": "2026-11-26T03:03:46.424446+00:00",
+      "delay_ms": 273,
+      "sequence": 174,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662226896,
+      "captured": "2026-11-26T03:03:46.632948+00:00",
+      "delay_ms": 264,
+      "sequence": 175,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662227095,
+      "captured": "2026-11-26T03:03:46.841260+00:00",
+      "delay_ms": 254,
+      "sequence": 176,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662227295,
+      "captured": "2026-11-26T03:03:47.046098+00:00",
+      "delay_ms": 249,
+      "sequence": 177,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662227495,
+      "captured": "2026-11-26T03:03:47.251211+00:00",
+      "delay_ms": 244,
+      "sequence": 178,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662227698,
+      "captured": "2026-11-26T03:03:47.462399+00:00",
+      "delay_ms": 236,
+      "sequence": 179,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662227896,
+      "captured": "2026-11-26T03:03:47.665929+00:00",
+      "delay_ms": 231,
+      "sequence": 180,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662228095,
+      "captured": "2026-11-26T03:03:47.875415+00:00",
+      "delay_ms": 220,
+      "sequence": 181,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662228296,
+      "captured": "2026-11-26T03:03:48.082656+00:00",
+      "delay_ms": 214,
+      "sequence": 182,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662228495,
+      "captured": "2026-11-26T03:03:48.290945+00:00",
+      "delay_ms": 205,
+      "sequence": 183,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662228697,
+      "captured": "2026-11-26T03:03:48.491087+00:00",
+      "delay_ms": 206,
+      "sequence": 184,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662228895,
+      "captured": "2026-11-26T03:03:48.699157+00:00",
+      "delay_ms": 195,
+      "sequence": 185,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662229095,
+      "captured": "2026-11-26T03:03:48.907823+00:00",
+      "delay_ms": 188,
+      "sequence": 186,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662229294,
+      "captured": "2026-11-26T03:03:49.117544+00:00",
+      "delay_ms": 177,
+      "sequence": 187,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662229493,
+      "captured": "2026-11-26T03:03:49.322113+00:00",
+      "delay_ms": 171,
+      "sequence": 188,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662229694,
+      "captured": "2026-11-26T03:03:49.530869+00:00",
+      "delay_ms": 164,
+      "sequence": 189,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662230095,
+      "captured": "2026-11-26T03:03:49.740794+00:00",
+      "delay_ms": 355,
+      "sequence": 190,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662230295,
+      "captured": "2026-11-26T03:03:49.950816+00:00",
+      "delay_ms": 345,
+      "sequence": 191,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662230497,
+      "captured": "2026-11-26T03:03:50.157487+00:00",
+      "delay_ms": 340,
+      "sequence": 192,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662230696,
+      "captured": "2026-11-26T03:03:50.367188+00:00",
+      "delay_ms": 329,
+      "sequence": 193,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662230895,
+      "captured": "2026-11-26T03:03:50.574308+00:00",
+      "delay_ms": 321,
+      "sequence": 194,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662231095,
+      "captured": "2026-11-26T03:03:50.782578+00:00",
+      "delay_ms": 313,
+      "sequence": 195,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662231294,
+      "captured": "2026-11-26T03:03:50.990851+00:00",
+      "delay_ms": 304,
+      "sequence": 196,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662231494,
+      "captured": "2026-11-26T03:03:51.199129+00:00",
+      "delay_ms": 295,
+      "sequence": 197,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662231695,
+      "captured": "2026-11-26T03:03:51.407602+00:00",
+      "delay_ms": 288,
+      "sequence": 198,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662231895,
+      "captured": "2026-11-26T03:03:51.615822+00:00",
+      "delay_ms": 280,
+      "sequence": 199,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662232097,
+      "captured": "2026-11-26T03:03:51.824248+00:00",
+      "delay_ms": 273,
+      "sequence": 200,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662232295,
+      "captured": "2026-11-26T03:03:52.030898+00:00",
+      "delay_ms": 265,
+      "sequence": 201,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662232494,
+      "captured": "2026-11-26T03:03:52.231173+00:00",
+      "delay_ms": 263,
+      "sequence": 202,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662232696,
+      "captured": "2026-11-26T03:03:52.440912+00:00",
+      "delay_ms": 256,
+      "sequence": 203,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662232894,
+      "captured": "2026-11-26T03:03:52.646006+00:00",
+      "delay_ms": 248,
+      "sequence": 204,
+      "attempt_id": "5ab006073cec"
+    },
+    {
+      "received": 1795662244501,
+      "captured": "2026-11-26T03:04:04.018800+00:00",
+      "delay_ms": 483,
+      "sequence": 205,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662244700,
+      "captured": "2026-11-26T03:04:04.368275+00:00",
+      "delay_ms": 332,
+      "sequence": 206,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662244896,
+      "captured": "2026-11-26T03:04:04.645608+00:00",
+      "delay_ms": 251,
+      "sequence": 207,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662245095,
+      "captured": "2026-11-26T03:04:04.870687+00:00",
+      "delay_ms": 225,
+      "sequence": 208,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662245295,
+      "captured": "2026-11-26T03:04:05.076689+00:00",
+      "delay_ms": 219,
+      "sequence": 209,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662245494,
+      "captured": "2026-11-26T03:04:05.279259+00:00",
+      "delay_ms": 215,
+      "sequence": 210,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662245697,
+      "captured": "2026-11-26T03:04:05.482525+00:00",
+      "delay_ms": 214,
+      "sequence": 211,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662246095,
+      "captured": "2026-11-26T03:04:05.683880+00:00",
+      "delay_ms": 412,
+      "sequence": 212,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662246294,
+      "captured": "2026-11-26T03:04:05.909408+00:00",
+      "delay_ms": 385,
+      "sequence": 213,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662246495,
+      "captured": "2026-11-26T03:04:06.174192+00:00",
+      "delay_ms": 321,
+      "sequence": 214,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662246697,
+      "captured": "2026-11-26T03:04:06.399470+00:00",
+      "delay_ms": 298,
+      "sequence": 215,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662247895,
+      "captured": "2026-11-26T03:04:07.600966+00:00",
+      "delay_ms": 295,
+      "sequence": 217,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662248096,
+      "captured": "2026-11-26T03:04:07.807306+00:00",
+      "delay_ms": 289,
+      "sequence": 218,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662248295,
+      "captured": "2026-11-26T03:04:08.015345+00:00",
+      "delay_ms": 280,
+      "sequence": 219,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662248496,
+      "captured": "2026-11-26T03:04:08.222536+00:00",
+      "delay_ms": 274,
+      "sequence": 220,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662248701,
+      "captured": "2026-11-26T03:04:08.431314+00:00",
+      "delay_ms": 270,
+      "sequence": 221,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662248895,
+      "captured": "2026-11-26T03:04:08.641406+00:00",
+      "delay_ms": 254,
+      "sequence": 222,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662249095,
+      "captured": "2026-11-26T03:04:08.863419+00:00",
+      "delay_ms": 232,
+      "sequence": 223,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662249295,
+      "captured": "2026-11-26T03:04:09.072502+00:00",
+      "delay_ms": 223,
+      "sequence": 224,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662249496,
+      "captured": "2026-11-26T03:04:09.280850+00:00",
+      "delay_ms": 216,
+      "sequence": 225,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662249695,
+      "captured": "2026-11-26T03:04:09.490925+00:00",
+      "delay_ms": 205,
+      "sequence": 226,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662249893,
+      "captured": "2026-11-26T03:04:09.699025+00:00",
+      "delay_ms": 194,
+      "sequence": 227,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662250097,
+      "captured": "2026-11-26T03:04:09.907555+00:00",
+      "delay_ms": 190,
+      "sequence": 228,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662250293,
+      "captured": "2026-11-26T03:04:10.117584+00:00",
+      "delay_ms": 176,
+      "sequence": 229,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662250493,
+      "captured": "2026-11-26T03:04:10.326716+00:00",
+      "delay_ms": 167,
+      "sequence": 230,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662250697,
+      "captured": "2026-11-26T03:04:10.532973+00:00",
+      "delay_ms": 165,
+      "sequence": 231,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662251093,
+      "captured": "2026-11-26T03:04:10.740863+00:00",
+      "delay_ms": 353,
+      "sequence": 232,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662251294,
+      "captured": "2026-11-26T03:04:10.947620+00:00",
+      "delay_ms": 347,
+      "sequence": 233,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662251495,
+      "captured": "2026-11-26T03:04:11.157616+00:00",
+      "delay_ms": 338,
+      "sequence": 234,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662251697,
+      "captured": "2026-11-26T03:04:11.366728+00:00",
+      "delay_ms": 331,
+      "sequence": 235,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662251895,
+      "captured": "2026-11-26T03:04:11.572643+00:00",
+      "delay_ms": 323,
+      "sequence": 236,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662252096,
+      "captured": "2026-11-26T03:04:11.774328+00:00",
+      "delay_ms": 322,
+      "sequence": 237,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662252295,
+      "captured": "2026-11-26T03:04:11.982554+00:00",
+      "delay_ms": 313,
+      "sequence": 238,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662252494,
+      "captured": "2026-11-26T03:04:12.190954+00:00",
+      "delay_ms": 304,
+      "sequence": 239,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662252695,
+      "captured": "2026-11-26T03:04:12.391862+00:00",
+      "delay_ms": 304,
+      "sequence": 240,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662252895,
+      "captured": "2026-11-26T03:04:12.601875+00:00",
+      "delay_ms": 294,
+      "sequence": 241,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662253096,
+      "captured": "2026-11-26T03:04:12.810025+00:00",
+      "delay_ms": 286,
+      "sequence": 242,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662253295,
+      "captured": "2026-11-26T03:04:13.015839+00:00",
+      "delay_ms": 280,
+      "sequence": 243,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662253497,
+      "captured": "2026-11-26T03:04:13.224109+00:00",
+      "delay_ms": 273,
+      "sequence": 244,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662253697,
+      "captured": "2026-11-26T03:04:13.432655+00:00",
+      "delay_ms": 265,
+      "sequence": 245,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662253895,
+      "captured": "2026-11-26T03:04:13.641196+00:00",
+      "delay_ms": 254,
+      "sequence": 246,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662254093,
+      "captured": "2026-11-26T03:04:13.851223+00:00",
+      "delay_ms": 242,
+      "sequence": 247,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662254295,
+      "captured": "2026-11-26T03:04:14.057420+00:00",
+      "delay_ms": 238,
+      "sequence": 248,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662254496,
+      "captured": "2026-11-26T03:04:14.261590+00:00",
+      "delay_ms": 235,
+      "sequence": 249,
+      "attempt_id": "94c3d033b9aa"
+    },
+    {
+      "received": 1795662254696,
+      "captured": "2026-11-26T03:04:14.468853+00:00",
+      "delay_ms": 228,
+      "sequence": 250,
+      "attempt_id": "94c3d033b9aa"
+    }
+  ],
+  "view_observations": [
+    {
+      "at": 1795662146.293205,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "No attempt ID assigned.",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662147.003791,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "No attempt ID assigned.",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662147.7145731,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "No attempt ID assigned.",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662148.4265192,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "No attempt ID assigned.",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662149.137985,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "No attempt ID assigned.",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662149.8402061,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "No attempt ID assigned.",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662150.542908,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "No attempt ID assigned.",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662151.250726,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "No attempt ID assigned.",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662151.956183,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "No attempt ID assigned.",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662152.66473,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "No attempt ID assigned.",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662153.379071,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "No attempt ID assigned.",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662154.088062,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "No attempt ID assigned.",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662154.796351,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "No attempt ID assigned.",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662155.504033,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "No attempt ID assigned.",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662156.215351,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "No attempt ID assigned.",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662156.929704,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "No attempt ID assigned.",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662157.632766,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "No attempt ID assigned.",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662158.342595,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "No attempt ID assigned.",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662159.051865,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 722bfc8cb4e4 / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662159.757365,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 722bfc8cb4e4 / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662160.46799,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 722bfc8cb4e4 / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662161.175361,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 722bfc8cb4e4 / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662162.0152571,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 722bfc8cb4e4 / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662162.730114,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 722bfc8cb4e4 / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662163.433223,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 722bfc8cb4e4 / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662164.138752,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 722bfc8cb4e4 / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662165.0312471,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 722bfc8cb4e4 / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662165.7344482,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 722bfc8cb4e4 / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662166.4468212,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 722bfc8cb4e4 / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662167.1593988,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 722bfc8cb4e4 / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662167.872939,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 722bfc8cb4e4 / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662168.586522,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 722bfc8cb4e4 / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662169.2949162,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 722bfc8cb4e4 / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662170.002045,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 722bfc8cb4e4 / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662170.715054,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 722bfc8cb4e4 / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662171.425101,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 722bfc8cb4e4 / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662172.137227,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 722bfc8cb4e4 / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662172.850305,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 722bfc8cb4e4 / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662173.5583942,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 722bfc8cb4e4 / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662174.263863,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 722bfc8cb4e4 / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662174.985981,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 722bfc8cb4e4 / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662175.699849,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 722bfc8cb4e4 / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662176.4154072,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 722bfc8cb4e4 / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662177.125355,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 722bfc8cb4e4 / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662177.836721,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 722bfc8cb4e4 / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662178.549834,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Le chat dort.",
+      "attempt": "ATTEMPT 722bfc8cb4e4 / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662180.163224,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Le chat dort.",
+      "attempt": "ATTEMPT 722bfc8cb4e4 / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662180.8677802,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Le chat dort.",
+      "attempt": "ATTEMPT 722bfc8cb4e4 / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662181.577282,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Le chat dort.",
+      "attempt": "ATTEMPT 722bfc8cb4e4 / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662182.2915761,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Le chat dort.",
+      "attempt": "ATTEMPT 722bfc8cb4e4 / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662183.004129,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Le chat dort.",
+      "attempt": "ATTEMPT 722bfc8cb4e4 / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662183.7169201,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Le chat dort.",
+      "attempt": "ATTEMPT 722bfc8cb4e4 / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662184.42293,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Le chat dort.",
+      "attempt": "ATTEMPT 722bfc8cb4e4 / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662185.13482,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662185.849351,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662186.562201,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662187.2682528,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662187.978364,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662188.7769759,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662189.481132,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662190.190372,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662190.8983018,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662191.609718,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662192.321665,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662193.027806,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662193.74355,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662194.449516,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662195.162882,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662195.878003,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662196.5919092,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662197.3049421,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662198.013943,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662198.718207,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662199.430486,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662200.146364,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662200.851804,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662201.563818,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662202.274493,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662202.988801,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662203.695404,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662204.403838,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Le chat dort.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662205.207435,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Le chat dort.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662205.9150562,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Le chat dort.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662206.620123,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Le chat dort.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662207.330087,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Le chat dort.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662208.046135,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Le chat dort.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662208.770541,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Le chat dort.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662209.486738,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Le chat dort.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662210.193661,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Le chat dort.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662210.90406,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Le chat dort.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662211.6182542,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Le chat dort.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662212.333547,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Le chat dort.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662213.0399559,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Le chat dort.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662213.754358,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Le chat dort.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662214.4664729,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Le chat dort.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662215.1857212,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Le chat dort.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662215.892208,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Le chat dort.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662216.602402,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Le chat dort.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662217.309141,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Le chat dort.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662218.030568,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Le chat dort.",
+      "attempt": "ATTEMPT d4ae44afd13b / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662218.736667,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 5ab006073cec / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662219.447228,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 5ab006073cec / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662220.1535869,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 5ab006073cec / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662220.863591,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 5ab006073cec / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662221.57504,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 5ab006073cec / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662222.288932,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 5ab006073cec / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662222.996383,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 5ab006073cec / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662223.792227,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 5ab006073cec / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662224.5039139,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 5ab006073cec / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662225.220052,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 5ab006073cec / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662225.9306822,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 5ab006073cec / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662226.639484,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 5ab006073cec / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662227.352591,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 5ab006073cec / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662228.06225,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 5ab006073cec / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662228.770661,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 5ab006073cec / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662229.485327,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 5ab006073cec / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662230.197793,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 5ab006073cec / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662230.9121668,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 5ab006073cec / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662231.618421,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 5ab006073cec / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662232.3313909,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 5ab006073cec / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662233.0407062,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 5ab006073cec / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662233.8427808,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Le chat dort.\n",
+      "attempt": "ATTEMPT 5ab006073cec / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662234.562562,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Le chat dort.\n",
+      "attempt": "ATTEMPT 5ab006073cec / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662235.282675,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Le chat dort.\n",
+      "attempt": "ATTEMPT 5ab006073cec / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662235.997616,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Le chat dort.\n",
+      "attempt": "ATTEMPT 5ab006073cec / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662236.7109408,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Le chat dort.\n",
+      "attempt": "ATTEMPT 5ab006073cec / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662237.4260511,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Le chat dort.\n",
+      "attempt": "ATTEMPT 5ab006073cec / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662238.137341,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Le chat dort.\n",
+      "attempt": "ATTEMPT 5ab006073cec / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662238.850164,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Le chat dort.\n",
+      "attempt": "ATTEMPT 5ab006073cec / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662239.556864,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 94c3d033b9aa / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662240.272227,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 94c3d033b9aa / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662240.981309,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 94c3d033b9aa / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662241.699245,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 94c3d033b9aa / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662242.4185731,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 94c3d033b9aa / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662243.138978,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 94c3d033b9aa / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662243.852959,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 94c3d033b9aa / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662244.575705,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 94c3d033b9aa / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662245.3892841,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 94c3d033b9aa / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662246.105151,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 94c3d033b9aa / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662246.819961,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 94c3d033b9aa / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662247.533916,
+      "state": "RUNNING",
+      "camera": "VIEW GUARDED",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 94c3d033b9aa / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662248.249832,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 94c3d033b9aa / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662248.962965,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 94c3d033b9aa / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662249.6789079,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 94c3d033b9aa / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662250.388858,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 94c3d033b9aa / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662251.104504,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 94c3d033b9aa / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662251.812788,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 94c3d033b9aa / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662252.527842,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 94c3d033b9aa / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662253.2392042,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 94c3d033b9aa / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662253.954412,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 94c3d033b9aa / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662254.6694348,
+      "state": "RUNNING",
+      "camera": "DEVICE LIVE",
+      "answer": "Waiting for a validated response for this turn.",
+      "attempt": "ATTEMPT 94c3d033b9aa / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    },
+    {
+      "at": 1795662255.5148091,
+      "state": "COMPLETED",
+      "camera": "RUN FINISHED",
+      "answer": "Le chat dort.",
+      "attempt": "ATTEMPT 94c3d033b9aa / conversation1_turn1",
+      "python": "true",
+      "alert": ""
+    }
+  ]
+}

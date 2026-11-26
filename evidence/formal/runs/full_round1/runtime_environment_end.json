@@ -1,0 +1,204 @@
+{
+  "captured_utc": "2026-11-17T23:19:08.896685+00:00",
+  "stage": "full_round1",
+  "label": "end",
+  "kind": "READ_ONLY_RUNTIME_OBSERVATION",
+  "host": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+  "python": "3.13.1 (main, Dec  3 2024, 17:59:52) [Clang 16.0.0 (clang-1600.0.26.4)]",
+  "ram_bytes": {
+    "command": [
+      "sysctl",
+      "-n",
+      "hw.memsize"
+    ],
+    "exit_code": 0,
+    "stdout": "68719476736",
+    "stderr": ""
+  },
+  "cpu": {
+    "command": [
+      "sysctl",
+      "-n",
+      "machdep.cpu.brand_string"
+    ],
+    "exit_code": 0,
+    "stdout": "Apple M2 Max",
+    "stderr": ""
+  },
+  "android_release": {
+    "command": [
+      "/Users/TEST_USER/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5554",
+      "shell",
+      "getprop",
+      "ro.build.version.release"
+    ],
+    "exit_code": 0,
+    "stdout": "15",
+    "stderr": ""
+  },
+  "android_api": {
+    "command": [
+      "/Users/TEST_USER/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5554",
+      "shell",
+      "getprop",
+      "ro.build.version.sdk"
+    ],
+    "exit_code": 0,
+    "stdout": "35",
+    "stderr": ""
+  },
+  "android_fingerprint": {
+    "command": [
+      "/Users/TEST_USER/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5554",
+      "shell",
+      "getprop",
+      "ro.build.fingerprint"
+    ],
+    "exit_code": 0,
+    "stdout": "google/sdk_gphone64_arm64/emu64a:15/AE3A.240806.036/12592187:user/release-keys",
+    "stderr": ""
+  },
+  "default_ime_observation": {
+    "command": [
+      "/Users/TEST_USER/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5554",
+      "shell",
+      "settings",
+      "get",
+      "secure",
+      "default_input_method"
+    ],
+    "exit_code": 0,
+    "stdout": "com.google.android.inputmethod.latin/com.android.inputmethod.latin.LatinIME",
+    "stderr": ""
+  },
+  "ime_note": "During-run observation may catch the documented transient clipboard helper IME; final idle observation is recorded separately",
+  "stylus_handwriting": {
+    "command": [
+      "/Users/TEST_USER/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5554",
+      "shell",
+      "settings",
+      "get",
+      "secure",
+      "stylus_handwriting_enabled"
+    ],
+    "exit_code": 0,
+    "stdout": "0",
+    "stderr": ""
+  },
+  "effective_settings": {
+    "chatgpt": {
+      "enableMultiWindows": true,
+      "waitForIdleTimeout": 1000
+    },
+    "gemini": {
+      "limitXPathContextScope": false,
+      "enableMultiWindows": true,
+      "waitForIdleTimeout": 1000
+    }
+  },
+  "packages": {
+    "com.openai.chatgpt": {
+      "command": [
+        "/Users/TEST_USER/Library/Android/sdk/platform-tools/adb",
+        "-s",
+        "emulator-5554",
+        "shell",
+        "dumpsys",
+        "package",
+        "com.openai.chatgpt"
+      ],
+      "exit_code": 0,
+      "stdout": "versionCode=2631431 minSdk=32 targetSdk=37\nversionName=1.2026.314",
+      "stderr": ""
+    },
+    "com.google.android.apps.bard": {
+      "command": [
+        "/Users/TEST_USER/Library/Android/sdk/platform-tools/adb",
+        "-s",
+        "emulator-5554",
+        "shell",
+        "dumpsys",
+        "package",
+        "com.google.android.apps.bard"
+      ],
+      "exit_code": 0,
+      "stdout": "versionCode=345 minSdk=32 targetSdk=37\nversionName=1.0.995038376",
+      "stderr": ""
+    },
+    "com.google.android.googlequicksearchbox": {
+      "command": [
+        "/Users/TEST_USER/Library/Android/sdk/platform-tools/adb",
+        "-s",
+        "emulator-5554",
+        "shell",
+        "dumpsys",
+        "package",
+        "com.google.android.googlequicksearchbox"
+      ],
+      "exit_code": 0,
+      "stdout": "versionCode=301834562 minSdk=32 targetSdk=37\nversionName=17.74.18.ve.arm64\nversionCode=301351420 minSdk=29 targetSdk=34\nversionName=15.22.33.29.arm64",
+      "stderr": ""
+    },
+    "io.appium.settings": {
+      "command": [
+        "/Users/TEST_USER/Library/Android/sdk/platform-tools/adb",
+        "-s",
+        "emulator-5554",
+        "shell",
+        "dumpsys",
+        "package",
+        "io.appium.settings"
+      ],
+      "exit_code": 0,
+      "stdout": "versionCode=217 minSdk=26 targetSdk=35\nversionName=9.2.0",
+      "stderr": ""
+    }
+  },
+  "appium_version": "4.0.0",
+  "uiautomator2_version": "9.2.1",
+  "google_package_version_note": "First version pair is the updated installed app; an additional older pair is the factory system package",
+  "emulator_recovery_reference": {
+    "path": "work/d3_final_raw/emulator_dns_recovery_20261117_noon/recovery.json",
+    "pid": 78527,
+    "launch_argv": [
+      "/Users/TEST_USER/Library/Android/sdk/emulator/emulator",
+      "-avd",
+      "Group7_Pixel7_API35",
+      "-no-window",
+      "-no-audio",
+      "-no-boot-anim",
+      "-no-snapshot-load",
+      "-no-snapshot-save",
+      "-no-metrics",
+      "-dns-server",
+      "8.8.8.8,1.1.1.1"
+    ],
+    "userdata_wiped": false,
+    "dns_servers": [
+      "8.8.8.8",
+      "1.1.1.1"
+    ]
+  },
+  "emulator_process_observation": {
+    "command": [
+      "ps",
+      "-p",
+      "78527",
+      "-o",
+      "command="
+    ],
+    "exit_code": 0,
+    "stdout": "/Users/TEST_USER/Library/Android/sdk/emulator/qemu/darwin-aarch64/qemu-system-aarch64-headless -avd Group7_Pixel7_API35 -no-window -no-audio -no-boot-anim -no-snapshot-load -no-snapshot-save -no-metrics -dns-server 8.8.8.8,1.1.1.1",
+    "stderr": ""
+  }
+}

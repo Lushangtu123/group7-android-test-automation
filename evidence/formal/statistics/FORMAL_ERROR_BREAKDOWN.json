@@ -1,0 +1,848 @@
+{
+  "planned_rounds": [
+    "full_round1",
+    "full_round2",
+    "full_round3_completed"
+  ],
+  "total_original_error_records": 19,
+  "verified_application_generation_timeouts": 13,
+  "historical_collector_or_navigation_errors": 6,
+  "all_collector_errors_have_independent_complete_retests": true,
+  "known_unresolved_collector_errors_after_retests": 0,
+  "underlying_application_timeout_backend_cause": "UNKNOWN",
+  "errors": [
+    {
+      "attempt_id": "2312c3d85d1f",
+      "application": "chatgpt",
+      "case_id": "TC-NLU-01",
+      "original_status": "ERROR",
+      "classification": "CAPTURE_OR_INFRASTRUCTURE_ERROR",
+      "original_note": "RuntimeError: Copy action yielded no verifiably fresh clipboard text",
+      "snapshot_state": {
+        "generating": false,
+        "clipboard_overlay": false,
+        "fixed_input_top": null,
+        "prompt_present": false,
+        "matched_prompt_text": null,
+        "prompt_match": null,
+        "reply": {
+          "text": "The photosynthesis equation\nTry changing the inputs\nIn simple words: Photosynthesis is how plants use sunlight, water, and carbon dioxide to make food and release oxygen.\n\ud83c\udf31 Fun fact: Without photosynthesis, life on Earth as we know it would not be possible!",
+          "copy_present": true,
+          "copy_bounds": "[22,1901][117,1996]",
+          "body_bounds": "[42,0][1038,1995]",
+          "footer_completed": true,
+          "excluded_ui_metadata": [
+            "Learn more"
+          ]
+        },
+        "reply_completed": false
+      },
+      "pending_observation_evidence": {
+        "verified_ui_generation_timeout": false,
+        "original_status": "ERROR",
+        "backend_root_cause": "UNKNOWN",
+        "observation_only": true,
+        "observed_poll_span_seconds": 12.95,
+        "current_app_window": null,
+        "rejection_reasons": [
+          "Exception is not the bounded application-generation timeout",
+          "Current submitted prompt and visible generation marker are not in one app window",
+          "Last atomic observation does not show current unfinished generation",
+          "Polling history does not cover the configured generation deadline"
+        ],
+        "pre_send_exact_prompt_proven": true
+      },
+      "device_hostname_http_204_after_error": true,
+      "evidence_directory": "screenshots/chatgpt/TC-NLU-01/repeat_1/2312c3d85d1f",
+      "stage": "full_round1",
+      "independent_retest_link": {
+        "application": "chatgpt",
+        "case_id": "TC-NLU-01",
+        "original_attempt_id": "2312c3d85d1f",
+        "original_status": "ERROR",
+        "cause": "The response Copy gesture left the unique clipboard marker unchanged.",
+        "retest_stage": "round1_capture_repair_targets_v19",
+        "retest_attempt_id": "a4b61e8d56eb",
+        "retest_status": "PASS",
+        "fills_unsubmitted_case_coverage": false,
+        "certificate": "ROUND1_CAPTURE_REPAIR_ACCEPTANCE.json"
+      },
+      "raw_status_changed": false
+    },
+    {
+      "attempt_id": "3c0f99877981",
+      "application": "chatgpt",
+      "case_id": "TC-FLOW-02",
+      "original_status": "ERROR",
+      "classification": "CAPTURE_OR_INFRASTRUCTURE_ERROR",
+      "original_note": "TimeoutError: Application generation deadline exceeded",
+      "snapshot_state": {
+        "generating": false,
+        "clipboard_overlay": false,
+        "fixed_input_top": null,
+        "prompt_present": false,
+        "matched_prompt_text": null,
+        "prompt_match": null,
+        "reply": {
+          "text": "Canada's capital city is Ottawa, in the province of Ontario. \ud83c\udde8\ud83c\udde6",
+          "copy_present": true,
+          "copy_bounds": "[22,643][117,738]",
+          "body_bounds": "[42,464][1038,737]",
+          "footer_completed": true,
+          "excluded_ui_metadata": []
+        },
+        "reply_completed": false
+      },
+      "pending_observation_evidence": {
+        "verified_ui_generation_timeout": false,
+        "original_status": "ERROR",
+        "backend_root_cause": "UNKNOWN",
+        "observation_only": true,
+        "observed_poll_span_seconds": 119.675,
+        "current_app_window": null,
+        "rejection_reasons": [
+          "Current submitted prompt and visible generation marker are not in one app window",
+          "Last atomic observation does not show current unfinished generation"
+        ],
+        "pre_send_exact_prompt_proven": true
+      },
+      "device_hostname_http_204_after_error": true,
+      "evidence_directory": "screenshots/chatgpt/TC-FLOW-02/repeat_1/3c0f99877981",
+      "stage": "full_round1",
+      "independent_retest_link": {
+        "application": "chatgpt",
+        "case_id": "TC-FLOW-02",
+        "original_attempt_id": "3c0f99877981",
+        "original_status": "ERROR",
+        "cause": "The exact fifth prompt stayed in the editor while its real send control remained disabled.",
+        "retest_stage": "round1_capture_repair_targets_v19",
+        "retest_attempt_id": "a86967657d6a",
+        "retest_status": "REVIEW",
+        "fills_unsubmitted_case_coverage": false,
+        "certificate": "ROUND1_CAPTURE_REPAIR_ACCEPTANCE.json"
+      },
+      "raw_status_changed": false
+    },
+    {
+      "attempt_id": "16a48c67d7b9",
+      "application": "chatgpt",
+      "case_id": "AI-FA-04",
+      "original_status": "ERROR",
+      "classification": "CAPTURE_OR_INFRASTRUCTURE_ERROR",
+      "original_note": "TimeoutError: Application generation deadline exceeded",
+      "snapshot_state": {
+        "generating": false,
+        "clipboard_overlay": false,
+        "fixed_input_top": null,
+        "prompt_present": false,
+        "matched_prompt_text": null,
+        "prompt_match": null,
+        "reply": null,
+        "reply_completed": false
+      },
+      "pending_observation_evidence": {
+        "verified_ui_generation_timeout": false,
+        "original_status": "ERROR",
+        "backend_root_cause": "UNKNOWN",
+        "observation_only": true,
+        "observed_poll_span_seconds": 119.271,
+        "current_app_window": null,
+        "rejection_reasons": [
+          "Current submitted prompt and visible generation marker are not in one app window",
+          "Last atomic observation does not show current unfinished generation"
+        ],
+        "pre_send_exact_prompt_proven": true
+      },
+      "device_hostname_http_204_after_error": true,
+      "evidence_directory": "screenshots/chatgpt/AI-FA-04/repeat_1/16a48c67d7b9",
+      "stage": "full_round1",
+      "independent_retest_link": {
+        "application": "chatgpt",
+        "case_id": "AI-FA-04",
+        "original_attempt_id": "16a48c67d7b9",
+        "original_status": "ERROR",
+        "cause": "The exact first prompt stayed in the editor while its real send control remained disabled.",
+        "retest_stage": "round1_capture_repair_targets_v19",
+        "retest_attempt_id": "e139b99df4c7",
+        "retest_status": "PASS",
+        "fills_unsubmitted_case_coverage": true,
+        "certificate": "ROUND1_CAPTURE_REPAIR_ACCEPTANCE.json"
+      },
+      "raw_status_changed": false
+    },
+    {
+      "attempt_id": "5306b0def0ec",
+      "application": "chatgpt",
+      "case_id": "AI-FA-05",
+      "original_status": "ERROR",
+      "classification": "CAPTURE_OR_INFRASTRUCTURE_ERROR",
+      "original_note": "RuntimeError: Clipboard and visible response text disagree; manual capture check needed",
+      "snapshot_state": {
+        "generating": false,
+        "clipboard_overlay": false,
+        "fixed_input_top": null,
+        "prompt_present": true,
+        "matched_prompt_text": "Who won the 2030 Nobel Prize in Physics?",
+        "prompt_match": "EXACT",
+        "reply": {
+          "text": "No one has won the 2030 Nobel Prize in Physics yet. As of November 17, 2026, the 2030 laureates have not been announced.\nThe Nobel Prize in Physics is awarded annually, usually in October. The 2030 winner will be announced in October 2030.\nYou can follow announcements on the official Nobel Prize website\u2060\ufffc.",
+          "copy_present": true,
+          "copy_bounds": "[22,1273][117,1368]",
+          "body_bounds": "[42,602][1038,1367]",
+          "footer_completed": true,
+          "excluded_ui_metadata": [
+            "Sources"
+          ]
+        },
+        "reply_completed": true
+      },
+      "pending_observation_evidence": {
+        "verified_ui_generation_timeout": false,
+        "original_status": "ERROR",
+        "backend_root_cause": "UNKNOWN",
+        "observation_only": true,
+        "observed_poll_span_seconds": 4.732,
+        "current_app_window": "743",
+        "rejection_reasons": [
+          "Exception is not the bounded application-generation timeout",
+          "Current submitted prompt and visible generation marker are not in one app window",
+          "Last atomic observation does not show current unfinished generation",
+          "Polling history does not cover the configured generation deadline"
+        ],
+        "pre_send_exact_prompt_proven": true
+      },
+      "device_hostname_http_204_after_error": true,
+      "evidence_directory": "screenshots/chatgpt/AI-FA-05/repeat_1/5306b0def0ec",
+      "stage": "full_round1",
+      "independent_retest_link": {
+        "application": "chatgpt",
+        "case_id": "AI-FA-05",
+        "original_attempt_id": "5306b0def0ec",
+        "original_status": "ERROR",
+        "cause": "The Android inline link label and Markdown clipboard representation did not compare equal.",
+        "retest_stage": "round1_capture_repair_targets_v19",
+        "retest_attempt_id": "21e60a8d8376",
+        "retest_status": "PASS",
+        "fills_unsubmitted_case_coverage": false,
+        "certificate": "ROUND1_CAPTURE_REPAIR_ACCEPTANCE.json"
+      },
+      "raw_status_changed": false
+    },
+    {
+      "attempt_id": "ab90428f637f",
+      "application": "gemini",
+      "case_id": "TC-MEM-01",
+      "original_status": "ERROR",
+      "classification": "APPLICATION_GENERATION_TIMEOUT",
+      "original_note": "TimeoutError: Application generation deadline exceeded",
+      "snapshot_state": {
+        "generating": true,
+        "clipboard_overlay": false,
+        "fixed_input_top": 2095,
+        "prompt_present": true,
+        "matched_prompt_text": "What is my favorite animal?",
+        "prompt_match": "EXACT",
+        "reply": {
+          "text": "Based on our conversation, your favorite animal is a cat!",
+          "copy_present": false,
+          "copy_bounds": null,
+          "body_bounds": "[63,554][1017,1192]",
+          "footer_completed": false,
+          "excluded_ui_metadata": []
+        },
+        "reply_completed": false
+      },
+      "pending_observation_evidence": {
+        "verified_ui_generation_timeout": true,
+        "original_status": "ERROR",
+        "backend_root_cause": "UNKNOWN",
+        "observation_only": true,
+        "observed_poll_span_seconds": 118.134,
+        "current_app_window": "1003",
+        "rejection_reasons": [],
+        "pre_send_exact_prompt_proven": true
+      },
+      "device_hostname_http_204_after_error": true,
+      "evidence_directory": "screenshots/gemini/TC-MEM-01/repeat_1/ab90428f637f",
+      "stage": "full_round1",
+      "independent_retest_link": null,
+      "raw_status_changed": false
+    },
+    {
+      "attempt_id": "fe828bcd4b2f",
+      "application": "gemini",
+      "case_id": "TC-FLOW-01",
+      "original_status": "ERROR",
+      "classification": "APPLICATION_GENERATION_TIMEOUT",
+      "original_note": "TimeoutError: Application generation deadline exceeded",
+      "snapshot_state": {
+        "generating": true,
+        "clipboard_overlay": false,
+        "fixed_input_top": 2095,
+        "prompt_present": true,
+        "matched_prompt_text": "What is my favorite animal?",
+        "prompt_match": "EXACT",
+        "reply": {
+          "text": "Your favorite animal is a cat! You mentioned earlier that cats are your favorite.",
+          "copy_present": false,
+          "copy_bounds": null,
+          "body_bounds": "[63,554][1017,730]",
+          "footer_completed": false,
+          "excluded_ui_metadata": []
+        },
+        "reply_completed": false
+      },
+      "pending_observation_evidence": {
+        "verified_ui_generation_timeout": true,
+        "original_status": "ERROR",
+        "backend_root_cause": "UNKNOWN",
+        "observation_only": true,
+        "observed_poll_span_seconds": 118.307,
+        "current_app_window": "1003",
+        "rejection_reasons": [],
+        "pre_send_exact_prompt_proven": true
+      },
+      "device_hostname_http_204_after_error": true,
+      "evidence_directory": "screenshots/gemini/TC-FLOW-01/repeat_1/fe828bcd4b2f",
+      "stage": "full_round1",
+      "independent_retest_link": null,
+      "raw_status_changed": false
+    },
+    {
+      "attempt_id": "954ce1eede32",
+      "application": "gemini",
+      "case_id": "TC-FLOW-02",
+      "original_status": "ERROR",
+      "classification": "APPLICATION_GENERATION_TIMEOUT",
+      "original_note": "TimeoutError: Application generation deadline exceeded",
+      "snapshot_state": {
+        "generating": true,
+        "clipboard_overlay": false,
+        "fixed_input_top": 2095,
+        "prompt_present": true,
+        "matched_prompt_text": "Can you calculate five plus seven?",
+        "prompt_match": "EXACT",
+        "reply": {
+          "text": "Five plus seven is 12.",
+          "copy_present": false,
+          "copy_bounds": null,
+          "body_bounds": "[63,554][1017,657]",
+          "footer_completed": false,
+          "excluded_ui_metadata": []
+        },
+        "reply_completed": false
+      },
+      "pending_observation_evidence": {
+        "verified_ui_generation_timeout": true,
+        "original_status": "ERROR",
+        "backend_root_cause": "UNKNOWN",
+        "observation_only": true,
+        "observed_poll_span_seconds": 118.887,
+        "current_app_window": "1003",
+        "rejection_reasons": [],
+        "pre_send_exact_prompt_proven": true
+      },
+      "device_hostname_http_204_after_error": true,
+      "evidence_directory": "screenshots/gemini/TC-FLOW-02/repeat_1/954ce1eede32",
+      "stage": "full_round1",
+      "independent_retest_link": null,
+      "raw_status_changed": false
+    },
+    {
+      "attempt_id": "70fa8f7e3862",
+      "application": "gemini",
+      "case_id": "AI-MEM-05",
+      "original_status": "ERROR",
+      "classification": "APPLICATION_GENERATION_TIMEOUT",
+      "original_note": "TimeoutError: Application generation deadline exceeded",
+      "snapshot_state": {
+        "generating": true,
+        "clipboard_overlay": false,
+        "fixed_input_top": 2095,
+        "prompt_present": true,
+        "matched_prompt_text": "What is my favorite animal?",
+        "prompt_match": "EXACT",
+        "reply": {
+          "text": "I don't have access to your personal information or memories, so I don't know what your favorite animal is!\n\u200bIf you'd like to share, I'd love to hear what it is. Or, if there's anything else you'd like to chat about\u2014whether it's learning fun facts about different animals, planning a trip, or tackling a project\u2014just let me know!",
+          "copy_present": false,
+          "copy_bounds": null,
+          "body_bounds": "[63,554][1017,1137]",
+          "footer_completed": false,
+          "excluded_ui_metadata": []
+        },
+        "reply_completed": false
+      },
+      "pending_observation_evidence": {
+        "verified_ui_generation_timeout": true,
+        "original_status": "ERROR",
+        "backend_root_cause": "UNKNOWN",
+        "observation_only": true,
+        "observed_poll_span_seconds": 118.55,
+        "current_app_window": "1003",
+        "rejection_reasons": [],
+        "pre_send_exact_prompt_proven": true
+      },
+      "device_hostname_http_204_after_error": true,
+      "evidence_directory": "screenshots/gemini/AI-MEM-05/repeat_1/70fa8f7e3862",
+      "stage": "full_round1",
+      "independent_retest_link": null,
+      "raw_status_changed": false
+    },
+    {
+      "attempt_id": "c42f3c06e075",
+      "application": "gemini",
+      "case_id": "AI-FLOW-03",
+      "original_status": "ERROR",
+      "classification": "APPLICATION_GENERATION_TIMEOUT",
+      "original_note": "TimeoutError: Application generation deadline exceeded",
+      "snapshot_state": {
+        "generating": true,
+        "clipboard_overlay": false,
+        "fixed_input_top": 2095,
+        "prompt_present": true,
+        "matched_prompt_text": "5 + 7 equals how much?",
+        "prompt_match": "EXACT",
+        "reply": {
+          "text": "5 + 7 equals 12.",
+          "copy_present": false,
+          "copy_bounds": null,
+          "body_bounds": "[63,554][1017,657]",
+          "footer_completed": false,
+          "excluded_ui_metadata": []
+        },
+        "reply_completed": false
+      },
+      "pending_observation_evidence": {
+        "verified_ui_generation_timeout": true,
+        "original_status": "ERROR",
+        "backend_root_cause": "UNKNOWN",
+        "observation_only": true,
+        "observed_poll_span_seconds": 118.615,
+        "current_app_window": "1003",
+        "rejection_reasons": [],
+        "pre_send_exact_prompt_proven": true
+      },
+      "device_hostname_http_204_after_error": true,
+      "evidence_directory": "screenshots/gemini/AI-FLOW-03/repeat_1/c42f3c06e075",
+      "stage": "full_round1",
+      "independent_retest_link": null,
+      "raw_status_changed": false
+    },
+    {
+      "attempt_id": "b288fb3ccc48",
+      "application": "gemini",
+      "case_id": "TC-MEM-03",
+      "original_status": "ERROR",
+      "classification": "APPLICATION_GENERATION_TIMEOUT",
+      "original_note": "TimeoutError: Application generation deadline exceeded",
+      "snapshot_state": {
+        "generating": true,
+        "clipboard_overlay": false,
+        "fixed_input_top": 2095,
+        "prompt_present": true,
+        "matched_prompt_text": "What is 10 + 20?",
+        "prompt_match": "EXACT",
+        "reply": {
+          "text": "30",
+          "copy_present": false,
+          "copy_bounds": null,
+          "body_bounds": "[63,554][1017,657]",
+          "footer_completed": false,
+          "excluded_ui_metadata": []
+        },
+        "reply_completed": false
+      },
+      "pending_observation_evidence": {
+        "verified_ui_generation_timeout": true,
+        "original_status": "ERROR",
+        "backend_root_cause": "UNKNOWN",
+        "observation_only": true,
+        "observed_poll_span_seconds": 118.453,
+        "current_app_window": "1396",
+        "rejection_reasons": [],
+        "pre_send_exact_prompt_proven": true
+      },
+      "device_hostname_http_204_after_error": true,
+      "evidence_directory": "screenshots/gemini/TC-MEM-03/repeat_1/b288fb3ccc48",
+      "stage": "full_round2",
+      "independent_retest_link": null,
+      "raw_status_changed": false
+    },
+    {
+      "attempt_id": "4e49c6256e1a",
+      "application": "gemini",
+      "case_id": "TC-FLOW-01",
+      "original_status": "ERROR",
+      "classification": "APPLICATION_GENERATION_TIMEOUT",
+      "original_note": "TimeoutError: Application generation deadline exceeded",
+      "snapshot_state": {
+        "generating": true,
+        "clipboard_overlay": false,
+        "fixed_input_top": 2095,
+        "prompt_present": true,
+        "matched_prompt_text": "What is 5 + 7?",
+        "prompt_match": "EXACT",
+        "reply": {
+          "text": "12",
+          "copy_present": false,
+          "copy_bounds": null,
+          "body_bounds": "[63,554][1017,657]",
+          "footer_completed": false,
+          "excluded_ui_metadata": []
+        },
+        "reply_completed": false
+      },
+      "pending_observation_evidence": {
+        "verified_ui_generation_timeout": true,
+        "original_status": "ERROR",
+        "backend_root_cause": "UNKNOWN",
+        "observation_only": true,
+        "observed_poll_span_seconds": 119.261,
+        "current_app_window": "1396",
+        "rejection_reasons": [],
+        "pre_send_exact_prompt_proven": true
+      },
+      "device_hostname_http_204_after_error": true,
+      "evidence_directory": "screenshots/gemini/TC-FLOW-01/repeat_1/4e49c6256e1a",
+      "stage": "full_round2",
+      "independent_retest_link": null,
+      "raw_status_changed": false
+    },
+    {
+      "attempt_id": "55218882a3d2",
+      "application": "gemini",
+      "case_id": "TC-FLOW-02",
+      "original_status": "ERROR",
+      "classification": "APPLICATION_GENERATION_TIMEOUT",
+      "original_note": "TimeoutError: Application generation deadline exceeded",
+      "snapshot_state": {
+        "generating": true,
+        "clipboard_overlay": false,
+        "fixed_input_top": 2095,
+        "prompt_present": true,
+        "matched_prompt_text": "Can you calculate five plus seven?",
+        "prompt_match": "EXACT",
+        "reply": {
+          "text": "5 + 7 = 12",
+          "copy_present": false,
+          "copy_bounds": null,
+          "body_bounds": "[63,554][1017,651]",
+          "footer_completed": false,
+          "excluded_ui_metadata": []
+        },
+        "reply_completed": false
+      },
+      "pending_observation_evidence": {
+        "verified_ui_generation_timeout": true,
+        "original_status": "ERROR",
+        "backend_root_cause": "UNKNOWN",
+        "observation_only": true,
+        "observed_poll_span_seconds": 119.694,
+        "current_app_window": "1396",
+        "rejection_reasons": [],
+        "pre_send_exact_prompt_proven": true
+      },
+      "device_hostname_http_204_after_error": true,
+      "evidence_directory": "screenshots/gemini/TC-FLOW-02/repeat_1/55218882a3d2",
+      "stage": "full_round2",
+      "independent_retest_link": null,
+      "raw_status_changed": false
+    },
+    {
+      "attempt_id": "1dc107117626",
+      "application": "gemini",
+      "case_id": "AI-MEM-05",
+      "original_status": "ERROR",
+      "classification": "APPLICATION_GENERATION_TIMEOUT",
+      "original_note": "TimeoutError: Application generation deadline exceeded",
+      "snapshot_state": {
+        "generating": true,
+        "clipboard_overlay": false,
+        "fixed_input_top": 2095,
+        "prompt_present": true,
+        "matched_prompt_text": "What is my favorite animal?",
+        "prompt_match": "EXACT",
+        "reply": {
+          "text": "I don't have access to your personal information or preferences, so I'm not sure what your favorite animal is!\n\u200bIf you'd like to share, I'd love to know. What kind of animals are you usually drawn to?",
+          "copy_present": false,
+          "copy_bounds": null,
+          "body_bounds": "[63,554][1017,948]",
+          "footer_completed": false,
+          "excluded_ui_metadata": []
+        },
+        "reply_completed": false
+      },
+      "pending_observation_evidence": {
+        "verified_ui_generation_timeout": true,
+        "original_status": "ERROR",
+        "backend_root_cause": "UNKNOWN",
+        "observation_only": true,
+        "observed_poll_span_seconds": 118.327,
+        "current_app_window": "1396",
+        "rejection_reasons": [],
+        "pre_send_exact_prompt_proven": true
+      },
+      "device_hostname_http_204_after_error": true,
+      "evidence_directory": "screenshots/gemini/AI-MEM-05/repeat_1/1dc107117626",
+      "stage": "full_round2",
+      "independent_retest_link": null,
+      "raw_status_changed": false
+    },
+    {
+      "attempt_id": "a4653eb6e7eb",
+      "application": "gemini",
+      "case_id": "AI-FLOW-03",
+      "original_status": "ERROR",
+      "classification": "APPLICATION_GENERATION_TIMEOUT",
+      "original_note": "TimeoutError: Application generation deadline exceeded",
+      "snapshot_state": {
+        "generating": true,
+        "clipboard_overlay": false,
+        "fixed_input_top": 2095,
+        "prompt_present": true,
+        "matched_prompt_text": "5 + 7 equals how much?",
+        "prompt_match": "EXACT",
+        "reply": {
+          "text": "5 + 7 equals 12.",
+          "copy_present": false,
+          "copy_bounds": null,
+          "body_bounds": "[63,554][1017,660]",
+          "footer_completed": false,
+          "excluded_ui_metadata": []
+        },
+        "reply_completed": false
+      },
+      "pending_observation_evidence": {
+        "verified_ui_generation_timeout": true,
+        "original_status": "ERROR",
+        "backend_root_cause": "UNKNOWN",
+        "observation_only": true,
+        "observed_poll_span_seconds": 119.569,
+        "current_app_window": "1396",
+        "rejection_reasons": [],
+        "pre_send_exact_prompt_proven": true
+      },
+      "device_hostname_http_204_after_error": true,
+      "evidence_directory": "screenshots/gemini/AI-FLOW-03/repeat_1/a4653eb6e7eb",
+      "stage": "full_round2",
+      "independent_retest_link": null,
+      "raw_status_changed": false
+    },
+    {
+      "attempt_id": "b982a4a6ff37",
+      "application": "chatgpt",
+      "case_id": "TC-FA-02",
+      "original_status": "ERROR",
+      "classification": "CAPTURE_OR_INFRASTRUCTURE_ERROR",
+      "original_note": "TimeoutError: No visible UI element for selector new_chat_menu_button; inspect app UI",
+      "snapshot_state": {
+        "generating": false,
+        "clipboard_overlay": false,
+        "fixed_input_top": null,
+        "prompt_present": false,
+        "matched_prompt_text": null,
+        "prompt_match": null,
+        "reply": null,
+        "reply_completed": false
+      },
+      "pending_observation_evidence": {
+        "verified_ui_generation_timeout": false,
+        "original_status": "ERROR",
+        "backend_root_cause": "UNKNOWN",
+        "observation_only": true,
+        "observed_poll_span_seconds": 0,
+        "current_app_window": null,
+        "rejection_reasons": [
+          "Exception is not the bounded application-generation timeout",
+          "Current submitted prompt and visible generation marker are not in one app window",
+          "Missing atomic polling history",
+          "Polling history does not cover the configured generation deadline",
+          "Exact current prompt not proven in pre-send input XML"
+        ],
+        "pre_send_exact_prompt_proven": false
+      },
+      "device_hostname_http_204_after_error": null,
+      "evidence_directory": "screenshots/chatgpt/TC-FA-02/repeat_1/b982a4a6ff37",
+      "stage": "full_round3_completed",
+      "independent_retest_link": {
+        "original_attempt_id": "b982a4a6ff37",
+        "application": "chatgpt",
+        "case_id": "TC-FA-02",
+        "retest_stage": "round3_startup_repair_targets_v20",
+        "retest_attempt_id": "923be0b2fb1c",
+        "retest_status": "REVIEW",
+        "fills_unsubmitted_case_coverage": true,
+        "certificate": "ROUND3_STARTUP_REPAIR_ACCEPTANCE.json"
+      },
+      "raw_status_changed": false
+    },
+    {
+      "attempt_id": "f46edd4a692b",
+      "application": "chatgpt",
+      "case_id": "TC-FA-03",
+      "original_status": "ERROR",
+      "classification": "CAPTURE_OR_INFRASTRUCTURE_ERROR",
+      "original_note": "TimeoutError: No visible UI element for selector new_chat_ready_marker; inspect app UI",
+      "snapshot_state": {
+        "generating": false,
+        "clipboard_overlay": false,
+        "fixed_input_top": null,
+        "prompt_present": false,
+        "matched_prompt_text": null,
+        "prompt_match": null,
+        "reply": null,
+        "reply_completed": false
+      },
+      "pending_observation_evidence": {
+        "verified_ui_generation_timeout": false,
+        "original_status": "ERROR",
+        "backend_root_cause": "UNKNOWN",
+        "observation_only": true,
+        "observed_poll_span_seconds": 0,
+        "current_app_window": null,
+        "rejection_reasons": [
+          "Exception is not the bounded application-generation timeout",
+          "Current submitted prompt and visible generation marker are not in one app window",
+          "Missing atomic polling history",
+          "Polling history does not cover the configured generation deadline",
+          "Exact current prompt not proven in pre-send input XML"
+        ],
+        "pre_send_exact_prompt_proven": false
+      },
+      "device_hostname_http_204_after_error": null,
+      "evidence_directory": "screenshots/chatgpt/TC-FA-03/repeat_1/f46edd4a692b",
+      "stage": "full_round3_completed",
+      "independent_retest_link": {
+        "original_attempt_id": "f46edd4a692b",
+        "application": "chatgpt",
+        "case_id": "TC-FA-03",
+        "retest_stage": "round3_startup_repair_targets_v20",
+        "retest_attempt_id": "816db2e92c72",
+        "retest_status": "REVIEW",
+        "fills_unsubmitted_case_coverage": true,
+        "certificate": "ROUND3_STARTUP_REPAIR_ACCEPTANCE.json"
+      },
+      "raw_status_changed": false
+    },
+    {
+      "attempt_id": "0ad6fd860fba",
+      "application": "gemini",
+      "case_id": "TC-FLOW-02",
+      "original_status": "ERROR",
+      "classification": "APPLICATION_GENERATION_TIMEOUT",
+      "original_note": "TimeoutError: Application generation deadline exceeded",
+      "snapshot_state": {
+        "generating": true,
+        "clipboard_overlay": false,
+        "fixed_input_top": 2095,
+        "prompt_present": true,
+        "matched_prompt_text": "Can you calculate five plus seven?",
+        "prompt_match": "EXACT",
+        "reply": {
+          "text": "5 + 7 = 12.",
+          "copy_present": false,
+          "copy_bounds": null,
+          "body_bounds": "[63,554][1017,657]",
+          "footer_completed": false,
+          "excluded_ui_metadata": []
+        },
+        "reply_completed": false
+      },
+      "pending_observation_evidence": {
+        "verified_ui_generation_timeout": true,
+        "original_status": "ERROR",
+        "backend_root_cause": "UNKNOWN",
+        "observation_only": true,
+        "observed_poll_span_seconds": 119.133,
+        "current_app_window": "1758",
+        "rejection_reasons": [],
+        "pre_send_exact_prompt_proven": true
+      },
+      "device_hostname_http_204_after_error": true,
+      "evidence_directory": "screenshots/gemini/TC-FLOW-02/repeat_1/0ad6fd860fba",
+      "stage": "full_round3_completed",
+      "independent_retest_link": null,
+      "raw_status_changed": false
+    },
+    {
+      "attempt_id": "bc0dfc99cda3",
+      "application": "gemini",
+      "case_id": "AI-MEM-05",
+      "original_status": "ERROR",
+      "classification": "APPLICATION_GENERATION_TIMEOUT",
+      "original_note": "TimeoutError: Application generation deadline exceeded",
+      "snapshot_state": {
+        "generating": true,
+        "clipboard_overlay": false,
+        "fixed_input_top": 2095,
+        "prompt_present": true,
+        "matched_prompt_text": "What is my favorite animal?",
+        "prompt_match": "EXACT",
+        "reply": {
+          "text": "I don't have access to your personal information or memories, so I don't know what your favorite animal is!\n\u200bIf you'd like to share it, I'd love to hear what it is. Or, if you're curious about a particular animal, let me know and we can dive into some cool facts about it!",
+          "copy_present": false,
+          "copy_bounds": null,
+          "body_bounds": "[63,554][1017,1074]",
+          "footer_completed": false,
+          "excluded_ui_metadata": []
+        },
+        "reply_completed": false
+      },
+      "pending_observation_evidence": {
+        "verified_ui_generation_timeout": true,
+        "original_status": "ERROR",
+        "backend_root_cause": "UNKNOWN",
+        "observation_only": true,
+        "observed_poll_span_seconds": 118.162,
+        "current_app_window": "1758",
+        "rejection_reasons": [],
+        "pre_send_exact_prompt_proven": true
+      },
+      "device_hostname_http_204_after_error": true,
+      "evidence_directory": "screenshots/gemini/AI-MEM-05/repeat_1/bc0dfc99cda3",
+      "stage": "full_round3_completed",
+      "independent_retest_link": null,
+      "raw_status_changed": false
+    },
+    {
+      "attempt_id": "ebf6313d82cf",
+      "application": "gemini",
+      "case_id": "AI-FLOW-03",
+      "original_status": "ERROR",
+      "classification": "APPLICATION_GENERATION_TIMEOUT",
+      "original_note": "TimeoutError: Application generation deadline exceeded",
+      "snapshot_state": {
+        "generating": true,
+        "clipboard_overlay": false,
+        "fixed_input_top": 2095,
+        "prompt_present": true,
+        "matched_prompt_text": "5 + 7 equals how much?",
+        "prompt_match": "EXACT",
+        "reply": {
+          "text": "5 + 7 equals 12.",
+          "copy_present": false,
+          "copy_bounds": null,
+          "body_bounds": "[63,554][1017,660]",
+          "footer_completed": false,
+          "excluded_ui_metadata": []
+        },
+        "reply_completed": false
+      },
+      "pending_observation_evidence": {
+        "verified_ui_generation_timeout": true,
+        "original_status": "ERROR",
+        "backend_root_cause": "UNKNOWN",
+        "observation_only": true,
+        "observed_poll_span_seconds": 119.711,
+        "current_app_window": "1758",
+        "rejection_reasons": [],
+        "pre_send_exact_prompt_proven": true
+      },
+      "device_hostname_http_204_after_error": true,
+      "evidence_directory": "screenshots/gemini/AI-FLOW-03/repeat_1/ebf6313d82cf",
+      "stage": "full_round3_completed",
+      "independent_retest_link": null,
+      "raw_status_changed": false
+    }
+  ]
+}

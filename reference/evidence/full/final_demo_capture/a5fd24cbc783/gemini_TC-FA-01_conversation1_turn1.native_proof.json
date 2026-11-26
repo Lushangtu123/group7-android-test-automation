@@ -1,0 +1,34 @@
+{
+  "complete_accessible_text_proven": true,
+  "views": [
+    {
+      "parts": [
+        "The capital of Canada is Ottawa. It is located in the province of Ontario, along the Ottawa River."
+      ],
+      "body_bounds": "[63,554][1017,730]",
+      "user_bounds": "[279,326][1017,490]",
+      "start_prompt_confirmed": true,
+      "matched_prompt_text": "What is the capital of Canada?",
+      "footer_completed": true,
+      "media_descriptions": [],
+      "scroll_margin_x": 31,
+      "fixed_input_top": 1853,
+      "xml_file": "gemini_TC-FA-01_conversation1_turn1_native_view_00.xml",
+      "png_file": "gemini_TC-FA-01_conversation1_turn1_native_view_00.png",
+      "xml_sha256": "7c0d1ac0dd7a98fc0bd1b09fac608bfa522e05b0360865db4727e7c8e7199c8d",
+      "png_sha256": "00cf0a80d9942d3227290a62d39373a67c71ecec1b90dd601bdc42eb1cb12e85",
+      "at_monotonic": 356022.724453416,
+      "overlap_parts": null
+    }
+  ],
+  "requested_prompt": "What is the capital of Canada?",
+  "completed_footer_confirmed": true,
+  "start_prompt_confirmed": true,
+  "full_response_parts": [
+    "The capital of Canada is Ottawa. It is located in the province of Ontario, along the Ottawa River."
+  ],
+  "nontext_media_transcribed": false,
+  "scope": "All accessible TextView/code text in the current response; media remain raw screenshots/XML",
+  "full_response_text": "The capital of Canada is Ottawa. It is located in the province of Ontario, along the Ottawa River.",
+  "final_view_position": "START_OF_CURRENT_RESPONSE"
+}

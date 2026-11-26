@@ -1,0 +1,62 @@
+{
+  "planned": 114,
+  "planned_prompt_turns": 252,
+  "captured_prompt_turns": 209,
+  "recorded": 114,
+  "counts": {
+    "PASS": 37,
+    "FAIL": 0,
+    "REVIEW": 58,
+    "ERROR": 19
+  },
+  "attempted_pct": 97.37,
+  "completed_without_error": 95,
+  "completion_pct": 83.33,
+  "automatic_pass_pct_planned": 32.46,
+  "automatic_pass_pct_completed": 38.95,
+  "execution_status": "ALL_PLANNED_OUTCOME_RECORDS_AVAILABLE",
+  "recorded_rounds": 3,
+  "wall_seconds": null,
+  "known_active_seconds": 8177.587,
+  "recorded_case_seconds": 8090.4689,
+  "time_limitations": "Interrupted Round 3 has no complete first-segment wall measurement. Known active intervals and exact recorded attempt durations are separate; idle interruption gaps are excluded.",
+  "started_rounds_without_final_wall_seconds": [
+    "full_round3_completed"
+  ],
+  "automatic_prompt_retries": 0,
+  "automatic_case_retries": 0,
+  "preserved_interrupted_partial_checkpoints_outside_plan_counts": 1,
+  "explicit_interrupted_round_resumptions": 3,
+  "resume_policy": "Checkpointed outcomes, including ERROR, are skipped unchanged. Uncheckpointed interrupted cases are explicitly restarted in a fresh temporary chat; orphan evidence is retained. No fabricated status is assigned to an orphan.",
+  "clipboard_read_recovery_retries": 1,
+  "clipboard_read_recovery_evidence": [
+    {
+      "round": "full_round1",
+      "evidence": "full_round1/screenshots/chatgpt/AI-FLOW-03/repeat_1/27eb985a2691/chatgpt_AI-FLOW-03_conversation1_turn4.clipboard_recovery.jsonl",
+      "operations": 1
+    }
+  ],
+  "helper_anr_boundary_recoveries": [],
+  "ui_operation_recoveries": [
+    {
+      "round": "full_round3_completed",
+      "operation": "SAME_RESPONSE_COPY_RETRY",
+      "evidence": "full_round3_completed/screenshots/chatgpt/TC-NLU-01/repeat_1/1483fad02517/chatgpt_TC-NLU-01_conversation1_turn1.copy_action_retry.json",
+      "reason": "Initial scoped Copy gesture did not replace the unique clipboard marker",
+      "prompt_resent": false
+    }
+  ],
+  "capture_adapter_changed_between_rounds": true,
+  "status_consistency_all3": 25,
+  "stable_denominator_if_all3": 38,
+  "recording_enabled": false,
+  "review_counted_as_pass": false,
+  "stability_definition": "Identical automatic status across independent rounds. Does not certify identical wording or semantic correctness.",
+  "cases_with_submitted_prompt_evidence": 111,
+  "independent_retests_covering_unsubmitted_plan_slots": 3,
+  "plan_slots_with_actual_prompt_evidence_in_primary_or_linked_retest": 114,
+  "independent_retests_change_no_original_outcomes": true,
+  "unstarted_or_submission_unproven_records": 3,
+  "outcome_records_pct": 100.0,
+  "all_planned_dialogues_completed_without_error": false
+}

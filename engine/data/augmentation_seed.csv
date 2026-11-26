@@ -1,0 +1,9 @@
+variant_id,source_case_id,transformation,candidate_prompt_or_sequence,expected,historical_note
+AUG-01,TC-FA-01,paraphrase,Name the city that serves as Canada's national capital.,Ottawa,Proposed only
+AUG-02,TC-FA-01,informal,"Hey, what city is the capital of Canada?",Ottawa,Proposed only
+AUG-03,TC-FA-02,typo,what does cpU stnd for in comp science?,Central Processing Unit,Proposed only
+AUG-04,TC-FA-03,premise_mutation,Why did Australia select Melbourne as its capital?,Correct the premise; Canberra,Proposed only
+AUG-05,TC-NLU-01,novice,Explain photosynthesis in two simple sentences for a beginner.,Accurate beginner-friendly explanation,Historical manual result recorded in D#2
+AUG-06,TC-MEM-02,interruption,"After stating cat, ask for a short Java function; then ask for favorite animal.",Cat,Proposed only
+AUG-07,TC-FLOW-02,paraphrase,Replace the math turn with: What do you get when you add 5 and 7?,12; final cat,Proposed only
+AUG-08,AI-MEM-04,value_update,"State favorite color blue, explicitly update to green, ask current favorite color.",Green,Proposed only

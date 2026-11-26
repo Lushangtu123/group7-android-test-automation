@@ -1,0 +1,17 @@
+{
+  "id": "20261126T030225Z_13fd3e84",
+  "state": "RUNNING",
+  "plan": {
+    "profile": "full",
+    "app": "both",
+    "cases": [
+      "MB-GEN-009"
+    ],
+    "repeats": 2
+  },
+  "started_utc": "2026-11-26T03:02:25.970683+00:00",
+  "scope": "NEW_DEMO_RUN_NOT_FORMAL114",
+  "planned": 4,
+  "pid": 49118,
+  "capture_label": "Latest saved evidence frame; not a live video stream"
+}

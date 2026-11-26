@@ -1,0 +1,50 @@
+test_matching_prompt_does_not_make_an_account_avatar_safe (test_console.AccountLabelTests.test_matching_prompt_does_not_make_an_account_avatar_safe) ... ok
+test_private_display_name_is_not_served_as_ui_text (test_console.AccountLabelTests.test_private_display_name_is_not_served_as_ui_text) ... ok
+test_console_source_is_frozen_before_worker_launch (test_console.ConsoleSnapshotTests.test_console_source_is_frozen_before_worker_launch) ... ok
+test_restart_after_completed_worker_uses_its_actual_summary (test_console.ConsoleSnapshotTests.test_restart_after_completed_worker_uses_its_actual_summary) ... ok
+test_generation_keeps_immutable_independent_outputs (test_console.JobTests.test_generation_keeps_immutable_independent_outputs) ... ok
+test_interrupted_job_does_not_invent_outcomes (test_console.JobTests.test_interrupted_job_does_not_invent_outcomes) ... ok
+test_recorded_reference_stats_are_not_live (test_console.JobTests.test_recorded_reference_stats_are_not_live) ... ok
+test_single_active_job_and_restart_discovery (test_console.JobTests.test_single_active_job_and_restart_discovery) ... ok
+test_unready_environment_creates_no_run (test_console.JobTests.test_unready_environment_creates_no_run) ... ok
+test_full_defaults_all_four_cases_twice (test_console.PlanTests.test_full_defaults_all_four_cases_twice) ... ok
+test_quick_cannot_hide_arbitrary_case_selection (test_console.PlanTests.test_quick_cannot_hide_arbitrary_case_selection) ... ok
+test_quick_is_one_generated_case_two_apps_once (test_console.PlanTests.test_quick_is_one_generated_case_two_apps_once) ... ok
+test_unknown_case_app_or_excessive_repeat_is_rejected (test_console.PlanTests.test_unknown_case_app_or_excessive_repeat_is_rejected) ... ok
+test_escape_paths_and_symlinks_rejected (test_console.PrivacyTests.test_escape_paths_and_symlinks_rejected) ... ok
+test_preview_does_not_allow_xml_external_entities (test_console.PrivacyTests.test_preview_does_not_allow_xml_external_entities) ... ok
+test_preview_requires_verified_prompt_and_no_account_nodes (test_console.PrivacyTests.test_preview_requires_verified_prompt_and_no_account_nodes) ... ok
+test_public_logs_redact_email_username_and_credentials (test_console.PrivacyTests.test_public_logs_redact_email_username_and_credentials) ... ok
+test_clipboard_payload_is_not_exposed_in_public_logs (test_console.RestoredWorkerTests.test_clipboard_payload_is_not_exposed_in_public_logs) ... ok
+test_restored_manager_finalizes_worker_that_ends_later (test_console.RestoredWorkerTests.test_restored_manager_finalizes_worker_that_ends_later) ... ok
+test_bootstrap_separates_historical_scopes (test_http.HttpTests.test_bootstrap_separates_historical_scopes) ... ok
+test_cross_origin_mutation_rejected (test_http.HttpTests.test_cross_origin_mutation_rejected) ... ok
+test_duplicate_run_rejected_then_interrupted_export (test_http.HttpTests.test_duplicate_run_rejected_then_interrupted_export) ... ok
+test_forged_action_token_rejected (test_http.HttpTests.test_forged_action_token_rejected) ... ok
+test_generation_calls_real_generator (test_http.HttpTests.test_generation_calls_real_generator) ... ok
+test_traversal_and_private_source_are_not_served (test_http.HttpTests.test_traversal_and_private_source_are_not_served) ... ok
+test_video_range_supported_if_companion_exists (test_http.HttpTests.test_video_range_supported_if_companion_exists) ... ok
+test_worksheet_download_and_source_readable (test_http.HttpTests.test_worksheet_download_and_source_readable) ... ok
+test_export_keeps_executable_source_regex_bytes (test_live_http.LiveHttpTests.test_export_keeps_executable_source_regex_bytes) ... ok
+test_frame_contains_capture_time_and_sequence (test_live_http.LiveHttpTests.test_frame_contains_capture_time_and_sequence) ... ok
+test_frame_requires_session_token (test_live_http.LiveHttpTests.test_frame_requires_session_token) ... ok
+test_new_run_starts_mirror_and_stop_stops_it (test_live_http.LiveHttpTests.test_new_run_starts_mirror_and_stop_stops_it) ... ok
+test_running_python_log_and_cursor_available (test_live_http.LiveHttpTests.test_running_python_log_and_cursor_available) ... ok
+test_appium_log_is_available_before_final_archive_and_has_no_payload (test_live_services.ServiceTests.test_appium_log_is_available_before_final_archive_and_has_no_payload) ... ok
+test_capture_failure_never_reuses_previous_frame_as_live (test_live_services.ServiceTests.test_capture_failure_never_reuses_previous_frame_as_live) ... ok
+test_existing_active_console_log_precedes_legacy_global_log (test_live_services.ServiceTests.test_existing_active_console_log_precedes_legacy_global_log) ... ok
+test_frame_from_previous_attempt_cannot_appear_in_new_attempt (test_live_services.ServiceTests.test_frame_from_previous_attempt_cannot_appear_in_new_attempt) ... ok
+test_invalid_log_source_or_cursor_is_rejected (test_live_services.ServiceTests.test_invalid_log_source_or_cursor_is_rejected) ... ok
+test_log_cursor_preserves_partial_lines_and_raw_source (test_live_services.ServiceTests.test_log_cursor_preserves_partial_lines_and_raw_source) ... ok
+test_old_frame_is_hidden_as_delayed (test_live_services.ServiceTests.test_old_frame_is_hidden_as_delayed) ... ok
+test_old_loop_cannot_follow_the_next_stream_after_terminal_transition (test_live_services.ServiceTests.test_old_loop_cannot_follow_the_next_stream_after_terminal_transition) ... ok
+test_privacy_guard_is_checked_again_before_serving (test_live_services.ServiceTests.test_privacy_guard_is_checked_again_before_serving) ... ok
+test_repeated_start_reuses_one_capture_thread (test_live_services.ServiceTests.test_repeated_start_reuses_one_capture_thread) ... ok
+test_stop_and_completed_job_disable_live_frame (test_live_services.ServiceTests.test_stop_and_completed_job_disable_live_frame) ... ok
+test_visibility_hides_account_page_even_with_prompt (test_live_services.ServiceTests.test_visibility_hides_account_page_even_with_prompt) ... ok
+test_visibility_needs_current_prompt_and_current_identity (test_live_services.ServiceTests.test_visibility_needs_current_prompt_and_current_identity) ... ok
+
+----------------------------------------------------------------------
+Ran 45 tests in 3.674s
+
+OK

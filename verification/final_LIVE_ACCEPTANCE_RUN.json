@@ -1,0 +1,17 @@
+{
+  "id": "20261126T030705Z_6cce1e00",
+  "state": "RUNNING",
+  "plan": {
+    "profile": "full",
+    "app": "both",
+    "cases": [
+      "MB-GEN-009"
+    ],
+    "repeats": 2
+  },
+  "started_utc": "2026-11-26T03:07:05.747261+00:00",
+  "scope": "NEW_DEMO_RUN_NOT_FORMAL114",
+  "planned": 4,
+  "pid": 49776,
+  "capture_label": "Continuous current-device mirror; saved screenshots are separate evidence"
+}

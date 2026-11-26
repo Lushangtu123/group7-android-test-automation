@@ -1,0 +1,8 @@
+{"at_monotonic": 360334.253274333, "phase": "atomic_overlay", "expect_overlay": false, "present": false, "dismiss_available": false}
+{"at_monotonic": 360345.587982583, "phase": "atomic_overlay", "expect_overlay": true, "present": false, "dismiss_available": false}
+{"at_monotonic": 360347.169620666, "phase": "atomic_overlay", "expect_overlay": true, "present": true, "dismiss_available": true}
+{"at_monotonic": 360348.272903791, "phase": "dismiss_clicked", "expect_overlay": true}
+{"at_monotonic": 360349.166769208, "phase": "atomic_overlay", "expect_overlay": true, "present": false, "dismiss_available": false}
+{"at_monotonic": 360354.532166625, "phase": "atomic_overlay", "expect_overlay": false, "present": true, "dismiss_available": true}
+{"at_monotonic": 360356.414500458, "phase": "dismiss_clicked", "expect_overlay": false}
+{"at_monotonic": 360357.292049416, "phase": "atomic_overlay", "expect_overlay": false, "present": false, "dismiss_available": false}

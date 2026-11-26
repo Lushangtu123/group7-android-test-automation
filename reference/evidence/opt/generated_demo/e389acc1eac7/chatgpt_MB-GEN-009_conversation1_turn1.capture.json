@@ -1,0 +1,15 @@
+{
+  "requested_mode": "copy",
+  "actual_mode": "copy",
+  "visible_native_text": "Le chat dort.",
+  "captured_characters": 13,
+  "configured_copy_action": "mobile: clickGesture",
+  "requested_prompt": "Translate this sentence into French: The cat is sleeping. Reply with only the French sentence.",
+  "rendered_user_prompt": "Translate this sentence into French: The cat is sleeping. Reply with only the French sentence.",
+  "prompt_match": "EXACT",
+  "prompt_ui_variant_limitation": null,
+  "native_full_response_proven": false,
+  "excluded_native_ui_labels": [],
+  "clipboard_read_recovery_count": 0,
+  "limitation": null
+}

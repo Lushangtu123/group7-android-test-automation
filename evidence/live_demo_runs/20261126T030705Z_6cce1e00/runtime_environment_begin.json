@@ -1,0 +1,48 @@
+{
+  "captured_utc": "2026-11-26T03:07:05.850214+00:00",
+  "python": "3.13.1 (main, Dec  3 2024, 17:59:52) [Clang 16.0.0 (clang-1600.0.26.4)]",
+  "appium_server": "http://127.0.0.1:4723",
+  "device": "emulator-5554",
+  "android_release": "15",
+  "android_api": "35",
+  "packages": {
+    "com.openai.chatgpt": {
+      "exit_code": 0,
+      "version_lines": [
+        "versionCode=2631431 minSdk=32 targetSdk=37",
+        "versionName=1.2026.314"
+      ],
+      "error": ""
+    },
+    "com.google.android.apps.bard": {
+      "exit_code": 0,
+      "version_lines": [
+        "versionCode=345 minSdk=32 targetSdk=37",
+        "versionName=1.0.995038376"
+      ],
+      "error": ""
+    },
+    "com.google.android.googlequicksearchbox": {
+      "exit_code": 0,
+      "version_lines": [
+        "versionCode=301834562 minSdk=32 targetSdk=37",
+        "versionName=17.74.18.ve.arm64",
+        "versionCode=301351420 minSdk=29 targetSdk=34",
+        "versionName=15.22.33.29.arm64"
+      ],
+      "error": ""
+    },
+    "io.appium.settings": {
+      "exit_code": 0,
+      "version_lines": [
+        "versionCode=217 minSdk=26 targetSdk=35",
+        "versionName=9.2.0"
+      ],
+      "error": ""
+    }
+  },
+  "python_dependencies": {
+    "Appium-Python-Client": "6.1.7",
+    "selenium": "4.52.0"
+  }
+}

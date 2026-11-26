@@ -1,0 +1,8 @@
+{"at_monotonic": 361575.613992875, "phase": "atomic_overlay", "expect_overlay": false, "present": false, "dismiss_available": false}
+{"at_monotonic": 361587.026411708, "phase": "atomic_overlay", "expect_overlay": true, "present": false, "dismiss_available": false}
+{"at_monotonic": 361588.374664541, "phase": "atomic_overlay", "expect_overlay": true, "present": true, "dismiss_available": true}
+{"at_monotonic": 361589.308847208, "phase": "dismiss_clicked", "expect_overlay": true}
+{"at_monotonic": 361590.143932875, "phase": "atomic_overlay", "expect_overlay": true, "present": false, "dismiss_available": false}
+{"at_monotonic": 361595.992311208, "phase": "atomic_overlay", "expect_overlay": false, "present": true, "dismiss_available": true}
+{"at_monotonic": 361597.233209166, "phase": "dismiss_clicked", "expect_overlay": false}
+{"at_monotonic": 361598.125229916, "phase": "atomic_overlay", "expect_overlay": false, "present": false, "dismiss_available": false}

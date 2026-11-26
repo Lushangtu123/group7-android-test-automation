@@ -1,0 +1,23 @@
+{
+  "kind": "REAL_ANDROID_APPIUM_DEMO_CONSOLE",
+  "scope": "NEW_DEMO_RUN_NOT_FORMAL114",
+  "plan": {
+    "profile": "full",
+    "app": "both",
+    "cases": [
+      "MB-GEN-009"
+    ],
+    "repeats": 2
+  },
+  "started_utc": "2026-11-26T03:07:05.849731+00:00",
+  "process_id": 49776,
+  "recording_enabled": false,
+  "automatic_case_retries": 0,
+  "automatic_prompt_resends": 0,
+  "appium_log_source": "/Users/DEMO_USER/Documents/Codex/2026-11-16/macbook-m2-max-android-studio-emulator/demo/Group7_Demo_Console/runtime/services/appium.log",
+  "appium_log_offset": 257435,
+  "ended_utc": "2026-11-26T03:08:53.455032+00:00",
+  "wall_seconds": 107.605,
+  "interrupted": false,
+  "exit_code": 0
+}

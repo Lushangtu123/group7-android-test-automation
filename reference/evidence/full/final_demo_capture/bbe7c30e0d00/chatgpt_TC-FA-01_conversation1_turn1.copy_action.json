@@ -1,0 +1,11 @@
+{
+  "action": "mobile: clickGesture",
+  "element_id": "00000000-0000-0706-7735-995b00000009",
+  "element_rect": {
+    "height": 95,
+    "width": 95,
+    "x": 22,
+    "y": 718
+  },
+  "scoped_to_current_response": true
+}

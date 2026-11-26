@@ -1,0 +1,13 @@
+# Keep evidence bytes and checksum provenance stable across platforms.
+* -text
+*.py text eol=lf
+*.js text eol=lf
+*.mjs text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.command text eol=lf
+*.md text eol=lf
+/evidence/** -text
+/reference/** -text
+/actual_generation/** -text
+/verification/** -text

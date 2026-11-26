@@ -1,0 +1,15 @@
+{
+  "requested_mode": "copy",
+  "actual_mode": "copy",
+  "visible_native_text": "Dog",
+  "captured_characters": 3,
+  "configured_copy_action": "mobile: clickGesture",
+  "requested_prompt": "Which animal did I tell you is my favorite? Give only the animal name.",
+  "rendered_user_prompt": "Which animal did I tell you is my favorite? Give only the animal name.",
+  "prompt_match": "EXACT",
+  "prompt_ui_variant_limitation": null,
+  "native_full_response_proven": false,
+  "excluded_native_ui_labels": [],
+  "clipboard_read_recovery_count": 0,
+  "limitation": null
+}

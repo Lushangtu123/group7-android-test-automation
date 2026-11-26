@@ -1,0 +1,18 @@
+{
+  "captured_utc": "2026-11-26T03:12:54.280699+00:00",
+  "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+  "architecture": "arm64",
+  "python": "3.13.1 (main, Dec  3 2024, 17:59:52) [Clang 16.0.0 (clang-1600.0.26.4)]",
+  "macos": "27.2.1",
+  "cpu": "Apple M2 Max",
+  "appium_server": {
+    "value": {
+      "ready": true,
+      "message": "The server is ready to accept new connections",
+      "build": {
+        "version": "4.0.0"
+      }
+    }
+  },
+  "uiautomator2_version": "9.2.1"
+}

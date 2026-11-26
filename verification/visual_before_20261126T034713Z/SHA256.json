@@ -1,0 +1,11 @@
+{
+  "static/index.html": "46ae894a91f54938b77790d303d49bd4c6f9b31492035654f1859dc35112fea7",
+  "static/style.css": "39be038d83b20d8df638b5f00a9f996d946883140ddc001941f8a634d111ad95",
+  "static/app.js": "0284608401132d04f8b74f078ac6105b3479394c400dd06cc645129b9c57a15a",
+  "static/view_logic.mjs": "6dabd0615cb81471441d0f445ff9714ce0f5ddfc7d7cbfdcf7c506ec1785930d",
+  "server.py": "1c1537b3d3aace3ba671e1057e902bf850e14feeadb9b0d1fb25c759b19d4205",
+  "live_services.py": "1e9def6dd4ec513e015ce513594e8a249b6d06042f5779cd35c24bdedb415c35",
+  "live_worker.py": "c0c61994bf83a495abbd677623f9645cf703a4dcb6ecfb4462c43687206cf4e2",
+  "console_core.py": "b609fd5a88f5166f149ac49f1e6baf4b8724d758d07f690574cade436c085f98",
+  "original_delivery_zip": "3ff9bf1b650fb30df2e108c0a16b11244272994d22f885f09ddb9181e2ad7950"
+}

@@ -1,0 +1,254 @@
+{
+  "id": "d0ad7a3e5f7d",
+  "candidates": 16,
+  "executable": 4,
+  "elapsed_seconds": 0.002325,
+  "created_utc": "2026-11-26T03:07:04.884233+00:00",
+  "definitions": [
+    {
+      "generated_id": "GEN-001",
+      "feature": "Factual/Domain",
+      "input_class": "verified geography fact",
+      "context_class": "new independent chat",
+      "expected_output_class": "verified answer",
+      "review_status": "CANDIDATE_NEEDS_LOGIC_REVIEW",
+      "execution_status": "NOT_EXECUTED",
+      "case_id": "MB-GEN-001",
+      "conversations": [
+        [
+          "Name the capital city of Canada. Answer with the city name only."
+        ]
+      ],
+      "oracle": "ottawa",
+      "expected": "Explicitly identify Ottawa as the capital of Canada. Contradicted or merely quoted city mentions do not pass.",
+      "validity_pre_review": "CODEX_AI_LOGICAL_PRE_REVIEW",
+      "validity_reason": "A verified country/capital parameter in a fresh chat directly supports the requested verified-answer output.",
+      "human_reviewer": "",
+      "human_approval": "",
+      "human_review_date": "",
+      "generation_method": "Existing deterministic Cartesian generator followed by a reviewed coordinate-to-prompt template; no remote LLM call"
+    },
+    {
+      "generated_id": "GEN-008",
+      "feature": "Memory",
+      "input_class": "preference statement",
+      "context_class": "one interruption",
+      "expected_output_class": "recall original",
+      "review_status": "CANDIDATE_NEEDS_LOGIC_REVIEW",
+      "execution_status": "NOT_EXECUTED",
+      "case_id": "MB-GEN-008",
+      "conversations": [
+        [
+          "My favorite animal is a dog. Remember this during our conversation.",
+          "What is 8 + 6? Give only the number.",
+          "Which animal did I tell you is my favorite? Give only the animal name."
+        ]
+      ],
+      "oracle": "opt_memory_dog14",
+      "expected": "Keep one conversation, calculate 8+6=14 during one interruption, then explicitly recall dog without inventing a changed preference.",
+      "validity_pre_review": "CODEX_AI_LOGICAL_PRE_REVIEW",
+      "validity_reason": "An explicit original preference plus exactly one intervening question makes recall of the original value testable.",
+      "human_reviewer": "",
+      "human_approval": "",
+      "human_review_date": "",
+      "generation_method": "Existing deterministic Cartesian generator followed by a reviewed coordinate-to-prompt template; no remote LLM call"
+    },
+    {
+      "generated_id": "GEN-009",
+      "feature": "NLU",
+      "input_class": "clear question",
+      "context_class": "standalone",
+      "expected_output_class": "clear semantic answer",
+      "review_status": "CANDIDATE_NEEDS_LOGIC_REVIEW",
+      "execution_status": "NOT_EXECUTED",
+      "case_id": "MB-GEN-009",
+      "conversations": [
+        [
+          "Translate this sentence into French: The cat is sleeping. Reply with only the French sentence."
+        ]
+      ],
+      "oracle": "opt_translate_fr_cat",
+      "expected": "Give a complete affirmative French translation preserving cat and sleeping. Le chat dort and Le chat est en train de dormir are predeclared valid forms; explicit dog or negated sleep forms fail. Other wording requires REVIEW.",
+      "validity_pre_review": "CODEX_AI_LOGICAL_PRE_REVIEW",
+      "validity_reason": "An unambiguous standalone translation request tests natural-language understanding with whole-sentence semantic assertions, not keyword presence.",
+      "human_reviewer": "",
+      "human_approval": "",
+      "human_review_date": "",
+      "generation_method": "Existing deterministic Cartesian generator followed by a reviewed coordinate-to-prompt template; no remote LLM call"
+    },
+    {
+      "generated_id": "GEN-013",
+      "feature": "Fixed Flow",
+      "input_class": "preference",
+      "context_class": "five-turn original",
+      "expected_output_class": "correct intermediate steps",
+      "review_status": "CANDIDATE_NEEDS_LOGIC_REVIEW",
+      "execution_status": "NOT_EXECUTED",
+      "case_id": "MB-GEN-013",
+      "conversations": [
+        [
+          "My favorite animal is a dog. Remember this during our conversation.",
+          "What is 8 + 6? Give only the number.",
+          "Define a parameterless Python function that prints Hello. Return only the function definition.",
+          "What is the capital city of Australia? Give only the city name.",
+          "What is my favorite animal? Give only the animal name."
+        ]
+      ],
+      "oracle": "opt_flow_dog14_canberra",
+      "expected": "Complete all five turns in one chat: original dog preference; 14; syntactically valid parameterless Hello-printing function; Canberra; dog recall. Never execute model-generated code.",
+      "validity_pre_review": "CODEX_AI_LOGICAL_PRE_REVIEW",
+      "validity_reason": "The five-step original flow structure is preserved with new dog/14/Australia parameters. Intermediate and final results have independent assertions.",
+      "human_reviewer": "",
+      "human_approval": "",
+      "human_review_date": "",
+      "generation_method": "Existing deterministic Cartesian generator followed by a reviewed coordinate-to-prompt template; no remote LLM call"
+    }
+  ],
+  "coordinates": [
+    {
+      "generated_id": "GEN-001",
+      "feature": "Factual/Domain",
+      "input_class": "verified geography fact",
+      "context_class": "new independent chat",
+      "expected_output_class": "verified answer",
+      "review_status": "CANDIDATE_NEEDS_LOGIC_REVIEW",
+      "execution_status": "NOT_EXECUTED"
+    },
+    {
+      "generated_id": "GEN-002",
+      "feature": "Factual/Domain",
+      "input_class": "verified geography fact",
+      "context_class": "new independent chat",
+      "expected_output_class": "premise correction",
+      "review_status": "CANDIDATE_NEEDS_LOGIC_REVIEW",
+      "execution_status": "NOT_EXECUTED"
+    },
+    {
+      "generated_id": "GEN-003",
+      "feature": "Factual/Domain",
+      "input_class": "verified geography fact",
+      "context_class": "new independent chat",
+      "expected_output_class": "uncertainty acknowledgement",
+      "review_status": "CANDIDATE_NEEDS_LOGIC_REVIEW",
+      "execution_status": "NOT_EXECUTED"
+    },
+    {
+      "generated_id": "GEN-004",
+      "feature": "Factual/Domain",
+      "input_class": "verified geography fact",
+      "context_class": "misleading preceding turn",
+      "expected_output_class": "verified answer",
+      "review_status": "CANDIDATE_NEEDS_LOGIC_REVIEW",
+      "execution_status": "NOT_EXECUTED"
+    },
+    {
+      "generated_id": "GEN-005",
+      "feature": "Memory",
+      "input_class": "preference statement",
+      "context_class": "immediate",
+      "expected_output_class": "recall original",
+      "review_status": "CANDIDATE_NEEDS_LOGIC_REVIEW",
+      "execution_status": "NOT_EXECUTED"
+    },
+    {
+      "generated_id": "GEN-006",
+      "feature": "Memory",
+      "input_class": "preference statement",
+      "context_class": "immediate",
+      "expected_output_class": "recall updated",
+      "review_status": "CANDIDATE_NEEDS_LOGIC_REVIEW",
+      "execution_status": "NOT_EXECUTED"
+    },
+    {
+      "generated_id": "GEN-007",
+      "feature": "Memory",
+      "input_class": "preference statement",
+      "context_class": "immediate",
+      "expected_output_class": "admit unknown",
+      "review_status": "CANDIDATE_NEEDS_LOGIC_REVIEW",
+      "execution_status": "NOT_EXECUTED"
+    },
+    {
+      "generated_id": "GEN-008",
+      "feature": "Memory",
+      "input_class": "preference statement",
+      "context_class": "one interruption",
+      "expected_output_class": "recall original",
+      "review_status": "CANDIDATE_NEEDS_LOGIC_REVIEW",
+      "execution_status": "NOT_EXECUTED"
+    },
+    {
+      "generated_id": "GEN-009",
+      "feature": "NLU",
+      "input_class": "clear question",
+      "context_class": "standalone",
+      "expected_output_class": "clear semantic answer",
+      "review_status": "CANDIDATE_NEEDS_LOGIC_REVIEW",
+      "execution_status": "NOT_EXECUTED"
+    },
+    {
+      "generated_id": "GEN-010",
+      "feature": "NLU",
+      "input_class": "clear question",
+      "context_class": "standalone",
+      "expected_output_class": "clarification request",
+      "review_status": "CANDIDATE_NEEDS_LOGIC_REVIEW",
+      "execution_status": "NOT_EXECUTED"
+    },
+    {
+      "generated_id": "GEN-011",
+      "feature": "NLU",
+      "input_class": "clear question",
+      "context_class": "standalone",
+      "expected_output_class": "consistent skill-based assessment",
+      "review_status": "CANDIDATE_NEEDS_LOGIC_REVIEW",
+      "execution_status": "NOT_EXECUTED"
+    },
+    {
+      "generated_id": "GEN-012",
+      "feature": "NLU",
+      "input_class": "clear question",
+      "context_class": "paired independent chats",
+      "expected_output_class": "clear semantic answer",
+      "review_status": "CANDIDATE_NEEDS_LOGIC_REVIEW",
+      "execution_status": "NOT_EXECUTED"
+    },
+    {
+      "generated_id": "GEN-013",
+      "feature": "Fixed Flow",
+      "input_class": "preference",
+      "context_class": "five-turn original",
+      "expected_output_class": "correct intermediate steps",
+      "review_status": "CANDIDATE_NEEDS_LOGIC_REVIEW",
+      "execution_status": "NOT_EXECUTED"
+    },
+    {
+      "generated_id": "GEN-014",
+      "feature": "Fixed Flow",
+      "input_class": "preference",
+      "context_class": "five-turn original",
+      "expected_output_class": "correct final recall",
+      "review_status": "CANDIDATE_NEEDS_LOGIC_REVIEW",
+      "execution_status": "NOT_EXECUTED"
+    },
+    {
+      "generated_id": "GEN-015",
+      "feature": "Fixed Flow",
+      "input_class": "preference",
+      "context_class": "five-turn paraphrase",
+      "expected_output_class": "correct intermediate steps",
+      "review_status": "CANDIDATE_NEEDS_LOGIC_REVIEW",
+      "execution_status": "NOT_EXECUTED"
+    },
+    {
+      "generated_id": "GEN-016",
+      "feature": "Fixed Flow",
+      "input_class": "preference",
+      "context_class": "five-turn paraphrase",
+      "expected_output_class": "correct final recall",
+      "review_status": "CANDIDATE_NEEDS_LOGIC_REVIEW",
+      "execution_status": "NOT_EXECUTED"
+    }
+  ],
+  "remote_llm_call": false
+}

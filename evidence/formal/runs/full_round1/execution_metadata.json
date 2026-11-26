@@ -1,0 +1,18 @@
+{
+  "stage": "full_round1",
+  "recording_enabled": false,
+  "process_id": 4435,
+  "kind": "REAL_ANDROID_APPIUM",
+  "arguments": {
+    "stage": "full_round1",
+    "app": "both",
+    "cases": null,
+    "repeats": 1,
+    "record": false
+  },
+  "started_utc": "2026-11-17T22:23:18.184213+00:00",
+  "retry_policy": "No implicit prompt or case retries; specific clipboard-helper read timeout permits one audited helper restart/read retry per turn",
+  "clock_start_monotonic": 346309.105749958,
+  "ended_utc": "2026-11-17T23:17:47.837540+00:00",
+  "wall_seconds": 2970.965
+}

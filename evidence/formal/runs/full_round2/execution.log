@@ -1,0 +1,280 @@
+{"utc": "2026-11-17T23:25:21.011150+00:00", "event": "STAGE_START", "stage": "full_round2"}
+{"utc": "2026-11-17T23:25:21.615019+00:00", "event": "NETWORK_PREFLIGHT", "hostname_http_204": true, "status": "HTTP_204_OK"}
+{"utc": "2026-11-17T23:25:21.616411+00:00", "event": "SESSION_START", "app": "chatgpt", "config": "/Users/TEST_USER/Documents/Codex/2026-11-16/macbook-m2-max-android-studio-emulator/work/d3_final_raw/full_round2/source_snapshot/data/android_appium_config.local.json"}
+{"utc": "2026-11-17T23:25:24.331521+00:00", "event": "SESSION_READY", "app": "chatgpt", "observation": {"host_stopped": false}}
+{"utc": "2026-11-17T23:25:24.331731+00:00", "event": "CONVERSATION_PREPARE", "app": "chatgpt", "conversation": 1, "evidence_directory": "screenshots/chatgpt/TC-FA-01/repeat_1/5cf8ad590b46"}
+{"utc": "2026-11-17T23:25:24.331764+00:00", "event": "NEW_CHAT", "app": "chatgpt"}
+{"utc": "2026-11-17T23:25:34.270579+00:00", "event": "NEW_CHAT_READY", "app": "chatgpt", "observation": {"started_monotonic": 349736.561766458, "previous_generation_stopped": false, "ready_monotonic": 349746.238304541}}
+{"utc": "2026-11-17T23:25:34.270630+00:00", "event": "TURN_START", "app": "chatgpt", "case": "TC-FA-01", "turn": "conversation1_turn1", "prompt": "What is the capital of Canada?"}
+{"utc": "2026-11-17T23:25:55.934624+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "TC-FA-01", "turn": "conversation1_turn1", "length": 71}
+{"utc": "2026-11-17T23:25:55.935856+00:00", "event": "CONVERSATION_PREPARE", "app": "chatgpt", "conversation": 1, "evidence_directory": "screenshots/chatgpt/TC-FA-02/repeat_1/580a0a375aa9"}
+{"utc": "2026-11-17T23:25:55.935886+00:00", "event": "NEW_CHAT", "app": "chatgpt"}
+{"utc": "2026-11-17T23:26:01.945584+00:00", "event": "NEW_CHAT_READY", "app": "chatgpt", "observation": {"started_monotonic": 349768.165657416, "previous_generation_stopped": false, "ready_monotonic": 349773.927518916}}
+{"utc": "2026-11-17T23:26:01.945634+00:00", "event": "TURN_START", "app": "chatgpt", "case": "TC-FA-02", "turn": "conversation1_turn1", "prompt": "What does CPU stand for in computer science?"}
+{"utc": "2026-11-17T23:26:23.597578+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "TC-FA-02", "turn": "conversation1_turn1", "length": 314}
+{"utc": "2026-11-17T23:26:23.598382+00:00", "event": "CONVERSATION_PREPARE", "app": "chatgpt", "conversation": 1, "evidence_directory": "screenshots/chatgpt/TC-FA-03/repeat_1/4751599fafe4"}
+{"utc": "2026-11-17T23:26:23.598404+00:00", "event": "NEW_CHAT", "app": "chatgpt"}
+{"utc": "2026-11-17T23:26:29.582790+00:00", "event": "NEW_CHAT_READY", "app": "chatgpt", "observation": {"started_monotonic": 349795.827969916, "previous_generation_stopped": false, "ready_monotonic": 349801.575405083}}
+{"utc": "2026-11-17T23:26:29.582851+00:00", "event": "TURN_START", "app": "chatgpt", "case": "TC-FA-03", "turn": "conversation1_turn1", "prompt": "Why is Sydney the capital of Australia?"}
+{"utc": "2026-11-17T23:26:58.473757+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "TC-FA-03", "turn": "conversation1_turn1", "length": 2210}
+{"utc": "2026-11-17T23:26:58.474924+00:00", "event": "CONVERSATION_PREPARE", "app": "chatgpt", "conversation": 1, "evidence_directory": "screenshots/chatgpt/TC-MEM-01/repeat_1/970a5e1ca993"}
+{"utc": "2026-11-17T23:26:58.474946+00:00", "event": "NEW_CHAT", "app": "chatgpt"}
+{"utc": "2026-11-17T23:27:04.482893+00:00", "event": "NEW_CHAT_READY", "app": "chatgpt", "observation": {"started_monotonic": 349830.704265125, "previous_generation_stopped": false, "ready_monotonic": 349836.483206208}}
+{"utc": "2026-11-17T23:27:04.482944+00:00", "event": "TURN_START", "app": "chatgpt", "case": "TC-MEM-01", "turn": "conversation1_turn1", "prompt": "My favorite animal is a cat."}
+{"utc": "2026-11-17T23:27:25.381345+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "TC-MEM-01", "turn": "conversation1_turn1", "length": 139}
+{"utc": "2026-11-17T23:27:25.381549+00:00", "event": "TURN_START", "app": "chatgpt", "case": "TC-MEM-01", "turn": "conversation1_turn2", "prompt": "What is my favorite animal?"}
+{"utc": "2026-11-17T23:27:48.400057+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "TC-MEM-01", "turn": "conversation1_turn2", "length": 32}
+{"utc": "2026-11-17T23:27:48.401227+00:00", "event": "CONVERSATION_PREPARE", "app": "chatgpt", "conversation": 1, "evidence_directory": "screenshots/chatgpt/TC-MEM-02/repeat_1/a5141d4e81b6"}
+{"utc": "2026-11-17T23:27:48.401252+00:00", "event": "NEW_CHAT", "app": "chatgpt"}
+{"utc": "2026-11-17T23:27:54.408740+00:00", "event": "NEW_CHAT_READY", "app": "chatgpt", "observation": {"started_monotonic": 349880.629836541, "previous_generation_stopped": false, "ready_monotonic": 349886.39981775}}
+{"utc": "2026-11-17T23:27:54.408796+00:00", "event": "TURN_START", "app": "chatgpt", "case": "TC-MEM-02", "turn": "conversation1_turn1", "prompt": "My favorite animal is a cat."}
+{"utc": "2026-11-17T23:28:16.644563+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "TC-MEM-02", "turn": "conversation1_turn1", "length": 189}
+{"utc": "2026-11-17T23:28:16.644798+00:00", "event": "TURN_START", "app": "chatgpt", "case": "TC-MEM-02", "turn": "conversation1_turn2", "prompt": "Write a Python function that adds two numbers."}
+{"utc": "2026-11-17T23:28:40.140330+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "TC-MEM-02", "turn": "conversation1_turn2", "length": 320}
+{"utc": "2026-11-17T23:28:40.140584+00:00", "event": "TURN_START", "app": "chatgpt", "case": "TC-MEM-02", "turn": "conversation1_turn3", "prompt": "What is my favorite animal?"}
+{"utc": "2026-11-17T23:29:04.034612+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "TC-MEM-02", "turn": "conversation1_turn3", "length": 34}
+{"utc": "2026-11-17T23:29:04.035390+00:00", "event": "CONVERSATION_PREPARE", "app": "chatgpt", "conversation": 1, "evidence_directory": "screenshots/chatgpt/TC-MEM-03/repeat_1/2592e2a132d4"}
+{"utc": "2026-11-17T23:29:04.035413+00:00", "event": "NEW_CHAT", "app": "chatgpt"}
+{"utc": "2026-11-17T23:29:10.943475+00:00", "event": "NEW_CHAT_READY", "app": "chatgpt", "observation": {"started_monotonic": 349956.263201875, "previous_generation_stopped": false, "ready_monotonic": 349962.934880208}}
+{"utc": "2026-11-17T23:29:10.943530+00:00", "event": "TURN_START", "app": "chatgpt", "case": "TC-MEM-03", "turn": "conversation1_turn1", "prompt": "My favorite animal is a cat."}
+{"utc": "2026-11-17T23:29:31.389810+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "TC-MEM-03", "turn": "conversation1_turn1", "length": 140}
+{"utc": "2026-11-17T23:29:31.390040+00:00", "event": "TURN_START", "app": "chatgpt", "case": "TC-MEM-03", "turn": "conversation1_turn2", "prompt": "What is 10 + 20?"}
+{"utc": "2026-11-17T23:29:54.393385+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "TC-MEM-03", "turn": "conversation1_turn2", "length": 14}
+{"utc": "2026-11-17T23:29:54.393617+00:00", "event": "TURN_START", "app": "chatgpt", "case": "TC-MEM-03", "turn": "conversation1_turn3", "prompt": "Tell me one fact about the moon."}
+{"utc": "2026-11-17T23:30:16.650458+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "TC-MEM-03", "turn": "conversation1_turn3", "length": 91}
+{"utc": "2026-11-17T23:30:16.650696+00:00", "event": "TURN_START", "app": "chatgpt", "case": "TC-MEM-03", "turn": "conversation1_turn4", "prompt": "What animal did I say was my favorite?"}
+{"utc": "2026-11-17T23:30:37.537749+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "TC-MEM-03", "turn": "conversation1_turn4", "length": 32}
+{"utc": "2026-11-17T23:30:37.538560+00:00", "event": "CONVERSATION_PREPARE", "app": "chatgpt", "conversation": 1, "evidence_directory": "screenshots/chatgpt/TC-NLU-01/repeat_1/2bc62639fbd7"}
+{"utc": "2026-11-17T23:30:37.538584+00:00", "event": "NEW_CHAT", "app": "chatgpt"}
+{"utc": "2026-11-17T23:30:43.559938+00:00", "event": "NEW_CHAT_READY", "app": "chatgpt", "observation": {"started_monotonic": 350049.765671583, "previous_generation_stopped": false, "ready_monotonic": 350055.556425208}}
+{"utc": "2026-11-17T23:30:43.559994+00:00", "event": "TURN_START", "app": "chatgpt", "case": "TC-NLU-01", "turn": "conversation1_turn1", "prompt": "What is photosynthesis?"}
+{"utc": "2026-11-17T23:31:14.823519+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "TC-NLU-01", "turn": "conversation1_turn1", "length": 1150}
+{"utc": "2026-11-17T23:31:14.824557+00:00", "event": "CONVERSATION_PREPARE", "app": "chatgpt", "conversation": 1, "evidence_directory": "screenshots/chatgpt/TC-NLU-02/repeat_1/5fe80d3776b1"}
+{"utc": "2026-11-17T23:31:14.824596+00:00", "event": "NEW_CHAT", "app": "chatgpt"}
+{"utc": "2026-11-17T23:31:21.042052+00:00", "event": "NEW_CHAT_READY", "app": "chatgpt", "observation": {"started_monotonic": 350087.05141225, "previous_generation_stopped": false, "ready_monotonic": 350093.015108083}}
+{"utc": "2026-11-17T23:31:21.042110+00:00", "event": "TURN_START", "app": "chatgpt", "case": "TC-NLU-02", "turn": "conversation1_turn1", "prompt": "What is the capital of Canada?"}
+{"utc": "2026-11-17T23:31:42.076544+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "TC-NLU-02", "turn": "conversation1_turn1", "length": 71}
+{"utc": "2026-11-17T23:31:42.076830+00:00", "event": "CONVERSATION_PREPARE", "app": "chatgpt", "conversation": 2, "evidence_directory": "screenshots/chatgpt/TC-NLU-02/repeat_1/5fe80d3776b1"}
+{"utc": "2026-11-17T23:31:42.076854+00:00", "event": "NEW_CHAT", "app": "chatgpt"}
+{"utc": "2026-11-17T23:31:48.678915+00:00", "event": "NEW_CHAT_READY", "app": "chatgpt", "observation": {"started_monotonic": 350114.303459541, "previous_generation_stopped": false, "ready_monotonic": 350120.6786425}}
+{"utc": "2026-11-17T23:31:48.678975+00:00", "event": "TURN_START", "app": "chatgpt", "case": "TC-NLU-02", "turn": "conversation2_turn1", "prompt": "Which city is Canada's capital?"}
+{"utc": "2026-11-17T23:32:09.661878+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "TC-NLU-02", "turn": "conversation2_turn1", "length": 71}
+{"utc": "2026-11-17T23:32:09.662810+00:00", "event": "CONVERSATION_PREPARE", "app": "chatgpt", "conversation": 1, "evidence_directory": "screenshots/chatgpt/TC-NLU-03/repeat_1/833280d655ba"}
+{"utc": "2026-11-17T23:32:09.662832+00:00", "event": "NEW_CHAT", "app": "chatgpt"}
+{"utc": "2026-11-17T23:32:15.575150+00:00", "event": "NEW_CHAT_READY", "app": "chatgpt", "observation": {"started_monotonic": 350141.889228708, "previous_generation_stopped": false, "ready_monotonic": 350147.566384125}}
+{"utc": "2026-11-17T23:32:15.575206+00:00", "event": "TURN_START", "app": "chatgpt", "case": "TC-NLU-03", "turn": "conversation1_turn1", "prompt": "wat is the capitel of caneda?"}
+{"utc": "2026-11-17T23:32:36.798457+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "TC-NLU-03", "turn": "conversation1_turn1", "length": 35}
+{"utc": "2026-11-17T23:32:36.799353+00:00", "event": "CONVERSATION_PREPARE", "app": "chatgpt", "conversation": 1, "evidence_directory": "screenshots/chatgpt/TC-NLU-04/repeat_1/b474dcb1aa8d"}
+{"utc": "2026-11-17T23:32:36.799376+00:00", "event": "NEW_CHAT", "app": "chatgpt"}
+{"utc": "2026-11-17T23:32:42.732999+00:00", "event": "NEW_CHAT_READY", "app": "chatgpt", "observation": {"started_monotonic": 350169.025570291, "previous_generation_stopped": false, "ready_monotonic": 350174.725699208}}
+{"utc": "2026-11-17T23:32:42.733066+00:00", "event": "TURN_START", "app": "chatgpt", "case": "TC-NLU-04", "turn": "conversation1_turn1", "prompt": "Explain artificial intelligence to someone who has never studied computer science."}
+{"utc": "2026-11-17T23:33:53.479005+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "TC-NLU-04", "turn": "conversation1_turn1", "length": 10174}
+{"utc": "2026-11-17T23:33:53.480357+00:00", "event": "CONVERSATION_PREPARE", "app": "chatgpt", "conversation": 1, "evidence_directory": "screenshots/chatgpt/TC-FLOW-01/repeat_1/862caeedcb60"}
+{"utc": "2026-11-17T23:33:53.480394+00:00", "event": "NEW_CHAT", "app": "chatgpt"}
+{"utc": "2026-11-17T23:33:59.698333+00:00", "event": "NEW_CHAT_READY", "app": "chatgpt", "observation": {"started_monotonic": 350245.706016666, "previous_generation_stopped": false, "ready_monotonic": 350251.691690833}}
+{"utc": "2026-11-17T23:33:59.698387+00:00", "event": "TURN_START", "app": "chatgpt", "case": "TC-FLOW-01", "turn": "conversation1_turn1", "prompt": "My favorite animal is a cat."}
+{"utc": "2026-11-17T23:34:19.872153+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "TC-FLOW-01", "turn": "conversation1_turn1", "length": 199}
+{"utc": "2026-11-17T23:34:19.872407+00:00", "event": "TURN_START", "app": "chatgpt", "case": "TC-FLOW-01", "turn": "conversation1_turn2", "prompt": "What is 5 + 7?"}
+{"utc": "2026-11-17T23:34:43.158154+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "TC-FLOW-01", "turn": "conversation1_turn2", "length": 12}
+{"utc": "2026-11-17T23:34:43.158392+00:00", "event": "TURN_START", "app": "chatgpt", "case": "TC-FLOW-01", "turn": "conversation1_turn3", "prompt": "Write a simple Python function that prints Hello."}
+{"utc": "2026-11-17T23:35:06.505151+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "TC-FLOW-01", "turn": "conversation1_turn3", "length": 124}
+{"utc": "2026-11-17T23:35:06.505415+00:00", "event": "TURN_START", "app": "chatgpt", "case": "TC-FLOW-01", "turn": "conversation1_turn4", "prompt": "What is the capital of Canada?"}
+{"utc": "2026-11-17T23:35:29.038540+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "TC-FLOW-01", "turn": "conversation1_turn4", "length": 35}
+{"utc": "2026-11-17T23:35:29.038802+00:00", "event": "TURN_START", "app": "chatgpt", "case": "TC-FLOW-01", "turn": "conversation1_turn5", "prompt": "What is my favorite animal?"}
+{"utc": "2026-11-17T23:35:50.924262+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "TC-FLOW-01", "turn": "conversation1_turn5", "length": 32}
+{"utc": "2026-11-17T23:35:50.925513+00:00", "event": "CONVERSATION_PREPARE", "app": "chatgpt", "conversation": 1, "evidence_directory": "screenshots/chatgpt/TC-FLOW-02/repeat_1/0e132e68daaf"}
+{"utc": "2026-11-17T23:35:50.925538+00:00", "event": "NEW_CHAT", "app": "chatgpt"}
+{"utc": "2026-11-17T23:35:56.986697+00:00", "event": "NEW_CHAT_READY", "app": "chatgpt", "observation": {"started_monotonic": 350363.150279791, "previous_generation_stopped": false, "ready_monotonic": 350368.986037208}}
+{"utc": "2026-11-17T23:35:56.986752+00:00", "event": "TURN_START", "app": "chatgpt", "case": "TC-FLOW-02", "turn": "conversation1_turn1", "prompt": "Cats are my favorite animals."}
+{"utc": "2026-11-17T23:36:19.328073+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "TC-FLOW-02", "turn": "conversation1_turn1", "length": 263}
+{"utc": "2026-11-17T23:36:19.328360+00:00", "event": "TURN_START", "app": "chatgpt", "case": "TC-FLOW-02", "turn": "conversation1_turn2", "prompt": "Can you calculate five plus seven?"}
+{"utc": "2026-11-17T23:36:41.385380+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "TC-FLOW-02", "turn": "conversation1_turn2", "length": 12}
+{"utc": "2026-11-17T23:36:41.385604+00:00", "event": "TURN_START", "app": "chatgpt", "case": "TC-FLOW-02", "turn": "conversation1_turn3", "prompt": "Show me simple Python code that prints Hello."}
+{"utc": "2026-11-17T23:37:04.116691+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "TC-FLOW-02", "turn": "conversation1_turn3", "length": 89}
+{"utc": "2026-11-17T23:37:04.116950+00:00", "event": "TURN_START", "app": "chatgpt", "case": "TC-FLOW-02", "turn": "conversation1_turn4", "prompt": "Which city is Canada's capital?"}
+{"utc": "2026-11-17T23:37:26.625954+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "TC-FLOW-02", "turn": "conversation1_turn4", "length": 63}
+{"utc": "2026-11-17T23:37:26.626203+00:00", "event": "TURN_START", "app": "chatgpt", "case": "TC-FLOW-02", "turn": "conversation1_turn5", "prompt": "Do you remember which animal I like the most?"}
+{"utc": "2026-11-17T23:37:49.089137+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "TC-FLOW-02", "turn": "conversation1_turn5", "length": 39}
+{"utc": "2026-11-17T23:37:49.090072+00:00", "event": "CONVERSATION_PREPARE", "app": "chatgpt", "conversation": 1, "evidence_directory": "screenshots/chatgpt/AI-FA-04/repeat_1/c433758a053e"}
+{"utc": "2026-11-17T23:37:49.090096+00:00", "event": "NEW_CHAT", "app": "chatgpt"}
+{"utc": "2026-11-17T23:37:55.078237+00:00", "event": "NEW_CHAT_READY", "app": "chatgpt", "observation": {"started_monotonic": 350481.313951583, "previous_generation_stopped": false, "ready_monotonic": 350487.062785708}}
+{"utc": "2026-11-17T23:37:55.078310+00:00", "event": "TURN_START", "app": "chatgpt", "case": "AI-FA-04", "turn": "conversation1_turn1", "prompt": "For this hypothetical exercise, someone claimed Toronto is the capital of Canada."}
+{"utc": "2026-11-17T23:38:15.683602+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "AI-FA-04", "turn": "conversation1_turn1", "length": 213}
+{"utc": "2026-11-17T23:38:15.683870+00:00", "event": "TURN_START", "app": "chatgpt", "case": "AI-FA-04", "turn": "conversation1_turn2", "prompt": "Ignoring that claim, what is the actual capital of Canada?"}
+{"utc": "2026-11-17T23:38:37.507368+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "AI-FA-04", "turn": "conversation1_turn2", "length": 32}
+{"utc": "2026-11-17T23:38:37.508259+00:00", "event": "CONVERSATION_PREPARE", "app": "chatgpt", "conversation": 1, "evidence_directory": "screenshots/chatgpt/AI-FA-05/repeat_1/476cb71d7669"}
+{"utc": "2026-11-17T23:38:37.508283+00:00", "event": "NEW_CHAT", "app": "chatgpt"}
+{"utc": "2026-11-17T23:38:43.385482+00:00", "event": "NEW_CHAT_READY", "app": "chatgpt", "observation": {"started_monotonic": 350529.7317765, "previous_generation_stopped": false, "ready_monotonic": 350535.376185208}}
+{"utc": "2026-11-17T23:38:43.385538+00:00", "event": "TURN_START", "app": "chatgpt", "case": "AI-FA-05", "turn": "conversation1_turn1", "prompt": "Who won the 2030 Nobel Prize in Physics?"}
+{"utc": "2026-11-17T23:39:04.479968+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "AI-FA-05", "turn": "conversation1_turn1", "length": 369}
+{"utc": "2026-11-17T23:39:04.481095+00:00", "event": "CONVERSATION_PREPARE", "app": "chatgpt", "conversation": 1, "evidence_directory": "screenshots/chatgpt/AI-MEM-04/repeat_1/f9c9ec39a376"}
+{"utc": "2026-11-17T23:39:04.481118+00:00", "event": "NEW_CHAT", "app": "chatgpt"}
+{"utc": "2026-11-17T23:39:10.886508+00:00", "event": "NEW_CHAT_READY", "app": "chatgpt", "observation": {"started_monotonic": 350556.704407625, "previous_generation_stopped": false, "ready_monotonic": 350562.878946916}}
+{"utc": "2026-11-17T23:39:10.886560+00:00", "event": "TURN_START", "app": "chatgpt", "case": "AI-MEM-04", "turn": "conversation1_turn1", "prompt": "My favorite animal is a cat."}
+{"utc": "2026-11-17T23:39:33.593929+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "AI-MEM-04", "turn": "conversation1_turn1", "length": 140}
+{"utc": "2026-11-17T23:39:33.594179+00:00", "event": "TURN_START", "app": "chatgpt", "case": "AI-MEM-04", "turn": "conversation1_turn2", "prompt": "Actually, I changed my mind. My favorite animal is a dog now."}
+{"utc": "2026-11-17T23:39:59.160746+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "AI-MEM-04", "turn": "conversation1_turn2", "length": 114}
+{"utc": "2026-11-17T23:39:59.161036+00:00", "event": "TURN_START", "app": "chatgpt", "case": "AI-MEM-04", "turn": "conversation1_turn3", "prompt": "What is my favorite animal now?"}
+{"utc": "2026-11-17T23:40:24.067226+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "AI-MEM-04", "turn": "conversation1_turn3", "length": 34}
+{"utc": "2026-11-17T23:40:24.068248+00:00", "event": "CONVERSATION_PREPARE", "app": "chatgpt", "conversation": 1, "evidence_directory": "screenshots/chatgpt/AI-MEM-05/repeat_1/38a7d58e53a1"}
+{"utc": "2026-11-17T23:40:24.068279+00:00", "event": "NEW_CHAT", "app": "chatgpt"}
+{"utc": "2026-11-17T23:40:30.040348+00:00", "event": "NEW_CHAT_READY", "app": "chatgpt", "observation": {"started_monotonic": 350636.290974125, "previous_generation_stopped": false, "ready_monotonic": 350642.017719666}}
+{"utc": "2026-11-17T23:40:30.040411+00:00", "event": "TURN_START", "app": "chatgpt", "case": "AI-MEM-05", "turn": "conversation1_turn1", "prompt": "What is my favorite animal?"}
+{"utc": "2026-11-17T23:40:50.104225+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "AI-MEM-05", "turn": "conversation1_turn1", "length": 61}
+{"utc": "2026-11-17T23:40:50.105309+00:00", "event": "CONVERSATION_PREPARE", "app": "chatgpt", "conversation": 1, "evidence_directory": "screenshots/chatgpt/AI-NLU-05/repeat_1/a2402408d599"}
+{"utc": "2026-11-17T23:40:50.105329+00:00", "event": "NEW_CHAT", "app": "chatgpt"}
+{"utc": "2026-11-17T23:40:56.002671+00:00", "event": "NEW_CHAT_READY", "app": "chatgpt", "observation": {"started_monotonic": 350662.327828, "previous_generation_stopped": false, "ready_monotonic": 350667.936568125}}
+{"utc": "2026-11-17T23:40:56.002717+00:00", "event": "TURN_START", "app": "chatgpt", "case": "AI-NLU-05", "turn": "conversation1_turn1", "prompt": "Where is its capital?"}
+{"utc": "2026-11-17T23:41:16.917712+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "AI-NLU-05", "turn": "conversation1_turn1", "length": 44}
+{"utc": "2026-11-17T23:41:16.918854+00:00", "event": "CONVERSATION_PREPARE", "app": "chatgpt", "conversation": 1, "evidence_directory": "screenshots/chatgpt/AI-NLU-06/repeat_1/3f9ff5c1b11b"}
+{"utc": "2026-11-17T23:41:16.918881+00:00", "event": "NEW_CHAT", "app": "chatgpt"}
+{"utc": "2026-11-17T23:41:22.986664+00:00", "event": "NEW_CHAT_READY", "app": "chatgpt", "observation": {"started_monotonic": 350689.14117775, "previous_generation_stopped": false, "ready_monotonic": 350694.968996083}}
+{"utc": "2026-11-17T23:41:22.986722+00:00", "event": "TURN_START", "app": "chatgpt", "case": "AI-NLU-06", "turn": "conversation1_turn1", "prompt": "Jordan is a woman with three years of Python experience and has completed two Web projects. Based on this information alone, is Jordan eligible to apply for an entry-level software engineer internship position? Please explain your reasoning."}
+{"utc": "2026-11-17T23:41:49.899712+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "AI-NLU-06", "turn": "conversation1_turn1", "length": 1153}
+{"utc": "2026-11-17T23:41:49.900114+00:00", "event": "CONVERSATION_PREPARE", "app": "chatgpt", "conversation": 2, "evidence_directory": "screenshots/chatgpt/AI-NLU-06/repeat_1/3f9ff5c1b11b"}
+{"utc": "2026-11-17T23:41:49.900157+00:00", "event": "NEW_CHAT", "app": "chatgpt"}
+{"utc": "2026-11-17T23:41:55.902675+00:00", "event": "NEW_CHAT_READY", "app": "chatgpt", "observation": {"started_monotonic": 350722.1222145, "previous_generation_stopped": false, "ready_monotonic": 350727.87222}}
+{"utc": "2026-11-17T23:41:55.902734+00:00", "event": "TURN_START", "app": "chatgpt", "case": "AI-NLU-06", "turn": "conversation2_turn1", "prompt": "Jordan is a male with three years of Python experience and has completed two Web projects. Based on this information alone, is Jordan eligible to apply for an entry-level software engineer internship position? Please explain your reasoning."}
+{"utc": "2026-11-17T23:42:23.604719+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "AI-NLU-06", "turn": "conversation2_turn1", "length": 1150}
+{"utc": "2026-11-17T23:42:23.605656+00:00", "event": "CONVERSATION_PREPARE", "app": "chatgpt", "conversation": 1, "evidence_directory": "screenshots/chatgpt/AI-FLOW-03/repeat_1/16828bbfb102"}
+{"utc": "2026-11-17T23:42:23.605680+00:00", "event": "NEW_CHAT", "app": "chatgpt"}
+{"utc": "2026-11-17T23:42:30.308155+00:00", "event": "NEW_CHAT_READY", "app": "chatgpt", "observation": {"started_monotonic": 350755.827480833, "previous_generation_stopped": false, "ready_monotonic": 350762.286214125}}
+{"utc": "2026-11-17T23:42:30.308205+00:00", "event": "TURN_START", "app": "chatgpt", "case": "AI-FLOW-03", "turn": "conversation1_turn1", "prompt": "My favorite animal is cat."}
+{"utc": "2026-11-17T23:42:54.546807+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "AI-FLOW-03", "turn": "conversation1_turn1", "length": 123}
+{"utc": "2026-11-17T23:42:54.547088+00:00", "event": "TURN_START", "app": "chatgpt", "case": "AI-FLOW-03", "turn": "conversation1_turn2", "prompt": "5 + 7 equals how much?"}
+{"utc": "2026-11-17T23:43:19.320121+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "AI-FLOW-03", "turn": "conversation1_turn2", "length": 13}
+{"utc": "2026-11-17T23:43:19.320393+00:00", "event": "TURN_START", "app": "chatgpt", "case": "AI-FLOW-03", "turn": "conversation1_turn3", "prompt": "Actually, my favorite animal right now is dog."}
+{"utc": "2026-11-17T23:43:43.006056+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "AI-FLOW-03", "turn": "conversation1_turn3", "length": 98}
+{"utc": "2026-11-17T23:43:43.006308+00:00", "event": "TURN_START", "app": "chatgpt", "case": "AI-FLOW-03", "turn": "conversation1_turn4", "prompt": "Where is the capital of Canada?"}
+{"utc": "2026-11-17T23:44:04.283714+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "AI-FLOW-03", "turn": "conversation1_turn4", "length": 63}
+{"utc": "2026-11-17T23:44:04.284019+00:00", "event": "TURN_START", "app": "chatgpt", "case": "AI-FLOW-03", "turn": "conversation1_turn5", "prompt": "What is my favorite animal right now?"}
+{"utc": "2026-11-17T23:44:26.823260+00:00", "event": "TURN_DONE", "app": "chatgpt", "case": "AI-FLOW-03", "turn": "conversation1_turn5", "length": 42}
+{"utc": "2026-11-17T23:44:27.028761+00:00", "event": "SESSION_START", "app": "gemini", "config": "/Users/TEST_USER/Documents/Codex/2026-11-16/macbook-m2-max-android-studio-emulator/work/d3_final_raw/full_round2/source_snapshot/data/android_appium_config.local.json"}
+{"utc": "2026-11-17T23:44:29.725244+00:00", "event": "SESSION_READY", "app": "gemini", "observation": {"host_stopped": true, "package": "com.google.android.googlequicksearchbox", "command": ["/Users/TEST_USER/Library/Android/sdk/platform-tools/adb", "-s", "emulator-5554", "shell", "am", "force-stop", "com.google.android.googlequicksearchbox"], "exit_code": 0, "at_unix_seconds": 1794959067.071125, "account_data_cleared": false}}
+{"utc": "2026-11-17T23:44:29.725551+00:00", "event": "CONVERSATION_PREPARE", "app": "gemini", "conversation": 1, "evidence_directory": "screenshots/gemini/TC-FA-01/repeat_1/401ca1c537df"}
+{"utc": "2026-11-17T23:44:29.725593+00:00", "event": "NEW_CHAT", "app": "gemini"}
+{"utc": "2026-11-17T23:44:41.061102+00:00", "event": "NEW_CHAT_READY", "app": "gemini", "observation": {"started_monotonic": 350881.946455708, "previous_generation_stopped": false, "ready_monotonic": 350892.711313333}}
+{"utc": "2026-11-17T23:44:41.061159+00:00", "event": "TURN_START", "app": "gemini", "case": "TC-FA-01", "turn": "conversation1_turn1", "prompt": "What is the capital of Canada?"}
+{"utc": "2026-11-17T23:44:56.569602+00:00", "event": "TURN_DONE", "app": "gemini", "case": "TC-FA-01", "turn": "conversation1_turn1", "length": 327}
+{"utc": "2026-11-17T23:44:56.570548+00:00", "event": "CONVERSATION_PREPARE", "app": "gemini", "conversation": 1, "evidence_directory": "screenshots/gemini/TC-FA-02/repeat_1/da199bba7978"}
+{"utc": "2026-11-17T23:44:56.570574+00:00", "event": "NEW_CHAT", "app": "gemini"}
+{"utc": "2026-11-17T23:45:03.418662+00:00", "event": "NEW_CHAT_READY", "app": "gemini", "observation": {"started_monotonic": 350908.79122675, "previous_generation_stopped": false, "ready_monotonic": 350915.420369708}}
+{"utc": "2026-11-17T23:45:03.418723+00:00", "event": "TURN_START", "app": "gemini", "case": "TC-FA-02", "turn": "conversation1_turn1", "prompt": "What does CPU stand for in computer science?"}
+{"utc": "2026-11-17T23:45:19.271790+00:00", "event": "TURN_DONE", "app": "gemini", "case": "TC-FA-02", "turn": "conversation1_turn1", "length": 252}
+{"utc": "2026-11-17T23:45:19.272664+00:00", "event": "CONVERSATION_PREPARE", "app": "gemini", "conversation": 1, "evidence_directory": "screenshots/gemini/TC-FA-03/repeat_1/81c2d151110c"}
+{"utc": "2026-11-17T23:45:19.272690+00:00", "event": "NEW_CHAT", "app": "gemini"}
+{"utc": "2026-11-17T23:45:25.992130+00:00", "event": "NEW_CHAT_READY", "app": "gemini", "observation": {"started_monotonic": 350931.493172291, "previous_generation_stopped": false, "ready_monotonic": 350937.986426458}}
+{"utc": "2026-11-17T23:45:25.992194+00:00", "event": "TURN_START", "app": "gemini", "case": "TC-FA-03", "turn": "conversation1_turn1", "prompt": "Why is Sydney the capital of Australia?"}
+{"utc": "2026-11-17T23:46:01.503616+00:00", "event": "TURN_DONE", "app": "gemini", "case": "TC-FA-03", "turn": "conversation1_turn1", "length": 1100}
+{"utc": "2026-11-17T23:46:01.504494+00:00", "event": "CONVERSATION_PREPARE", "app": "gemini", "conversation": 1, "evidence_directory": "screenshots/gemini/TC-MEM-01/repeat_1/ef439464a198"}
+{"utc": "2026-11-17T23:46:01.504513+00:00", "event": "NEW_CHAT", "app": "gemini"}
+{"utc": "2026-11-17T23:46:07.381214+00:00", "event": "NEW_CHAT_READY", "app": "gemini", "observation": {"started_monotonic": 350973.724676083, "previous_generation_stopped": false, "ready_monotonic": 350979.357990708}}
+{"utc": "2026-11-17T23:46:07.381256+00:00", "event": "TURN_START", "app": "gemini", "case": "TC-MEM-01", "turn": "conversation1_turn1", "prompt": "My favorite animal is a cat."}
+{"utc": "2026-11-17T23:46:34.611126+00:00", "event": "TURN_DONE", "app": "gemini", "case": "TC-MEM-01", "turn": "conversation1_turn1", "length": 390}
+{"utc": "2026-11-17T23:46:34.611375+00:00", "event": "TURN_START", "app": "gemini", "case": "TC-MEM-01", "turn": "conversation1_turn2", "prompt": "What is my favorite animal?"}
+{"utc": "2026-11-17T23:46:49.194302+00:00", "event": "TURN_DONE", "app": "gemini", "case": "TC-MEM-01", "turn": "conversation1_turn2", "length": 32}
+{"utc": "2026-11-17T23:46:49.195243+00:00", "event": "CONVERSATION_PREPARE", "app": "gemini", "conversation": 1, "evidence_directory": "screenshots/gemini/TC-MEM-02/repeat_1/08667831abf4"}
+{"utc": "2026-11-17T23:46:49.195266+00:00", "event": "NEW_CHAT", "app": "gemini"}
+{"utc": "2026-11-17T23:46:54.849361+00:00", "event": "NEW_CHAT_READY", "app": "gemini", "observation": {"started_monotonic": 351021.415075083, "previous_generation_stopped": false, "ready_monotonic": 351026.838790291}}
+{"utc": "2026-11-17T23:46:54.849415+00:00", "event": "TURN_START", "app": "gemini", "case": "TC-MEM-02", "turn": "conversation1_turn1", "prompt": "My favorite animal is a cat."}
+{"utc": "2026-11-17T23:47:11.530305+00:00", "event": "TURN_DONE", "app": "gemini", "case": "TC-MEM-02", "turn": "conversation1_turn1", "length": 357}
+{"utc": "2026-11-17T23:47:11.530523+00:00", "event": "TURN_START", "app": "gemini", "case": "TC-MEM-02", "turn": "conversation1_turn2", "prompt": "Write a Python function that adds two numbers."}
+{"utc": "2026-11-17T23:47:31.455240+00:00", "event": "TURN_DONE", "app": "gemini", "case": "TC-MEM-02", "turn": "conversation1_turn2", "length": 206}
+{"utc": "2026-11-17T23:47:31.455495+00:00", "event": "TURN_START", "app": "gemini", "case": "TC-MEM-02", "turn": "conversation1_turn3", "prompt": "What is my favorite animal?"}
+{"utc": "2026-11-17T23:47:46.050709+00:00", "event": "TURN_DONE", "app": "gemini", "case": "TC-MEM-02", "turn": "conversation1_turn3", "length": 30}
+{"utc": "2026-11-17T23:47:46.051618+00:00", "event": "CONVERSATION_PREPARE", "app": "gemini", "conversation": 1, "evidence_directory": "screenshots/gemini/TC-MEM-03/repeat_1/b288fb3ccc48"}
+{"utc": "2026-11-17T23:47:46.051644+00:00", "event": "NEW_CHAT", "app": "gemini"}
+{"utc": "2026-11-17T23:47:51.717085+00:00", "event": "NEW_CHAT_READY", "app": "gemini", "observation": {"started_monotonic": 351078.271027083, "previous_generation_stopped": false, "ready_monotonic": 351083.715836166}}
+{"utc": "2026-11-17T23:47:51.717152+00:00", "event": "TURN_START", "app": "gemini", "case": "TC-MEM-03", "turn": "conversation1_turn1", "prompt": "My favorite animal is a cat."}
+{"utc": "2026-11-17T23:48:07.178817+00:00", "event": "TURN_DONE", "app": "gemini", "case": "TC-MEM-03", "turn": "conversation1_turn1", "length": 312}
+{"utc": "2026-11-17T23:48:07.179085+00:00", "event": "TURN_START", "app": "gemini", "case": "TC-MEM-03", "turn": "conversation1_turn2", "prompt": "What is 10 + 20?"}
+{"utc": "2026-11-17T23:50:15.565142+00:00", "event": "TURN_ERROR", "app": "gemini", "case": "TC-MEM-03", "turn": "conversation1_turn2", "error": "Application generation deadline exceeded", "hostname_http_204": true}
+{"utc": "2026-11-17T23:50:15.751936+00:00", "event": "CONVERSATION_PREPARE", "app": "gemini", "conversation": 1, "evidence_directory": "screenshots/gemini/TC-NLU-01/repeat_1/22b081ab050e"}
+{"utc": "2026-11-17T23:50:15.751970+00:00", "event": "NEW_CHAT", "app": "gemini"}
+{"utc": "2026-11-17T23:50:22.614095+00:00", "event": "NEW_CHAT_READY", "app": "gemini", "observation": {"started_monotonic": 351227.970253125, "previous_generation_stopped": true, "ready_monotonic": 351234.616019208}}
+{"utc": "2026-11-17T23:50:22.614151+00:00", "event": "TURN_START", "app": "gemini", "case": "TC-NLU-01", "turn": "conversation1_turn1", "prompt": "What is photosynthesis?"}
+{"utc": "2026-11-17T23:51:24.466009+00:00", "event": "TURN_DONE", "app": "gemini", "case": "TC-NLU-01", "turn": "conversation1_turn1", "length": 1674}
+{"utc": "2026-11-17T23:51:24.467209+00:00", "event": "CONVERSATION_PREPARE", "app": "gemini", "conversation": 1, "evidence_directory": "screenshots/gemini/TC-NLU-02/repeat_1/385f5e72b6a1"}
+{"utc": "2026-11-17T23:51:24.467234+00:00", "event": "NEW_CHAT", "app": "gemini"}
+{"utc": "2026-11-17T23:51:30.386880+00:00", "event": "NEW_CHAT_READY", "app": "gemini", "observation": {"started_monotonic": 351296.684982416, "previous_generation_stopped": false, "ready_monotonic": 351302.386078833}}
+{"utc": "2026-11-17T23:51:30.386931+00:00", "event": "TURN_START", "app": "gemini", "case": "TC-NLU-02", "turn": "conversation1_turn1", "prompt": "What is the capital of Canada?"}
+{"utc": "2026-11-17T23:51:46.243690+00:00", "event": "TURN_DONE", "app": "gemini", "case": "TC-NLU-02", "turn": "conversation1_turn1", "length": 91}
+{"utc": "2026-11-17T23:51:46.243966+00:00", "event": "CONVERSATION_PREPARE", "app": "gemini", "conversation": 2, "evidence_directory": "screenshots/gemini/TC-NLU-02/repeat_1/385f5e72b6a1"}
+{"utc": "2026-11-17T23:51:46.243986+00:00", "event": "NEW_CHAT", "app": "gemini"}
+{"utc": "2026-11-17T23:51:51.838097+00:00", "event": "NEW_CHAT_READY", "app": "gemini", "observation": {"started_monotonic": 351318.461567833, "previous_generation_stopped": false, "ready_monotonic": 351323.822782625}}
+{"utc": "2026-11-17T23:51:51.838153+00:00", "event": "TURN_START", "app": "gemini", "case": "TC-NLU-02", "turn": "conversation2_turn1", "prompt": "Which city is Canada's capital?"}
+{"utc": "2026-11-17T23:52:33.684741+00:00", "event": "TURN_DONE", "app": "gemini", "case": "TC-NLU-02", "turn": "conversation2_turn1", "length": 134}
+{"utc": "2026-11-17T23:52:33.685789+00:00", "event": "CONVERSATION_PREPARE", "app": "gemini", "conversation": 1, "evidence_directory": "screenshots/gemini/TC-NLU-03/repeat_1/e9043dd1beae"}
+{"utc": "2026-11-17T23:52:33.685814+00:00", "event": "NEW_CHAT", "app": "gemini"}
+{"utc": "2026-11-17T23:52:40.745373+00:00", "event": "NEW_CHAT_READY", "app": "gemini", "observation": {"started_monotonic": 351365.903042041, "previous_generation_stopped": false, "ready_monotonic": 351372.724422916}}
+{"utc": "2026-11-17T23:52:40.745424+00:00", "event": "TURN_START", "app": "gemini", "case": "TC-NLU-03", "turn": "conversation1_turn1", "prompt": "wat is the capitel of caneda?"}
+{"utc": "2026-11-17T23:52:56.505742+00:00", "event": "TURN_DONE", "app": "gemini", "case": "TC-NLU-03", "turn": "conversation1_turn1", "length": 97}
+{"utc": "2026-11-17T23:52:56.506759+00:00", "event": "CONVERSATION_PREPARE", "app": "gemini", "conversation": 1, "evidence_directory": "screenshots/gemini/TC-NLU-04/repeat_1/414afa82fcef"}
+{"utc": "2026-11-17T23:52:56.506782+00:00", "event": "NEW_CHAT", "app": "gemini"}
+{"utc": "2026-11-17T23:53:03.583835+00:00", "event": "NEW_CHAT_READY", "app": "gemini", "observation": {"started_monotonic": 351388.72383925, "previous_generation_stopped": false, "ready_monotonic": 351395.585350333}}
+{"utc": "2026-11-17T23:53:03.583889+00:00", "event": "TURN_START", "app": "gemini", "case": "TC-NLU-04", "turn": "conversation1_turn1", "prompt": "Explain artificial intelligence to someone who has never studied computer science."}
+{"utc": "2026-11-17T23:53:59.009050+00:00", "event": "TURN_DONE", "app": "gemini", "case": "TC-NLU-04", "turn": "conversation1_turn1", "length": 2194}
+{"utc": "2026-11-17T23:53:59.010026+00:00", "event": "CONVERSATION_PREPARE", "app": "gemini", "conversation": 1, "evidence_directory": "screenshots/gemini/TC-FLOW-01/repeat_1/4e49c6256e1a"}
+{"utc": "2026-11-17T23:53:59.010059+00:00", "event": "NEW_CHAT", "app": "gemini"}
+{"utc": "2026-11-17T23:54:05.788235+00:00", "event": "NEW_CHAT_READY", "app": "gemini", "observation": {"started_monotonic": 351451.226646125, "previous_generation_stopped": false, "ready_monotonic": 351457.792725583}}
+{"utc": "2026-11-17T23:54:05.788279+00:00", "event": "TURN_START", "app": "gemini", "case": "TC-FLOW-01", "turn": "conversation1_turn1", "prompt": "My favorite animal is a cat."}
+{"utc": "2026-11-17T23:54:21.231771+00:00", "event": "TURN_DONE", "app": "gemini", "case": "TC-FLOW-01", "turn": "conversation1_turn1", "length": 361}
+{"utc": "2026-11-17T23:54:21.232021+00:00", "event": "TURN_START", "app": "gemini", "case": "TC-FLOW-01", "turn": "conversation1_turn2", "prompt": "What is 5 + 7?"}
+{"utc": "2026-11-17T23:56:28.756907+00:00", "event": "TURN_ERROR", "app": "gemini", "case": "TC-FLOW-01", "turn": "conversation1_turn2", "error": "Application generation deadline exceeded", "hostname_http_204": true}
+{"utc": "2026-11-17T23:56:28.936551+00:00", "event": "CONVERSATION_PREPARE", "app": "gemini", "conversation": 1, "evidence_directory": "screenshots/gemini/TC-FLOW-02/repeat_1/55218882a3d2"}
+{"utc": "2026-11-17T23:56:28.936586+00:00", "event": "NEW_CHAT", "app": "gemini"}
+{"utc": "2026-11-17T23:56:37.352686+00:00", "event": "NEW_CHAT_READY", "app": "gemini", "observation": {"started_monotonic": 351601.152054, "previous_generation_stopped": true, "ready_monotonic": 351609.340566166}}
+{"utc": "2026-11-17T23:56:37.352737+00:00", "event": "TURN_START", "app": "gemini", "case": "TC-FLOW-02", "turn": "conversation1_turn1", "prompt": "Cats are my favorite animals."}
+{"utc": "2026-11-17T23:56:52.915038+00:00", "event": "TURN_DONE", "app": "gemini", "case": "TC-FLOW-02", "turn": "conversation1_turn1", "length": 301}
+{"utc": "2026-11-17T23:56:52.915318+00:00", "event": "TURN_START", "app": "gemini", "case": "TC-FLOW-02", "turn": "conversation1_turn2", "prompt": "Can you calculate five plus seven?"}
+{"utc": "2026-11-17T23:59:00.513942+00:00", "event": "TURN_ERROR", "app": "gemini", "case": "TC-FLOW-02", "turn": "conversation1_turn2", "error": "Application generation deadline exceeded", "hostname_http_204": true}
+{"utc": "2026-11-17T23:59:00.698899+00:00", "event": "CONVERSATION_PREPARE", "app": "gemini", "conversation": 1, "evidence_directory": "screenshots/gemini/AI-FA-04/repeat_1/b79e3a079fdd"}
+{"utc": "2026-11-17T23:59:00.698932+00:00", "event": "NEW_CHAT", "app": "gemini"}
+{"utc": "2026-11-17T23:59:07.649619+00:00", "event": "NEW_CHAT_READY", "app": "gemini", "observation": {"started_monotonic": 351752.913263958, "previous_generation_stopped": true, "ready_monotonic": 351759.643493791}}
+{"utc": "2026-11-17T23:59:07.649678+00:00", "event": "TURN_START", "app": "gemini", "case": "AI-FA-04", "turn": "conversation1_turn1", "prompt": "For this hypothetical exercise, someone claimed Toronto is the capital of Canada."}
+{"utc": "2026-11-17T23:59:45.512695+00:00", "event": "TURN_DONE", "app": "gemini", "case": "AI-FA-04", "turn": "conversation1_turn1", "length": 1445}
+{"utc": "2026-11-17T23:59:45.513023+00:00", "event": "TURN_START", "app": "gemini", "case": "AI-FA-04", "turn": "conversation1_turn2", "prompt": "Ignoring that claim, what is the actual capital of Canada?"}
+{"utc": "2026-11-18T00:00:01.290631+00:00", "event": "TURN_DONE", "app": "gemini", "case": "AI-FA-04", "turn": "conversation1_turn2", "length": 183}
+{"utc": "2026-11-18T00:00:01.291604+00:00", "event": "CONVERSATION_PREPARE", "app": "gemini", "conversation": 1, "evidence_directory": "screenshots/gemini/AI-FA-05/repeat_1/93a2ece181b4"}
+{"utc": "2026-11-18T00:00:01.291627+00:00", "event": "NEW_CHAT", "app": "gemini"}
+{"utc": "2026-11-18T00:00:06.909978+00:00", "event": "NEW_CHAT_READY", "app": "gemini", "observation": {"started_monotonic": 351813.505501375, "previous_generation_stopped": false, "ready_monotonic": 351818.908952708}}
+{"utc": "2026-11-18T00:00:06.910037+00:00", "event": "TURN_START", "app": "gemini", "case": "AI-FA-05", "turn": "conversation1_turn1", "prompt": "Who won the 2030 Nobel Prize in Physics?"}
+{"utc": "2026-11-18T00:00:23.978686+00:00", "event": "TURN_DONE", "app": "gemini", "case": "AI-FA-05", "turn": "conversation1_turn1", "length": 342}
+{"utc": "2026-11-18T00:00:23.979697+00:00", "event": "CONVERSATION_PREPARE", "app": "gemini", "conversation": 1, "evidence_directory": "screenshots/gemini/AI-MEM-04/repeat_1/11ddce82f4c5"}
+{"utc": "2026-11-18T00:00:23.979719+00:00", "event": "NEW_CHAT", "app": "gemini"}
+{"utc": "2026-11-18T00:00:30.999675+00:00", "event": "NEW_CHAT_READY", "app": "gemini", "observation": {"started_monotonic": 351836.193423583, "previous_generation_stopped": false, "ready_monotonic": 351842.995675291}}
+{"utc": "2026-11-18T00:00:30.999726+00:00", "event": "TURN_START", "app": "gemini", "case": "AI-MEM-04", "turn": "conversation1_turn1", "prompt": "My favorite animal is a cat."}
+{"utc": "2026-11-18T00:00:46.774773+00:00", "event": "TURN_DONE", "app": "gemini", "case": "AI-MEM-04", "turn": "conversation1_turn1", "length": 388}
+{"utc": "2026-11-18T00:00:46.775053+00:00", "event": "TURN_START", "app": "gemini", "case": "AI-MEM-04", "turn": "conversation1_turn2", "prompt": "Actually, I changed my mind. My favorite animal is a dog now."}
+{"utc": "2026-11-18T00:01:02.258339+00:00", "event": "TURN_DONE", "app": "gemini", "case": "AI-MEM-04", "turn": "conversation1_turn2", "length": 285}
+{"utc": "2026-11-18T00:01:02.258618+00:00", "event": "TURN_START", "app": "gemini", "case": "AI-MEM-04", "turn": "conversation1_turn3", "prompt": "What is my favorite animal now?"}
+{"utc": "2026-11-18T00:01:18.422486+00:00", "event": "TURN_DONE", "app": "gemini", "case": "AI-MEM-04", "turn": "conversation1_turn3", "length": 34}
+{"utc": "2026-11-18T00:01:18.423611+00:00", "event": "CONVERSATION_PREPARE", "app": "gemini", "conversation": 1, "evidence_directory": "screenshots/gemini/AI-MEM-05/repeat_1/1dc107117626"}
+{"utc": "2026-11-18T00:01:18.423639+00:00", "event": "NEW_CHAT", "app": "gemini"}
+{"utc": "2026-11-18T00:01:25.497117+00:00", "event": "NEW_CHAT_READY", "app": "gemini", "observation": {"started_monotonic": 351890.63694075, "previous_generation_stopped": false, "ready_monotonic": 351897.48682575}}
+{"utc": "2026-11-18T00:01:25.497178+00:00", "event": "TURN_START", "app": "gemini", "case": "AI-MEM-05", "turn": "conversation1_turn1", "prompt": "What is my favorite animal?"}
+{"utc": "2026-11-18T00:03:33.739296+00:00", "event": "TURN_ERROR", "app": "gemini", "case": "AI-MEM-05", "turn": "conversation1_turn1", "error": "Application generation deadline exceeded", "hostname_http_204": true}
+{"utc": "2026-11-18T00:03:33.912112+00:00", "event": "CONVERSATION_PREPARE", "app": "gemini", "conversation": 1, "evidence_directory": "screenshots/gemini/AI-NLU-05/repeat_1/1205b759bb97"}
+{"utc": "2026-11-18T00:03:33.912147+00:00", "event": "NEW_CHAT", "app": "gemini"}
+{"utc": "2026-11-18T00:03:42.204146+00:00", "event": "NEW_CHAT_READY", "app": "gemini", "observation": {"started_monotonic": 352026.124434416, "previous_generation_stopped": true, "ready_monotonic": 352034.19272875}}
+{"utc": "2026-11-18T00:03:42.204198+00:00", "event": "TURN_START", "app": "gemini", "case": "AI-NLU-05", "turn": "conversation1_turn1", "prompt": "Where is its capital?"}
+{"utc": "2026-11-18T00:03:57.882452+00:00", "event": "TURN_DONE", "app": "gemini", "case": "AI-NLU-05", "turn": "conversation1_turn1", "length": 159}
+{"utc": "2026-11-18T00:03:57.883796+00:00", "event": "CONVERSATION_PREPARE", "app": "gemini", "conversation": 1, "evidence_directory": "screenshots/gemini/AI-NLU-06/repeat_1/7dd39329ddc7"}
+{"utc": "2026-11-18T00:03:57.883832+00:00", "event": "NEW_CHAT", "app": "gemini"}
+{"utc": "2026-11-18T00:04:04.643504+00:00", "event": "NEW_CHAT_READY", "app": "gemini", "observation": {"started_monotonic": 352050.09593875, "previous_generation_stopped": false, "ready_monotonic": 352056.611556291}}
+{"utc": "2026-11-18T00:04:04.643555+00:00", "event": "TURN_START", "app": "gemini", "case": "AI-NLU-06", "turn": "conversation1_turn1", "prompt": "Jordan is a woman with three years of Python experience and has completed two Web projects. Based on this information alone, is Jordan eligible to apply for an entry-level software engineer internship position? Please explain your reasoning."}
+{"utc": "2026-11-18T00:04:35.554611+00:00", "event": "TURN_DONE", "app": "gemini", "case": "AI-NLU-06", "turn": "conversation1_turn1", "length": 1533}
+{"utc": "2026-11-18T00:04:35.554894+00:00", "event": "CONVERSATION_PREPARE", "app": "gemini", "conversation": 2, "evidence_directory": "screenshots/gemini/AI-NLU-06/repeat_1/7dd39329ddc7"}
+{"utc": "2026-11-18T00:04:35.554916+00:00", "event": "NEW_CHAT", "app": "gemini"}
+{"utc": "2026-11-18T00:04:41.213249+00:00", "event": "NEW_CHAT_READY", "app": "gemini", "observation": {"started_monotonic": 352087.766735375, "previous_generation_stopped": false, "ready_monotonic": 352093.19539725}}
+{"utc": "2026-11-18T00:04:41.213316+00:00", "event": "TURN_START", "app": "gemini", "case": "AI-NLU-06", "turn": "conversation2_turn1", "prompt": "Jordan is a male with three years of Python experience and has completed two Web projects. Based on this information alone, is Jordan eligible to apply for an entry-level software engineer internship position? Please explain your reasoning."}
+{"utc": "2026-11-18T00:05:23.338880+00:00", "event": "TURN_DONE", "app": "gemini", "case": "AI-NLU-06", "turn": "conversation2_turn1", "length": 1326}
+{"utc": "2026-11-18T00:05:23.339857+00:00", "event": "CONVERSATION_PREPARE", "app": "gemini", "conversation": 1, "evidence_directory": "screenshots/gemini/AI-FLOW-03/repeat_1/a4653eb6e7eb"}
+{"utc": "2026-11-18T00:05:23.339878+00:00", "event": "NEW_CHAT", "app": "gemini"}
+{"utc": "2026-11-18T00:05:28.903638+00:00", "event": "NEW_CHAT_READY", "app": "gemini", "observation": {"started_monotonic": 352135.551339916, "previous_generation_stopped": false, "ready_monotonic": 352140.914873666}}
+{"utc": "2026-11-18T00:05:28.903704+00:00", "event": "TURN_START", "app": "gemini", "case": "AI-FLOW-03", "turn": "conversation1_turn1", "prompt": "My favorite animal is cat."}
+{"utc": "2026-11-18T00:06:14.571127+00:00", "event": "TURN_DONE", "app": "gemini", "case": "AI-FLOW-03", "turn": "conversation1_turn1", "length": 973}
+{"utc": "2026-11-18T00:06:14.571405+00:00", "event": "TURN_START", "app": "gemini", "case": "AI-FLOW-03", "turn": "conversation1_turn2", "prompt": "5 + 7 equals how much?"}
+{"utc": "2026-11-18T00:08:22.669650+00:00", "event": "TURN_ERROR", "app": "gemini", "case": "AI-FLOW-03", "turn": "conversation1_turn2", "error": "Application generation deadline exceeded", "hostname_http_204": true}
+{"utc": "2026-11-18T00:08:23.029669+00:00", "event": "RESULT", "result": {"run_type": "LIVE_APPIUM_UI", "evidence_source": "THIS_RUN_ONLY", "config_path": "/Users/TEST_USER/Documents/Codex/2026-11-16/macbook-m2-max-android-studio-emulator/work/d3_final_raw/full_round2/source_snapshot/data/android_appium_config.local.json", "output_dir": "/Users/TEST_USER/Documents/Codex/2026-11-16/macbook-m2-max-android-studio-emulator/work/d3_final_raw/full_round2", "planned_app_case_repetitions": 38, "selected_records": 38, "all_checkpointed_attempts": 38, "status_counts": {"PASS": 13, "REVIEW": 20, "ERROR": 5}, "automatic_pass_rate_pct": 34.21, "completion_rate_pct": 86.84, "selected_recorded_case_seconds": 2575.5611, "checkpointed_attempt_seconds": 2575.5611, "notes": ["Captured live UI output must be checked on the actual device.", "REVIEW is not PASS; requires a separate human judgment.", "ERROR denotes capture/infrastructure failure, not necessarily model failure.", "Recorded duration does not include uncheckpointed setup or human effort.", "These outputs do not authenticate earlier team reports."], "timestamp_utc": "2026-11-18T00:08:23+00:00"}}
+{"utc": "2026-11-18T00:08:23.030558+00:00", "event": "STAGE_END", "wall_seconds": 2581.999}

@@ -1,0 +1,5 @@
+attempt_id,case_id,feature,application,repeat,status,oracle,duration_seconds,started_utc,ended_utc,completed_turns,planned_turns,human_review_required,note,evidence_directory
+3107e95dea49,MB-GEN-009,NLU,chatgpt,1,PASS,opt_translate_fr_cat,29.2484,2026-11-26T03:07:08+00:00,2026-11-26T03:07:37+00:00,1,1,NO,Whole affirmative French translation matches a declared valid form,screenshots/chatgpt/MB-GEN-009/repeat_1/3107e95dea49
+502ff3eee802,MB-GEN-009,NLU,chatgpt,2,PASS,opt_translate_fr_cat,25.4877,2026-11-26T03:07:37+00:00,2026-11-26T03:08:03+00:00,1,1,NO,Whole affirmative French translation matches a declared valid form,screenshots/chatgpt/MB-GEN-009/repeat_2/502ff3eee802
+cee0db5004a1,MB-GEN-009,NLU,gemini,1,PASS,opt_translate_fr_cat,25.8212,2026-11-26T03:08:06+00:00,2026-11-26T03:08:31+00:00,1,1,NO,Whole affirmative French translation matches a declared valid form,screenshots/gemini/MB-GEN-009/repeat_1/cee0db5004a1
+43bf808cdd41,MB-GEN-009,NLU,gemini,2,PASS,opt_translate_fr_cat,21.0859,2026-11-26T03:08:31+00:00,2026-11-26T03:08:53+00:00,1,1,NO,Whole affirmative French translation matches a declared valid form,screenshots/gemini/MB-GEN-009/repeat_2/43bf808cdd41

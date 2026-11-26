@@ -1,0 +1,34 @@
+{
+  "complete_accessible_text_proven": true,
+  "views": [
+    {
+      "parts": [
+        "Got it! I've noted that your favorite animal is a dog.\n​How can I help you today?"
+      ],
+      "body_bounds": "[63,680][1017,948]",
+      "user_bounds": "[173,326][1017,616]",
+      "start_prompt_confirmed": true,
+      "matched_prompt_text": "My favorite animal is a dog. Remember this during our conversation.",
+      "footer_completed": true,
+      "media_descriptions": [],
+      "scroll_margin_x": 31,
+      "fixed_input_top": 2095,
+      "xml_file": "gemini_MB-GEN-008_conversation1_turn1_native_view_00.xml",
+      "png_file": "gemini_MB-GEN-008_conversation1_turn1_native_view_00.png",
+      "xml_sha256": "bd3438ffc1219d8de34cd75d947318c524ea0e44f0091b51187e67782540af83",
+      "png_sha256": "cbb4b24cf67740c40c0a5b5c05f92df5ebfded21605b1038d72a5569078c66ee",
+      "at_monotonic": 360753.880874208,
+      "overlap_parts": null
+    }
+  ],
+  "requested_prompt": "My favorite animal is a dog. Remember this during our conversation.",
+  "completed_footer_confirmed": true,
+  "start_prompt_confirmed": true,
+  "full_response_parts": [
+    "Got it! I've noted that your favorite animal is a dog.\n​How can I help you today?"
+  ],
+  "nontext_media_transcribed": false,
+  "scope": "All accessible TextView/code text in the current response; media remain raw screenshots/XML",
+  "full_response_text": "Got it! I've noted that your favorite animal is a dog.\n​How can I help you today?",
+  "final_view_position": "START_OF_CURRENT_RESPONSE"
+}

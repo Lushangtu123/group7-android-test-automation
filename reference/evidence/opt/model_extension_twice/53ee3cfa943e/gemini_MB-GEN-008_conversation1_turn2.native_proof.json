@@ -1,0 +1,34 @@
+{
+  "complete_accessible_text_proven": true,
+  "views": [
+    {
+      "parts": [
+        "14"
+      ],
+      "body_bounds": "[63,617][1017,720]",
+      "user_bounds": "[173,326][1017,553]",
+      "start_prompt_confirmed": true,
+      "matched_prompt_text": "What is 8 + 6? Give only the number.",
+      "footer_completed": true,
+      "media_descriptions": [],
+      "scroll_margin_x": 31,
+      "fixed_input_top": 2095,
+      "xml_file": "gemini_MB-GEN-008_conversation1_turn2_native_view_00.xml",
+      "png_file": "gemini_MB-GEN-008_conversation1_turn2_native_view_00.png",
+      "xml_sha256": "ff32e16f9f1fe412414f2484f047a4dc610a9ee40dc0d6a915d96ec619148482",
+      "png_sha256": "036046f6b0008781c73192117dfdffed3d5732547c0431f0b069681a19938c35",
+      "at_monotonic": 360770.119433625,
+      "overlap_parts": null
+    }
+  ],
+  "requested_prompt": "What is 8 + 6? Give only the number.",
+  "completed_footer_confirmed": true,
+  "start_prompt_confirmed": true,
+  "full_response_parts": [
+    "14"
+  ],
+  "nontext_media_transcribed": false,
+  "scope": "All accessible TextView/code text in the current response; media remain raw screenshots/XML",
+  "full_response_text": "14",
+  "final_view_position": "START_OF_CURRENT_RESPONSE"
+}

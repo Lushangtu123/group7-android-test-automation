@@ -1,0 +1,20 @@
+{
+  "checks": [
+    "default entry is the execution workbench",
+    "default plan is both apps twice",
+    "completed history does not autoplay as live",
+    "log font is at least20px",
+    "prompt and answer fonts are at least24px",
+    "all4 real outcomes selectable",
+    "finished run has no live indicator",
+    "stop hidden and evidence export visible after completion",
+    "complete answer dialog available",
+    "real Appium HTTP logs available",
+    "model oracle visible",
+    "fullscreen control works with actual browser input",
+    "mobile has no document horizontal overflow",
+    "recorded library remains available and labelled",
+    "no uncaught JavaScript errors"
+  ],
+  "browser_errors": []
+}

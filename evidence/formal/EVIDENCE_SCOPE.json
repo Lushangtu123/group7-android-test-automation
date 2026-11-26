@@ -1,0 +1,33 @@
+{
+  "formal_runs": [
+    "full_round1",
+    "full_round2",
+    "full_round3_completed"
+  ],
+  "formal_outcome_records": 114,
+  "counts": {
+    "PASS": 37,
+    "FAIL": 0,
+    "REVIEW": 58,
+    "ERROR": 19
+  },
+  "primary_prompt_submission_proven_cases": 111,
+  "independent_coverage_complements": 3,
+  "completed_without_error": 95,
+  "formal_captured_turns": 209,
+  "formal_planned_turns": 252,
+  "preserved_interrupted_orphan_checkpoints_excluded_from_209": 1,
+  "retests_never_replace_primary_status": true,
+  "all_history_review_rows": 192,
+  "human_signatures_present": 0,
+  "local_tests_not_android_attempts": true,
+  "sample_attempts": 40,
+  "all_19_formal_errors_have_full_sample_directories": true,
+  "diagnostic_folders_without_attempt_ids": [
+    "runs/r7_navigation_diagnostic",
+    "runs/round3_resume_navigation_diagnostic",
+    "runs/native_viewport_validation_v14",
+    "runs/round3_original_server_log_recovery"
+  ],
+  "historical_FAIL_sample_outside_formal_114": true
+}

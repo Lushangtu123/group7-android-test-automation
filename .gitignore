@@ -1,0 +1,21 @@
+# Local device/runtime state and installed environments
+/runtime/
+/engine/reports/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+node_modules/
+.DS_Store
+.env
+.env.*
+!.env.example
+cookies*.json
+credentials*.json
+storageState*.json
+# Distributions and videos are GitHub Release assets.
+*.zip
+*.mp4
+*.mov
+# The tracked engine configuration contains inspected selectors and sanitized
+# paths only. Never add login credentials or browser state to it.

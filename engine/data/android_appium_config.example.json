@@ -1,0 +1,45 @@
+{
+  "server_url": "http://127.0.0.1:4723",
+  "timeout_seconds": 90,
+  "stable_seconds": 3,
+  "poll_seconds": 0.5,
+  "chat_reset_wait_seconds": 1.2,
+  "apps": {
+    "chatgpt": {
+      "platform": "Android",
+      "capture_mode": "text",
+      "capabilities": {
+        "platformName": "Android",
+        "appium:automationName": "UiAutomator2",
+        "appium:deviceName": "REPLACE_WITH_DEVICE_NAME",
+        "appium:udid": "REPLACE_WITH_ADB_DEVICE_ID",
+        "appium:appPackage": "REPLACE_WITH_INSPECTED_CHATGPT_PACKAGE",
+        "appium:noReset": true
+      },
+      "selectors": {
+        "new_chat_button": {"by":"accessibility id","value":"REPLACE_WITH_INSPECTED_VALUE"},
+        "prompt_input": {"by":"id","value":"REPLACE_WITH_INSPECTED_VALUE"},
+        "send_button": {"by":"accessibility id","value":"REPLACE_WITH_INSPECTED_VALUE"},
+        "assistant_response_bubbles": {"by":"xpath","value":"REPLACE_WITH_INSPECTED_RESPONSE_BUBBLE_LOCATOR"}
+      }
+    },
+    "gemini": {
+      "platform": "Android",
+      "capture_mode": "text",
+      "capabilities": {
+        "platformName": "Android",
+        "appium:automationName": "UiAutomator2",
+        "appium:deviceName": "REPLACE_WITH_DEVICE_NAME",
+        "appium:udid": "REPLACE_WITH_ADB_DEVICE_ID",
+        "appium:appPackage": "REPLACE_WITH_INSPECTED_GEMINI_HOST_PACKAGE",
+        "appium:noReset": true
+      },
+      "selectors": {
+        "new_chat_button": {"by":"accessibility id","value":"REPLACE_WITH_INSPECTED_VALUE"},
+        "prompt_input": {"by":"id","value":"REPLACE_WITH_INSPECTED_VALUE"},
+        "send_button": {"by":"accessibility id","value":"REPLACE_WITH_INSPECTED_VALUE"},
+        "assistant_response_bubbles": {"by":"xpath","value":"REPLACE_WITH_INSPECTED_RESPONSE_BUBBLE_LOCATOR"}
+      }
+    }
+  }
+}

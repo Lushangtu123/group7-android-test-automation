@@ -1,0 +1,15 @@
+{
+  "requested_mode": "copy",
+  "actual_mode": "copy",
+  "visible_native_text": "14",
+  "captured_characters": 2,
+  "configured_copy_action": "mobile: clickGesture",
+  "requested_prompt": "What is 8 + 6? Give only the number.",
+  "rendered_user_prompt": "What is 8 + 6? Give only the number.",
+  "prompt_match": "EXACT",
+  "prompt_ui_variant_limitation": null,
+  "native_full_response_proven": false,
+  "excluded_native_ui_labels": [],
+  "clipboard_read_recovery_count": 0,
+  "limitation": null
+}

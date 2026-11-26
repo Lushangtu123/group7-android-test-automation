@@ -1,0 +1,17 @@
+{
+  "requested_mode": "copy",
+  "actual_mode": "copy",
+  "visible_native_text": "def greet():\n    print(\"Hello\")",
+  "captured_characters": 45,
+  "configured_copy_action": "mobile: clickGesture",
+  "requested_prompt": "Define a parameterless Python function that prints Hello. Return only the function definition.",
+  "rendered_user_prompt": "Define a parameterless Python function that prints Hello. Return only the function definition.",
+  "prompt_match": "EXACT",
+  "prompt_ui_variant_limitation": null,
+  "native_full_response_proven": false,
+  "excluded_native_ui_labels": [
+    "Python"
+  ],
+  "clipboard_read_recovery_count": 0,
+  "limitation": null
+}

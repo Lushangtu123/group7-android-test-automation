@@ -1,0 +1,15 @@
+{
+  "requested_mode": "copy",
+  "actual_mode": "copy",
+  "visible_native_text": "The capital of Canada is Ottawa, located in the province of Ontario. 🇨🇦",
+  "captured_characters": 71,
+  "configured_copy_action": "mobile: clickGesture",
+  "requested_prompt": "What is the capital of Canada?",
+  "rendered_user_prompt": "What is the capital of Canada?",
+  "prompt_match": "EXACT",
+  "prompt_ui_variant_limitation": null,
+  "native_full_response_proven": false,
+  "excluded_native_ui_labels": [],
+  "clipboard_read_recovery_count": 0,
+  "limitation": null
+}
