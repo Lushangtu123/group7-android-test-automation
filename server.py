@@ -20,7 +20,13 @@ def make_handler(manager,reference,token,mirror=None):
    self.send_response(status);self.send_header('Content-Type',kind);self.send_header('Content-Length',str(len(data)));self.send_header('Cache-Control','no-store');self.send_header('X-Content-Type-Options','nosniff');self.send_header('X-Frame-Options','DENY')
    for k,v in (headers or {}).items():self.send_header(k,v)
    self.end_headers();self.wfile.write(data)
+  def host_allowed(self):
+   # Only the loopback names this server is reached by. A page served from another
+   # hostname that resolves to 127.0.0.1 (DNS rebinding) is refused before any route.
+   port=str(self.server.server_port)
+   return self.headers.get('Host','') in ('127.0.0.1:'+port,'localhost:'+port)
   def do_GET(self):
+   if not self.host_allowed():return self.respond({'error':'Open the console at http://127.0.0.1:'+str(self.server.server_port)},421)
    try:self.get()
    except (ValueError,KeyError,FileNotFoundError) as e:self.respond({'error':str(e)},404)
    except (BrokenPipeError,ConnectionResetError):pass
@@ -88,6 +94,7 @@ def make_handler(manager,reference,token,mirror=None):
    if not p.is_file():return self.respond({'error':'Page not found'},404)
    kind=mimetypes.guess_type(p.name)[0] or 'application/octet-stream';return self.respond(p.read_bytes(),kind=kind+('; charset=utf-8' if kind.startswith('text/') or kind=='application/javascript' else ''))
   def do_POST(self):
+   if not self.host_allowed():return self.respond({'error':'Open the console at http://127.0.0.1:'+str(self.server.server_port)},421)
    try:
     if self.headers.get('X-Demo-Token')!=token:return self.respond({'error':'Reload the local console before using run controls'},403)
     origin=self.headers.get('Origin')

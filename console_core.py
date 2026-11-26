@@ -74,6 +74,18 @@ def preview_allowed(xml,prompts):
   if any(re.search(r'(?<![A-Za-z0-9])'+re.escape(name)+r'(?![A-Za-z0-9])',text,re.I) for name in private_names()):return False
  return any((n.get('text') in prompts or n.get('content-desc') in prompts) and n.get('displayed','true')!='false' for n in nodes)
 
+FINAL_STAGE=4
+def frame_rank(name):
+ """Order of a saved turn screenshot: (conversation, turn, stage), or None if it is not one.
+ Stages: before_send 1, after_send 2, native_view_NN 3.NN, final capture 4."""
+ m=re.search(r'_conversation(\d+)_turn(\d+)(_before_send|_after_send|_native_view_(\d+))?\.png$',name)
+ if not m:return None
+ stage=FINAL_STAGE if not m[3] else 1 if m[3]=='_before_send' else 2 if m[3]=='_after_send' else 3+int(m[4])/1000
+ return (int(m[1]),int(m[2]),stage)
+
+def appium_server_url(config):
+ return str(config.get('server_url') or 'http://127.0.0.1:4723').rstrip('/')
+
 def sdk_paths():
  sdk=Path(os.environ.get('ANDROID_HOME') or os.environ.get('ANDROID_SDK_ROOT') or Path.home()/'Library/Android/sdk')
  return sdk,Path(shutil.which('adb') or sdk/'platform-tools/adb')
@@ -95,10 +107,12 @@ def preflight():
   if code==0:
    for name,pkg in [('ChatGPT','com.openai.chatgpt'),('Gemini','com.google.android.apps.bard')]:
     c,t,_=command([adb,'-s',device,'shell','pm','path',pkg]);check(name+' installed',c==0 and 'package:' in t,pkg,'Use the already installed, logged-in test app. Login is checked by the actual UI run.')
+ # Same server the engine connects to (appium_adapter reads server_url from this config).
+ server=appium_server_url(config)
  try:
-  with urllib.request.urlopen('http://127.0.0.1:4723/status',timeout=3) as f:data=json.load(f)
-  ready=data.get('value',{}).get('ready',False);detail='Appium at 127.0.0.1:4723'
- except Exception:ready=False;detail='Appium is not responding'
+  with urllib.request.urlopen(server+'/status',timeout=3) as f:data=json.load(f)
+  ready=data.get('value',{}).get('ready',False);detail='Appium at '+server
+ except Exception:ready=False;detail='Appium is not responding at '+server
  check('Appium server',ready,detail,'Start the existing server: bash "Start Appium.command". No software is installed.')
  return {'ready':all(c['ok'] for c in checks),'checks':checks,'checked_utc':utc(),'note':'Readiness does not prove app login, current selector compatibility, or backend health. Each live run checks network and UI readiness.'}
 
@@ -205,16 +219,22 @@ class RunManager:
    from group7_auto.model_based import export_executable
    begin=time.monotonic();a=export_generated_cases(folder/'generated_candidates.csv');b=export_executable(folder/'model_based_extension.csv');result={'id':id,'candidates':len(a),'executable':len(b),'elapsed_seconds':round(time.monotonic()-begin,6),'created_utc':utc(),'definitions':b,'coordinates':a,'remote_llm_call':False};atomic(folder/'generation.json',result);return result
  def preview(self,id):
-  d=self.directory(id);snap=self.snapshot(id);active=snap['active_attempt']
+  # Resolved so it compares with safe_join's resolved path when the runtime folder is behind a symlink.
+  d=self.directory(id).resolve();snap=self.snapshot(id);active=snap['active_attempt']
   if not active:return None
   folder=safe_join(d,active['evidence_directory']);case=active['case'];definitions=self.definitions();prompts=[p for r in definitions if r['case_id']==case for g in r['conversations'] for p in g]
   candidates=[]
   for png in folder.glob('*.png'):
-   if 'reset' in png.name or 'unused_notice' in png.name:continue
+   if 'reset' in png.name or 'unused_notice' in png.name or frame_rank(png.name) is None:continue
    xml=png.with_suffix('.xml')
    if xml.is_file() and preview_allowed(xml.read_text(),prompts):candidates.append(png)
   if not candidates:return None
-  p=max(candidates,key=lambda p:p.stat().st_mtime);return {'path':str(p.relative_to(d)),'captured_utc':datetime.fromtimestamp(p.stat().st_mtime,timezone.utc).isoformat(),'attempt_id':active['attempt_id'],'label':'Saved evidence frame — capture time shown','bytes':p.read_bytes()}
+  # Latest turn first, then the latest stage of that turn. File times are not used to choose:
+  # they change when a run folder is copied or unpacked.
+  p=max(candidates,key=lambda p:frame_rank(p.name));conversation,turn,stage=frame_rank(p.name)
+  recorded=next((t.get('captured_at_utc') for t in snap['turns'] if t.get('attempt_id')==active['attempt_id'] and t.get('conversation')==conversation and t.get('turn')==turn),None)
+  captured=recorded if recorded and stage==FINAL_STAGE else datetime.fromtimestamp(p.stat().st_mtime,timezone.utc).isoformat()
+  return {'path':str(p.relative_to(d)),'captured_utc':captured,'capture_time_source':'turn_checkpoint' if recorded and stage==FINAL_STAGE else 'file_modified_time','attempt_id':active['attempt_id'],'label':'Saved evidence frame — capture time shown','bytes':p.read_bytes()}
  def definitions(self):
   sys.path.insert(0,str(ROOT/'engine'));from group7_auto.model_based import concretize
   return concretize()
