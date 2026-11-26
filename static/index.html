@@ -13,6 +13,7 @@
   <div class="header-tools">
     <span class="scope" title="This workbench never changes the original formal study (19 cases × 2 apps × 3 rounds = 114 attempts). New demo runs are saved separately.">Formal study (114) is read-only</span>
     <a href="/library/index.html#evidence" target="_blank" rel="noopener">Evidence library ↗</a>
+    <button id="focus" type="button" aria-pressed="false" title="Enlarge the device and current turn for presenting (Esc to exit)">◱ Focus</button>
     <button id="fullscreen" type="button">⛶ Full screen</button>
   </div>
 </header>
@@ -68,7 +69,7 @@
     </div>
 
     <div class="execution-column">
-      <div class="current-head"><span id="current-app">AWAITING EXECUTION</span><span id="run-state" class="pill" aria-live="polite">IDLE</span></div>
+      <div class="current-head"><span id="current-app">AWAITING EXECUTION</span><span class="head-right"><span id="focus-progress"></span><span id="run-state" class="pill" aria-live="polite">IDLE</span></span></div>
       <div class="turn-content">
         <div id="preview" class="preview">Loading scenario…</div>
         <div id="live-turn" hidden>
@@ -82,7 +83,7 @@
         </div>
         <div id="turn-steps" class="turn-steps" aria-hidden="true"></div>
         <div id="prompt" class="prompt">The actual prompt will appear here when Appium starts the turn.</div>
-        <div class="answer-head"><span class="field-label">VALIDATED CAPTURE · CURRENT TURN</span><span id="verdict"></span></div>
+        <div class="answer-head"><span class="field-label">VALIDATED CAPTURE · CURRENT TURN</span><span class="head-right"><button id="answer-more" type="button" class="link" hidden>Full answer ↗</button><span id="verdict"></span></span></div>
         <div id="answer" class="answer waiting">Waiting for a real app response.</div>
         <div id="attempt">No attempt ID assigned.</div>
         </div>

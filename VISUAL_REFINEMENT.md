@@ -42,3 +42,13 @@ Browser files only (`static/index.html`, `static/style.css`, `static/app.js`, `s
 - Multi-turn attempts list their earlier finished turns (prompt and captured answer, one line each) above the current prompt. On short screens the list shows about two rows and keeps the newest in view, so the current answer stays visible.
 
 Checks: 45 console and 7 JavaScript tests pass. One real GEN-013 run (ChatGPT, 1 repeat) completed 5/5 turns, PASS, 118.3 s; after the first live frame the panel never fell back to the full notice, and the earlier-turn list grew from 0 to 4. That run was a frontend check only and is not added to any published count.
+
+## Presenting a run
+
+Browser files only.
+
+- The results table lists every planned execution from the start in the worker's order (application, then repeat). Rows read WAITING, RUNNING (with the current turn), the recorded outcome, or, once a run has ended, INTERRUPTED for the execution that was stopped and NOT RUN for any that never started.
+- Focus mode (header button, Esc to exit) hides the controls, logs and results table and gives the device view and current turn the whole screen in two equal columns, with a short progress line. At 1920×1080 the device view grows from 323px to 377px wide.
+- When the current prompt or answer is cut off by its box, a "Full answer" button opens the whole turn.
+
+Checks: 45 console and 8 JavaScript tests pass. One real GEN-009 run (ChatGPT + Gemini, 1 repeat) completed 2/2 PASS; the table moved through WAITING, RUNNING and PASS for each row. Frontend check only; not added to any published count.

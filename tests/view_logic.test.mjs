@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { currentTurn, frameState, turnInfo, compactAppiumLine, earlierTurns, holdFrame } from '../static/view_logic.mjs';
+import { currentTurn, frameState, turnInfo, compactAppiumLine, earlierTurns, holdFrame, plannedRows } from '../static/view_logic.mjs';
 test('a matching repeated prompt never reuses the earlier attempt answer', () => {
  const job={events:[{event:'TURN_START',attempt_id:'a',turn:'t',prompt:'same'}, {event:'TURN_DONE',attempt_id:'a',turn:'t',response:'old'}, {event:'TURN_START',attempt_id:'b',turn:'t',prompt:'same'}]};
  assert.equal(currentTurn(job).answer,null);
@@ -42,4 +42,14 @@ test('a guarded gap keeps the last frame only for the same running attempt',()=>
  assert.equal(holdFrame('DISCONNECTED','a','a'),false);
  assert.equal(holdFrame('LIVE','a','a'),false);
  assert.equal(holdFrame('DELAYED',null,'a'),false);
+});
+test('planned rows follow the worker order and mark running, waiting and done',()=>{
+ const job={plan:{app:'both',cases:['MB-GEN-009'],repeats:2},
+  attempts:[{application:'chatgpt',case_id:'MB-GEN-009',repeat:'1',attempt_id:'a1'}],
+  active_attempt:{app:'chatgpt',case:'MB-GEN-009',repeat:2,attempt_id:'a2'}};
+ const rows=plannedRows(job,true);
+ assert.deepEqual(rows.map(r=>`${r.app}/${r.repeat}/${r.state}`),['chatgpt/1/DONE','chatgpt/2/RUNNING','gemini/1/WAITING','gemini/2/WAITING']);
+ assert.equal(rows[1].attemptId,'a2');
+ assert.deepEqual(plannedRows(job,false).map(r=>r.state),['DONE','STOPPED','NOT_RUN','NOT_RUN']);
+ assert.equal(plannedRows({attempts:[{application:'gemini',case_id:'X',repeat:'1'}]},false)[0].state,'DONE');
 });
