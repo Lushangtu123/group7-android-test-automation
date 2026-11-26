@@ -194,6 +194,27 @@ select {
 .answer.REVIEW { border-left-color: #d9bf72; }
 .answer.FAIL, .answer.ERROR { border-left-color: #d79a7f; }
 .answer.waiting { font-size: 24px; color: var(--faint); font-weight: 400; }
+/* Planned executions in the results table */
+.pill.WAITING, .pill.NOT { background: #eef0ea; color: var(--muted); border-color: #d9ded3; }
+.row-running td { background: #eef5e9; }
+.row-pending td { color: var(--muted); }
+td.mono { font: 17px var(--mono); }
+
+.head-right { display: flex; align-items: center; gap: 14px; }
+#answer-more { font-size: 16px; }
+#focus-progress { display: none; font: 15px var(--mono); color: var(--muted); }
+
+/* Focus mode: device and current turn only, for presenting. Esc or the button exits. */
+body.focus .control-bar, body.focus .system-line, body.focus #checks, body.focus .results-panel,
+body.focus .history-note, body.focus .log-toolbar, body.focus #logs, body.focus .edition, body.focus .scope { display: none !important; }
+body.focus main { padding-top: 14px; padding-bottom: 14px; }
+body.focus .workbench { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); height: calc(100vh - 130px); max-height: none; }
+body.focus .turn-content { max-height: none; flex: 1; }
+body.focus .prompt { font-size: 34px; max-height: 40vh; }
+body.focus .answer { font-size: 36px; max-height: 32vh; }
+body.focus #focus-progress { display: inline; }
+body.focus #focus { background: var(--green); border-color: var(--green); color: #fbfaf4; }
+
 /* Idle scenario preview */
 .preview .conv { margin-top: 12px; }
 .preview-prompts { margin: 8px 0 16px; padding-left: 1.6em; font-size: 24px; line-height: 1.4; }
@@ -344,6 +365,8 @@ dialog p { font-size: 24px; }
   .header-tools { gap: 10px; font-size: 15px; }
   .header-tools button { font-size: 0; padding: 7px 11px; }
   .header-tools button:before { content: "⛶"; font-size: 23px; }
+  .header-tools #focus:before { content: "◱"; }
+  body.focus .header-tools #focus:before { content: "✕"; }
   .header-tools a { max-width: 104px; }
   main { padding: 20px; }
   .control-bar { flex-direction: column; align-items: stretch; }
@@ -375,6 +398,11 @@ dialog p { font-size: 24px; }
   dialog { padding: 30px 20px; }
   #curtain { padding: 30px; }
   #curtain h1 { font-size: 39px; }
+}
+@media (max-width: 760px) {
+  body.focus .workbench { grid-template-columns: 1fr; height: auto; }
+  body.focus .prompt { font-size: 28px; }
+  body.focus .answer { font-size: 30px; }
 }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; scroll-behavior: auto !important; }

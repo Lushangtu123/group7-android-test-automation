@@ -1,4 +1,4 @@
-import { currentTurn, frameState, turnInfo, compactAppiumLine, earlierTurns, holdFrame } from './view_logic.mjs';
+import { currentTurn, frameState, turnInfo, compactAppiumLine, earlierTurns, holdFrame, plannedRows } from './view_logic.mjs';
 
 const $ = s => document.querySelector(s);
 const names = { chatgpt: 'ChatGPT', gemini: 'Gemini' };
@@ -105,6 +105,20 @@ function renderTurn(start) {
   ).join('<i class="gap"></i>');
 }
 
+// Offer the full current turn when the prompt or answer is cut off by its box.
+function updateAnswerMore() {
+  const cut = el => el.scrollHeight > el.clientHeight + 2;
+  const answered = !$('#answer').classList.contains('waiting');
+  $('#answer-more').hidden = !(answered && (cut($('#answer')) || cut($('#prompt'))));
+}
+
+function showCurrentAnswer() {
+  const { start, answer } = currentTurn(state.job);
+  if (!start) return;
+  $('#answer-detail').innerHTML = `<div class="field-label">CURRENT TURN · ${esc(start.attempt_id)} / ${esc(start.turn)}</div><h2>${esc(appName(start.app))} / ${esc(start.case)} / repeat ${esc(start.repeat)}</h2><div class="answer-pair"><b>${esc(start.prompt)}</b><p>${esc(answer ?? 'Waiting for a validated response for this turn.')}</p></div>`;
+  $('#answer-dialog').showModal();
+}
+
 function renderHistory(job, start) {
   const rows = earlierTurns(job, start);
   const key = (start?.attempt_id || '') + ':' + rows.length;
@@ -141,9 +155,23 @@ function renderJob(job) {
   $('#counts').innerHTML = Object.entries(job.counts).map(([s, n]) =>
     `<span class="${n > 0 ? esc(s) : ''}">${esc(s)} <b>${Number(n)}</b></span>`
   ).join('');
-  $('#outcomes').innerHTML = job.attempts.length
-    ? job.attempts.map(r => `<tr><td>${esc(appName(r.application))} / repeat ${esc(r.repeat)}</td><td><button type="button" data-attempt="${esc(r.attempt_id)}">${esc(r.attempt_id)} ↗</button></td><td>${esc(r.completed_turns)} / ${esc(r.planned_turns)} turns</td><td>${pill(r.status)}</td><td>${Number(r.duration_seconds).toFixed(1)}s</td></tr>`).join('')
-    : `<tr><td colspan="5">${terminal.has(job.state) ? 'No case outcome was recorded before the run ended.' : 'Appium is running. No case outcome has been recorded yet.'}</td></tr>`;
+  const rows = plannedRows(job, !terminal.has(job.state));
+  const turnNow = start && turnInfo(start.turn, state.data?.definitions.find(d => d.case_id === start.case));
+  $('#outcomes').innerHTML = rows.length ? rows.map(row => {
+    const label = `${esc(appName(row.app))} / repeat ${esc(row.repeat)}`;
+    if (row.state === 'DONE') {
+      const r = row.attempt;
+      return `<tr><td>${label}</td><td><button type="button" data-attempt="${esc(r.attempt_id)}">${esc(r.attempt_id)} ↗</button></td><td>${esc(r.completed_turns)} / ${esc(r.planned_turns)} turns</td><td>${pill(r.status)}</td><td>${Number(r.duration_seconds).toFixed(1)}s</td></tr>`;
+    }
+    if (row.state === 'RUNNING') {
+      const capture = turnNow && start.attempt_id === row.attemptId ? `turn ${turnNow.overall} of ${turnNow.totalTurns}` : 'preparing';
+      return `<tr class="row-running"><td>${label}</td><td class="mono">${esc(row.attemptId)}</td><td>${capture}</td><td>${pill('RUNNING')}</td><td>—</td></tr>`;
+    }
+    if (row.state === 'STOPPED') return `<tr><td>${label}</td><td class="mono">${esc(row.attemptId)}</td><td>stopped before an outcome</td><td>${pill('INTERRUPTED')}</td><td>—</td></tr>`;
+    return `<tr class="row-pending"><td>${label}</td><td>—</td><td>—</td><td>${pill(row.state === 'WAITING' ? 'WAITING' : 'NOT RUN')}</td><td>—</td></tr>`;
+  }).join('') : '<tr><td colspan="5">No case outcome was recorded.</td></tr>';
+  $('#focus-progress').textContent = `${job.attempts.length} / ${job.planned} · ` + Object.entries(job.counts).filter(([, n]) => n > 0).map(([s, n]) => `${s} ${n}`).join(' · ');
+  updateAnswerMore();
   $('#export').hidden = !terminal.has(job.state);
   $('#export').href = '/api/jobs/' + encodeURIComponent(job.id) + '/export';
   controls();
@@ -465,6 +493,20 @@ $('#generate').onclick = async () => {
   finally { $('#generate').disabled = false; }
 };
 $('#zoom').onclick = () => { $('#frame-dialog').showModal(); };
+$('#answer-more').onclick = showCurrentAnswer;
+window.addEventListener('resize', () => updateAnswerMore());
+function setFocus(on) {
+  document.body.classList.toggle('focus', on);
+  $('#focus').setAttribute('aria-pressed', String(on));
+  $('#focus').textContent = on ? '✕ Exit focus' : '◱ Focus';
+  try { sessionStorage.setItem('group7-focus', on ? '1' : ''); } catch { /* storage unavailable */ }
+  setTimeout(updateAnswerMore, 50);
+}
+$('#focus').onclick = () => setFocus(!document.body.classList.contains('focus'));
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && document.body.classList.contains('focus') && !document.querySelector('dialog[open]')) setFocus(false);
+});
+try { if (sessionStorage.getItem('group7-focus')) setFocus(true); } catch { /* storage unavailable */ }
 $('#fullscreen').onclick = () => {
   (document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen()).catch(e => error(e.message));
 };

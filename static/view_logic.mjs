@@ -61,3 +61,32 @@ export function earlierTurns(job, start) {
 export function holdFrame(status, frameAttempt, activeAttempt) {
   return ['PRIVACY', 'DELAYED', 'STARTING'].includes(status) && !!frameAttempt && frameAttempt === activeAttempt;
 }
+
+// Every planned execution in the worker's order (app, then repeat, then case), matched to
+// recorded outcomes. state: DONE, RUNNING, WAITING (not started yet), STOPPED (started, run ended
+// before it finished) or NOT_RUN (run ended before it started).
+export function plannedRows(job, running) {
+  const attempts = job?.attempts || [];
+  const plan = job?.plan;
+  const used = new Set();
+  const rows = [];
+  if (plan) {
+    const apps = plan.app === 'both' ? ['chatgpt', 'gemini'] : [plan.app];
+    const active = job.active_attempt;
+    for (const app of apps) {
+      for (let repeat = 1; repeat <= plan.repeats; repeat += 1) {
+        for (const caseId of plan.cases) {
+          const i = attempts.findIndex((r, k) => !used.has(k) && r.application === app && r.case_id === caseId && Number(r.repeat) === repeat);
+          if (i >= 0) { used.add(i); rows.push({ app, caseId, repeat, state: 'DONE', attempt: attempts[i] }); continue; }
+          const isActive = !!active && active.app === app && active.case === caseId && Number(active.repeat) === repeat;
+          const state = running ? (isActive ? 'RUNNING' : 'WAITING') : (isActive ? 'STOPPED' : 'NOT_RUN');
+          rows.push({ app, caseId, repeat, state, attemptId: isActive ? active.attempt_id : null });
+        }
+      }
+    }
+  }
+  attempts.forEach((r, k) => {
+    if (!used.has(k)) rows.push({ app: r.application, caseId: r.case_id, repeat: Number(r.repeat), state: 'DONE', attempt: r });
+  });
+  return rows;
+}
