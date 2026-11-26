@@ -17,3 +17,9 @@ Checks: 50 console tests (5 new; the Host and saved-frame tests fail on the prev
 - **Parsed run files reused between polls.** The execution log, outcome table, checkpoints and response details are re-read only when a file's size or modification time changes.
 
 Checks: 54 console tests (4 new, all failing on the previous code), 197 engine tests and 9 view-logic tests pass. A real GEN-009 run (ChatGPT, 1 repeat) passed through the updated server, and its result row moved WAITING → RUNNING → PASS live. Check run only; not added to any published count.
+
+## Readable formatting
+
+The console server and its tests (`server.py`, `console_core.py`, `live_services.py`, `live_worker.py`, `tests/*.py`) are formatted with black (settings in `pyproject.toml`, line length 100), and CI checks the formatting. The Android engine under `engine/` is deliberately not reformatted, so it stays byte-identical to the code recorded in the evidence.
+
+No behaviour changed: the syntax trees of all nine files are identical before and after formatting, except the indentation inside two docstrings added in the previous change. 54 console, 197 engine and 9 view-logic tests pass, and a real GEN-009 run (ChatGPT, 1 repeat) passed through the reformatted server and worker. Check run only; not added to any published count.

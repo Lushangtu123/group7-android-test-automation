@@ -22,6 +22,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
+      - name: Console code formatting
+        # The Android engine is excluded (see pyproject.toml); it stays as recorded in the evidence.
+        run: |
+          python -m pip install --quiet black==26.10.1
+          black --check server.py console_core.py live_services.py live_worker.py tests
       - name: Checksum manifest
         run: shasum -a 256 -c --quiet MANIFEST.sha256
       - name: Console tests
