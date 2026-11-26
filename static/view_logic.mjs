@@ -42,3 +42,22 @@ export function compactAppiumLine(line) {
     .replace(/^\d{4}-\d{2}-\d{2} (\d{2}:\d{2}:\d{2}:\d{3})/, '$1')
     .replace(UUID, '$1…');
 }
+
+// Completed turns of the current attempt before the one now running, oldest first.
+export function earlierTurns(job, start) {
+  if (!start) return [];
+  const prompts = new Map();
+  const done = [];
+  for (const e of job?.events || []) {
+    if (e.attempt_id !== start.attempt_id || e.turn === start.turn) continue;
+    if (e.event === 'TURN_START') prompts.set(e.turn, e.prompt);
+    if (e.event === 'TURN_DONE') done.push({ turn: e.turn, prompt: prompts.get(e.turn) ?? '', response: e.response ?? '' });
+  }
+  return done;
+}
+
+// While the view is guarded between turns, keep showing the last frame only if it
+// belongs to the attempt that is still running.
+export function holdFrame(status, frameAttempt, activeAttempt) {
+  return ['PRIVACY', 'DELAYED', 'STARTING'].includes(status) && !!frameAttempt && frameAttempt === activeAttempt;
+}

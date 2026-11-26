@@ -32,3 +32,13 @@ Earlier distributions (`Group7_Live_Demo.zip`, `Group7_Live_Demo_Presentation.zi
 - Evidence library (`static/library/style.css` only): the accent orange is darker (#bf4320) so white button text and orange labels reach 4.5:1 contrast, the REVIEW label colour is darker, and no text is smaller than 12px. Checked on all five library views at 1920×1080 and 375px wide with no horizontal overflow.
 
 No Android tests were run for this change.
+
+## Demo flow
+
+Browser files only (`static/index.html`, `static/style.css`, `static/app.js`, `static/view_logic.mjs`, `tests/view_logic.test.mjs`).
+
+- Between turns, while Appium works on screens that are not published, the device panel keeps the last verified frame of the same attempt, dimmed, with a banner, instead of switching to a full "Preparing" screen. A frame from a different attempt or app is never held; a disconnected device still shows the full notice.
+- Before any run is selected, the right column previews the chosen scenario: every prompt in order, the pass rule, and the target apps. Choosing "Choose a completed run" returns to this preview.
+- Multi-turn attempts list their earlier finished turns (prompt and captured answer, one line each) above the current prompt. On short screens the list shows about two rows and keeps the newest in view, so the current answer stays visible.
+
+Checks: 45 console and 7 JavaScript tests pass. One real GEN-013 run (ChatGPT, 1 repeat) completed 5/5 turns, PASS, 118.3 s; after the first live frame the panel never fell back to the full notice, and the earlier-turn list grew from 0 to 4. That run was a frontend check only and is not added to any published count.
