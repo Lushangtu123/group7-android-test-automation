@@ -523,7 +523,7 @@ window.addEventListener('resize', () => updateAnswerMore());
 function setFocus(on) {
   document.body.classList.toggle('focus', on);
   $('#focus').setAttribute('aria-pressed', String(on));
-  $('#focus').textContent = on ? '✕ Exit focus' : '◱ Focus';
+  $('#focus').textContent = on ? 'Exit focus' : 'Focus';
   try { sessionStorage.setItem('group7-focus', on ? '1' : ''); } catch { /* storage unavailable */ }
   setTimeout(updateAnswerMore, 50);
 }
