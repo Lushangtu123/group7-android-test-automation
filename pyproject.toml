@@ -1,0 +1,6 @@
+# Formatting settings for the console server and its tests. The Android engine under
+# engine/ is left as recorded in the evidence and is not reformatted.
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+extend-exclude = "^/(engine|reference|evidence|verification|actual_generation)/"
