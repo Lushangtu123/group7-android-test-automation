@@ -83,3 +83,13 @@ Workbench only (`static/index.html`, `static/style.css`, one scroll rule in `sta
 - Starting a run on a wide screen returns to the top so the top bar stays visible; on narrow screens it still scrolls down to the workbench.
 
 Checks: contrast and minimum-size scans pass at 1920×1080 and 375px (no text below WCAG AA or 12px, no horizontal overflow); dropdown text fits at 1920, 1366 and 1024 wide. 54 console and 9 JavaScript tests pass. Live on the existing emulator: GEN-009 (ChatGPT + Gemini) 2/2 PASS and GEN-009 (ChatGPT) PASS in the new layout, with the held frame shown between turns. Check runs only; not added to any published count.
+
+## Desktop text sizes and centred button icons
+
+Browser files only (`static/style.css`, `static/index.html`, `static/app.js`, `static/library/style.css`) plus `docs/LOCAL_DEMO_GUIDE.md`.
+
+- The workbench used projection-sized text everywhere (body 21px, prompt 29–31px, answer 30px, logs 20–21px, table 19px). The normal view now uses a desktop scale: body 16px, prompt 22px (24px at 1800px and wider), answer 21px, logs and table 15px, controls 14–15px. Focus mode keeps large text for projection (prompt 34px, answer 36px). This supersedes the "prompt/answer ≥24px, logs ≥20px" rule noted in earlier sections, and the corresponding thresholds in `verification/check_ui.py`, which describe the earlier default view.
+- Button symbols (▶ ■ ◱ ⛶ ↗) came from fallback fonts and sat off-centre at uneven sizes. Start, Stop, Focus / Exit focus, Full screen and Enlarge view now use SVG icons in the text colour, and every button centres its label on both axes (measured within 1px, including dialogs and focus mode). On phones the header buttons show the icons alone.
+- Evidence library: the overview headline is 36–56px instead of 50–86px, section headings 28–40px, and the overview numbers 34px instead of 43px; projection mode is unchanged.
+
+Checks: no text below WCAG AA or 12px and no horizontal overflow at 1920×1080, 1366×768 and 375px; dropdown text fits; 1366×768 still fits the workbench in one screen. 54 console and 9 JavaScript tests pass. Live on the existing emulator: GEN-009 (ChatGPT) PASS in the new sizes. Check run only; not added to any published count.

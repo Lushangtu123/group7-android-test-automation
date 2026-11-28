@@ -37,4 +37,9 @@ dialog::backdrop{background:rgba(16,24,40,.55);backdrop-filter:blur(6px)}
 .page-footer{margin:0!important;padding:24px 56px!important;background:#fff}
 @media(max-width:1200px){.masthead,.page-footer{padding-left:28px!important;padding-right:28px!important}}
 @media(max-width:760px){.masthead,.page-footer{padding-left:20px!important;padding-right:20px!important}.metric:first-child{padding-left:12px!important}}
+/* Desktop type scale (projection mode keeps its own larger sizes). */
+body:not(.projector) h1{font-size:clamp(36px,3.6vw,56px)}
+body:not(.projector) .section-head h1{font-size:clamp(28px,2.6vw,40px)}
+body:not(.projector) h2{font-size:30px}
+body:not(.projector) .metric .number{font-size:34px}
 
