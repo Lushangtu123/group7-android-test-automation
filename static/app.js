@@ -191,7 +191,7 @@ function renderJob(job) {
     if (row.state === 'STOPPED') return `<tr><td>${label}</td><td class="mono">${esc(row.attemptId)}</td><td>stopped before an outcome</td><td>${pill('INTERRUPTED')}</td><td>—</td></tr>`;
     return `<tr class="row-pending"><td>${label}</td><td>—</td><td>—</td><td>${pill(row.state === 'WAITING' ? 'WAITING' : 'NOT RUN')}</td><td>—</td></tr>`;
   }).join('') : '<tr><td colspan="5">No case outcome was recorded.</td></tr>';
-  $('#focus-progress').textContent = `${job.attempts.length} / ${job.planned} · ` + Object.entries(job.counts).filter(([, n]) => n > 0).map(([s, n]) => `${s} ${n}`).join(' · ');
+  $('#focus-progress').textContent = [`${job.attempts.length} / ${job.planned}`, ...Object.entries(job.counts).filter(([, n]) => n > 0).map(([s, n]) => `${s} ${n}`)].join(' · ');
   updateAnswerMore();
   $('#export').hidden = !terminal.has(job.state);
   $('#export').href = '/api/jobs/' + encodeURIComponent(job.id) + '/export';
