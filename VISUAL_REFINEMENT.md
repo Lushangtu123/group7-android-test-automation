@@ -62,3 +62,13 @@ Browser files only (workbench and evidence library).
 - All times are shown in the viewer's local time, 24-hour: Python events, Appium HTTP lines (Appium writes UTC; converted), frame and saved-frame times, saved-run labels and the library's event list. The log bar names the time zone.
 
 Checks: 45 console and 9 JavaScript tests pass (the time test also passes with TZ=UTC). Browser: Appium and Python events for the same moment now read the same local time; the banner appeared when the server was stopped, changed to the restart notice after it came back, stayed steady, and cleared on reload; the library's five views load with no failed requests or overflow. No Android tests were run for this change.
+
+## Clean light theme
+
+Styles only (`static/style.css`, `static/library/style.css`, and the diagram stroke colour in `static/library/app.js`); no markup, behaviour or backend change.
+
+- Both pages use the same tokens: a light grey canvas (#f6f7f9), white cards with 14px corners and soft shadows, one indigo accent (#4f46e5), and the system sans-serif for text and headings (the serif display face is gone). The log panel stays dark (#0b1220).
+- The workbench splits into two cards (device and current turn), the header is a full-width white bar, and status labels, readiness checks and result counts are rounded chips with a coloured dot. PASS / REVIEW / FAIL / ERROR / INTERRUPTED keep distinct green, amber, red and violet colours.
+- The evidence library keeps its layout and projection mode; its palette, buttons, cards, tables, status labels and logo match the workbench.
+
+Checks: a contrast scan of the workbench (idle, saved run, Appium log, focus mode, answer dialog) and all five library views finds no text below WCAG AA and nothing under 12px, at 1920×1080 and 375px wide; 1366×768 still fits the workbench in one screen. Prompt/answer stay at 24px or larger and logs at 20px or larger. Tests: 54 console and 9 JavaScript tests pass. A live run was not repeated for this styling change because the emulator and Appium were not running at the time; the live and held-frame states use the same styles as the saved and idle states that were checked.
