@@ -7,19 +7,12 @@
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-<header>
+<div class="app">
+<aside class="sidebar" aria-label="Run controls">
   <a class="identity" href="/"><span class="mark">G<span>7</span></span><span>Automation<br><b>Studio</b></span></a>
-  <div class="edition">GROUP 07 / ANDROID TEST LAB<span>Live execution workspace</span></div>
-  <div class="header-tools">
-    <span class="scope" title="This workbench never changes the original formal study (19 cases × 2 apps × 3 rounds = 114 attempts). New demo runs are saved separately.">Formal study (114) is read-only</span>
-    <a href="/library/index.html#evidence" target="_blank" rel="noopener">Evidence library ↗</a>
-    <button id="focus" type="button" aria-pressed="false" title="Enlarge the device and current turn for presenting (Esc to exit)">◱ Focus</button>
-    <button id="fullscreen" type="button">⛶ Full screen</button>
-  </div>
-</header>
 
-<main>
-  <section class="control-bar" aria-label="Real execution controls">
+  <section class="side-section control-bar" aria-label="Real execution controls">
+    <h2 class="side-title">New run</h2>
     <label>GENERATED SCENARIO
       <select id="case">
         <option value="MB-GEN-009">GEN-009 · French translation</option>
@@ -28,33 +21,58 @@
         <option value="MB-GEN-013">GEN-013 · Five-turn workflow</option>
       </select>
     </label>
-    <label>APPLICATION
-      <select id="application">
-        <option value="both">ChatGPT + Gemini</option>
-        <option value="chatgpt">ChatGPT only</option>
-        <option value="gemini">Gemini only</option>
-      </select>
-    </label>
-    <label>RUNS PER APP
-      <select id="repeats"><option>1</option><option selected>2</option><option>3</option></select>
-    </label>
+    <div class="side-row">
+      <label>APPLICATION
+        <select id="application">
+          <option value="both">ChatGPT + Gemini</option>
+          <option value="chatgpt">ChatGPT only</option>
+          <option value="gemini">Gemini only</option>
+        </select>
+      </label>
+      <label>RUNS PER APP
+        <select id="repeats"><option>1</option><option selected>2</option><option>3</option></select>
+      </label>
+    </div>
+    <span id="plan">4 planned executions</span>
     <div class="actions">
       <button id="readiness" type="button">Check readiness</button>
       <button id="start" type="button" class="primary">▶ Start real demo</button>
       <button id="stop" type="button" class="danger" hidden>■ Stop run</button>
     </div>
+  </section>
+
+  <section class="side-section readiness" aria-label="Readiness">
+    <h2 class="side-title">Readiness</h2>
+    <p id="health">Existing emulator and logged-in apps · check readiness before starting.</p>
+    <ul id="checks" class="checks" aria-label="Readiness checks" hidden></ul>
+  </section>
+
+  <section class="side-section review" aria-label="Saved runs">
+    <h2 class="side-title">Review</h2>
     <label class="saved-runs">REVIEW A SAVED RUN
       <select id="saved"><option value="">Choose a completed run</option></select>
     </label>
   </section>
 
-  <div class="system-line">
-    <span id="health">Existing emulator and logged-in apps · check readiness before starting.</span>
-    <span id="plan">4 planned executions</span>
+  <nav class="side-section side-links" aria-label="More">
     <button id="model-button" type="button" class="link">3D model &amp; generator ↗</button>
     <a href="/library/index.html#repeat" target="_blank" rel="noopener">Original three-round comparison ↗</a>
+    <a href="/library/index.html#evidence" target="_blank" rel="noopener">Evidence library ↗</a>
+  </nav>
+
+  <span class="scope" title="This workbench never changes the original formal study (19 cases × 2 apps × 3 rounds = 114 attempts). New demo runs are saved separately.">Formal study (114) is read-only</span>
+</aside>
+
+<div class="main-col">
+<header class="topbar">
+  <div class="edition">GROUP 07 / ANDROID TEST LAB<span>Live execution workspace</span></div>
+  <div class="header-tools">
+    <button id="focus" type="button" aria-pressed="false" title="Enlarge the device and current turn for presenting (Esc to exit)">◱ Focus</button>
+    <button id="fullscreen" type="button">⛶ Full screen</button>
   </div>
-  <ul id="checks" class="checks" aria-label="Readiness checks" hidden></ul>
+</header>
+
+<main>
   <div id="connection" class="connection" role="alert" hidden><span id="connection-text"></span><button type="button" id="reload" class="primary">Reload page</button></div>
   <div id="alert" role="alert" hidden></div>
 
@@ -115,6 +133,8 @@
   </section>
   <p class="history-note">Saved results are labelled separately from the live device view.</p>
 </main>
+</div>
+</div>
 
 <dialog id="model-dialog">
   <button class="close" type="button" aria-label="Close model">×</button>
