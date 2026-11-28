@@ -72,3 +72,14 @@ Styles only (`static/style.css`, `static/library/style.css`, and the diagram str
 - The evidence library keeps its layout and projection mode; its palette, buttons, cards, tables, status labels and logo match the workbench.
 
 Checks: a contrast scan of the workbench (idle, saved run, Appium log, focus mode, answer dialog) and all five library views finds no text below WCAG AA and nothing under 12px, at 1920×1080 and 375px wide; 1366×768 still fits the workbench in one screen. Prompt/answer stay at 24px or larger and logs at 20px or larger. Tests: 54 console and 9 JavaScript tests pass. Live check afterwards on the existing emulator and accounts: GEN-009 (ChatGPT + Gemini, 1 repeat) 2/2 PASS and GEN-013 (ChatGPT, 5 turns) PASS in 116.9 s; the live view, the held-frame banner between turns, earlier turns, planned result rows and focus mode all render in the new theme. The same check fixed a stray separator in the focus-mode progress line when no outcome had been recorded yet. Check runs only; not added to any published count.
+
+## Sidebar layout
+
+Workbench only (`static/index.html`, `static/style.css`, one scroll rule in `static/app.js`); the evidence library is unchanged. Every element id is kept, so behaviour, tests and acceptance scripts are unaffected.
+
+- The run controls (scenario, application, runs per app, planned count, Check readiness, Start/Stop), the readiness checklist, the saved-run picker and the links (3D model, three-round comparison, evidence library) live in a sticky left sidebar. The main column has a slim top bar (title, Focus, Full screen) and the device and current-turn cards directly below it, so the workbench is taller.
+- Device view width: 1920×1080 323 → 387px; 1366×768 209 → 266px; 1280×720 187 → 244px. The workbench still fits in one screen at 1366×768 and 1280×720.
+- Narrow windows (≤1100px) turn the sidebar into a three-column control panel above the workbench; phones (≤760px) stack it in one column. Focus mode hides the sidebar.
+- Starting a run on a wide screen returns to the top so the top bar stays visible; on narrow screens it still scrolls down to the workbench.
+
+Checks: contrast and minimum-size scans pass at 1920×1080 and 375px (no text below WCAG AA or 12px, no horizontal overflow); dropdown text fits at 1920, 1366 and 1024 wide. 54 console and 9 JavaScript tests pass. Live on the existing emulator: GEN-009 (ChatGPT + Gemini) 2/2 PASS and GEN-009 (ChatGPT) PASS in the new layout, with the held frame shown between turns. Check runs only; not added to any published count.

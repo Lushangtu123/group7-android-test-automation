@@ -455,7 +455,10 @@ async function start() {
     renderJob({ ...job, events: [], details: [], attempts: [], counts: { PASS: 0, FAIL: 0, REVIEW: 0, ERROR: 0 }, elapsed_seconds: 0 });
     state.data.jobs = await api('/api/jobs');
     savedRuns(state.data.jobs);
-    $('.workbench').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // With the side control bar the workbench is already at the top: just return there, keeping the
+    // top bar (Focus, Full screen) in view. On narrow screens the controls sit above it, so scroll down.
+    if (getComputedStyle($('.sidebar')).position === 'sticky') window.scrollTo({ top: 0, behavior: 'smooth' });
+    else $('.workbench').scrollIntoView({ behavior: 'smooth', block: 'start' });
   } catch (e) { error(e.message); }
   finally { state.busy = false; controls(); }
 }
