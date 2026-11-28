@@ -93,3 +93,13 @@ Browser files only (`static/style.css`, `static/index.html`, `static/app.js`, `s
 - Evidence library: the overview headline is 36–56px instead of 50–86px, section headings 28–40px, and the overview numbers 34px instead of 43px; projection mode is unchanged.
 
 Checks: no text below WCAG AA or 12px and no horizontal overflow at 1920×1080, 1366×768 and 375px; dropdown text fits; 1366×768 still fits the workbench in one screen. 54 console and 9 JavaScript tests pass. Live on the existing emulator: GEN-009 (ChatGPT) PASS in the new sizes. Check run only; not added to any published count.
+
+## Select arrows and saved-run labels
+
+Browser files only (`static/style.css`, `static/app.js`, `static/library/style.css`).
+
+- Every drop-down on both pages now draws its own chevron, inset 12px from the right edge (8px in the narrow runs-per-app picker), instead of the browser's arrow, which sat against the border and, in the narrow picker, crowded out the value. Disabled pickers are greyed out.
+- The runs-per-app picker is wider (80px, 72px on laptop widths), so its number is always fully visible.
+- Saved-run labels are compact so they fit the sidebar picker: time only for today's runs, "Both" for both apps, no "×1", and a short status word ("stopped", "error"). Hovering the picker shows the full label.
+
+Checks: at 1440, 1366 and 375px wide every picker's text fits its space and every saved-run label fits; the library's pickers use the same chevron. 54 console and 9 JavaScript tests pass.

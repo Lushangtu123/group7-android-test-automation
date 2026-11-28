@@ -95,19 +95,34 @@ function controls() {
   for (const id of ['case', 'application', 'repeats', 'saved']) $('#' + id).disabled = state.busy || active;
 }
 
-function runLabel(j) {
+// Saved-run labels must fit the sidebar picker, so the visible label is compact (time only for
+// today's runs, "Both" for both apps, no "×1", short status word); the full label is the tooltip.
+const SHORT_APPS = { both: 'Both', chatgpt: 'ChatGPT', gemini: 'Gemini' };
+const SHORT_STATE = { INTERRUPTED: 'stopped', PROCESS_ERROR: 'error', RUNNING: 'running', STOPPING: 'stopping' };
+function runLabel(j, full = false) {
   const started = new Date(j.started_utc);
-  const when = started.toLocaleDateString([], { month: 'short', day: 'numeric' }) + ' ' + clock(started).slice(0, 5);
+  const today = started.toDateString() === new Date().toDateString();
+  const date = started.toLocaleDateString([], { month: 'short', day: 'numeric' });
+  const when = full || !today ? date + ' ' + clock(started).slice(0, 5) : clock(started).slice(0, 5);
   const plan = j.plan || {};
-  const cases = (plan.cases || []).map(c => caseLabel(c).split(' · ')[0]).join(', ') || 'Unknown case';
-  const outcome = j.state === 'COMPLETED' ? '' : ' · ' + j.state;
-  return `${when} · ${cases} · ${appLabels[plan.app] || plan.app || ''} ×${plan.repeats ?? '?'}${outcome}`;
+  const cases = (plan.cases || []).map(c => full ? caseLabel(c) : caseLabel(c).split(' · ')[0]).join(', ') || 'Unknown case';
+  if (full) return `${when} · ${cases} · ${appLabels[plan.app] || plan.app || ''} ×${plan.repeats ?? '?'} · ${j.state}`;
+  const repeats = plan.repeats > 1 ? ' ×' + plan.repeats : '';
+  const outcome = j.state === 'COMPLETED' ? '' : ' · ' + (SHORT_STATE[j.state] || j.state.toLowerCase());
+  return `${when} · ${cases} · ${SHORT_APPS[plan.app] || plan.app || ''}${repeats}${outcome}`;
 }
 
 function savedRuns(jobs) {
   $('#saved').innerHTML = '<option value="">Choose a completed run</option>' + jobs.map(j =>
-    `<option value="${esc(j.id)}" ${state.id === j.id ? 'selected' : ''}>${esc(runLabel(j))}</option>`
+    `<option value="${esc(j.id)}" title="${esc(runLabel(j, true))}" ${state.id === j.id ? 'selected' : ''}>${esc(runLabel(j))}</option>`
   ).join('');
+  syncSavedTitle();
+}
+
+// Hovering the picker shows the full label of the chosen run.
+function syncSavedTitle() {
+  const option = $('#saved').selectedOptions[0];
+  $('#saved').title = option && option.value ? option.title : '';
 }
 
 function renderTurn(start) {
@@ -499,7 +514,7 @@ function selectTab(source, focus) {
 $('#start').onclick = start;
 $('#stop').onclick = stop;
 $('#readiness').onclick = () => check().catch(e => error(e.message));
-$('#saved').onchange = e => { if (e.target.value) select(e.target.value); else clearSelection(); };
+$('#saved').onchange = e => { syncSavedTitle(); if (e.target.value) select(e.target.value); else clearSelection(); };
 for (const id of ['case', 'application', 'repeats']) $('#' + id).onchange = updatePlan;
 for (const source of ['python', 'appium']) $('#' + source + '-tab').onclick = () => selectTab(source);
 $('[role="tablist"]').addEventListener('keydown', e => {
